@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) — isaacmath.kr 전용 GA4 속성. faithreason.kr 측정 ID를 재사용하지 말 것 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS3GE709TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JS3GE709TF');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2084707405154770"
+        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>단항식의 계산 강의노트 PRO | 2-1</title>
+<meta name="description" content="중2 1학기 2단원 「단항식의 계산」 강의노트. 지수법칙 네 가지(곱셈·거듭제곱의 거듭제곱·나눗셈·곱과 분수의 거듭제곱), 지수가 0이나 음수가 될 때의 뜻, 단항식의 곱셈과 나눗셈, 혼합 계산과 어떤 식 구하기, 큰 수의 자릿수와 도형 활용까지 정리했습니다. 인터랙티브 퀴즈와 연습문제 30문항(기본·응용·심화)을 무료로 제공합니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_2_%EB%8B%A8%ED%95%AD%EC%8B%9D%EC%9D%98%EA%B3%84%EC%82%B0_PRO.html">
+<meta property="og:title" content="단항식의 계산 — 중2 1학기 2단원 강의노트">
+<meta property="og:description" content="지수법칙 네 가지와 단항식의 곱셈·나눗셈을 정리한 중2 1학기 2단원 강의노트. 지수가 0·음수가 될 때의 뜻, 혼합 계산과 어떤 식 구하기, 자릿수·도형 활용까지. 연습문제 30문항 수록.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_2_%EB%8B%A8%ED%95%AD%EC%8B%9D%EC%9D%98%EA%B3%84%EC%82%B0_PRO.html">
+<style>
+  :root {
+    --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
+    --border:rgba(148,163,184,0.18); --text:#e7ecf3; --muted:#9aa7bd;
+    --green:#34d399; --green-d:#059669; --blue:#60a5fa; --orange:#fbbf24;
+    --red:#f87171; --purple:#c4b5fd; --gold:#fbbf24;
+  }
+  html.light {
+    --bg:#f3f5f9; --bg2:#eef1f7; --card:#ffffff; --card-solid:#ffffff;
+    --border:#e2e8f0; --text:#1a202c; --muted:#5b6675;
+    --green:#0f9d63; --blue:#2563eb; --orange:#c2870b; --red:#dc2626; --purple:#7c3aed;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(52,211,153,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(96,165,250,0.10), transparent 55%), var(--bg);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  p { margin-bottom:10px; } strong { color:var(--text); }
+  ul,ol { padding-left:20px; } li { margin-bottom:6px; } sup { font-size:.7em; } em { color:var(--muted); font-style:italic; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--green),var(--gold)); z-index:300; transition:width .1s; }
+
+  .page-header { position:relative; overflow:hidden; border-bottom:1px solid var(--border); }
+  .page-header::before { content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg, rgba(52,211,153,0.16), rgba(96,165,250,0.10) 50%, transparent); }
+  .page-header-inner { position:relative; max-width:820px; margin:0 auto; padding:48px 24px 34px; }
+  .brandline { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .pro-badge { font-size:11px; font-weight:800; letter-spacing:.08em; color:#1a1205;
+    background:linear-gradient(135deg,#fde68a,var(--gold)); padding:4px 10px; border-radius:6px; }
+  .brandline .label { font-size:13px; color:var(--muted); letter-spacing:.02em; }
+  .page-header h1 { font-size:32px; font-weight:800; letter-spacing:-0.03em; line-height:1.2; }
+  .page-header .sub { margin-top:10px; color:var(--muted); font-size:15px; }
+  .header-tools { display:flex; gap:8px; margin-top:18px; align-items:center; flex-wrap:wrap; }
+  .mini-btn { font-size:12.5px; color:var(--text); background:var(--card); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer; backdrop-filter:blur(6px); transition:.15s; }
+  .mini-btn:hover { border-color:var(--green); color:var(--green); }
+
+  .achieve { max-width:820px; margin:18px auto 0; padding:0 24px; }
+  .achieve-card { background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px 20px; backdrop-filter:blur(10px); display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .ring { --p:0; width:54px; height:54px; border-radius:50%; flex-shrink:0;
+    background:conic-gradient(var(--green) calc(var(--p)*1%), rgba(148,163,184,0.18) 0);
+    display:flex; align-items:center; justify-content:center; }
+  .ring span { width:42px; height:42px; border-radius:50%; background:var(--bg2);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:var(--green); }
+  .achieve-text { flex:1; min-width:160px; }
+  .achieve-text .t { font-weight:700; font-size:15px; } .achieve-text .d { font-size:13px; color:var(--muted); }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; }
+  .ach-badge { font-size:11px; font-weight:700; padding:5px 9px; border-radius:20px;
+    background:rgba(148,163,184,0.12); color:var(--muted); border:1px solid var(--border); }
+  .ach-badge.on { background:rgba(251,191,36,0.16); color:var(--gold); border-color:rgba(251,191,36,0.4); }
+
+  .toc { position:sticky; top:0; z-index:200; background:rgba(11,18,32,0.82); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); display:flex; justify-content:safe center; gap:2px; overflow-x:auto; padding:0 16px; }
+  html.light .toc { background:rgba(243,245,249,0.85); }
+  .toc a { padding:14px 10px; font-size:12.5px; color:var(--muted); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:.2s; }
+  .toc a:hover { color:var(--green); } .toc a.active { color:var(--green); border-bottom-color:var(--green); }
+
+  .content { max-width:820px; margin:0 auto; padding:34px 24px 90px; }
+
+  .section { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:30px 30px 26px; margin-bottom:22px; backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.25); }
+  html.light .section { box-shadow:0 6px 20px rgba(15,23,42,0.06); }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .section-num { width:30px; height:30px; border-radius:9px; flex-shrink:0; font-size:14px; font-weight:800;
+    color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); display:flex; align-items:center; justify-content:center; }
+  .section-title { font-size:21px; font-weight:800; letter-spacing:-0.02em; }
+  .complete-btn { margin-left:auto; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:9px; cursor:pointer;
+    border:1px solid var(--border); background:transparent; color:var(--muted); transition:.15s; white-space:nowrap; }
+  .complete-btn:hover { border-color:var(--green); color:var(--green); }
+  .section.done { border-color:rgba(52,211,153,0.45); }
+  .section.done .complete-btn { background:rgba(52,211,153,0.14); color:var(--green); border-color:rgba(52,211,153,0.45); }
+
+  .box { border-radius:12px; padding:15px 18px; margin:14px 0; border:1px solid var(--border);
+    border-left-width:4px; background:rgba(148,163,184,0.06); }
+  .box-green { border-left-color:var(--green); background:rgba(52,211,153,0.08); }
+  .box-blue { border-left-color:var(--blue); background:rgba(96,165,250,0.08); }
+  .box-orange { border-left-color:var(--orange); background:rgba(251,191,36,0.08); }
+  .box-red { border-left-color:var(--red); background:rgba(248,113,113,0.08); }
+  .box-purple { border-left-color:var(--purple); background:rgba(196,181,253,0.08); }
+  .box-title { font-weight:800; font-size:13px; margin-bottom:6px; }
+  .box-green .box-title{color:var(--green);} .box-blue .box-title{color:var(--blue);}
+  .box-orange .box-title{color:var(--orange);} .box-red .box-title{color:var(--red);} .box-purple .box-title{color:var(--purple);}
+
+  .special-table { width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; border-radius:10px; overflow:hidden; }
+  .special-table th { background:rgba(52,211,153,0.16); color:var(--green); padding:10px 12px; text-align:center; font-weight:700; }
+  .special-table td { padding:10px 12px; text-align:center; border-bottom:1px solid var(--border); }
+  .table-wrap { overflow-x:auto; margin:14px 0; }
+  .table-wrap .special-table { margin:0; }
+
+  .formula-big { background:linear-gradient(135deg, rgba(52,211,153,0.10), rgba(196,181,253,0.10));
+    border:2px solid var(--purple); border-radius:14px; padding:22px; text-align:center; margin:16px 0; }
+  .formula-big .f-title { font-size:13px; font-weight:800; color:var(--purple); margin-bottom:10px; }
+  .formula-big .f-body { font-size:20px; font-weight:800; line-height:1.8; }
+
+  .diagram-wrap { text-align:center; margin:16px 0; }
+  .diagram-wrap svg { max-width:100%; height:auto; width:100%; display:block; margin:0 auto; }
+
+  .stepbox { background:rgba(148,163,184,0.06); border-radius:10px; padding:14px 18px; margin:10px 0; border-left:4px solid var(--purple); }
+  .stepbox .step-header { font-size:12px; font-weight:800; color:var(--purple); margin-bottom:6px; }
+
+  .solution { border:1px dashed var(--border); border-radius:12px; padding:16px 18px; margin:14px 0; background:rgba(196,181,253,0.05); }
+  .sol-head { display:flex; align-items:center; gap:8px; font-weight:800; font-size:14px; color:var(--purple); }
+  .sol-q { margin:6px 0 12px; font-weight:600; }
+  .step { display:none; padding:10px 14px; margin:8px 0; border-radius:10px; background:rgba(148,163,184,0.07); border-left:3px solid var(--purple); font-size:14.5px; }
+  .step.show { display:block; animation:fade .3s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+  .step .s-label { font-size:11px; font-weight:800; color:var(--purple); letter-spacing:.04em; }
+  .reveal-btn { margin-top:8px; font-size:13px; font-weight:700; padding:9px 16px; border-radius:9px; cursor:pointer; border:1px solid var(--purple); color:var(--purple); background:transparent; transition:.15s; }
+  .reveal-btn:hover { background:rgba(196,181,253,0.14); } .reveal-btn:disabled { opacity:.4; cursor:default; }
+
+  .quiz { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:14px; padding:18px; margin:14px 0; }
+  .quiz-q { font-weight:700; margin-bottom:12px; }
+  .quiz-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .quiz-input { width:150px; padding:9px 12px; font-size:15px; border-radius:9px; border:1px solid var(--border); background:var(--bg2); color:var(--text); }
+  .quiz-input:focus { outline:none; border-color:var(--green); }
+  .quiz-submit { padding:9px 18px; font-size:14px; font-weight:700; border-radius:9px; cursor:pointer; color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); border:none; }
+  .quiz-hint { font-size:12.5px; color:var(--muted); margin-top:8px; }
+  .quiz-fb { margin-top:10px; font-size:13.5px; font-weight:700; display:none; }
+  .quiz-fb.show { display:block; } .quiz-fb.ok { color:var(--green); } .quiz-fb.ng { color:var(--red); }
+
+  .wrongnote { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .wrongnote h2 { font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .wrongnote .empty { color:var(--muted); font-size:14px; margin-top:8px; }
+  .wrong-item { padding:12px 14px; border-radius:10px; background:rgba(248,113,113,0.08); border-left:3px solid var(--red); margin-top:10px; font-size:14px; }
+  .wrong-item .wq { font-weight:600; } .wrong-item .wa { font-size:13px; color:var(--muted); margin-top:4px; }
+  .clear-btn { margin-top:14px; font-size:12.5px; padding:7px 12px; border-radius:8px; cursor:pointer; border:1px solid var(--border); background:transparent; color:var(--muted); }
+  .review-btn { margin-top:14px; margin-right:8px; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; border:1px solid var(--purple); background:transparent; color:var(--purple); }
+  .review-btn.done { background:rgba(196,181,253,0.16); }
+
+  .gate { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px 30px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .gate h2 { font-size:19px; font-weight:800; display:flex; align-items:center; gap:8px; }
+  .gate .desc { color:var(--muted); font-size:14px; margin-top:6px; }
+  .checklist { list-style:none; padding:0; margin:18px 0; }
+  .checklist li { display:flex; align-items:center; gap:12px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; font-size:14px; background:rgba(148,163,184,0.05); }
+  .checklist li .mark { width:24px; height:24px; border-radius:50%; border:2px solid var(--muted); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--muted); font-weight:800; }
+  .checklist li.ok .mark { border-color:var(--green); background:var(--green); color:#04140d; }
+  .checklist li.ok { border-color:rgba(52,211,153,0.4); }
+  .start-btn { display:inline-block; margin-top:6px; padding:13px 24px; border-radius:11px; font-weight:800; font-size:15px; border:none; cursor:pointer; transition:.15s; }
+  .start-btn.locked { background:rgba(148,163,184,0.15); color:var(--muted); cursor:not-allowed; }
+  .start-btn.open { background:linear-gradient(135deg,var(--green),var(--green-d)); color:#04140d; box-shadow:0 6px 18px rgba(52,211,153,0.25); }
+
+  .practice-wrap { display:none; }
+  .practice-title { font-size:24px; font-weight:800; letter-spacing:-0.02em; margin:8px 0 4px; }
+  .practice-sub { color:var(--muted); font-size:14px; margin-bottom:18px; }
+  .pset { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:20px; backdrop-filter:blur(10px); }
+  .pset-head { display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+  .diff-badge { font-size:12px; font-weight:800; padding:5px 12px; border-radius:20px; }
+  .diff-basic { background:rgba(96,165,250,0.16); color:var(--blue); }
+  .diff-applied { background:rgba(251,191,36,0.16); color:var(--orange); }
+  .diff-hard { background:rgba(196,181,253,0.16); color:var(--purple); }
+  .pset-title { font-size:18px; font-weight:800; }
+  .pcount { margin-left:auto; font-size:13px; color:var(--muted); font-weight:700; }
+  .pcount.clear { color:var(--green); }
+  .lockmsg { display:none; color:var(--muted); font-size:14px; padding:16px 0 2px; }
+  .pset.locked .pbody { display:none; }
+  .pset.locked .lockmsg { display:block; }
+  .pset.locked { opacity:.9; }
+  .prob { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin:10px 0; }
+  .prob .pq { font-weight:600; margin-bottom:10px; font-size:14.5px; }
+  .prob .pnum { color:var(--green); font-weight:800; margin-right:6px; }
+
+  .toast { position:fixed; left:50%; bottom:32px; transform:translateX(-50%) translateY(12px); z-index:400;
+    background:var(--card-solid); border:1px solid var(--border); color:var(--text); padding:12px 18px; border-radius:12px;
+    font-size:13.5px; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,0.35); opacity:0; transition:opacity .3s, transform .3s; max-width:90vw; text-align:center; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast.ok { border-color:rgba(52,211,153,0.5); } .toast.ng { border-color:rgba(248,113,113,0.5); }
+  .confetti-canvas { position:fixed; inset:0; pointer-events:none; z-index:390; }
+  @keyframes wrongflash { 0%{box-shadow:0 0 0 0 rgba(248,113,113,0);} 30%{box-shadow:0 0 0 3px rgba(248,113,113,0.55);} 100%{box-shadow:0 0 0 0 rgba(248,113,113,0);} }
+  .wrongnote.flash { animation:wrongflash .7s ease; }
+
+  @media (max-width:600px) {
+    .page-header-inner{padding:32px 16px 24px;} .page-header h1{font-size:24px;}
+    .content{padding:24px 16px 70px;} .section,.gate,.pset,.wrongnote{padding:22px 18px;}
+  }
+  @media print {
+    :root{--bg:#fff;--bg2:#fff;--card:#fff;--card-solid:#fff;--border:#cbd5e1;--text:#111827;--muted:#475569;--green:#0f9d63;--blue:#2563eb;--orange:#c2870b;--red:#dc2626;--purple:#7c3aed;--gold:#b45309;}
+    body{background:#fff; color:#000;}
+    .progress-bar,.toc,.header-tools,.complete-btn,.reveal-btn,.quiz-submit,.clear-btn,.review-btn,.achieve,.start-btn{display:none!important;}
+    .section,.wrongnote,.gate,.pset{box-shadow:none; border:1px solid #ccc; backdrop-filter:none; break-inside:avoid;}
+    .step{display:block!important;} .practice-wrap{display:block!important;} .pset.locked .pbody{display:block!important;} .lockmsg{display:none!important;}
+  }
+  .unit-nav{max-width:900px;margin:44px auto 0;padding:0 20px;display:grid;
+    grid-template-columns:1fr 1fr;gap:12px;}
+  .unit-nav a{display:flex;flex-direction:column;gap:3px;padding:14px 18px;
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    text-decoration:none;transition:border-color .15s, transform .15s;}
+  .unit-nav a:hover{border-color:var(--green);transform:translateY(-2px);}
+  .unit-nav .un-lbl{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.03em;}
+  .unit-nav .un-t{font-size:14.5px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+  .unit-nav .nx{text-align:right;grid-column:2;}
+  @media(max-width:600px){.unit-nav{grid-template-columns:1fr;}.unit-nav .nx{grid-column:1;text-align:left;}}
+  .site-foot{margin:40px auto 0;padding:22px 20px 30px;border-top:1px solid var(--border);
+    text-align:center;font-size:12.5px;color:var(--muted);line-height:1.9;}
+  .site-foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--border);}
+  .site-foot a:hover{color:var(--green);border-color:var(--green);}
+  .site-foot .sep{margin:0 8px;opacity:.5;}
+
+  /* ── 2-1 2단원 「단항식의 계산」 전용 시각자료 (SVG 없이 HTML/CSS) ───────── */
+  /* V1 거듭제곱 구조 */
+  .powstruct { display:flex; justify-content:center; align-items:flex-start; gap:0; padding:26px 10px 12px; }
+  .powstruct .pw { position:relative; font-size:44px; font-weight:800; letter-spacing:-.02em; line-height:1; }
+  .powstruct .pw sup { font-size:.48em; color:var(--orange); }
+  .powstruct .pw .base { color:var(--green); }
+  .pw-notes { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:14px; }
+  .pw-note { font-size:13px; font-weight:700; }
+  .pw-note.b { color:var(--green); } .pw-note.e { color:var(--orange); }
+  .pw-note span { display:block; font-size:12px; font-weight:600; color:var(--muted); margin-top:2px; }
+
+  /* V2 지수법칙 카드 */
+  .lawgrid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:14px 0; }
+  .lawcard { background:var(--card); border:1px solid var(--border); border-left:3px solid var(--green);
+    border-radius:10px; padding:12px 14px; }
+  .lawcard .ln { font-size:11.5px; font-weight:800; color:var(--muted); letter-spacing:.04em; }
+  .lawcard .lf { font-size:17px; font-weight:800; margin:5px 0 3px; }
+  .lawcard .ld { font-size:12.5px; color:var(--muted); }
+  .lawcard.c2 { border-left-color:var(--blue); } .lawcard.c3 { border-left-color:var(--orange); }
+  .lawcard.c4 { border-left-color:var(--purple); }
+  @media(max-width:600px){ .lawgrid{grid-template-columns:1fr;} }
+
+  /* V3 블록 전개 */
+  .blkrow { display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; padding:8px 0; }
+  .blk { display:inline-flex; align-items:center; justify-content:center; min-width:32px; height:34px;
+    padding:0 8px; border-radius:8px; font-weight:800; font-size:15px; }
+  .blk.g { background:rgba(52,211,153,.18); color:var(--green); border:1px solid rgba(52,211,153,.45); }
+  .blk.b { background:rgba(96,165,250,.18); color:var(--blue); border:1px solid rgba(96,165,250,.45); }
+  .blkop { font-size:17px; font-weight:800; color:var(--muted); margin:0 3px; }
+  .blkres { text-align:center; font-size:16px; font-weight:800; margin-top:8px; }
+
+  /* V4 약분 */
+  .fracbox { display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap; padding:6px 0; }
+  .frac { display:inline-flex; flex-direction:column; align-items:center; gap:4px; }
+  .frac .top, .frac .bot { display:flex; gap:5px; padding:3px 6px; }
+  .frac .bar { width:100%; min-width:96px; height:2px; background:var(--text); opacity:.75; }
+  .cancel { position:relative; opacity:.45; }
+  .cancel::after { content:""; position:absolute; left:-2px; right:-2px; top:50%;
+    height:2px; background:var(--red); transform:rotate(-16deg); }
+  .frac-note { font-size:12.5px; color:var(--muted); text-align:center; margin-top:8px; }
+  .frac-note b { color:var(--red); }
+
+  /* V5 세 갈래 */
+  .branch { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0 4px; }
+  .brc { border:1px solid var(--border); border-radius:10px; padding:11px 12px; background:var(--card); text-align:center; }
+  .brc .cond { font-size:12px; font-weight:800; color:var(--muted); }
+  .brc .res { font-size:16px; font-weight:800; margin-top:5px; }
+  .brc.p .res { color:var(--green); } .brc.z .res { color:var(--blue); } .brc.n .res { color:var(--orange); }
+  .brc .ex { font-size:11.5px; color:var(--muted); margin-top:4px; }
+  @media(max-width:600px){ .branch{grid-template-columns:1fr;} }
+
+  /* V6 정리 순서 */
+  .orderline { display:flex; justify-content:center; align-items:stretch; gap:0; flex-wrap:wrap; margin:12px 0 4px; }
+  .ostep { flex:1 1 130px; min-width:120px; border:1px solid var(--border); background:var(--card);
+    border-radius:10px; padding:10px 12px; margin:4px; text-align:center; }
+  .ostep .on { display:inline-block; width:20px; height:20px; line-height:20px; border-radius:50%;
+    background:var(--green); color:#06281c; font-size:12px; font-weight:800; margin-bottom:5px; }
+  .ostep .ot { font-size:13.5px; font-weight:800; }
+  .ostep .oe { font-size:12px; color:var(--muted); margin-top:3px; }
+
+  /* V7 · V8 연산 흐름 */
+  .opflow { display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap; padding:8px 0; }
+  .opnode { min-width:46px; padding:8px 12px; border:1px solid var(--border); border-radius:9px;
+    background:var(--card); font-weight:800; font-size:15px; text-align:center; }
+  .opnode.res { border-color:var(--green); color:var(--green); }
+  .opnode.unk { border-color:var(--orange); color:var(--orange); border-style:dashed; }
+  .oparrow { display:flex; flex-direction:column; align-items:center; gap:2px; min-width:74px; }
+  .oparrow .lbl { font-size:12px; font-weight:800; color:var(--blue); white-space:nowrap; }
+  .oparrow .ln { width:100%; height:0; border-top:2px solid var(--border); position:relative; }
+  .oparrow .ln::after { content:""; position:absolute; right:-1px; top:-4px;
+    border-left:6px solid var(--border); border-top:4px solid transparent; border-bottom:4px solid transparent; }
+  .oparrow.back .lbl { color:var(--orange); }
+  .flowcap { text-align:center; font-size:12.5px; color:var(--muted); margin-top:6px; }
+
+  /* 다이어그램 캡션 */
+  .dia-cap{color:var(--muted);font-size:13px;text-align:center;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="progress-bar" id="pbar"></div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="brandline">
+      <span class="pro-badge">PRO</span>
+      <span class="label">Isaac Math 2-1 강의노트 · 프리미엄</span>
+    </div>
+    <h1>단항식의 계산</h1>
+    <div class="sub">1단원에서 수를 정리했으니 이제 식으로 넘어갑니다. 단항식끼리 곱하고 나누면 결과도 다시 단항식이므로, 할 일은 사실상 <strong>지수를 정리하는 것</strong> 하나뿐입니다. 그래서 지수법칙 네 가지를 먼저 세운 뒤, 지수가 0이나 음수가 되는 경우까지 한 가지 방법으로 처리하는 요령을 익히고, 단항식의 곱셈·나눗셈과 혼합 계산, 그리고 자릿수·넓이·부피에 쓰이는 활용까지 정리합니다.</div>
+    <div class="header-tools">
+      <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
+      <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
+      <button class="mini-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+      <button class="mini-btn" onclick="resetAll()">↺ 진행 초기화</button>
+    </div>
+  </div>
+</header>
+
+<div class="achieve">
+  <div class="achieve-card">
+    <div class="ring" id="ring"><span id="ringTxt">0%</span></div>
+    <div class="achieve-text">
+      <div class="t" id="achTitle">학습 진행률</div>
+      <div class="d" id="achDesc">각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.</div>
+    </div>
+    <div class="badges">
+      <span class="ach-badge" id="b_first">🔰 첫 완료</span>
+      <span class="ach-badge" id="b_half">🔥 절반 돌파</span>
+      <span class="ach-badge" id="b_master">🏆 단원 마스터</span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" id="toc">
+  <a href="#s1" class="tlink">① 단항식</a>
+  <a href="#s2" class="tlink">② 곱셈</a>
+  <a href="#s3" class="tlink">③ 거듭제곱</a>
+  <a href="#s4" class="tlink">④ 나눗셈</a>
+  <a href="#s5" class="tlink">⑤ 곱의 거듭제곱</a>
+  <a href="#s6" class="tlink">⑥ 단항식 계산</a>
+  <a href="#s7" class="tlink">⑦ 혼합·역산</a>
+  <a href="#s8" class="tlink">⑧ 활용</a>
+  <a href="#wrong" class="tlink">📕 오답노트</a>
+  <a href="#gate" class="tlink">✏️ 연습문제</a>
+</nav>
+
+<div class="content">
+  <section class="section" id="s1">
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">단항식과 거듭제곱 — 왜 지수법칙부터인가</span>
+      <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
+
+<p>중2 1학기는 <strong>수 → 식 → 대수 → 함수</strong> 순서로 나아갑니다. 1단원 「유리수와 소수」에서 수 이야기가 끝났으니, 이제부터는 식 차례입니다.</p>
+<div class="box box-blue"><div class="box-title">🗺️ 중2 1학기 지도</div>
+수 → 유리수와 소수 (1단원, 완료)<br>
+식 → <strong>단항식의 계산</strong> (이번 단원) → 다항식의 계산 (다음 단원)<br>
+대수 → 일차부등식·연립일차방정식<br>
+함수 → 일차함수</div>
+<p>1-1에서 다항식은 <strong>덧셈·뺄셈만</strong> 배웠습니다(동류항 정리). 곱셈은 상수를 다항식에 나눠 곱하는 데까지였죠. 이번 단원에서는 <strong>단항식끼리의 곱셈·나눗셈</strong>을 배우고, 다음 단원에서 다항식으로 넓힙니다.</p>
+<div class="box box-green"><div class="box-title">🔑 항과 단항식</div>
+<strong>항</strong>은 수와 문자의 <strong>곱</strong>으로만 이루어진 덩어리입니다. <strong>단항식</strong>은 항이 하나뿐인 식이에요.<br>
+예) 3x²y, −2ab³, 7 — 셋 다 곱으로만 되어 있으므로 단항식입니다.</div>
+<p>단항식과 단항식을 곱하면 결과도 <strong>또 단항식</strong>입니다(곱으로만 이어지니까요). 그래서 이 단원에서 할 일은 사실상 <strong>지수를 정리하는 것</strong> 하나뿐입니다 — 그러니 지수법칙부터 차근차근 세워 봅시다.</p>
+<p>거듭제곱을 복습해 봅시다. 5⁴ 에서 <strong>밑은 5, 지수는 4</strong>입니다(소인수분해에서 이미 쓴 용어예요).</p>
+<div class="box box-red"><div class="box-title">⚠️ 지수 1은 생략된 것 — 0이 아니다</div>
+<strong>a 처럼 지수 없이 그냥 써 있으면 지수 1이 생략된 것</strong>입니다. 0이 아니에요. 예를 들어 x²y 에서 y의 지수는 1입니다.</div>
+<div class="diagram-wrap" style="max-width:420px;margin:16px auto">
+  <div class="powstruct"><div class="pw"><span class="base">a</span><sup>3</sup></div></div>
+  <div class="pw-notes">
+    <div class="pw-note b">밑<span>어떤 수를 곱하는가</span></div>
+    <div class="pw-note e">지수<span>몇 개를 곱하는가</span></div>
+  </div>
+  <div class="dia-cap">a³ = a × a × a — a를 3개 곱했다는 뜻</div>
+</div>
+<div class="lawgrid">
+  <div class="lawcard"><div class="ln">법칙 ① 곱셈</div>
+    <div class="lf">a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></div>
+    <div class="ld">밑이 같으면 지수끼리 <strong>더한다</strong></div></div>
+  <div class="lawcard c2"><div class="ln">법칙 ② 거듭제곱의 거듭제곱</div>
+    <div class="lf">(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></div>
+    <div class="ld">지수끼리 <strong>곱한다</strong></div></div>
+  <div class="lawcard c3"><div class="ln">법칙 ③ 나눗셈</div>
+    <div class="lf">a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></div>
+    <div class="ld">지수끼리 <strong>뺀다</strong></div></div>
+  <div class="lawcard c4"><div class="ln">법칙 ④ 곱·분수의 거듭제곱</div>
+    <div class="lf">(ab)<sup>n</sup> = a<sup>n</sup>b<sup>n</sup></div>
+    <div class="ld">괄호 안 <strong>모두에게</strong> 나눠 준다</div></div>
+</div>
+    <div class="quiz" data-qid="b1" data-ans="6" data-type="num">
+      <div class="quiz-q">Q. 2를 여섯 번 곱한 것을 2의 거듭제곱으로 나타낼 때, 지수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b2" data-ans="1" data-type="num">
+      <div class="quiz-q">Q. 단항식 −5a<sup>3</sup>b 에서 문자 b의 지수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s2">
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">지수법칙 (1) 곱셈 — 지수끼리 더한다</span>
+      <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
+
+<p>a² × a³ 을 풀어 써 봅시다. (a×a)×(a×a×a) 이므로, a를 5개 곱한 것과 같습니다. 즉 a² × a³ = a⁵ 입니다. <strong>지수는 '개수'라서, 곱하면 개수가 합쳐집니다.</strong></p>
+<div class="diagram-wrap" style="max-width:520px;margin:16px auto">
+  <div class="blkrow">
+    <span class="blk g">a</span><span class="blk g">a</span>
+    <span class="blkop">×</span>
+    <span class="blk b">a</span><span class="blk b">a</span><span class="blk b">a</span>
+  </div>
+  <div class="blkres">a² × a³ = a를 (2 + 3)개 곱한 것 = a⁵</div>
+  <div class="dia-cap">지수는 '개수'다 — 곱하면 개수가 합쳐진다</div>
+</div>
+<div class="formula-big"><div class="f-title">지수법칙 ① 곱셈</div>
+  <div class="f-body">a<sup>m</sup> × a<sup>n</sup> = a<sup>m+n</sup></div></div>
+<div class="box box-red"><div class="box-title">⚠️ 밑이 같아야 한다</div>
+a<sup>m</sup> × b<sup>n</sup> 처럼 밑이 다르면 지수끼리 더할 수 없습니다. 서로 다른 것을 곱하는 것이기 때문이에요.</div>
+<p>문자가 여럿이면 <strong>같은 문자끼리</strong> 모아서 정리합니다. 예를 들어 x³y² × x⁴y 은 x끼리(3+4), y끼리(2+1)를 각각 더해 x⁷y³ 이 됩니다.</p>
+    <div class="quiz" data-qid="b3" data-ans="9" data-type="num">
+      <div class="quiz-q">Q. a<sup>5</sup> × a<sup>4</sup> = a<sup>□</sup> 일 때, □의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b4" data-ans="10" data-type="num">
+      <div class="quiz-q">Q. x<sup>2</sup>y × x<sup>3</sup>y<sup>4</sup> = x<sup>m</sup>y<sup>n</sup> 일 때, m + n 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s3">
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">지수법칙 (2) 거듭제곱의 거듭제곱 — 지수끼리 곱한다</span>
+      <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
+
+<p>(a²)³ 을 풀어 써 봅시다. a²를 3개 곱한 것이므로 a<sup>2+2+2</sup> = a⁶ 입니다. <strong>2를 3번 더한 것이 곧 2×3</strong> 이지요.</p>
+<div class="formula-big"><div class="f-title">지수법칙 ② 거듭제곱의 거듭제곱</div>
+  <div class="f-body">(a<sup>m</sup>)<sup>n</sup> = a<sup>mn</sup></div></div>
+<p>여러 겹으로 쌓여 있어도 차근차근 계산하면 됩니다. 예를 들어 ((x³)²)² 은 안쪽부터 (3×2)×2 = 12, 즉 x¹² 이 됩니다.</p>
+<div class="box box-red"><div class="box-title">⚠️ 법칙①과 헷갈리지 말 것</div>
+<strong>곱셈은 지수를 더하고, 거듭제곱의 거듭제곱은 지수를 곱합니다.</strong> 둘을 섞어 쓰는 실수가 가장 흔합니다.<br>
+같은 3과 2로 만들어 비교해 보세요.<br>
+a<sup>3</sup> × a<sup>2</sup> = a<sup>3+2</sup> = a<sup>5</sup> (더한다)<br>
+(a<sup>3</sup>)<sup>2</sup> = a<sup>3×2</sup> = a<sup>6</sup> (곱한다)<br>
+숫자가 같은데도 답이 다릅니다.</div>
+    <div class="quiz" data-qid="b5" data-ans="12" data-type="num">
+      <div class="quiz-q">Q. (a<sup>3</sup>)<sup>4</sup> = a<sup>□</sup> 일 때, □의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b6" data-ans="10" data-type="num">
+      <div class="quiz-q">Q. (x<sup>2</sup>)<sup>3</sup> × x<sup>4</sup> = x<sup>□</sup> 일 때, □의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s4">
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">지수법칙 (3) 나눗셈 — 일단 빼고 결과를 본다</span>
+      <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
+
+<p>a⁵ ÷ a² 를 풀어 써 봅시다. a⁵/a² 에서 위아래의 a를 2개씩 약분하면 a³ 이 남습니다.</p>
+<div class="diagram-wrap" style="max-width:460px;margin:16px auto">
+  <div class="fracbox">
+    <div class="frac">
+      <div class="top"><span class="blk g cancel">a</span><span class="blk g cancel">a</span><span class="blk g">a</span><span class="blk g">a</span><span class="blk g">a</span></div>
+      <div class="bar"></div>
+      <div class="bot"><span class="blk b cancel">a</span><span class="blk b cancel">a</span></div>
+    </div>
+    <span class="blkop">=</span>
+    <div class="frac">
+      <div class="top"><span class="blk g">a</span><span class="blk g">a</span><span class="blk g">a</span></div>
+      <div class="bar"></div>
+      <div class="bot"><span class="blk b">1</span></div>
+    </div>
+    <span class="blkop">=</span>
+    <div class="blkres" style="margin:0">a³</div>
+  </div>
+  <div class="frac-note">약분해서 다 지웠을 때 분모에 남는 것은 <b>1</b>이다 — 0이 아니다</div>
+</div>
+<div class="box box-red"><div class="box-title">⚠️ 약분해서 다 지운 자리에 남는 것은 1이다</div>
+0이 아닙니다. 약분은 나눗셈이니까요 — 학생들이 가장 많이 하는 실수입니다.</div>
+<div class="formula-big"><div class="f-title">지수법칙 ③ 나눗셈</div>
+  <div class="f-body">a<sup>m</sup> ÷ a<sup>n</sup> = a<sup>m−n</sup></div></div>
+<p>교과서는 m&gt;n / m=n / m&lt;n 세 경우로 나눠 외우게 하지만, <strong>일단 빼고 결과를 보면 한 가지로 끝납니다.</strong></p>
+<div class="branch">
+  <div class="brc p"><div class="cond">m − n 이 양수</div><div class="res">a<sup>m−n</sup></div>
+    <div class="ex">그대로 쓴다</div></div>
+  <div class="brc z"><div class="cond">m − n 이 0</div><div class="res">1</div>
+    <div class="ex">같은 수로 나눈 것</div></div>
+  <div class="brc n"><div class="cond">m − n 이 음수</div><div class="res">1 / a<sup>n−m</sup></div>
+    <div class="ex">역수를 만든다</div></div>
+</div>
+<div class="flowcap">교과서는 세 경우로 나눠 외우게 하지만, <strong>일단 빼고</strong> 결과를 보고 판단하면 한 가지로 끝난다</div>
+<p>뺀 결과가 <strong>0</strong>이면 <strong>1</strong>입니다 — a³ ÷ a³ = a⁰ = 1. a를 0개 가져와 곱한다는 것은 아무것도 안 가져왔다는 뜻이니, 1이 그대로 남습니다. 뺀 결과가 <strong>음수</strong>이면 <strong>역수</strong>가 됩니다 — a³ ÷ a⁵ = a⁻² = 1/a².</p>
+<div class="box box-blue"><div class="box-title">💡 참고 — 지수가 0이나 음수가 될 때</div>
+지수 자리에 0이나 음수가 오는 것은 <strong>중2에서는 공식적으로 다루지 않습니다.</strong> 고등학교 「대수」에서 지수 자리에 모든 수가 올 수 있다고 배웁니다. 중2 답안에는 <strong>1</strong> 또는 <strong>1/a²</strong> 처럼 씁니다.</div>
+    <div class="quiz" data-qid="b7" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. b<sup>9</sup> ÷ b<sup>4</sup> = b<sup>□</sup> 일 때, □의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b8" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. x<sup>2</sup> ÷ x<sup>6</sup> 을 간단히 하면 1/x<sup>□</sup> 이다. □의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s5">
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">지수법칙 (4) 곱과 분수의 거듭제곱 — 괄호 안 모두에게 나눠 준다</span>
+      <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
+
+<p>(ab)³ = a³b³ 이고, (a²b)³ = a⁶b³ 입니다. 괄호 안의 곱해진 문자 하나하나가 모두 그 지수만큼 거듭제곱됩니다.</p>
+<div class="box box-red"><div class="box-title">⚠️ 안 써 있는 지수는 1이다</div>
+(ab)³ 의 b도 사실은 b¹ 이므로 b<sup>1×3</sup> = b³ 이 됩니다. 0으로 착각해 사라뜨리면 안 됩니다.</div>
+<p><strong>계수도 함께 거듭제곱됩니다.</strong> 예를 들어 (3a²)² 은 3도 거듭제곱되어 9a⁴ 이 됩니다 — 3이 아니라 <strong>9</strong>예요.</p>
+<p><strong>부호</strong>도 주의합니다. (−2a)³ 처럼 홀수 번 곱하면 음수(−8a³)가 되고, 짝수 번 곱하면 양수가 됩니다. 분수도 같은 방식입니다 — (a/b)³ = a³/b³.</p>
+<div class="formula-big"><div class="f-title">지수법칙 ④ 곱·분수의 거듭제곱</div>
+  <div class="f-body">(ab)<sup>n</sup> = a<sup>n</sup>b<sup>n</sup> &nbsp;&nbsp;&nbsp; (a/b)<sup>n</sup> = a<sup>n</sup>/b<sup>n</sup></div></div>
+    <div class="quiz" data-qid="b9" data-ans="20" data-type="num">
+      <div class="quiz-q">Q. (a<sup>2</sup>b<sup>3</sup>)<sup>4</sup> = a<sup>m</sup>b<sup>n</sup> 일 때, m + n 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b10" data-ans="-27" data-type="num">
+      <div class="quiz-q">Q. (−3x)<sup>3</sup> 을 간단히 했을 때, 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s6">
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">단항식의 곱셈과 나눗셈 — 계수는 계수끼리, 문자는 문자끼리</span>
+      <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
+
+<p><strong>곱셈</strong>은 예를 들어 2xy × (−3x²) = −6x³y 처럼 계산합니다. 순서는 <strong>부호 → 계수 → 문자(알파벳 순)</strong>입니다.</p>
+<p><strong>나눗셈</strong>은 나눗셈 뒤의 것을 <strong>분모로 보내거나</strong>, <strong>역수를 곱하는</strong> 방식으로 처리합니다(1-1 유리수 연산에서 쓰던 방법 그대로예요). 예를 들어 15a⁴b² ÷ 5a²b = 3a²b 입니다. <strong>계수가 분수면 역수 곱셈이 편합니다</strong> — 뒤집어서 분자로 올려 놓고 한 번에 정리합니다.</p>
+<div class="box box-red"><div class="box-title">⚠️ 수업에서 특히 강조한 부분</div>
+빗금(사선 약분)을 치며 지워 나가지 마세요. 풀이가 지워져 나중에 뭘 썼는지 안 보이고, 그러다 실수가 납니다. <strong>한 번에 눈으로 정리해 쓰는 것</strong>이 목표예요. 부수적으로, 2² 같은 것은 그대로 두지 말고 <strong>4로 계산해서</strong> 쓰세요. 부호와 숫자를 앞에 씁니다.</div>
+<div class="orderline">
+  <div class="ostep"><span class="on">1</span><div class="ot">부호</div><div class="oe">−가 몇 개인지</div></div>
+  <div class="ostep"><span class="on">2</span><div class="ot">계수</div><div class="oe">숫자끼리 계산</div></div>
+  <div class="ostep"><span class="on">3</span><div class="ot">문자</div><div class="oe">같은 문자끼리 지수 정리</div></div>
+</div>
+<div class="flowcap">이 순서대로 <strong>한 번에</strong> 쓴다 — 빗금을 치며 지워 나가지 않는다</div>
+    <div class="quiz" data-qid="b11" data-ans="-12" data-type="num">
+      <div class="quiz-q">Q. 3x<sup>2</sup>y × (−4xy<sup>3</sup>) 을 간단히 했을 때, 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b12" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 12a<sup>5</sup>b<sup>3</sup> ÷ 3a<sup>2</sup>b = 4a<sup>m</sup>b<sup>n</sup> 일 때, m + n 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s7">
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">혼합 계산과 어떤 식 구하기</span>
+      <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
+
+<p>혼합 계산의 순서는 <strong>거듭제곱 먼저 풀기 → 나눗셈을 곱셈(역수)으로 바꾸기 → 부호·계수·문자 정리</strong>입니다. 예를 들어 16a²b ÷ 8a × 3ab 은 16a²b ÷ 8a = 2ab 를 먼저 하고, 여기에 3ab 를 곱해 <strong>6a²b²</strong> 이 됩니다.</p>
+<div class="box box-orange"><div class="box-title">🏆 시험 포인트 — 뒤에 있는 것을 먼저 곱하면 안 된다</div>
+÷ 와 × 가 나란히 있으면 <strong>앞에서부터 차례로</strong> 계산합니다. 뒤의 8a × 3ab 를 먼저 묶어
+16a²b ÷ (8a × 3ab) 로 계산해 버리면 답이 <strong>2/3</strong> 이 되어 전혀 다른 값이 나옵니다.
+나눗셈을 처음부터 역수 곱셈으로 바꿔 두면 이런 실수를 막을 수 있어요.</div>
+<p><strong>어떤 식 구하기(□·A 문항)</strong>는 곱해서 갔으면 <strong>나눠서</strong> 돌아온다는 원리를 씁니다. 예를 들어 A × 3x² = 12x⁵ 이면, A = 12x⁵ ÷ 3x² = 4x³ 입니다. <strong>여러 칸을 지나는 흐름도</strong>도 화살표를 거꾸로 따라가면 됩니다.</p>
+<div class="diagram-wrap" style="max-width:520px;margin:16px auto">
+  <div class="opflow">
+    <span class="opnode unk">A</span>
+    <span class="oparrow"><span class="lbl">× 3x²</span><span class="ln"></span></span>
+    <span class="opnode res">12x⁵</span>
+  </div>
+  <div class="opflow">
+    <span class="opnode res">12x⁵</span>
+    <span class="oparrow back"><span class="lbl">÷ 3x²</span><span class="ln"></span></span>
+    <span class="opnode unk">A</span>
+  </div>
+  <div class="flowcap">곱해서 갔으면 <strong>나눠서</strong> 돌아온다  →  A = 12x⁵ ÷ 3x²</div>
+</div>
+    <div class="quiz" data-qid="b13" data-ans="16" data-type="num">
+      <div class="quiz-q">Q. 8x<sup>5</sup> ÷ 2x<sup>2</sup> × 3x = kx<sup>n</sup> 일 때, k + n 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b14" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. 어떤 단항식 A 에 대하여 A × 2x<sup>3</sup> = 10x<sup>7</sup> 이다. A = 5x<sup>□</sup> 일 때 □의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s8">
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">지수법칙의 활용 — 큰 수·자릿수·도형</span>
+      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
+
+<p><strong>10의 거듭제곱으로 묶기</strong> — 2와 5를 짝지어 10을 만듭니다. 예를 들어 2⁵ × 5³ = 2² × (2³×5³) = 4 × 10³ = 4000, 즉 <strong>4자리</strong>입니다. 자릿수는 <strong>(10<sup>n</sup> 앞에 남은 수의 자릿수) + n</strong> 으로 셉니다.</p>
+<p><strong>a × 10<sup>n</sup> 꼴로 적은 큰 수의 나눗셈</strong>은 앞의 수끼리, 10의 거듭제곱끼리 따로 계산합니다. 예를 들어 빛은 1초에 3 × 10<sup>5</sup> km 를 갑니다. 어떤 별까지의 거리가 1.2 × 10<sup>8</sup> km 라면, 빛이 닿는 데 걸리는 시간은 (1.2 × 10<sup>8</sup>) ÷ (3 × 10<sup>5</sup>) = 0.4 × 10<sup>3</sup> = <strong>400초</strong>입니다. 큰 수를 다룰 때는 2<sup>n</sup>·10<sup>n</sup> 처럼 <strong>거듭제곱 꼴로 바꿔 놓고 지수법칙으로</strong> 계산하는 것이 훨씬 빠릅니다 — 저장 용량(KB·MB·GB)이 2의 거듭제곱으로 정의된 것도 같은 이유입니다.</p>
+<p><strong>넓이·부피 공식에 단항식을 대입</strong>합니다. 공식은 그대로고 문자만 단항식일 뿐입니다.</p>
+<div class="table-wrap"><table class="special-table">
+  <tr><th>도형</th><th>공식</th></tr>
+  <tr><td>원기둥의 부피</td><td>π × (반지름)² × (높이)</td></tr>
+  <tr><td>삼각형의 넓이</td><td>½ × (밑변) × (높이)</td></tr>
+  <tr><td>뿔의 부피</td><td>⅓ × (밑넓이) × (높이)</td></tr>
+  <tr><td>구의 부피</td><td>4/3 × π × (반지름)³</td></tr>
+</table></div>
+<p>예를 들어 밑면의 반지름이 2a 이고 부피가 12πa⁵ 인 원기둥의 높이를 구해 봅시다. π(2a)²h = 4πa²h = 12πa⁵ 이므로, h = 3a³ 입니다.</p>
+    <div class="quiz" data-qid="b15" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 2<sup>3</sup> × 5<sup>5</sup> 은 몇 자리 자연수인가?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+<div class="diagram-wrap" style="max-width:320px;margin:16px auto">
+<svg viewBox="0 0 320 232" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="부피가 45πa⁵ 인 원기둥">
+<polyline points="90.0,174.0 90.1,173.0 90.4,172.0 91.0,171.1 91.7,170.1 92.7,169.2 93.8,168.3 95.2,167.4 96.7,166.5 98.4,165.7 100.3,164.9 102.4,164.1 104.6,163.4 107.0,162.7 109.6,162.1 112.2,161.5 115.0,161.0 117.9,160.5 120.9,160.1 123.9,159.8 127.1,159.5 130.2,159.3 133.5,159.1 136.7,159.0 140.0,159.0 143.3,159.0 146.5,159.1 149.8,159.3 152.9,159.5 156.1,159.8 159.1,160.1 162.1,160.5 165.0,161.0 167.8,161.5 170.4,162.1 173.0,162.7 175.4,163.4 177.6,164.1 179.7,164.9 181.6,165.7 183.3,166.5 184.8,167.4 186.2,168.3 187.3,169.2 188.3,170.1 189.0,171.1 189.6,172.0 189.9,173.0 190.0,174.0" fill="none" stroke="var(--text)" stroke-width="1.48" stroke-dasharray="5,4" opacity="0.7"/>
+<polyline points="190.0,174.0 189.9,175.0 189.6,176.0 189.0,176.9 188.3,177.9 187.3,178.8 186.2,179.7 184.8,180.6 183.3,181.5 181.6,182.3 179.7,183.1 177.6,183.9 175.4,184.6 173.0,185.3 170.4,185.9 167.8,186.5 165.0,187.0 162.1,187.5 159.1,187.9 156.1,188.2 152.9,188.5 149.8,188.7 146.5,188.9 143.3,189.0 140.0,189.0 136.7,189.0 133.5,188.9 130.2,188.7 127.1,188.5 123.9,188.2 120.9,187.9 117.9,187.5 115.0,187.0 112.2,186.5 109.6,185.9 107.0,185.3 104.6,184.6 102.4,183.9 100.3,183.1 98.4,182.3 96.7,181.5 95.2,180.6 93.8,179.7 92.7,178.8 91.7,177.9 91.0,176.9 90.4,176.0 90.1,175.0 90.0,174.0" fill="none" stroke="var(--text)" stroke-width="1.90"/>
+<polyline points="190.0,86.5 189.6,88.5 188.3,90.4 186.2,92.2 183.3,94.0 179.7,95.6 175.4,97.1 170.4,98.4 165.0,99.5 159.1,100.4 152.9,101.0 146.5,101.4 140.0,101.5 133.5,101.4 127.1,101.0 120.9,100.4 115.0,99.5 109.6,98.4 104.6,97.1 100.3,95.6 96.7,94.0 93.8,92.2 91.7,90.4 90.4,88.5 90.0,86.5 90.4,84.5 91.7,82.6 93.8,80.8 96.7,79.0 100.3,77.4 104.6,75.9 109.6,74.6 115.0,73.5 120.9,72.6 127.1,72.0 133.5,71.6 140.0,71.5 146.5,71.6 152.9,72.0 159.1,72.6 165.0,73.5 170.4,74.6 175.4,75.9 179.7,77.4 183.3,79.0 186.2,80.8 188.3,82.6 189.6,84.5 190.0,86.5" fill="none" stroke="var(--text)" stroke-width="1.90"/>
+<line x1="90.0" y1="174.0" x2="90.0" y2="86.5" stroke="var(--text)" stroke-width="1.90"/>
+<line x1="190.0" y1="174.0" x2="190.0" y2="86.5" stroke="var(--text)" stroke-width="1.90"/>
+<line x1="140.0" y1="174.0" x2="190.0" y2="174.0" stroke="var(--green)" stroke-width="1.7" stroke-dasharray="4,3"/>
+<circle cx="140.0" cy="174.0" r="2.6" fill="var(--green)"/>
+<line x1="224.0" y1="86.5" x2="224.0" y2="174.0" stroke="var(--orange)" stroke-width="1.5"/>
+<line x1="219.0" y1="86.5" x2="229.0" y2="86.5" stroke="var(--orange)" stroke-width="1.5"/>
+<line x1="219.0" y1="174.0" x2="229.0" y2="174.0" stroke="var(--orange)" stroke-width="1.5"/>
+<line x1="165.0" y1="203.9" x2="165.0" y2="174.0" stroke="var(--green)" stroke-width="1.15" opacity="0.75"/>
+<text x="165.0" y="226.0" font-size="13.0" fill="var(--green)" text-anchor="middle" font-weight="700">3a</text>
+<text x="240.0" y="134.2" font-size="13.0" fill="var(--orange)" text-anchor="middle" font-weight="700">h</text>
+</svg>
+<div class="dia-cap">부피가 45πa⁵ 인 원기둥</div>
+</div>
+    <div class="quiz" data-qid="b16" data-ans="3" data-type="num">
+      <div class="quiz-q">Q. 밑면의 반지름이 3a 인 원기둥의 부피가 45πa<sup>5</sup> 이다. 높이가 5a<sup>□</sup> 일 때 □의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+<p style="margin-top:16px;color:var(--muted);font-size:14px">다음 단원에서는 항이 여러 개인 <strong>다항식</strong>의 계산으로 넓힙니다.</p>
+  </section>
+  <section class="wrongnote" id="wrong">
+    <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
+    <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
+    <button class="review-btn" id="reviewBtn" onclick="reviewWrong()">오답 정리 완료</button>
+    <button class="clear-btn" onclick="clearWrong()">오답노트 비우기</button>
+  </section>
+
+  <section class="gate" id="gate">
+    <h2>🔓 연습문제 잠금 해제</h2>
+    <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
+    <ul class="checklist">
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
+    </ul>
+    <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
+  </section>
+
+  <div class="practice-wrap" id="practiceWrap">
+    <div class="practice-title">✏️ 연습문제</div>
+    <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용 10문제를 모두 채점하면 심화가 열립니다. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
+
+    <div class="pset" id="pset_basic">
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 — 지수법칙 네 가지 그대로 쓰기</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pbody">
+        <div class="prob" data-qid="pb1" data-ans="9" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>a<sup>3</sup> × a<sup>6</sup> = a<sup>□</sup> 일 때, □의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb2" data-ans="20" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>(x<sup>5</sup>)<sup>4</sup> = x<sup>□</sup> 일 때, □의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb3" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>a<sup>10</sup> ÷ a<sup>4</sup> = a<sup>□</sup> 일 때, □의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb4" data-ans="16" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>(2a<sup>3</sup>b<sup>2</sup>)<sup>4</sup> 을 간단히 했을 때, 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb5" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>x<sup>3</sup> × x<sup>□</sup> = x<sup>11</sup> 일 때, □의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb6" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>y<sup>6</sup> ÷ y<sup>6</sup> 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb7" data-ans="-8" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>(−2x<sup>2</sup>y)<sup>3</sup> = kx<sup>6</sup>y<sup>3</sup> 일 때, k의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb8" data-ans="25" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>4a<sup>3</sup> × 5a<sup>2</sup> = ka<sup>n</sup> 일 때, k + n 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb9" data-ans="20" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>24x<sup>8</sup> ÷ 6x<sup>3</sup> = kx<sup>n</sup> 일 때, k × n 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb10" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>x<sup>8</sup> ÷ x<sup>3</sup> ÷ x<sup>2</sup> = x<sup>□</sup> 일 때, □의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_applied">
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 — 여러 법칙을 섞고, 거꾸로 되돌리기</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="prob" data-qid="pa1" data-ans="-12" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>(−3a<sup>2</sup>b<sup>3</sup>)<sup>3</sup> = ka<sup>m</sup>b<sup>n</sup> 일 때, k + m + n 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa2" data-ans="9" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>(x<sup>2</sup>)<sup>5</sup> × (x<sup>3</sup>)<sup>2</sup> ÷ x<sup>7</sup> = x<sup>□</sup> 일 때, □의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa3" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>3<sup>2</sup> = a 일 때, 27<sup>4</sup> 을 a의 거듭제곱으로 나타내면 a<sup>□</sup> 이다. □의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa4" data-ans="9" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>3<sup>5</sup> × 2<sup>8</sup> × 5<sup>6</sup> 은 몇 자리의 자연수인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa5" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>12x<sup>5</sup>y<sup>3</sup> ÷ (−3xy) × 2x<sup>2</sup>y<sup>4</sup> = kx<sup>m</sup>y<sup>n</sup> 일 때, k + m + n 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa6" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>어떤 단항식 A 에 대하여 A ÷ 3x<sup>2</sup>y = 4xy<sup>3</sup> 이다. A = 12x<sup>m</sup>y<sup>n</sup> 일 때, m + n 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa7" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>밑면의 반지름이 2a<sup>2</sup>b 인 원기둥의 부피가 36πa<sup>7</sup>b<sup>5</sup> 이다. 높이가 9a<sup>m</sup>b<sup>n</sup> 일 때, m + n 의 값을 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:280px;margin:16px auto">
+<svg viewBox="0 0 320 232" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="부피가 36πa⁷b⁵ 인 원기둥">
+<polyline points="90.0,174.0 90.1,173.0 90.4,172.0 91.0,171.1 91.7,170.1 92.7,169.2 93.8,168.3 95.2,167.4 96.7,166.5 98.4,165.7 100.3,164.9 102.4,164.1 104.6,163.4 107.0,162.7 109.6,162.1 112.2,161.5 115.0,161.0 117.9,160.5 120.9,160.1 123.9,159.8 127.1,159.5 130.2,159.3 133.5,159.1 136.7,159.0 140.0,159.0 143.3,159.0 146.5,159.1 149.8,159.3 152.9,159.5 156.1,159.8 159.1,160.1 162.1,160.5 165.0,161.0 167.8,161.5 170.4,162.1 173.0,162.7 175.4,163.4 177.6,164.1 179.7,164.9 181.6,165.7 183.3,166.5 184.8,167.4 186.2,168.3 187.3,169.2 188.3,170.1 189.0,171.1 189.6,172.0 189.9,173.0 190.0,174.0" fill="none" stroke="var(--text)" stroke-width="1.48" stroke-dasharray="5,4" opacity="0.7"/>
+<polyline points="190.0,174.0 189.9,175.0 189.6,176.0 189.0,176.9 188.3,177.9 187.3,178.8 186.2,179.7 184.8,180.6 183.3,181.5 181.6,182.3 179.7,183.1 177.6,183.9 175.4,184.6 173.0,185.3 170.4,185.9 167.8,186.5 165.0,187.0 162.1,187.5 159.1,187.9 156.1,188.2 152.9,188.5 149.8,188.7 146.5,188.9 143.3,189.0 140.0,189.0 136.7,189.0 133.5,188.9 130.2,188.7 127.1,188.5 123.9,188.2 120.9,187.9 117.9,187.5 115.0,187.0 112.2,186.5 109.6,185.9 107.0,185.3 104.6,184.6 102.4,183.9 100.3,183.1 98.4,182.3 96.7,181.5 95.2,180.6 93.8,179.7 92.7,178.8 91.7,177.9 91.0,176.9 90.4,176.0 90.1,175.0 90.0,174.0" fill="none" stroke="var(--text)" stroke-width="1.90"/>
+<polyline points="190.0,86.5 189.6,88.5 188.3,90.4 186.2,92.2 183.3,94.0 179.7,95.6 175.4,97.1 170.4,98.4 165.0,99.5 159.1,100.4 152.9,101.0 146.5,101.4 140.0,101.5 133.5,101.4 127.1,101.0 120.9,100.4 115.0,99.5 109.6,98.4 104.6,97.1 100.3,95.6 96.7,94.0 93.8,92.2 91.7,90.4 90.4,88.5 90.0,86.5 90.4,84.5 91.7,82.6 93.8,80.8 96.7,79.0 100.3,77.4 104.6,75.9 109.6,74.6 115.0,73.5 120.9,72.6 127.1,72.0 133.5,71.6 140.0,71.5 146.5,71.6 152.9,72.0 159.1,72.6 165.0,73.5 170.4,74.6 175.4,75.9 179.7,77.4 183.3,79.0 186.2,80.8 188.3,82.6 189.6,84.5 190.0,86.5" fill="none" stroke="var(--text)" stroke-width="1.90"/>
+<line x1="90.0" y1="174.0" x2="90.0" y2="86.5" stroke="var(--text)" stroke-width="1.90"/>
+<line x1="190.0" y1="174.0" x2="190.0" y2="86.5" stroke="var(--text)" stroke-width="1.90"/>
+<line x1="140.0" y1="174.0" x2="190.0" y2="174.0" stroke="var(--green)" stroke-width="1.7" stroke-dasharray="4,3"/>
+<circle cx="140.0" cy="174.0" r="2.6" fill="var(--green)"/>
+<line x1="224.0" y1="86.5" x2="224.0" y2="174.0" stroke="var(--orange)" stroke-width="1.5"/>
+<line x1="219.0" y1="86.5" x2="229.0" y2="86.5" stroke="var(--orange)" stroke-width="1.5"/>
+<line x1="219.0" y1="174.0" x2="229.0" y2="174.0" stroke="var(--orange)" stroke-width="1.5"/>
+<line x1="165.0" y1="203.9" x2="165.0" y2="174.0" stroke="var(--green)" stroke-width="1.15" opacity="0.75"/>
+<text x="165.0" y="226.0" font-size="13.0" fill="var(--green)" text-anchor="middle" font-weight="700">2a²b</text>
+<text x="240.0" y="134.2" font-size="13.0" fill="var(--orange)" text-anchor="middle" font-weight="700">h</text>
+</svg>
+<div class="dia-cap">부피가 36πa⁷b⁵ 인 원기둥</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa8" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>밑변의 길이가 6x<sup>2</sup>y 인 삼각형의 넓이가 24x<sup>3</sup>y<sup>4</sup> 이다. 높이가 8x<sup>m</sup>y<sup>n</sup> 일 때, m + n 의 값을 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:280px;margin:16px auto">
+<svg viewBox="0 0 330 218" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="밑변의 길이가 6x²y 인 삼각형">
+<line x1="200.0" y1="42.0" x2="44.0" y2="148.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="44.0" y1="148.0" x2="288.0" y2="148.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="288.0" y1="148.0" x2="200.0" y2="42.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="200.0" y1="42.0" x2="200.0" y2="148.0" stroke="var(--orange)" stroke-width="1.6" stroke-dasharray="5,4"/>
+<line x1="190.0" y1="148.0" x2="190.0" y2="138.0" stroke="var(--orange)" stroke-width="1.3"/>
+<line x1="190.0" y1="138.0" x2="200.0" y2="138.0" stroke="var(--orange)" stroke-width="1.3"/>
+<line x1="44.0" y1="170.0" x2="288.0" y2="170.0" stroke="var(--green)" stroke-width="1.5"/>
+<line x1="44.0" y1="165.0" x2="44.0" y2="175.0" stroke="var(--green)" stroke-width="1.5"/>
+<line x1="288.0" y1="165.0" x2="288.0" y2="175.0" stroke="var(--green)" stroke-width="1.5"/>
+<text x="166.0" y="194.0" font-size="13.0" fill="var(--green)" text-anchor="middle" font-weight="700">6x²y</text>
+<text x="182.0" y="108.0" font-size="13.0" fill="var(--orange)" text-anchor="middle" font-weight="700">h</text>
+<text x="142.0" y="133.0" font-size="12.5" fill="var(--muted)" text-anchor="middle" font-weight="700">넓이 24x³y⁴</text>
+</svg>
+<div class="dia-cap">밑변의 길이가 6x²y 인 삼각형</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa9" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>(2<sup>x</sup> × 3<sup>y</sup>)<sup>3</sup> = 2<sup>9</sup> × 3<sup>15</sup> 일 때, x + y 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa10" data-ans="13" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>단항식 8x<sup>5</sup>y<sup>3</sup> 에 어떤 단항식을 곱해야 할 것을 잘못하여 나누었더니 2x<sup>2</sup>y 가 되었다. 바르게 계산한 식이 32x<sup>m</sup>y<sup>n</sup> 일 때, m + n 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_hard">
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 — 조건 역추적과 자릿수·도형 활용</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="solution">
+          <div class="sol-head">🧩 단계별 풀이 — 지수가 섞인 식은 공통인 것으로 묶는다</div>
+          <div class="sol-q">3<sup>x+2</sup> + 3<sup>x</sup> = 90 일 때, x의 값을 구하시오.</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>3<sup>x+2</sup> = 3<sup>x</sup> × 3² 입니다(법칙 ①을 거꾸로 쓴 것). 두 항 모두 3<sup>x</sup> 를 품고 있습니다.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>공통인 3<sup>x</sup> 로 묶으면 3<sup>x</sup> × (3² + 1) = 3<sup>x</sup> × 10 = 90.</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>양변을 10으로 나누면 3<sup>x</sup> = 9 = 3².</div>
+          <div class="step"><span class="s-label">정답</span><br>밑이 같으므로 지수를 비교해 x = 2.</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>2<sup>x+3</sup> + 2<sup>x+1</sup> + 2<sup>x</sup> = 176 일 때, x의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph2" data-ans="50" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>2<sup>n+4</sup> × 5<sup>5</sup> 이 9자리의 자연수가 될 때, n이 될 수 있는 모든 자연수의 합을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 2와 5를 짝지어 10의 거듭제곱을 만들어 보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph3" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>3<sup>2</sup> = a, 2<sup>3</sup> = b 일 때, 72<sup>3</sup> 을 a<sup>m</sup>b<sup>n</sup> 으로 나타내면 m + n 의 값은?</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph4" data-ans="16" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>(a<sup>x</sup>b<sup>y</sup>c<sup>z</sup>)<sup>w</sup> = a<sup>18</sup>b<sup>30</sup>c<sup>12</sup> 를 만족하는 가장 큰 자연수 w에 대하여, x + y + z + w 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: w는 18, 30, 12 를 모두 나누어야 합니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph5" data-ans="15" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>컴퓨터에서 저장 용량은 1KB = 2<sup>10</sup>Byte, 1MB = 2<sup>20</sup>Byte, 1GB = 2<sup>30</sup>Byte 로 환산한다. 용량이 64GB인 메모리 카드에 용량이 2MB인 사진을 최대 2<sup>□</sup>장 저장할 수 있다. □의 값을 구하시오.</div>
+          <div class="table-wrap"><table class="special-table">
+            <tr><th>단위</th><th>환산</th></tr>
+            <tr><td>1KB</td><td>2<sup>10</sup>Byte</td></tr>
+            <tr><td>1MB</td><td>2<sup>20</sup>Byte</td></tr>
+            <tr><td>1GB</td><td>2<sup>30</sup>Byte</td></tr>
+          </table></div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph6" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>(2xy<sup>2</sup>)<sup>3</sup> ÷ A × 3x<sup>2</sup>y = 12x<sup>3</sup>y<sup>5</sup> 이다. A = 2x<sup>m</sup>y<sup>n</sup> 일 때, m + n 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph7" data-ans="28" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>밑면이 가로 3ab, 세로 2a<sup>2</sup>b<sup>2</sup> 인 직사각형이고 높이가 (2ab)<sup>3</sup> 인 사각뿔의 부피가 ka<sup>m</sup>b<sup>n</sup> 일 때, k + m + n 의 값을 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:280px;margin:16px auto">
+<svg viewBox="0 0 350 258" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="밑면이 직사각형인 사각뿔">
+<line x1="92.8" y1="184.6" x2="134.9" y2="157.9" stroke="var(--text)" stroke-width="1.48" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="277.2" y1="179.4" x2="134.9" y2="157.9" stroke="var(--text)" stroke-width="1.48" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="134.9" y1="157.9" x2="185.0" y2="76.4" stroke="var(--text)" stroke-width="1.48" stroke-dasharray="5,4" opacity="0.7"/>
+<line x1="92.8" y1="184.6" x2="235.1" y2="206.1" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="92.8" y1="184.6" x2="185.0" y2="76.4" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="235.1" y1="206.1" x2="277.2" y2="179.4" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="235.1" y1="206.1" x2="185.0" y2="76.4" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="277.2" y1="179.4" x2="185.0" y2="76.4" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="185.0" y1="76.4" x2="185.0" y2="182.0" stroke="var(--orange)" stroke-width="1.5" stroke-dasharray="5,4"/>
+<line x1="162.9" y1="201.2" x2="164.0" y2="195.3" stroke="var(--green)" stroke-width="1.15" opacity="0.75"/>
+<line x1="280.2" y1="200.7" x2="256.2" y2="192.7" stroke="var(--green)" stroke-width="1.15" opacity="0.75"/>
+<line x1="137.7" y1="122.2" x2="185.0" y2="129.2" stroke="var(--orange)" stroke-width="1.15" opacity="0.75"/>
+<text x="160.0" y="223.3" font-size="13.0" fill="var(--green)" text-anchor="middle" font-weight="700">3ab</text>
+<text x="306.2" y="214.7" font-size="13.0" fill="var(--green)" text-anchor="middle" font-weight="700">2a²b²</text>
+<text x="108.9" y="123.4" font-size="13.0" fill="var(--orange)" text-anchor="middle" font-weight="700">(2ab)³</text>
+</svg>
+<div class="dia-cap">밑면이 직사각형인 사각뿔</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph8" data-ans="36" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>지름이 6a<sup>2</sup>b 인 반원을 지름을 축으로 하여 1회전 시킬 때 생기는 입체도형의 부피가 kπa<sup>6</sup>b<sup>3</sup> 이다. k의 값을 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:280px;margin:16px auto">
+<svg viewBox="0 0 310 252" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="지름을 축으로 1회전 시킨다">
+<polyline points="156.0,66.0 152.7,66.1 149.3,66.4 146.0,66.8 142.7,67.4 139.4,68.2 136.2,69.1 133.1,70.3 130.0,71.5 126.9,73.0 124.0,74.6 121.1,76.3 118.4,78.2 115.7,80.3 113.2,82.4 110.7,84.7 108.4,87.2 106.3,89.7 104.2,92.4 102.3,95.1 100.6,98.0 99.0,100.9 97.5,104.0 96.3,107.1 95.1,110.2 94.2,113.4 93.4,116.7 92.8,120.0 92.4,123.3 92.1,126.7 92.0,130.0 92.1,133.3 92.4,136.7 92.8,140.0 93.4,143.3 94.2,146.6 95.1,149.8 96.3,152.9 97.5,156.0 99.0,159.1 100.6,162.0 102.3,164.9 104.2,167.6 106.3,170.3 108.4,172.8 110.7,175.3 113.2,177.6 115.7,179.7 118.4,181.8 121.1,183.7 124.0,185.4 126.9,187.0 130.0,188.5 133.1,189.7 136.2,190.9 139.4,191.8 142.7,192.6 146.0,193.2 149.3,193.6 152.7,193.9 156.0,194.0" fill="rgba(52,211,153,0.13)" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="156.0" y1="66.0" x2="156.0" y2="194.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="156.0" y1="34.0" x2="156.0" y2="66.0" stroke="var(--orange)" stroke-width="1.4" stroke-dasharray="6,4"/>
+<line x1="156.0" y1="194.0" x2="156.0" y2="226.0" stroke="var(--orange)" stroke-width="1.4" stroke-dasharray="6,4"/>
+<path d="M 128.0 38.0 A 28 9 0 1 1 184.0 38.0" fill="none" stroke="var(--orange)" stroke-width="1.4"/>
+<polygon points="184.0,38.0 175.0,33.0 176.0,44.0" fill="var(--orange)"/>
+<line x1="60.0" y1="66.0" x2="60.0" y2="194.0" stroke="var(--green)" stroke-width="1.5"/>
+<line x1="55.0" y1="66.0" x2="65.0" y2="66.0" stroke="var(--green)" stroke-width="1.5"/>
+<line x1="55.0" y1="194.0" x2="65.0" y2="194.0" stroke="var(--green)" stroke-width="1.5"/>
+<text x="30.0" y="134.0" font-size="13.0" fill="var(--green)" text-anchor="middle" font-weight="700">6a²b</text>
+<text x="218.0" y="42.0" font-size="12.0" fill="var(--orange)" text-anchor="middle" font-weight="700">회전축</text>
+</svg>
+<div class="dia-cap">지름을 축으로 1회전 시킨다</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph9" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>1 × 2 × 3 × … × 30 = A × 10<sup>n</sup> 꼴로 나타낼 때, n의 최댓값을 구하시오. (단, A는 자연수)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 10 하나를 만들려면 2와 5가 하나씩 필요합니다. 어느 쪽이 더 귀할까요?</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph10" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>어떤 단항식 A에 2x<sup>3</sup>y 를 곱한 것을 B, B를 2xy<sup>2</sup> 로 나눈 것을 C라 하자. C에 (−3y)<sup>2</sup> 을 곱했더니 18x<sup>5</sup>y<sup>3</sup> 이 되었다. A = kx<sup>m</sup>y<sup>n</sup> 일 때, k + m + n 의 값을 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:280px;margin:16px auto">
+  <div class="opflow">
+    <span class="opnode unk">A</span>
+    <span class="oparrow"><span class="lbl">× 2x³y</span><span class="ln"></span></span>
+    <span class="opnode">B</span>
+    <span class="oparrow"><span class="lbl">÷ 2xy²</span><span class="ln"></span></span>
+    <span class="opnode">C</span>
+    <span class="oparrow"><span class="lbl">× (−3y)²</span><span class="ln"></span></span>
+    <span class="opnode res">18x⁵y³</span>
+  </div>
+  <div class="flowcap">화살표를 <strong>거꾸로</strong> 따라가면 A 를 찾을 수 있다</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="wrongnote" id="pwrong">
+      <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
+      <div id="pwrongList"><p class="empty">아직 틀린 문제가 없어요.</p></div>
+    </section>
+  </div>
+</div>
+
+<nav class="unit-nav" aria-label="단원 이동">
+    <a class="pv" href="note_2-1_1_%EC%9C%A0%EB%A6%AC%EC%88%98%EC%99%80%EC%86%8C%EC%88%98_PRO.html">
+      <span class="un-lbl">← 이전 단원</span>
+      <span class="un-t">1단원 · 유리수와 소수</span>
+    </a>
+  </nav>
+
+<footer class="site-foot">
+  <p><a href="index.html">← 중2 1학기 목차</a><span class="sep">·</span><a href="/">Isaac Math 홈</a><span class="sep">·</span><a href="/about.html">사이트 소개</a><span class="sep">·</span><a href="/privacy.html">개인정보처리방침</a></p>
+  <p>© Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</p>
+</footer>
+
+<script>
+const LS='isaacmath_note_2-1-2_v1';
+let state={done:[],results:{},reviewed:false};
+function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
+
+let cel={init:false,practice:false,applied:false,hard:false};
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(msg,type){const t=document.createElement('div');t.className='toast '+(type==='ng'?'ng':'ok');t.textContent=msg;document.body.appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300);},2200);}
+function flashWrong(id){const el=document.getElementById(id);if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function confetti(){if(reduceMotion)return;const c=document.createElement('canvas');c.className='confetti-canvas';c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);const ctx=c.getContext('2d');const cols=['#34d399','#60a5fa','#fbbf24','#c4b5fd','#f87171'];const ps=[];for(let i=0;i<90;i++)ps.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.3,r:4+Math.random()*5,vx:-2+Math.random()*4,vy:2+Math.random()*4,col:cols[i%cols.length],rot:Math.random()*6.28,vr:-0.2+Math.random()*0.4});let t0=null;function frame(ts){if(!t0)t0=ts;const el=ts-t0;ctx.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.05;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.col;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.7);ctx.restore();});if(el<1600)requestAnimationFrame(frame);else c.remove();}requestAnimationFrame(frame);}
+function celebrate(msg){toast(msg,'ok');confetti();}
+
+function toggleTheme(){document.documentElement.classList.toggle('light');const light=document.documentElement.classList.contains('light');document.getElementById('themeBtn').textContent=light?'🌙 다크 모드':'☀️ 라이트 모드';}
+function resetAll(){if(confirm('이 단원의 모든 진행 상황(완료·채점·오답·잠금)을 초기화할까요?')){state={done:[],results:{},reviewed:false};save();location.reload();}}
+
+function onScroll(){const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('pbar').style.width=Math.min(100,sc)+'%';}
+window.addEventListener('scroll',onScroll);
+
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  const inp=e.target;
+  if(inp.classList&&inp.classList.contains('quiz-input')){
+    e.preventDefault();
+    const row=inp.closest('.quiz-row');const btn=row&&row.querySelector('.quiz-submit');
+    if(btn)grade(btn);
+  }
+});
+
+const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;document.querySelectorAll('.tlink').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.tlink[href="#'+id+'"]');if(l)l.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.section,#wrong,#gate').forEach(s=>spy.observe(s));
+
+function qtext(el){const q=el.querySelector('.quiz-q, .pq');return q?q.textContent.trim():'';}
+function ids(t){return [...document.querySelectorAll('[data-qid]')].filter(t);}
+const bodyEls=()=>ids(q=>q.dataset.qid[0]==='b');
+const setEls=(p)=>ids(q=>q.dataset.qid.startsWith(p));
+const gradedIn=(list)=>list.filter(q=>state.results[q.dataset.qid]).length;
+
+function grade(btn){
+  const el=btn.closest('[data-qid]');const qid=el.dataset.qid;
+  const inp=el.querySelector('.quiz-input');const type=el.dataset.type;
+  const cands=el.dataset.ans.split('|');   // 복수 정답 지원
+  let val=inp.value.trim();
+  let ok=type==='num'?(val!==''&&cands.some(a=>Number(val)===Number(a))):cands.some(a=>val.replace(/\s/g,'')===a.replace(/\s/g,''));
+  state.results[qid]={correct:ok,given:val||'(미입력)',question:qtext(el),ans:cands[0]};
+  if(!ok){flashWrong(qid[0]==='p'?'pwrong':'wrong');toast('❌ 틀린 문제가 오답노트에 기록됐어요','ng');}
+  save();refresh();
+}
+function paint(el){
+  const qid=el.dataset.qid;const r=state.results[qid];const fb=el.querySelector('.quiz-fb');const inp=el.querySelector('.quiz-input');
+  if(!fb)return;
+  if(r){if(inp&&inp.value===''&&r.given!=='(미입력)')inp.value=r.given;
+    fb.classList.add('show');
+    if(r.correct){fb.className='quiz-fb show ok';fb.textContent='✅ 정답이에요!';}
+    else{fb.className='quiz-fb show ng';fb.textContent='❌ 다시 생각해봐요. (오답노트에 기록됐어요)';}
+  } else {fb.className='quiz-fb';fb.textContent='';}
+}
+
+function toggleDone(id){const i=state.done.indexOf(id);if(i>=0)state.done.splice(i,1);else state.done.push(id);save();refresh();}
+function reveal(btn){const box=btn.closest('.solution');const steps=box.querySelectorAll('.step');for(const s of steps){if(!s.classList.contains('show')){s.classList.add('show');break;}}if([...steps].every(s=>s.classList.contains('show'))){btn.disabled=true;btn.textContent='모든 단계 공개됨';}}
+function reviewWrong(){state.reviewed=true;save();refresh();}
+function clearWrong(){for(const k of Object.keys(state.results)){if(state.results[k].correct===false)delete state.results[k];}save();refresh();}
+function startPractice(){const wrap=document.getElementById('practiceWrap');if(wrap.style.display==='block'){document.getElementById('pset_basic').scrollIntoView({behavior:'smooth'});}}
+
+function renderWrongList(boxId,list){
+  const box=document.getElementById(boxId);
+  const items=list.filter(q=>{const r=state.results[q.dataset.qid];return r&&r.correct===false;}).map(q=>state.results[q.dataset.qid]);
+  if(!items.length){box.innerHTML='<p class="empty">아직 틀린 문제가 없어요.</p>';return;}
+  box.innerHTML=items.map(w=>'<div class="wrong-item"><div class="wq">'+w.question+'</div><div class="wa">내 답: '+w.given+' · 정답: '+w.ans+'</div></div>').join('');
+}
+
+function refresh(){
+  state.done=state.done.filter(id=>document.getElementById(id));
+  const secs=document.querySelectorAll('.section');
+  secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
+  const total=secs.length;const p=Math.round(state.done.length/total*100);
+  document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
+  document.getElementById('b_first').classList.toggle('on',state.done.length>=1);
+  document.getElementById('b_half').classList.toggle('on',p>=50);
+  document.getElementById('b_master').classList.toggle('on',p>=100);
+  const d=document.getElementById('achDesc');
+  d.textContent=p>=100?'🏆 단원 마스터! 모든 섹션을 끝냈어요.':(p>=50?'🔥 절반 돌파! 끝까지 가볼까요?':'각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.');
+
+  document.querySelectorAll('[data-qid]').forEach(paint);
+
+  renderWrongList('wrongList',bodyEls());
+  renderWrongList('pwrongList',[...setEls('pb'),...setEls('pa'),...setEls('ph')]);
+  const rb=document.getElementById('reviewBtn');if(state.reviewed){rb.classList.add('done');rb.textContent='✓ 오답 정리 완료';}else{rb.classList.remove('done');rb.textContent='오답 정리 완료';}
+
+  const body=bodyEls();const bg=gradedIn(body);
+  document.getElementById('gradedCount').textContent=bg;
+  document.getElementById('quizTotal').textContent=body.length;
+  const quizDone=bg===body.length&&body.length>0;
+  document.getElementById('ck_quiz').classList.toggle('ok',quizDone);
+  document.getElementById('ck_review').classList.toggle('ok',state.reviewed);
+  const unlocked=quizDone&&state.reviewed;
+  const sb=document.getElementById('startBtn');
+  if(unlocked){sb.className='start-btn open';sb.textContent='✏️ 연습문제 풀기 →';}
+  else{sb.className='start-btn locked';sb.textContent='🔒 연습문제 풀기 (잠김)';}
+  document.getElementById('practiceWrap').style.display=unlocked?'block':'none';
+
+  const nb=setEls('pb').length, na=setEls('pa').length;
+  const gb=gradedIn(setEls('pb')),ga=gradedIn(setEls('pa')),gh=gradedIn(setEls('ph'));
+  setCount('cnt_basic',gb,nb);setCount('cnt_applied',ga,na);setCount('cnt_hard',gh,setEls('ph').length);
+  document.getElementById('pset_basic').classList.remove('locked');
+  document.getElementById('pset_applied').classList.toggle('locked',gb<nb);
+  document.getElementById('pset_hard').classList.toggle('locked',ga<na);
+
+  const cur={practice:unlocked,applied:gb>=nb,hard:ga>=na};
+  if(cel.init){
+    if(cur.practice&&!cel.practice)celebrate('🎉 축하합니다! 연습문제가 열렸어요!');
+    else if(cur.hard&&!cel.hard)celebrate('🏆 심화 레벨이 열렸어요!');
+    else if(cur.applied&&!cel.applied)celebrate('🔥 응용 레벨이 열렸어요!');
+  }
+  cel={init:true,practice:cur.practice,applied:cur.applied,hard:cur.hard};
+}
+function setCount(id,n,tot){const el=document.getElementById(id);el.textContent=n+' / '+tot;el.classList.toggle('clear',n>=tot);}
+
+load();
+if(document.documentElement.classList.contains('light'))document.getElementById('themeBtn').textContent='🌙 다크 모드';
+refresh();
+</script>
+</body>
+</html>
