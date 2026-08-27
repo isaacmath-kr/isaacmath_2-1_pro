@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) — isaacmath.kr 전용 GA4 속성. faithreason.kr 측정 ID를 재사용하지 말 것 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS3GE709TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JS3GE709TF');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2084707405154770"
+        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>다항식의 계산 강의노트 PRO | 2-1</title>
+<meta name="description" content="중2 1학기 3단원 「다항식의 계산」 강의노트. 다항식의 덧셈과 뺄셈(동류항 정리), 이차식과 겹괄호 벗기기, 계수가 분수인 식의 계산, 단항식과 다항식의 곱셈(분배법칙·전개), 다항식과 단항식의 나눗셈 두 가지 방법, 사칙 혼합 계산과 어떤 식 구하기, 식의 값과 도형 활용까지 정리했습니다. 인터랙티브 퀴즈와 연습문제 30문항(기본·응용·심화)을 무료로 제공합니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_3_%EB%8B%A4%ED%95%AD%EC%8B%9D%EC%9D%98%EA%B3%84%EC%82%B0_PRO.html">
+<meta property="og:title" content="다항식의 계산 — 중2 1학기 3단원 강의노트">
+<meta property="og:description" content="다항식의 덧셈·뺄셈·곱셈·나눗셈을 한 번에 정리한 중2 1학기 3단원 강의노트. 겹괄호 벗기기, 분수 계수, 전개와 약분, 어떤 식 구하기, 도형 활용까지. 연습문제 30문항 수록.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_3_%EB%8B%A4%ED%95%AD%EC%8B%9D%EC%9D%98%EA%B3%84%EC%82%B0_PRO.html">
+<style>
+  :root {
+    --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
+    --border:rgba(148,163,184,0.18); --text:#e7ecf3; --muted:#9aa7bd;
+    --green:#34d399; --green-d:#059669; --blue:#60a5fa; --orange:#fbbf24;
+    --red:#f87171; --purple:#c4b5fd; --gold:#fbbf24;
+  }
+  html.light {
+    --bg:#f3f5f9; --bg2:#eef1f7; --card:#ffffff; --card-solid:#ffffff;
+    --border:#e2e8f0; --text:#1a202c; --muted:#5b6675;
+    --green:#0f9d63; --blue:#2563eb; --orange:#c2870b; --red:#dc2626; --purple:#7c3aed;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(52,211,153,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(96,165,250,0.10), transparent 55%), var(--bg);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  p { margin-bottom:10px; } strong { color:var(--text); }
+  ul,ol { padding-left:20px; } li { margin-bottom:6px; } sup { font-size:.7em; } em { color:var(--muted); font-style:italic; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--green),var(--gold)); z-index:300; transition:width .1s; }
+
+  .page-header { position:relative; overflow:hidden; border-bottom:1px solid var(--border); }
+  .page-header::before { content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg, rgba(52,211,153,0.16), rgba(96,165,250,0.10) 50%, transparent); }
+  .page-header-inner { position:relative; max-width:820px; margin:0 auto; padding:48px 24px 34px; }
+  .brandline { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .pro-badge { font-size:11px; font-weight:800; letter-spacing:.08em; color:#1a1205;
+    background:linear-gradient(135deg,#fde68a,var(--gold)); padding:4px 10px; border-radius:6px; }
+  .brandline .label { font-size:13px; color:var(--muted); letter-spacing:.02em; }
+  .page-header h1 { font-size:32px; font-weight:800; letter-spacing:-0.03em; line-height:1.2; }
+  .page-header .sub { margin-top:10px; color:var(--muted); font-size:15px; }
+  .header-tools { display:flex; gap:8px; margin-top:18px; align-items:center; flex-wrap:wrap; }
+  .mini-btn { font-size:12.5px; color:var(--text); background:var(--card); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer; backdrop-filter:blur(6px); transition:.15s; }
+  .mini-btn:hover { border-color:var(--green); color:var(--green); }
+
+  .achieve { max-width:820px; margin:18px auto 0; padding:0 24px; }
+  .achieve-card { background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px 20px; backdrop-filter:blur(10px); display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .ring { --p:0; width:54px; height:54px; border-radius:50%; flex-shrink:0;
+    background:conic-gradient(var(--green) calc(var(--p)*1%), rgba(148,163,184,0.18) 0);
+    display:flex; align-items:center; justify-content:center; }
+  .ring span { width:42px; height:42px; border-radius:50%; background:var(--bg2);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:var(--green); }
+  .achieve-text { flex:1; min-width:160px; }
+  .achieve-text .t { font-weight:700; font-size:15px; } .achieve-text .d { font-size:13px; color:var(--muted); }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; }
+  .ach-badge { font-size:11px; font-weight:700; padding:5px 9px; border-radius:20px;
+    background:rgba(148,163,184,0.12); color:var(--muted); border:1px solid var(--border); }
+  .ach-badge.on { background:rgba(251,191,36,0.16); color:var(--gold); border-color:rgba(251,191,36,0.4); }
+
+  .toc { position:sticky; top:0; z-index:200; background:rgba(11,18,32,0.82); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); display:flex; justify-content:safe center; gap:2px; overflow-x:auto; padding:0 16px; }
+  html.light .toc { background:rgba(243,245,249,0.85); }
+  .toc a { padding:14px 10px; font-size:12.5px; color:var(--muted); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:.2s; }
+  .toc a:hover { color:var(--green); } .toc a.active { color:var(--green); border-bottom-color:var(--green); }
+
+  .content { max-width:820px; margin:0 auto; padding:34px 24px 90px; }
+
+  .section { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:30px 30px 26px; margin-bottom:22px; backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.25); }
+  html.light .section { box-shadow:0 6px 20px rgba(15,23,42,0.06); }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .section-num { width:30px; height:30px; border-radius:9px; flex-shrink:0; font-size:14px; font-weight:800;
+    color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); display:flex; align-items:center; justify-content:center; }
+  .section-title { font-size:21px; font-weight:800; letter-spacing:-0.02em; }
+  .complete-btn { margin-left:auto; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:9px; cursor:pointer;
+    border:1px solid var(--border); background:transparent; color:var(--muted); transition:.15s; white-space:nowrap; }
+  .complete-btn:hover { border-color:var(--green); color:var(--green); }
+  .section.done { border-color:rgba(52,211,153,0.45); }
+  .section.done .complete-btn { background:rgba(52,211,153,0.14); color:var(--green); border-color:rgba(52,211,153,0.45); }
+
+  .box { border-radius:12px; padding:15px 18px; margin:14px 0; border:1px solid var(--border);
+    border-left-width:4px; background:rgba(148,163,184,0.06); }
+  .box-green { border-left-color:var(--green); background:rgba(52,211,153,0.08); }
+  .box-blue { border-left-color:var(--blue); background:rgba(96,165,250,0.08); }
+  .box-orange { border-left-color:var(--orange); background:rgba(251,191,36,0.08); }
+  .box-red { border-left-color:var(--red); background:rgba(248,113,113,0.08); }
+  .box-purple { border-left-color:var(--purple); background:rgba(196,181,253,0.08); }
+  .box-title { font-weight:800; font-size:13px; margin-bottom:6px; }
+  .box-green .box-title{color:var(--green);} .box-blue .box-title{color:var(--blue);}
+  .box-orange .box-title{color:var(--orange);} .box-red .box-title{color:var(--red);} .box-purple .box-title{color:var(--purple);}
+
+  .special-table { width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; border-radius:10px; overflow:hidden; }
+  .special-table th { background:rgba(52,211,153,0.16); color:var(--green); padding:10px 12px; text-align:center; font-weight:700; }
+  .special-table td { padding:10px 12px; text-align:center; border-bottom:1px solid var(--border); }
+  .table-wrap { overflow-x:auto; margin:14px 0; }
+  .table-wrap .special-table { margin:0; }
+
+  .formula-big { background:linear-gradient(135deg, rgba(52,211,153,0.10), rgba(196,181,253,0.10));
+    border:2px solid var(--purple); border-radius:14px; padding:22px; text-align:center; margin:16px 0; }
+  .formula-big .f-title { font-size:13px; font-weight:800; color:var(--purple); margin-bottom:10px; }
+  .formula-big .f-body { font-size:20px; font-weight:800; line-height:1.8; }
+
+  .diagram-wrap { text-align:center; margin:16px 0; }
+  .diagram-wrap svg { max-width:100%; height:auto; width:100%; display:block; margin:0 auto; }
+
+  .stepbox { background:rgba(148,163,184,0.06); border-radius:10px; padding:14px 18px; margin:10px 0; border-left:4px solid var(--purple); }
+  .stepbox .step-header { font-size:12px; font-weight:800; color:var(--purple); margin-bottom:6px; }
+
+  .solution { border:1px dashed var(--border); border-radius:12px; padding:16px 18px; margin:14px 0; background:rgba(196,181,253,0.05); }
+  .sol-head { display:flex; align-items:center; gap:8px; font-weight:800; font-size:14px; color:var(--purple); }
+  .sol-q { margin:6px 0 12px; font-weight:600; }
+  .step { display:none; padding:10px 14px; margin:8px 0; border-radius:10px; background:rgba(148,163,184,0.07); border-left:3px solid var(--purple); font-size:14.5px; }
+  .step.show { display:block; animation:fade .3s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+  .step .s-label { font-size:11px; font-weight:800; color:var(--purple); letter-spacing:.04em; }
+  .reveal-btn { margin-top:8px; font-size:13px; font-weight:700; padding:9px 16px; border-radius:9px; cursor:pointer; border:1px solid var(--purple); color:var(--purple); background:transparent; transition:.15s; }
+  .reveal-btn:hover { background:rgba(196,181,253,0.14); } .reveal-btn:disabled { opacity:.4; cursor:default; }
+
+  .quiz { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:14px; padding:18px; margin:14px 0; }
+  .quiz-q { font-weight:700; margin-bottom:12px; }
+  .quiz-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .quiz-input { width:150px; padding:9px 12px; font-size:15px; border-radius:9px; border:1px solid var(--border); background:var(--bg2); color:var(--text); }
+  .quiz-input:focus { outline:none; border-color:var(--green); }
+  .quiz-submit { padding:9px 18px; font-size:14px; font-weight:700; border-radius:9px; cursor:pointer; color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); border:none; }
+  .quiz-hint { font-size:12.5px; color:var(--muted); margin-top:8px; }
+  .quiz-fb { margin-top:10px; font-size:13.5px; font-weight:700; display:none; }
+  .quiz-fb.show { display:block; } .quiz-fb.ok { color:var(--green); } .quiz-fb.ng { color:var(--red); }
+
+  .wrongnote { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .wrongnote h2 { font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .wrongnote .empty { color:var(--muted); font-size:14px; margin-top:8px; }
+  .wrong-item { padding:12px 14px; border-radius:10px; background:rgba(248,113,113,0.08); border-left:3px solid var(--red); margin-top:10px; font-size:14px; }
+  .wrong-item .wq { font-weight:600; } .wrong-item .wa { font-size:13px; color:var(--muted); margin-top:4px; }
+  .clear-btn { margin-top:14px; font-size:12.5px; padding:7px 12px; border-radius:8px; cursor:pointer; border:1px solid var(--border); background:transparent; color:var(--muted); }
+  .review-btn { margin-top:14px; margin-right:8px; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; border:1px solid var(--purple); background:transparent; color:var(--purple); }
+  .review-btn.done { background:rgba(196,181,253,0.16); }
+
+  .gate { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px 30px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .gate h2 { font-size:19px; font-weight:800; display:flex; align-items:center; gap:8px; }
+  .gate .desc { color:var(--muted); font-size:14px; margin-top:6px; }
+  .checklist { list-style:none; padding:0; margin:18px 0; }
+  .checklist li { display:flex; align-items:center; gap:12px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; font-size:14px; background:rgba(148,163,184,0.05); }
+  .checklist li .mark { width:24px; height:24px; border-radius:50%; border:2px solid var(--muted); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--muted); font-weight:800; }
+  .checklist li.ok .mark { border-color:var(--green); background:var(--green); color:#04140d; }
+  .checklist li.ok { border-color:rgba(52,211,153,0.4); }
+  .start-btn { display:inline-block; margin-top:6px; padding:13px 24px; border-radius:11px; font-weight:800; font-size:15px; border:none; cursor:pointer; transition:.15s; }
+  .start-btn.locked { background:rgba(148,163,184,0.15); color:var(--muted); cursor:not-allowed; }
+  .start-btn.open { background:linear-gradient(135deg,var(--green),var(--green-d)); color:#04140d; box-shadow:0 6px 18px rgba(52,211,153,0.25); }
+
+  .practice-wrap { display:none; }
+  .practice-title { font-size:24px; font-weight:800; letter-spacing:-0.02em; margin:8px 0 4px; }
+  .practice-sub { color:var(--muted); font-size:14px; margin-bottom:18px; }
+  .pset { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:20px; backdrop-filter:blur(10px); }
+  .pset-head { display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+  .diff-badge { font-size:12px; font-weight:800; padding:5px 12px; border-radius:20px; }
+  .diff-basic { background:rgba(96,165,250,0.16); color:var(--blue); }
+  .diff-applied { background:rgba(251,191,36,0.16); color:var(--orange); }
+  .diff-hard { background:rgba(196,181,253,0.16); color:var(--purple); }
+  .pset-title { font-size:18px; font-weight:800; }
+  .pcount { margin-left:auto; font-size:13px; color:var(--muted); font-weight:700; }
+  .pcount.clear { color:var(--green); }
+  .lockmsg { display:none; color:var(--muted); font-size:14px; padding:16px 0 2px; }
+  .pset.locked .pbody { display:none; }
+  .pset.locked .lockmsg { display:block; }
+  .pset.locked { opacity:.9; }
+  .prob { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin:10px 0; }
+  .prob .pq { font-weight:600; margin-bottom:10px; font-size:14.5px; }
+  .prob .pnum { color:var(--green); font-weight:800; margin-right:6px; }
+
+  .toast { position:fixed; left:50%; bottom:32px; transform:translateX(-50%) translateY(12px); z-index:400;
+    background:var(--card-solid); border:1px solid var(--border); color:var(--text); padding:12px 18px; border-radius:12px;
+    font-size:13.5px; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,0.35); opacity:0; transition:opacity .3s, transform .3s; max-width:90vw; text-align:center; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast.ok { border-color:rgba(52,211,153,0.5); } .toast.ng { border-color:rgba(248,113,113,0.5); }
+  .confetti-canvas { position:fixed; inset:0; pointer-events:none; z-index:390; }
+  @keyframes wrongflash { 0%{box-shadow:0 0 0 0 rgba(248,113,113,0);} 30%{box-shadow:0 0 0 3px rgba(248,113,113,0.55);} 100%{box-shadow:0 0 0 0 rgba(248,113,113,0);} }
+  .wrongnote.flash { animation:wrongflash .7s ease; }
+
+  @media (max-width:600px) {
+    .page-header-inner{padding:32px 16px 24px;} .page-header h1{font-size:24px;}
+    .content{padding:24px 16px 70px;} .section,.gate,.pset,.wrongnote{padding:22px 18px;}
+  }
+  @media print {
+    :root{--bg:#fff;--bg2:#fff;--card:#fff;--card-solid:#fff;--border:#cbd5e1;--text:#111827;--muted:#475569;--green:#0f9d63;--blue:#2563eb;--orange:#c2870b;--red:#dc2626;--purple:#7c3aed;--gold:#b45309;}
+    body{background:#fff; color:#000;}
+    .progress-bar,.toc,.header-tools,.complete-btn,.reveal-btn,.quiz-submit,.clear-btn,.review-btn,.achieve,.start-btn{display:none!important;}
+    .section,.wrongnote,.gate,.pset{box-shadow:none; border:1px solid #ccc; backdrop-filter:none; break-inside:avoid;}
+    .step{display:block!important;} .practice-wrap{display:block!important;} .pset.locked .pbody{display:block!important;} .lockmsg{display:none!important;}
+  }
+  .unit-nav{max-width:900px;margin:44px auto 0;padding:0 20px;display:grid;
+    grid-template-columns:1fr 1fr;gap:12px;}
+  .unit-nav a{display:flex;flex-direction:column;gap:3px;padding:14px 18px;
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    text-decoration:none;transition:border-color .15s, transform .15s;}
+  .unit-nav a:hover{border-color:var(--green);transform:translateY(-2px);}
+  .unit-nav .un-lbl{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.03em;}
+  .unit-nav .un-t{font-size:14.5px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+  .unit-nav .nx{text-align:right;grid-column:2;}
+  @media(max-width:600px){.unit-nav{grid-template-columns:1fr;}.unit-nav .nx{grid-column:1;text-align:left;}}
+  .site-foot{margin:40px auto 0;padding:22px 20px 30px;border-top:1px solid var(--border);
+    text-align:center;font-size:12.5px;color:var(--muted);line-height:1.9;}
+  .site-foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--border);}
+  .site-foot a:hover{color:var(--green);border-color:var(--green);}
+  .site-foot .sep{margin:0 8px;opacity:.5;}
+
+  /* ── 2-1 2단원 「단항식의 계산」 전용 시각자료 (SVG 없이 HTML/CSS) ───────── */
+  /* V1 거듭제곱 구조 */
+  .powstruct { display:flex; justify-content:center; align-items:flex-start; gap:0; padding:26px 10px 12px; }
+  .powstruct .pw { position:relative; font-size:44px; font-weight:800; letter-spacing:-.02em; line-height:1; }
+  .powstruct .pw sup { font-size:.48em; color:var(--orange); }
+  .powstruct .pw .base { color:var(--green); }
+  .pw-notes { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:14px; }
+  .pw-note { font-size:13px; font-weight:700; }
+  .pw-note.b { color:var(--green); } .pw-note.e { color:var(--orange); }
+  .pw-note span { display:block; font-size:12px; font-weight:600; color:var(--muted); margin-top:2px; }
+
+  /* V2 지수법칙 카드 */
+  .lawgrid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:14px 0; }
+  .lawcard { background:var(--card); border:1px solid var(--border); border-left:3px solid var(--green);
+    border-radius:10px; padding:12px 14px; }
+  .lawcard .ln { font-size:11.5px; font-weight:800; color:var(--muted); letter-spacing:.04em; }
+  .lawcard .lf { font-size:17px; font-weight:800; margin:5px 0 3px; }
+  .lawcard .ld { font-size:12.5px; color:var(--muted); }
+  .lawcard.c2 { border-left-color:var(--blue); } .lawcard.c3 { border-left-color:var(--orange); }
+  .lawcard.c4 { border-left-color:var(--purple); }
+  @media(max-width:600px){ .lawgrid{grid-template-columns:1fr;} }
+
+  /* V3 블록 전개 */
+  .blkrow { display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; padding:8px 0; }
+  .blk { display:inline-flex; align-items:center; justify-content:center; min-width:32px; height:34px;
+    padding:0 8px; border-radius:8px; font-weight:800; font-size:15px; }
+  .blk.g { background:rgba(52,211,153,.18); color:var(--green); border:1px solid rgba(52,211,153,.45); }
+  .blk.b { background:rgba(96,165,250,.18); color:var(--blue); border:1px solid rgba(96,165,250,.45); }
+  .blkop { font-size:17px; font-weight:800; color:var(--muted); margin:0 3px; }
+  .blkres { text-align:center; font-size:16px; font-weight:800; margin-top:8px; }
+
+  /* V4 약분 */
+  .fracbox { display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap; padding:6px 0; }
+  .frac { display:inline-flex; flex-direction:column; align-items:center; gap:4px; }
+  .frac .top, .frac .bot { display:flex; gap:5px; padding:3px 6px; }
+  .frac .bar { width:100%; min-width:96px; height:2px; background:var(--text); opacity:.75; }
+  .cancel { position:relative; opacity:.45; }
+  .cancel::after { content:""; position:absolute; left:-2px; right:-2px; top:50%;
+    height:2px; background:var(--red); transform:rotate(-16deg); }
+  .frac-note { font-size:12.5px; color:var(--muted); text-align:center; margin-top:8px; }
+  .frac-note b { color:var(--red); }
+
+  /* V5 세 갈래 */
+  .branch { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0 4px; }
+  .brc { border:1px solid var(--border); border-radius:10px; padding:11px 12px; background:var(--card); text-align:center; }
+  .brc .cond { font-size:12px; font-weight:800; color:var(--muted); }
+  .brc .res { font-size:16px; font-weight:800; margin-top:5px; }
+  .brc.p .res { color:var(--green); } .brc.z .res { color:var(--blue); } .brc.n .res { color:var(--orange); }
+  .brc .ex { font-size:11.5px; color:var(--muted); margin-top:4px; }
+  @media(max-width:600px){ .branch{grid-template-columns:1fr;} }
+
+  /* V6 정리 순서 */
+  .orderline { display:flex; justify-content:center; align-items:stretch; gap:0; flex-wrap:wrap; margin:12px 0 4px; }
+  .ostep { flex:1 1 130px; min-width:120px; border:1px solid var(--border); background:var(--card);
+    border-radius:10px; padding:10px 12px; margin:4px; text-align:center; }
+  .ostep .on { display:inline-block; width:20px; height:20px; line-height:20px; border-radius:50%;
+    background:var(--green); color:#06281c; font-size:12px; font-weight:800; margin-bottom:5px; }
+  .ostep .ot { font-size:13.5px; font-weight:800; }
+  .ostep .oe { font-size:12px; color:var(--muted); margin-top:3px; }
+
+  /* V7 · V8 연산 흐름 */
+  .opflow { display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap; padding:8px 0; }
+  .opnode { min-width:46px; padding:8px 12px; border:1px solid var(--border); border-radius:9px;
+    background:var(--card); font-weight:800; font-size:15px; text-align:center; }
+  .opnode.res { border-color:var(--green); color:var(--green); }
+  .opnode.unk { border-color:var(--orange); color:var(--orange); border-style:dashed; }
+  .oparrow { display:flex; flex-direction:column; align-items:center; gap:2px; min-width:74px; }
+  .oparrow .lbl { font-size:12px; font-weight:800; color:var(--blue); white-space:nowrap; }
+  .oparrow .ln { width:100%; height:0; border-top:2px solid var(--border); position:relative; }
+  .oparrow .ln::after { content:""; position:absolute; right:-1px; top:-4px;
+    border-left:6px solid var(--border); border-top:4px solid transparent; border-bottom:4px solid transparent; }
+  .oparrow.back .lbl { color:var(--orange); }
+  .flowcap { text-align:center; font-size:12.5px; color:var(--muted); margin-top:6px; }
+
+  /* 다이어그램 캡션 */
+  .dia-cap{color:var(--muted);font-size:13px;text-align:center;margin-top:10px}
+
+/* ── 2-1 3단원 전용 시각자료 CSS (기존 CSS 블록 맨 끝, @media print 앞에 추가) ── */
+
+/* V1 다항식 해부도 */
+.anat { display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:10px; margin:18px 0 6px; }
+.anat .term { border:1px solid var(--border); border-radius:12px; padding:12px 16px 10px; background:var(--card);
+  text-align:center; min-width:104px; }
+.anat .term.g { border-color:var(--green); } .anat .term.b { border-color:var(--blue); } .anat .term.o { border-color:var(--orange); }
+.anat .tv { font-size:21px; font-weight:800; letter-spacing:-.01em; }
+.anat .tv .co { color:var(--green); } .anat .tv .va { color:var(--blue); }
+.anat .tl { font-size:11.5px; color:var(--muted); margin-top:7px; line-height:1.5; }
+.anat .plus { font-size:20px; font-weight:800; color:var(--muted); align-self:center; padding-top:12px; }
+
+/* V2 단원 지도 표 */
+.roadmap { width:100%; border-collapse:collapse; margin:16px 0 6px; font-size:14px; }
+.roadmap th, .roadmap td { border:1px solid var(--border); padding:9px 11px; text-align:center; }
+.roadmap th { background:rgba(52,211,153,0.10); font-weight:700; font-size:13px; }
+.roadmap td.now { color:var(--green); font-weight:800; }
+.roadmap td.later { color:var(--muted); }
+
+/* V3 동류항 색 블록 */
+.likebox { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:16px 0 6px; }
+.likebox .lt { padding:8px 14px; border-radius:10px; font-size:17px; font-weight:800; border:1px solid var(--border); }
+.likebox .lt.x { color:var(--green); background:rgba(52,211,153,0.12); border-color:var(--green); }
+.likebox .lt.y { color:var(--blue);  background:rgba(96,165,250,0.12); border-color:var(--blue); }
+.likebox .lt.c { color:var(--orange);background:rgba(251,191,36,0.12); border-color:var(--orange); }
+.likebox .op { align-self:center; font-size:17px; font-weight:800; color:var(--muted); }
+
+/* V4 / V11 : 틀린 예 ↔ 맞는 예 2단 비교 */
+.cmp2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 6px; }
+.cmp2 .cc { border:1px solid var(--border); border-radius:12px; padding:14px 16px; background:var(--card); }
+.cmp2 .cc.bad { border-color:var(--red); } .cmp2 .cc.good { border-color:var(--green); }
+.cmp2 .ch { font-size:12.5px; font-weight:800; margin-bottom:8px; }
+.cmp2 .cc.bad .ch { color:var(--red); } .cmp2 .cc.good .ch { color:var(--green); }
+.cmp2 .cb { font-size:15px; line-height:1.9; }
+.cmp2 .cn { font-size:12px; color:var(--muted); margin-top:8px; line-height:1.6; }
+@media(max-width:600px){ .cmp2 { grid-template-columns:1fr; } }
+
+/* V5 겹괄호 계층 */
+.nest { display:flex; flex-direction:column; align-items:center; gap:0; margin:16px 0 6px; }
+.nest .lv { border:1px solid var(--border); border-radius:12px; padding:12px 16px; width:100%; max-width:430px;
+  text-align:center; background:var(--card); }
+.nest .lv .lb { font-size:11.5px; font-weight:800; letter-spacing:.03em; display:block; margin-bottom:5px; }
+.nest .lv .ex { font-size:16px; font-weight:700; }
+.nest .lv.l1 { border-color:var(--green); } .nest .lv.l1 .lb { color:var(--green); }
+.nest .lv.l2 { border-color:var(--blue); }  .nest .lv.l2 .lb { color:var(--blue); }
+.nest .lv.l3 { border-color:var(--orange); }.nest .lv.l3 .lb { color:var(--orange); }
+.nest .arw { font-size:17px; color:var(--muted); line-height:1.1; padding:5px 0; }
+
+/* V7 분배법칙 — 항마다 한 칸 */
+.distrib { margin:18px 0 6px; }
+.distrib .head { text-align:center; font-size:20px; font-weight:800; letter-spacing:.01em; margin-bottom:12px; }
+.distrib .head .src { color:var(--green); }
+.distrib .cols { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.distrib .dc { border:1px solid var(--border); border-radius:12px; padding:12px 10px; text-align:center; background:var(--card); }
+.distrib .dc.c1 { border-color:var(--green); } .distrib .dc.c2 { border-color:var(--blue); } .distrib .dc.c3 { border-color:var(--orange); }
+.distrib .dc .mul { font-size:14px; color:var(--muted); }
+.distrib .dc .eq { font-size:19px; font-weight:800; margin-top:6px; }
+.distrib .dc.c1 .eq { color:var(--green); } .distrib .dc.c2 .eq { color:var(--blue); } .distrib .dc.c3 .eq { color:var(--orange); }
+.distrib .sum { text-align:center; font-size:18px; font-weight:800; margin-top:12px; }
+.distrib .sum .t1 { color:var(--green); } .distrib .sum .t2 { color:var(--blue); } .distrib .sum .t3 { color:var(--orange); }
+@media(max-width:600px){ .distrib .cols { grid-template-columns:1fr; } }
+
+/* V8 두 방법 나란히 */
+.ways { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 6px; }
+.ways .wy { border:1px solid var(--border); border-radius:12px; padding:14px 16px; background:var(--card); }
+.ways .wy.w1 { border-color:var(--green); } .ways .wy.w2 { border-color:var(--blue); }
+.ways .wh { font-size:12.5px; font-weight:800; margin-bottom:8px; }
+.ways .wy.w1 .wh { color:var(--green); } .ways .wy.w2 .wh { color:var(--blue); }
+.ways .wb { font-size:15px; line-height:2; }
+.ways .wn { font-size:12px; color:var(--muted); margin-top:8px; line-height:1.6; }
+@media(max-width:600px){ .ways { grid-template-columns:1fr; } }
+
+/* V9 약분 — 공통인 것만 */
+.cancelrow { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px; margin:16px 0 4px; }
+.cancelrow .chunk { border:1px solid var(--border); border-radius:10px; padding:10px 14px; text-align:center; background:var(--card); min-width:96px; }
+.cancelrow .chunk .cv { font-size:17px; font-weight:800; }
+.cancelrow .chunk .cf { font-size:11.5px; color:var(--muted); margin-top:6px; }
+.cancelrow .chunk.on { border-color:var(--green); } .cancelrow .chunk.on .cv { color:var(--green); }
+.cancelrow .sep { font-size:16px; font-weight:800; color:var(--muted); }
+.cancelverdict { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:10px; }
+.cancelverdict span { font-size:12.5px; font-weight:700; padding:5px 11px; border-radius:8px; border:1px solid var(--border); }
+.cancelverdict .yes { color:var(--green); border-color:var(--green); background:rgba(52,211,153,0.10); }
+.cancelverdict .no  { color:var(--red);   border-color:var(--red);   background:rgba(248,113,113,0.10); }
+
+/* V10 역산 흐름 */
+.revflow { display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:8px; margin:16px 0 6px; }
+.revflow .rf { border:1px solid var(--border); border-radius:12px; padding:11px 14px; background:var(--card);
+  text-align:center; flex:1 1 150px; min-width:140px; }
+.revflow .rf .rn { display:inline-block; width:20px; height:20px; line-height:20px; border-radius:50%;
+  background:var(--purple); color:#12121e; font-size:11.5px; font-weight:800; margin-bottom:6px; }
+.revflow .rf .rt { font-size:13.5px; font-weight:700; }
+.revflow .rf .re { font-size:11.5px; color:var(--muted); margin-top:5px; line-height:1.55; }
+
+/* V12 덧셈 피라미드 */
+.pyr { display:flex; flex-direction:column; align-items:center; gap:6px; margin:16px 0 6px; }
+.pyr .row { display:flex; justify-content:center; gap:12px; }
+.pyr .cell { border:1px solid var(--border); border-radius:9px; padding:9px 13px; background:var(--card);
+  font-size:14.5px; font-weight:700; min-width:78px; text-align:center; }
+.pyr .cell.q { border-color:var(--orange); color:var(--orange); border-style:dashed; }
+.pyr .cell.ans { border-color:var(--purple); color:var(--purple); }
+.pyr .hint { font-size:12.5px; color:var(--muted); }
+</style>
+</head>
+<body>
+<div class="progress-bar" id="pbar"></div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="brandline">
+      <span class="pro-badge">PRO</span>
+      <span class="label">Isaac Math 2-1 강의노트 · 프리미엄</span>
+    </div>
+    <h1>다항식의 계산</h1>
+    <div class="sub">2단원에서는 단항식끼리 지수를 정리했습니다. 이번에는 항이 여러 개인 <strong>다항식</strong>으로 넓혀 덧셈·뺄셈뿐 아니라 처음 배우는 <strong>곱셈·나눗셈</strong>까지 정리합니다. 이차식과 겹괄호 벗기기, 계수가 분수인 식, 분배법칙으로 전개하기, 다항식을 단항식으로 나누는 두 가지 방법, 사칙 혼합 계산과 어떤 식 구하기, 식의 값과 도형 활용까지 한 번에 다룹니다.</div>
+    <div class="header-tools">
+      <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
+      <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
+      <button class="mini-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+      <button class="mini-btn" onclick="resetAll()">↺ 진행 초기화</button>
+    </div>
+  </div>
+</header>
+
+<div class="achieve">
+  <div class="achieve-card">
+    <div class="ring" id="ring"><span id="ringTxt">0%</span></div>
+    <div class="achieve-text">
+      <div class="t" id="achTitle">학습 진행률</div>
+      <div class="d" id="achDesc">각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.</div>
+    </div>
+    <div class="badges">
+      <span class="ach-badge" id="b_first">🔰 첫 완료</span>
+      <span class="ach-badge" id="b_half">🔥 절반 돌파</span>
+      <span class="ach-badge" id="b_master">🏆 단원 마스터</span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" id="toc">
+  <a href="#s1" class="tlink">① 다항식 복습</a>
+  <a href="#s2" class="tlink">② 덧셈과 뺄셈</a>
+  <a href="#s3" class="tlink">③ 이차식·겹괄호</a>
+  <a href="#s4" class="tlink">④ 분수 계수</a>
+  <a href="#s5" class="tlink">⑤ 곱셈(전개)</a>
+  <a href="#s6" class="tlink">⑥ 나눗셈</a>
+  <a href="#s7" class="tlink">⑦ 혼합·역산</a>
+  <a href="#s8" class="tlink">⑧ 식의 값·활용</a>
+  <a href="#wrong" class="tlink">📕 오답노트</a>
+  <a href="#gate" class="tlink">✏️ 연습문제</a>
+</nav>
+
+<div class="content">
+  <section class="section" id="s1">
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">다항식을 다시 본다 — 항·계수·차수·동류항</span>
+      <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
+
+<p>지난 2단원에서는 <strong>단항식</strong>의 계산을 지수법칙 네 가지로 정리했습니다. 이번 단원부터는 항이 여러 개인 <strong>다항식</strong>을 다룹니다.</p>
+<p>사실 다항식의 덧셈·뺄셈은 1-1 「문자와 식」에서 이미 배운 내용입니다. 여기서는 그것을 <strong>이차식까지 넓히고</strong>, 아직 해 보지 않은 <strong>곱셈·나눗셈</strong>을 더합니다.</p>
+<div class="box box-blue"><div class="box-title">🔑 용어 정리 — 항 · 계수 · 차수 · 상수항 · 동류항</div>
+<strong>항</strong>은 수와 문자의 곱으로 이루어진 하나의 덩어리이고, <strong>계수</strong>는 그 항에서 문자 앞에 곱해진 수, <strong>차수</strong>는 그 항에서 곱해진 문자의 개수, 문자가 없는 항은 <strong>상수항</strong>이라 부릅니다.<br>
+<strong>동류항</strong>은 문자와 차수가 <strong>모두</strong> 같은 항입니다. 3x 와 5x 는 동류항이지만, 3x 와 3x<sup>2</sup> 는 문자는 같아도 차수가 달라 동류항이 아닙니다.</div>
+<div class="anat">
+  <div class="term g"><div class="tv"><span class="co">3</span>x<sup>2</sup></div>
+    <div class="tl">계수 3<br>차수 2</div></div>
+  <div class="plus">−</div>
+  <div class="term b"><div class="tv"><span class="co">5</span>x</div>
+    <div class="tl">계수 −5<br>차수 1</div></div>
+  <div class="plus">+</div>
+  <div class="term o"><div class="tv">7</div>
+    <div class="tl">상수항<br>차수 0</div></div>
+</div>
+<div class="flowcap">항이 세 개인 다항식 <strong>3x<sup>2</sup> − 5x + 7</strong> — 가장 높은 차수가 2이므로 <strong>이차식</strong>이다</div>
+<p>다항식의 <strong>차수</strong>는 각 항의 차수 중 가장 큰 것으로 정합니다. 차수가 1이면 <strong>일차식</strong>, 2이면 <strong>이차식</strong>이라 부릅니다. 문자가 여러 개인 항은 지수를 전부 더해 차수를 셉니다 — 예를 들어 3a<sup>2</sup>b 는 a의 지수 2와 b의 지수 1을 더해 차수가 <strong>3</strong>입니다.</p>
+<div class="box box-green"><div class="box-title">💡 단항식도 다항식이다</div>
+단항식은 <strong>항이 하나뿐인 다항식</strong>이라고 봅니다. 그래서 "다항식의 계산" 안에는 단항식이 섞인 경우도 자연스럽게 들어갑니다.</div>
+<p>다항식의 계산은 덧셈·뺄셈·곱셈·나눗셈 네 가지처럼 보이지만, <strong>뺄셈은 덧셈으로, 나눗셈은 곱셈으로</strong> 바꿔 쓸 수 있으므로 결국 배우는 것은 <strong>두 가지</strong>인 셈입니다.</p>
+<p>이 단원에서 정확히 어디까지 다루는지 아래 표로 먼저 못박아 둡니다.</p>
+<div class="table-wrap"><table class="roadmap">
+  <tr><th>계산</th><th>단항식과 단항식</th><th>단항식과 다항식</th><th>다항식과 다항식</th></tr>
+  <tr><th>덧셈 · 뺄셈</th><td class="now">✓ 이 단원</td><td class="now">✓ 이 단원</td><td class="now">✓ 이 단원</td></tr>
+  <tr><th>곱셈</th><td class="later">2단원에서 함</td><td class="now">✓ 이 단원</td><td class="later">3-1 곱셈 공식</td></tr>
+  <tr><th>나눗셈</th><td class="later">2단원에서 함</td><td class="now">✓ 이 단원</td><td class="later">고1 공통수학1</td></tr>
+</table></div>
+<div class="flowcap">덧셈·뺄셈은 어떤 조합이든 지금 할 수 있고, 곱셈·나눗셈은 <strong>한쪽이 단항식일 때</strong>까지가 이 단원이다</div>
+<div class="box box-orange"><div class="box-title">🏁 이 단원 다음은?</div>
+다항식 × 다항식은 <strong>3-1 「곱셈 공식」</strong>에서, 다항식 ÷ 다항식은 <strong>고1 「공통수학1」</strong>에서 배웁니다. 두 경우 모두 뿌리가 되는 원리는 여전히 <strong>분배법칙</strong>입니다.</div>
+    <div class="quiz" data-qid="b1" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 다항식 5x<sup>2</sup> − 3x + 8 에서 x의 계수와 상수항의 합은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b2" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 다항식 5x<sup>3</sup>y<sup>2</sup> − 4xy + 1 의 차수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s2">
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">다항식의 덧셈과 뺄셈 — 동류항끼리, 계수끼리</span>
+      <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
+
+<p><strong>덧셈</strong>은 괄호를 벗기고 동류항끼리 모아 <strong>계수끼리</strong> 더합니다. 문자는 그대로 둡니다. 예를 들어 (3x − y) + (2x − 5y) 는 괄호를 벗기면 3x − y + 2x − 5y, 동류항끼리 모으면 <strong>5x − 6y</strong> 입니다.</p>
+<div class="likebox">
+  <span class="lt x">7a</span><span class="op">+</span><span class="lt y">2b</span>
+  <span class="op">+</span><span class="lt x">3a</span><span class="op">−</span><span class="lt y">5b</span>
+</div>
+<div class="likebox">
+  <span class="lt x">(7 + 3)a</span><span class="op">+</span><span class="lt y">(2 − 5)b</span>
+  <span class="op">=</span><span class="lt x">10a</span><span class="op">−</span><span class="lt y">3b</span>
+</div>
+<div class="flowcap">같은 색끼리만 모인다 — <strong>계수끼리 더하고 문자는 그대로</strong></div>
+<p><strong>뺄셈</strong>은 빼는 다항식 <strong>전체</strong>에 괄호를 친 다음, 괄호 앞의 −를 <strong>괄호 안 모든 항</strong>에 곱합니다. 그러면 부호가 <strong>전부</strong> 바뀝니다. (3x − y) − (2x − 5y) 에서 뒤 괄호를 풀면 3x − y − 2x + 5y, 정리하면 <strong>x + 4y</strong> 입니다. 참고로 −(2x − 5y) 하나만 떼어 보면 <strong>−2x + 5y</strong> 로, 두 항의 부호가 모두 바뀐 것을 볼 수 있습니다.</p>
+<div class="box box-red"><div class="box-title">⚠️ 첫 항만 바꾸는 것이 최다 실수</div>
+괄호 앞의 −는 <strong>괄호 안 모든 항</strong>에 곱해집니다. 첫 항의 부호만 바꾸고 나머지는 그대로 두는 것이 이 단원에서 가장 많이 나오는 실수입니다.</div>
+<div class="cmp2">
+  <div class="cc bad"><div class="ch">❌ 앞의 것만 바꾼 풀이</div>
+    <div class="cb">(3x − y) − (2x − 5y)<br>= 3x − y − 2x <b style="color:var(--red)">− 5y</b><br>= x − 6y</div>
+    <div class="cn">괄호 안의 <b>−5y</b> 를 그대로 내려썼다. 가장 흔한 실수다.</div></div>
+  <div class="cc good"><div class="ch">✅ 모든 항의 부호를 바꾼 풀이</div>
+    <div class="cb">(3x − y) − (2x − 5y)<br>= 3x − y − 2x <b style="color:var(--green)">+ 5y</b><br>= x + 4y</div>
+    <div class="cn">빼기 괄호 앞의 −는 <b>괄호 안 전부</b>에 곱해진다.</div></div>
+</div>
+<div class="box box-blue"><div class="box-title">🎯 수업에서 강조한 목표 — 암산</div>
+익숙해지면 괄호를 다 풀어 쓰지 않고, 문자별로 계수만 훑어 "x는 얼마, y는 얼마" 하고 한 번에 씁니다. 다만 <strong>정확도가 먼저</strong>입니다 — 암산이 아직 안 되면 써서 풀고, 확실해지면 그때부터 암산을 연습하세요.</div>
+    <div class="quiz" data-qid="b3" data-ans="-4" data-type="num">
+      <div class="quiz-q">Q. (4x + 3y) + (2x − 7y) 를 간단히 했을 때, y의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b4" data-ans="-6" data-type="num">
+      <div class="quiz-q">Q. (5a − 2b) − (3a + 4b) 를 간단히 했을 때, b의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s3">
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">이차식의 계산과 겹괄호 — 계수만 눈으로 따라간다</span>
+      <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
+
+<p><strong>이차식</strong>은 차수가 2인 다항식입니다. 이차식끼리의 덧셈·뺄셈도 방법은 똑같습니다 — 동류항끼리 모읍니다. x<sup>2</sup> 항은 x<sup>2</sup> 항끼리, x 항은 x 항끼리, 상수항은 상수항끼리 계산합니다. 예를 들어 (2a<sup>2</sup> − 3a + 1) + (a<sup>2</sup> + 5a − 4) 는 <strong>3a<sup>2</sup> + 2a − 3</strong> 입니다.</p>
+<p><strong>겹괄호</strong>는 소괄호 ( ) → 중괄호 { } → 대괄호 [ ] 순서로 <strong>안쪽부터</strong> 벗깁니다. 예를 들어 7x − {4x − (2x − 3y)} 는 안쪽 (2x − 3y) 부터 처리해 4x − (2x − 3y) = 2x + 3y, 다시 7x − {2x + 3y} = <strong>5x − 3y</strong> 가 됩니다.</p>
+<div class="box box-orange"><div class="box-title">🎯 수업에서 강조한 목표 — 암산</div>
+초등에서는 "안쪽부터 차근차근 벗겨 쓰라"고 배웠지만, <strong>중등의 목표는 암산</strong>입니다. 괄호를 다 벗겨 쓰지 말고 <strong>문자 하나를 정해 그 계수만 끝까지 따라갑니다.</strong> 예를 들어 a를 먼저 훑어 a의 계수를 확정하고, 다음에 b를 훑습니다. 각 항이 괄호를 하나 빠져나올 때마다 앞의 부호를 만나 <strong>+/− 가 뒤집히는지</strong>만 보면 됩니다.</div>
+<div class="nest">
+  <div class="lv l1"><span class="lb">1단계 — 소괄호 ( )</span><span class="ex">4x − [ 2y − { 3x − <b style="color:var(--green)">(x − 5y)</b> } ]</span></div>
+  <div class="arw">↓</div>
+  <div class="lv l2"><span class="lb">2단계 — 중괄호 { }</span><span class="ex">4x − [ 2y − <b style="color:var(--blue)">{ 2x + 5y }</b> ]</span></div>
+  <div class="arw">↓</div>
+  <div class="lv l3"><span class="lb">3단계 — 대괄호 [ ]</span><span class="ex">4x − <b style="color:var(--orange)">[ −2x − 3y ]</b> = 6x + 3y</span></div>
+</div>
+<div class="flowcap">안쪽에서 바깥으로 — <strong>( ) → { } → [ ]</strong> 순서로 벗긴다</div>
+<div class="box box-red"><div class="box-title">⚠️ 겹괄호는 바깥 부호를 안쪽 전체에</div>
+겹괄호를 벗길 때 <strong>바깥 괄호 앞의 부호를 안쪽 전체에</strong> 적용하는 것을 놓치기 쉽습니다. 예를 들어 4x − [2y − {3x − (x − 5y)}] 는 안쪽부터 차례로 처리하면 <strong>6x + 3y</strong> 가 됩니다.</div>
+    <div class="quiz" data-qid="b5" data-ans="7" data-type="num">
+      <div class="quiz-q">Q. (3x<sup>2</sup> − x + 2) − (x<sup>2</sup> + 4x − 5) 를 간단히 했을 때, 상수항은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b6" data-ans="6" data-type="num">
+      <div class="quiz-q">Q. 5a − {2a − (3a − b)} 를 간단히 했을 때, a의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s4">
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">계수가 분수인 다항식 — 통분 말고 분리해서</span>
+      <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
+
+<p>수업에서 가장 힘주어 말한 대목입니다. 분수 꼴 다항식이 나오면 대부분 <strong>통분부터</strong> 하는데, 통분해서 한 덩어리로 만들면 <strong>각 항의 계수가 눈에서 사라집니다.</strong> 나중에 "x의 계수가 뭐냐"고 물으면 막힙니다.</p>
+<div class="box box-green"><div class="box-title">✅ 권장 — 분수를 항마다 분리한다</div>
+분수를 <strong>항마다 분리</strong>해 계수를 분수로 만든 뒤, <strong>계수끼리</strong> 계산합니다. 통분이 틀린 방법이라는 뜻은 아닙니다 — 답은 같습니다. 다만 <strong>실수할 기회가 늘어납니다.</strong></div>
+<div class="cmp2">
+  <div class="cc bad"><div class="ch">△ 통분해서 한 덩어리로</div>
+    <div class="cb">(2a + 3b)/3 − (a − b)/2<br>= { 2(2a + 3b) − 3(a − b) } / 6<br>= (a + 9b)/6</div>
+    <div class="cn">답은 맞지만, 도중에 <b>a의 계수가 얼마인지</b> 보이지 않는다. "계수를 말해 보라"고 하면 막힌다.</div></div>
+  <div class="cc good"><div class="ch">✅ 분수를 분리해 계수끼리</div>
+    <div class="cb">= (2/3)a + b − (1/2)a + (1/2)b<br>a : 2/3 − 1/2 = 1/6<br>b : 1 + 1/2 = 3/2</div>
+    <div class="cn">각 항의 계수가 <b>눈에 보인 채</b>로 끝난다. 이 단원의 실수는 거의 다 계수 구별에서 난다.</div></div>
+</div>
+<div class="box box-red"><div class="box-title">⚠️ 분수 앞의 마이너스는 분자 전체에</div>
+분수 앞의 마이너스는 <strong>분자 전체에 분배</strong>됩니다. −(2x − 3y)/5 = −(2/5)x + (3/5)y 처럼, 분자의 뒤쪽 항 부호를 안 바꾸는 것이 단골 실수입니다.</div>
+    <div class="quiz" data-qid="b7" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. (x + 2y)/2 + (3x − y)/4 를 간단히 하면 (ax + by)/4 이다. a의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b8" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. (2a − b)/3 − (a − 4b)/6 을 간단히 하면 (pa + qb)/6 이다. q의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s5">
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">단항식과 다항식의 곱셈 — 분배법칙으로 전개한다</span>
+      <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
+
+<p>곱셈의 뿌리는 1-1 에서 배운 <strong>분배법칙</strong> 하나뿐입니다. 괄호 앞(또는 뒤)의 단항식을 괄호 안 <strong>모든 항에 빠짐없이</strong> 곱합니다. 이렇게 곱셈의 괄호를 풀어 헤치는 것을 <strong>전개한다</strong>고 합니다.</p>
+<div class="distrib">
+  <div class="head"><span class="src">2x</span>(3x − y + 4) 를 전개하면?</div>
+  <div class="cols">
+    <div class="dc c1"><div class="mul">2x × 3x</div><div class="eq">6x<sup>2</sup></div></div>
+    <div class="dc c2"><div class="mul">2x × (−y)</div><div class="eq">−2xy</div></div>
+    <div class="dc c3"><div class="mul">2x × 4</div><div class="eq">8x</div></div>
+  </div>
+  <div class="sum">= <span class="t1">6x<sup>2</sup></span> <span class="t2">− 2xy</span> <span class="t3">+ 8x</span></div>
+</div>
+<div class="flowcap">괄호 앞의 것을 <strong>괄호 안 모든 항에 빠짐없이</strong> 곱한다 — 이것을 <strong>전개</strong>라고 한다</div>
+<div class="formula-big"><div class="f-title">분배법칙</div>
+  <div class="f-body">A(B + C) = AB + AC</div></div>
+<p>순서는 상관없습니다 — (다항식) × (단항식) 도 똑같습니다. 예를 들어 (a − 2b) × 3a 는 <strong>3a<sup>2</sup> − 6ab</strong> 입니다.</p>
+<div class="box box-red"><div class="box-title">⚠️ 부호와 항 개수를 조심하라</div>
+앞의 단항식이 음수면 <strong>모든 항의 부호가 바뀝니다.</strong> 또한 항의 개수만큼 곱셈이 생깁니다 — 세 항이면 <strong>세 번</strong> 곱해야 합니다. 마지막 상수항을 빠뜨리는 실수가 잦습니다. 예를 들어 −3a(2a − b + 5) 는 <strong>−6a<sup>2</sup> + 3ab − 15a</strong> 입니다 — 상수항 5까지 빠짐없이 곱했는지 확인하세요.</div>
+<p>다항식 × 다항식은 <strong>3-1 「곱셈 공식」</strong>에서 배웁니다. 그때도 뿌리는 여전히 분배법칙입니다.</p>
+    <div class="quiz" data-qid="b9" data-ans="-15" data-type="num">
+      <div class="quiz-q">Q. 3a(2a − 5b) 를 전개했을 때, ab의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b10" data-ans="-12" data-type="num">
+      <div class="quiz-q">Q. −4x(2x − y + 3) 을 전개했을 때, x의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s6">
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">다항식과 단항식의 나눗셈 — 두 가지 방법</span>
+      <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
+
+<p><strong>방법 ①</strong> 나눗셈 뒤의 것을 <strong>분모로 내려보냅니다.</strong> ⚠ 나눗셈 뒤에 있는 것을 <strong>전부</strong> 내려보내는 게 아니라, <strong>바로 뒤에 붙어 있는 하나만</strong> 내려보냅니다. 그 뒤에 또 다른 계산이 있으면 그것은 따로 처리합니다.</p>
+<p><strong>방법 ②</strong> 나눗셈을 <strong>역수의 곱셈</strong>으로 바꿉니다. 나누는 식의 <strong>계수가 분수일 때</strong> 특히 편합니다. 결과는 어느 쪽이나 같습니다 — 주어진 식의 모양을 보고 편한 쪽을 고르면 됩니다.</p>
+<div class="ways">
+  <div class="wy w1"><div class="wh">방법 ① 분모로 내려보낸다</div>
+    <div class="wb">(9xy − 6yz) ÷ 3y<br>= (9xy − 6yz) / <b style="color:var(--green)">3y</b><br>= 3x − 2z</div>
+    <div class="wn">나눗셈 기호 <b>바로 뒤에 붙어 있는 것 하나만</b> 분모로 간다. 그 뒤에 다른 계산이 또 있으면 따로 처리한다.</div></div>
+  <div class="wy w2"><div class="wh">방법 ② 역수를 곱한다</div>
+    <div class="wb">(9xy − 6yz) ÷ 3y<br>= (9xy − 6yz) × <b style="color:var(--blue)">1/(3y)</b><br>= 3x − 2z</div>
+    <div class="wn">계수가 분수일 때 편하다. 뒤집어 올린 뒤 분배법칙으로 전개하면 된다.</div></div>
+</div>
+<div class="flowcap">어느 쪽으로 가도 결과는 같다 — 주어진 식의 모양을 보고 편한 쪽을 고르면 된다</div>
+<div class="box box-red"><div class="box-title">⚠️⚠️ 약분 주의 — 이 섹션의 핵심</div>
+분모에 한 항, 분자에 두 항이 있으면 화면에는 <strong>덩어리가 세 개</strong> 있는 것처럼 <strong>보입니다</strong>. 표현을 잘 보세요 — 분자는 곧 두 항으로 분리될 것이므로 <strong>실제 항은 둘</strong>입니다. 다만 약분을 판단할 때는 이 세 덩어리를 다 봐야 합니다. <strong>세 덩어리가 동시에 가지고 있는 것만 약분할 수 있습니다.</strong> 한 덩어리에만 있는 문자는 절대 약분되지 않습니다.</div>
+<div class="cancelrow">
+  <div class="chunk on"><div class="cv">9xy</div><div class="cf">= <b>3y</b> × 3x</div></div>
+  <div class="sep">−</div>
+  <div class="chunk on"><div class="cv">6yz</div><div class="cf">= <b>3y</b> × 2z</div></div>
+  <div class="sep">÷</div>
+  <div class="chunk on"><div class="cv">3y</div><div class="cf">= <b>3y</b> × 1</div></div>
+</div>
+<div class="cancelverdict">
+  <span class="yes">3 — 세 덩어리 모두 가짐 → 약분 가능</span>
+  <span class="yes">y — 세 덩어리 모두 가짐 → 약분 가능</span>
+  <span class="no">x — 9xy 에만 있음 → 약분 불가</span>
+</div>
+<div class="flowcap">보이는 덩어리가 <strong>모두</strong> 가지고 있는 것만 약분할 수 있다</div>
+<div class="box box-orange"><div class="box-title">🎯 수업에서 강조한 목표</div>
+<strong>빗금(사선)을 그으며 약분하지 마세요.</strong> 초등에서 하던 방식입니다. 풀이가 지워져 나중에 뭘 썼는지 안 보이고, 지저분해져서 거기서 실수가 납니다. <strong>눈으로 한 번에</strong> 정리해 쓰는 것이 목표입니다. 다항식 ÷ 다항식은 <strong>고1 「공통수학1」</strong>에서 배웁니다.</div>
+    <div class="quiz" data-qid="b11" data-ans="-2" data-type="num">
+      <div class="quiz-q">Q. (12a<sup>2</sup>b − 8ab<sup>2</sup>) ÷ 4ab 를 간단히 했을 때, b의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b12" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. (6x<sup>2</sup>y − 9xy<sup>2</sup>) ÷ (3/2)xy 를 간단히 했을 때, x의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s7">
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">사칙 혼합 계산과 어떤 식 구하기</span>
+      <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
+
+<p><strong>계산 순서</strong>는 거듭제곱 → 괄호 안 → 곱셈·나눗셈 → 덧셈·뺄셈입니다. 곱셈·나눗셈은 <strong>앞에서부터 차례로</strong> 합니다.</p>
+<div class="box box-orange"><div class="box-title">🏆 시험 포인트 — 뒤에 있는 나눗셈을 먼저 묶으면 안 된다</div>
+(20x<sup>3</sup>y − 15x<sup>2</sup>y<sup>2</sup>) ÷ 5xy ÷ x 는 <strong>앞에서부터 차례로</strong> 계산해야 합니다.<br>
+올바른 계산: ÷ 5xy 를 먼저 하면 4x<sup>2</sup> − 3xy, 다시 ÷ x 를 하면 <strong>4x − 3y</strong>.<br>
+흔한 오답: 뒤의 5xy ÷ x = 5y 로 먼저 묶어 (20x<sup>3</sup>y − 15x<sup>2</sup>y<sup>2</sup>) ÷ 5y 로 계산해 버리면 전혀 다른 식인 <strong>4x<sup>3</sup> − 3x<sup>2</sup>y</strong> 가 나옵니다.</div>
+<p><strong>어떤 식 구하기(역산)</strong>는 "잘못 계산했더니 …가 되었다. 바르게 계산하면?" 유형입니다. ① 잘못한 식을 그대로 세우고 → ② 거기서 <strong>어떤 식 A부터</strong> 구한 다음 → ③ A로 <strong>바르게</strong> 계산합니다.</p>
+<div class="box box-red"><div class="box-title">⚠️ 묻는 것은 A가 아니다</div>
+2단계에서 구한 A는 <strong>중간 결과</strong>일 뿐입니다. 문제가 실제로 묻는 것은 <strong>바르게 계산한 결과</strong>입니다 — 2단계에서 멈추면 틀립니다.</div>
+<div class="revflow">
+  <div class="rf"><span class="rn">1</span><div class="rt">잘못한 식을 쓴다</div>
+    <div class="re">A − 3a = 2a − 5b</div></div>
+  <div class="rf"><span class="rn">2</span><div class="rt">A 부터 구한다</div>
+    <div class="re">A = (2a − 5b) + 3a<br>= 5a − 5b</div></div>
+  <div class="rf"><span class="rn">3</span><div class="rt">바르게 계산한다</div>
+    <div class="re">A + 3a = 8a − 5b</div></div>
+</div>
+<div class="flowcap">묻는 것은 <strong>A 가 아니라 바르게 계산한 결과</strong>다 — 2단계에서 멈추면 틀린다</div>
+<p><strong>□ 안에 알맞은 식</strong> 유형도 같은 역산입니다. 등식을 세우고 □만 남기면 됩니다.</p>
+    <div class="quiz" data-qid="b13" data-ans="-1" data-type="num">
+      <div class="quiz-q">Q. 어떤 식에서 4x를 빼야 할 것을 잘못하여 더했더니 7x + 2y 가 되었다. 바르게 계산한 식에서 x의 계수는?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b14" data-ans="3" data-type="num">
+      <div class="quiz-q">Q. 2x(3x − 1) − (4x<sup>2</sup> − 6x) ÷ 2x 를 간단히 했을 때, 상수항은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s8">
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">식의 값과 도형 활용 — 대입에는 괄호를 친다</span>
+      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
+
+<p><strong>식의 값</strong>은 문자에 수를 대입해 계산한 값입니다. 대입하는 수가 <strong>음수나 분수</strong>면 반드시 <strong>괄호를 쳐서</strong> 넣습니다. 또한 <strong>먼저 식을 간단히 한 뒤에 대입</strong>하면 계산이 훨씬 쉽고 실수도 줄어듭니다. 예를 들어 x = 2, y = −3 일 때 3x − 2y 는 3×2 − 2×(−3) = 6 + 6 = <strong>12</strong> 입니다. a = −2 일 때 a<sup>2</sup> − 3a 도 (−2)<sup>2</sup> − 3×(−2) = 4 + 6 = <strong>10</strong> 입니다.</p>
+<div class="box box-green"><div class="box-title">💡 식을 식에 대입하기 (수업 강조)</div>
+y = 2x + 1 처럼 조건이 주어지면 <strong>미지수의 개수를 줄일 수 있습니다.</strong> 미지수는 적을수록 다루기 쉽습니다 — 다만 <strong>이런 전제 조건이 있을 때만</strong> 줄일 수 있고, 마음대로 바꿀 수는 없습니다. 문제가 조건을 직접 주기도 하고, 상황만 주고 조건을 직접 만들게 하기도 합니다.</div>
+<div class="box box-red"><div class="box-title">⚠️ 식을 대입할 때도 반드시 괄호</div>
+식을 대입할 때는 <strong>반드시 괄호를 쳐서 통째로</strong> 넣습니다. 부호와 계산 순서가 바로 여기서 어긋납니다.</div>
+<div class="cmp2">
+  <div class="cc bad"><div class="ch">❌ 괄호 없이 대입</div>
+    <div class="cb">y = 2x + 1 을 5x − y 에<br>= 5x − 2x + 1<br>= 3x + 1</div>
+    <div class="cn">앞의 −가 <b>2x 에만</b> 걸려 상수항 부호가 틀렸다.</div></div>
+  <div class="cc good"><div class="ch">✅ 괄호를 쳐서 통째로</div>
+    <div class="cb">= 5x − <b style="color:var(--green)">(2x + 1)</b><br>= 5x − 2x − 1<br>= 3x − 1</div>
+    <div class="cn">식을 대입할 때는 <b>항상 괄호</b>를 친다. 수를 대입할 때도 음수·분수면 마찬가지다.</div></div>
+</div>
+<p><strong>도형 활용</strong>은 넓이·부피 공식에 다항식을 넣는 것입니다.</p>
+<div class="table-wrap"><table class="special-table">
+  <tr><th>공식</th><th>거꾸로 구하면</th></tr>
+  <tr><td>(직사각형 넓이) = 가로 × 세로</td><td>세로 = 넓이 ÷ 가로</td></tr>
+  <tr><td>(직육면체 부피) = 밑넓이 × 높이</td><td>높이 = 부피 ÷ 밑넓이</td></tr>
+</table></div>
+<p>즉 도형 문제의 정체는 <strong>다항식 ÷ 단항식</strong>입니다.</p>
+<div class="diagram-wrap" style="max-width:300px;margin:16px auto">
+<svg viewBox="0 0 380 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="밑면이 가로 5a, 세로 b 인 직육면체">
+<line x1="146.0" y1="38.0" x2="306.0" y2="38.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="306.0" y1="38.0" x2="306.0" y2="154.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="306.0" y1="154.0" x2="146.0" y2="154.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="146.0" y1="154.0" x2="146.0" y2="38.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="82.0" y1="202.0" x2="146.0" y2="154.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="82.0" y1="86.0" x2="146.0" y2="38.0" stroke="var(--text)" stroke-width="1.6"/>
+<line x1="242.0" y1="86.0" x2="306.0" y2="38.0" stroke="var(--text)" stroke-width="1.6"/>
+<line x1="242.0" y1="202.0" x2="306.0" y2="154.0" stroke="var(--text)" stroke-width="1.6"/>
+<line x1="82.0" y1="86.0" x2="242.0" y2="86.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="242.0" y1="86.0" x2="242.0" y2="202.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="242.0" y1="202.0" x2="82.0" y2="202.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="82.0" y1="202.0" x2="82.0" y2="86.0" stroke="var(--text)" stroke-width="1.9"/>
+<text x="162.0" y="226.5" text-anchor="middle" font-size="13.5" font-weight="600" fill="var(--blue)">가로 5a</text>
+<text x="72.5" y="144.0" text-anchor="end" font-size="13.5" font-weight="600" fill="var(--orange)">높이 ?</text>
+<text x="294.1" y="204.8" text-anchor="middle" font-size="13.5" font-weight="600" fill="var(--blue)">세로 b</text>
+</svg>
+<div class="flowcap">밑면이 가로 5a, 세로 b 인 직육면체 — 부피를 밑넓이 5ab 로 나누면 높이가 나온다</div>
+</div>
+
+<p>예를 들어 밑면이 가로 5a, 세로 b 이고 부피가 20a<sup>3</sup>b<sup>2</sup> + 15a<sup>2</sup>b<sup>3</sup> 인 직육면체가 있다고 합시다. 밑넓이는 5a × b = 5ab 이므로, 높이는 (20a<sup>3</sup>b<sup>2</sup> + 15a<sup>2</sup>b<sup>3</sup>) ÷ 5ab = <strong>4a<sup>2</sup>b + 3ab<sup>2</sup></strong> 입니다.</p>
+    <div class="quiz" data-qid="b15" data-ans="-26" data-type="num">
+      <div class="quiz-q">Q. x = −3, y = 4 일 때, 2x − 5y 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+    <div class="quiz" data-qid="b16" data-ans="9" data-type="num">
+      <div class="quiz-q">Q. y = x − 4 일 때, 3x − 2y 를 x의 식으로 나타내면 ax + b 이다. a + b 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<p style="margin-top:16px;color:var(--muted);font-size:14px">다항식의 계산은 여기까지입니다. 다음 단원부터는 부등식·방정식으로 넘어갑니다.</p>
+  </section>
+  <section class="wrongnote" id="wrong">
+    <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
+    <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
+    <button class="review-btn" id="reviewBtn" onclick="reviewWrong()">오답 정리 완료</button>
+    <button class="clear-btn" onclick="clearWrong()">오답노트 비우기</button>
+  </section>
+
+  <section class="gate" id="gate">
+    <h2>🔓 연습문제 잠금 해제</h2>
+    <p class="desc">아래 두 조건을 모두 채우면 기본·응용·심화 연습문제가 열려요.</p>
+    <ul class="checklist">
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
+    </ul>
+    <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
+  </section>
+
+  <div class="practice-wrap" id="practiceWrap">
+    <div class="practice-title">✏️ 연습문제</div>
+    <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용 10문제를 모두 채점하면 심화가 열립니다. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
+
+    <div class="pset" id="pset_basic">
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 — 동류항 정리부터 전개·약분까지</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pbody">
+        <div class="prob" data-qid="pb1" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>(2x + 5y) + (3x − 2y) 를 간단히 했을 때, x의 계수와 y의 계수의 합을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb2" data-ans="-4" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>(5y<sup>2</sup> − 3y) − (2y<sup>2</sup> + y − 6) 을 간단히 했을 때, y의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb3" data-ans="-12" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>4a(2a − 3b) 를 전개했을 때, ab의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb4" data-ans="-2" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>(15a<sup>2</sup> − 10a) ÷ 5a 를 간단히 했을 때, 상수항을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb5" data-ans="-4" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>2a − {3a − (a − 4b)} 를 간단히 했을 때, b의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb6" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>(x + 3y)/2 − (x − y)/4 를 간단히 하면 (ax + by)/4 이다. b의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb7" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>(6x − 9y) × (−(1/3)x) 를 전개했을 때, xy의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb8" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>(8x<sup>2</sup>y + 12xy<sup>2</sup>) ÷ 4xy 를 간단히 했을 때, x의 계수와 y의 계수의 합을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb9" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>어떤 식에서 2a − b 를 뺐더니 3a + 4b 가 되었다. 어떤 식에서 a의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb10" data-ans="-8" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>x = −2 일 때, (6x<sup>2</sup> − 4x) ÷ 2x 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_applied">
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 — 여러 계산을 섞고, 거꾸로 되돌리기</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="prob" data-qid="pa1" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>5x<sup>2</sup> + [−2x<sup>2</sup> − {4x − (−x<sup>2</sup> + 3x − 6)}] = ax<sup>2</sup> + bx + c 일 때, a + b − c 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa2" data-ans="11" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>이웃한 두 칸의 식을 더해 바로 아래 칸에 쓴 것이다. 맨 아래 칸 A 를 구했을 때, x의 계수를 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:340px;margin:16px auto">
+<div class="pyr">
+  <div class="row"><span class="cell">2x + y</span><span class="cell q">?</span><span class="cell">x − 3y</span></div>
+  <div class="row"><span class="cell q">?</span><span class="cell">5x − y</span></div>
+  <div class="row"><span class="cell ans">A</span></div>
+  <div class="hint">이웃한 두 칸의 식을 더해 바로 아래 칸에 쓴다</div>
+</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa3" data-ans="18" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>어떤 식에 −3xy 를 곱해야 할 것을 잘못하여 나누었더니 2x − 4y 가 되었다. 바르게 계산한 식에서 x<sup>3</sup>y<sup>2</sup> 의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa4" data-ans="23" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>5a(2a + 3b − 4) − 2a(a − 4b + 1) 을 전개하여 간단히 했을 때, ab의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa5" data-ans="-7" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>(1/4)x(8x − 4) − (2/3)x(3x + 6) + (1/2)(2x<sup>2</sup> − 6x) 를 간단히 했을 때, x<sup>2</sup>의 계수와 x의 계수의 합을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa6" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>(3/2)xy × (□) ÷ x<sup>2</sup>y = 12x<sup>2</sup>yz − 18xy<sup>2</sup> 일 때, □ 에 알맞은 식에서 x<sup>3</sup>yz 의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa7" data-ans="-6" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>넓이가 12x<sup>3</sup>y<sup>2</sup> − 8x<sup>2</sup>y<sup>3</sup> 이고 가로의 길이가 (4/3)x<sup>2</sup>y 인 직사각형이 있다. 세로의 길이에서 y<sup>2</sup>의 계수를 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:380px;margin:16px auto">
+<svg viewBox="0 0 380 208" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="넓이가 12x³y² − 8x²y³ 이고 가로가 (4/3)x²y 인 직사각형">
+<rect x="96.0" y="44.0" width="208.0" height="100.0" fill="var(--green)" stroke="var(--text)" stroke-width="1.9" opacity="0.10"/>
+<rect x="96.0" y="44.0" width="208.0" height="100.0" fill="none" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="96.0" y1="166.0" x2="304.0" y2="166.0" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.9"/>
+<line x1="96.0" y1="160.0" x2="96.0" y2="172.0" stroke="var(--muted)" stroke-width="1.2" opacity="0.9"/>
+<line x1="304.0" y1="160.0" x2="304.0" y2="172.0" stroke="var(--muted)" stroke-width="1.2" opacity="0.9"/>
+<line x1="70.0" y1="44.0" x2="70.0" y2="144.0" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.9"/>
+<line x1="64.0" y1="44.0" x2="76.0" y2="44.0" stroke="var(--muted)" stroke-width="1.2" opacity="0.9"/>
+<line x1="64.0" y1="144.0" x2="76.0" y2="144.0" stroke="var(--muted)" stroke-width="1.2" opacity="0.9"/>
+<text x="200.0" y="99.0" text-anchor="middle" font-size="14.5" font-weight="600" fill="var(--green)">12x³y² − 8x²y³</text>
+<text x="200.0" y="194.0" text-anchor="middle" font-size="13.5" font-weight="600" fill="var(--blue)">가로 = (4/3)x²y</text>
+<text x="62.0" y="99.0" text-anchor="end" font-size="13.5" font-weight="600" fill="var(--orange)">세로 = ?</text>
+</svg>
+<div class="flowcap">넓이와 가로의 길이가 주어진 직사각형</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa8" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>a = 2, b = −1 일 때, (4a<sup>2</sup>b − 6ab<sup>2</sup>) ÷ 2ab − (9a<sup>2</sup>b + 3ab<sup>2</sup>) ÷ (−3ab) 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 나눗셈을 먼저 각각 끝낸 뒤 빼세요. 뒤 괄호 앞의 −를 잊지 마세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa9" data-ans="-16" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>A = 3x<sup>2</sup> − 2x + 5, B = x<sup>2</sup> + 4x − 3 일 때, 2A − 3B 를 간단히 했을 때 x의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa10" data-ans="49" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>y = 2x − 3 일 때, 3(x + 2y) − 4(x − y) 를 x의 식으로 나타내면 ax + b 이다. a − b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pset locked" id="pset_hard">
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 — 조건 역추적과 도형 활용</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="solution">
+          <div class="sol-head">🧩 단계별 풀이 — □ 가 괄호 안에 있을 때는 등식을 세워 □ 만 남긴다</div>
+          <div class="sol-q">(3x + 2y)/2 − 2{(x − y)/4 − □/8} = (5/2)y 일 때, □ 에 알맞은 식을 구하시오.</div>
+          <div class="step"><span class="s-label">STEP 1</span><br>괄호 앞의 −2 를 안쪽 두 항에 각각 곱합니다. −2 × (x−y)/4 = −(x−y)/2, −2 × (−□/8) = +□/4.<br>식은 (3x + 2y)/2 − (x − y)/2 + □/4 = (5/2)y 가 됩니다.</div>
+          <div class="step"><span class="s-label">STEP 2</span><br>□ 가 든 항만 남기고 나머지를 오른쪽으로 넘깁니다.<br>□/4 = (5/2)y − (3x + 2y)/2 + (x − y)/2</div>
+          <div class="step"><span class="s-label">STEP 3</span><br>양변에 4를 곱합니다.<br>□ = 10y − 2(3x + 2y) + 2(x − y) = 10y − 6x − 4y + 2x − 2y</div>
+          <div class="step"><span class="s-label">정답</span><br>동류항을 정리하면 □ = −4x + 4y 입니다.</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="-4" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>(4x + 5y)/3 − 2{(x − y)/2 − □/6} = (5/3)y 일 때, □ 에 알맞은 식은 ax + by 이다. a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph2" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>어떤 다항식 A 를 −6x 로 나누었더니 몫이 (1/2)xy − (2/3)y<sup>2</sup> 이고 나머지가 5였다. (A − 5) ÷ xy 를 간단히 했을 때, y의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: (나누어지는 식) = (나누는 식) × (몫) + (나머지) 입니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph3" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>(18x<sup>3</sup>y<sup>2</sup> − 12x<sup>2</sup>y<sup>3</sup>) ÷ (3xy)<sup>2</sup> × 6y 를 간단히 했을 때, xy의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph4" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>x에 대한 다항식 A 가 두 조건을 모두 만족한다. 이때 a − b 의 값을 구하시오.<br>&nbsp;&nbsp;· A 를 x/2 로 나누면 4x<sup>2</sup> − 2x + a 이다.<br>&nbsp;&nbsp;· A 에서 x<sup>3</sup> + bx<sup>2</sup> − 3x 를 빼면 x<sup>3</sup> − 4x<sup>2</sup> + 7x 이다.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph5" data-ans="104" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>가로, 세로, 높이가 각각 5a, 3b, 4a 인 직육면체를 그림과 같이 한 변의 길이가 b 인 정사각형 모양으로 세로 방향으로 관통시켰다. 이 도형의 겉넓이가 pa<sup>2</sup> + qab + rb<sup>2</sup> 일 때, p + q + r 의 값을 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:340px;margin:16px auto">
+<svg viewBox="0 0 430 310" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="가로 5a, 세로 3b, 높이 4a 인 직육면체를 한 변이 b 인 정사각형 모양으로 관통시킨 도형">
+<line x1="148.0" y1="48.0" x2="356.0" y2="48.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="356.0" y1="48.0" x2="356.0" y2="194.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="356.0" y1="194.0" x2="148.0" y2="194.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="148.0" y1="194.0" x2="148.0" y2="48.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="74.0" y1="250.0" x2="148.0" y2="194.0" stroke="var(--text)" stroke-width="1.4" stroke-dasharray="5,4" opacity="0.55"/>
+<line x1="74.0" y1="104.0" x2="148.0" y2="48.0" stroke="var(--text)" stroke-width="1.6"/>
+<line x1="282.0" y1="104.0" x2="356.0" y2="48.0" stroke="var(--text)" stroke-width="1.6"/>
+<line x1="282.0" y1="250.0" x2="356.0" y2="194.0" stroke="var(--text)" stroke-width="1.6"/>
+<line x1="74.0" y1="104.0" x2="282.0" y2="104.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="282.0" y1="104.0" x2="282.0" y2="250.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="282.0" y1="250.0" x2="74.0" y2="250.0" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="74.0" y1="250.0" x2="74.0" y2="104.0" stroke="var(--text)" stroke-width="1.9"/>
+<rect x="161.4" y="171.2" width="32.0" height="32.0" fill="var(--bg)" stroke="var(--orange)" stroke-width="1.9"/>
+<line x1="235.4" y1="115.2" x2="267.4" y2="115.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<line x1="161.4" y1="171.2" x2="235.4" y2="115.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<line x1="267.4" y1="115.2" x2="267.4" y2="147.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<line x1="193.4" y1="171.2" x2="267.4" y2="115.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<line x1="267.4" y1="147.2" x2="235.4" y2="147.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<line x1="193.4" y1="203.2" x2="267.4" y2="147.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<line x1="235.4" y1="147.2" x2="235.4" y2="115.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<line x1="161.4" y1="203.2" x2="235.4" y2="147.2" stroke="var(--orange)" stroke-width="1.3" stroke-dasharray="4,4" opacity="0.75"/>
+<text x="178.0" y="276.0" text-anchor="middle" font-size="14" font-weight="600" fill="var(--blue)">5a</text>
+<text x="64.5" y="177.0" text-anchor="end" font-size="14" font-weight="600" fill="var(--blue)">4a</text>
+<text x="335.7" y="243.9" text-anchor="middle" font-size="14" font-weight="600" fill="var(--blue)">3b</text>
+<text x="129.7" y="191.9" text-anchor="end" font-size="13.5" font-weight="600" fill="var(--orange)">b</text>
+<text x="181.0" y="227.4" text-anchor="middle" font-size="13.5" font-weight="600" fill="var(--orange)">b</text>
+</svg>
+<div class="flowcap">직육면체를 정사각형 모양으로 관통시킨 도형</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph6" data-ans="24" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>직사각형 ABCD 에서 AB = 4x 이고, 두 점 E, F 는 변 BC 위에 B, E, F, C 순으로 놓여 있다. BF = 3x − 4y 이고 △ABF, △DEC, △DEF 의 넓이를 각각 S<sub>1</sub>, S<sub>2</sub>, S<sub>3</sub> 라 하자. S<sub>2</sub> = 9x<sup>2</sup> + 4xy 이고 S<sub>3</sub> 가 S<sub>1</sub> 의 1/2 배일 때, 직사각형 ABCD 의 넓이는 kx<sup>2</sup> 이다. k 의 값을 구하시오.</div>
+          <div class="diagram-wrap" style="max-width:400px;margin:16px auto">
+<svg viewBox="0 0 430 262" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="직사각형 ABCD 와 변 BC 위의 두 점 E, F 를 잇는 선분들">
+<rect x="84.0" y="54.0" width="282.0" height="124.0" fill="none" stroke="var(--text)" stroke-width="1.9"/>
+<line x1="84.0" y1="54.0" x2="202.4" y2="178.0" stroke="var(--green)" stroke-width="1.7"/>
+<line x1="366.0" y1="54.0" x2="143.2" y2="178.0" stroke="var(--blue)" stroke-width="1.7"/>
+<line x1="366.0" y1="54.0" x2="202.4" y2="178.0" stroke="var(--purple)" stroke-width="1.7"/>
+<circle cx="143.2" cy="178.0" r="3.2" fill="var(--text)"/>
+<circle cx="202.4" cy="178.0" r="3.2" fill="var(--text)"/>
+<line x1="56.0" y1="54.0" x2="56.0" y2="178.0" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.9"/>
+<line x1="84.0" y1="218.0" x2="202.4" y2="218.0" stroke="var(--muted)" stroke-width="1.2" stroke-dasharray="4,4" opacity="0.9"/>
+<line x1="84.0" y1="212.0" x2="84.0" y2="224.0" stroke="var(--muted)" stroke-width="1.2" opacity="0.9"/>
+<line x1="202.4" y1="212.0" x2="202.4" y2="224.0" stroke="var(--muted)" stroke-width="1.2" opacity="0.9"/>
+<text x="74.0" y="46.5" text-anchor="end" font-size="14" font-weight="600" fill="var(--text)">A</text>
+<text x="376.0" y="46.5" text-anchor="start" font-size="14" font-weight="600" fill="var(--text)">D</text>
+<text x="51.2" y="202.6" text-anchor="end" font-size="14" font-weight="600" fill="var(--text)">B</text>
+<text x="376.0" y="185.5" text-anchor="start" font-size="14" font-weight="600" fill="var(--text)">C</text>
+<text x="136.9" y="203.2" text-anchor="middle" font-size="14" font-weight="600" fill="var(--text)">E</text>
+<text x="208.7" y="203.2" text-anchor="middle" font-size="14" font-weight="600" fill="var(--text)">F</text>
+<text x="46.0" y="116.0" text-anchor="end" font-size="13.5" font-weight="600" fill="var(--blue)">4x</text>
+<text x="143.2" y="242.5" text-anchor="middle" font-size="13.5" font-weight="600" fill="var(--orange)">3x − 4y</text>
+</svg>
+<div class="flowcap">직사각형 ABCD 와 변 BC 위의 두 점 E, F</div>
+</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 세 삼각형의 높이가 모두 AB 로 같습니다. △DEC 는 △DEF 와 △DFC 로 나뉩니다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph7" data-ans="4/15" data-type="text">
+          <div class="pq"><span class="pnum">7.</span>1/x + 1/y = 4, y/x + x/y = 7/2 일 때, {6xy − (x + y)} ÷ (x<sup>2</sup> + y<sup>2</sup> + x + y) 의 값을 기약분수로 구하시오. (a/b 꼴로 입력)</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 조건의 양변에 xy 를 곱해 보세요.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph8" data-ans="17" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>2x + y = 5 일 때, 3(2x − y) + 2(x + 3y) 를 y 를 쓰지 않고 나타내면 ax + b 이다. a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph9" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>모든 x 에 대하여 a(x<sup>2</sup> − 2x + 3) − b(2x<sup>2</sup> + x − 1) = −4x<sup>2</sup> − 7x + 9 가 성립한다. a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph10" data-ans="-5" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>5a(2a − 3ab) − (10a<sup>2</sup>b − 20a<sup>2</sup>b<sup>2</sup>) ÷ 2b 를 계산했을 때, a<sup>2</sup>b 의 계수를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="wrongnote" id="pwrong">
+      <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
+      <div id="pwrongList"><p class="empty">아직 틀린 문제가 없어요.</p></div>
+    </section>
+  </div>
+</div>
+
+<nav class="unit-nav" aria-label="단원 이동">
+    <a class="pv" href="note_2-1_2_%EB%8B%A8%ED%95%AD%EC%8B%9D%EC%9D%98%EA%B3%84%EC%82%B0_PRO.html">
+      <span class="un-lbl">← 이전 단원</span>
+      <span class="un-t">2단원 · 단항식의 계산</span>
+    </a>
+</nav>
+
+<footer class="site-foot">
+  <p><a href="index.html">← 중2 1학기 목차</a><span class="sep">·</span><a href="/">Isaac Math 홈</a><span class="sep">·</span><a href="/about.html">사이트 소개</a><span class="sep">·</span><a href="/privacy.html">개인정보처리방침</a></p>
+  <p>© Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</p>
+</footer>
+
+<script>
+const LS='isaacmath_note_2-1-3_v1';
+let state={done:[],results:{},reviewed:false};
+function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
+
+let cel={init:false,practice:false,applied:false,hard:false};
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(msg,type){const t=document.createElement('div');t.className='toast '+(type==='ng'?'ng':'ok');t.textContent=msg;document.body.appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300);},2200);}
+function flashWrong(id){const el=document.getElementById(id);if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function confetti(){if(reduceMotion)return;const c=document.createElement('canvas');c.className='confetti-canvas';c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);const ctx=c.getContext('2d');const cols=['#34d399','#60a5fa','#fbbf24','#c4b5fd','#f87171'];const ps=[];for(let i=0;i<90;i++)ps.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.3,r:4+Math.random()*5,vx:-2+Math.random()*4,vy:2+Math.random()*4,col:cols[i%cols.length],rot:Math.random()*6.28,vr:-0.2+Math.random()*0.4});let t0=null;function frame(ts){if(!t0)t0=ts;const el=ts-t0;ctx.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.05;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.col;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.7);ctx.restore();});if(el<1600)requestAnimationFrame(frame);else c.remove();}requestAnimationFrame(frame);}
+function celebrate(msg){toast(msg,'ok');confetti();}
+
+function toggleTheme(){document.documentElement.classList.toggle('light');const light=document.documentElement.classList.contains('light');document.getElementById('themeBtn').textContent=light?'🌙 다크 모드':'☀️ 라이트 모드';}
+function resetAll(){if(confirm('이 단원의 모든 진행 상황(완료·채점·오답·잠금)을 초기화할까요?')){state={done:[],results:{},reviewed:false};save();location.reload();}}
+
+function onScroll(){const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('pbar').style.width=Math.min(100,sc)+'%';}
+window.addEventListener('scroll',onScroll);
+
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  const inp=e.target;
+  if(inp.classList&&inp.classList.contains('quiz-input')){
+    e.preventDefault();
+    const row=inp.closest('.quiz-row');const btn=row&&row.querySelector('.quiz-submit');
+    if(btn)grade(btn);
+  }
+});
+
+const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;document.querySelectorAll('.tlink').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.tlink[href="#'+id+'"]');if(l)l.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.section,#wrong,#gate').forEach(s=>spy.observe(s));
+
+function qtext(el){const q=el.querySelector('.quiz-q, .pq');return q?q.textContent.trim():'';}
+function ids(t){return [...document.querySelectorAll('[data-qid]')].filter(t);}
+const bodyEls=()=>ids(q=>q.dataset.qid[0]==='b');
+const setEls=(p)=>ids(q=>q.dataset.qid.startsWith(p));
+const gradedIn=(list)=>list.filter(q=>state.results[q.dataset.qid]).length;
+
+function grade(btn){
+  const el=btn.closest('[data-qid]');const qid=el.dataset.qid;
+  const inp=el.querySelector('.quiz-input');const type=el.dataset.type;
+  const cands=el.dataset.ans.split('|');   // 복수 정답 지원
+  let val=inp.value.trim();
+  let ok=type==='num'?(val!==''&&cands.some(a=>Number(val)===Number(a))):cands.some(a=>val.replace(/\s/g,'')===a.replace(/\s/g,''));
+  state.results[qid]={correct:ok,given:val||'(미입력)',question:qtext(el),ans:cands[0]};
+  if(!ok){flashWrong(qid[0]==='p'?'pwrong':'wrong');toast('❌ 틀린 문제가 오답노트에 기록됐어요','ng');}
+  save();refresh();
+}
+function paint(el){
+  const qid=el.dataset.qid;const r=state.results[qid];const fb=el.querySelector('.quiz-fb');const inp=el.querySelector('.quiz-input');
+  if(!fb)return;
+  if(r){if(inp&&inp.value===''&&r.given!=='(미입력)')inp.value=r.given;
+    fb.classList.add('show');
+    if(r.correct){fb.className='quiz-fb show ok';fb.textContent='✅ 정답이에요!';}
+    else{fb.className='quiz-fb show ng';fb.textContent='❌ 다시 생각해봐요. (오답노트에 기록됐어요)';}
+  } else {fb.className='quiz-fb';fb.textContent='';}
+}
+
+function toggleDone(id){const i=state.done.indexOf(id);if(i>=0)state.done.splice(i,1);else state.done.push(id);save();refresh();}
+function reveal(btn){const box=btn.closest('.solution');const steps=box.querySelectorAll('.step');for(const s of steps){if(!s.classList.contains('show')){s.classList.add('show');break;}}if([...steps].every(s=>s.classList.contains('show'))){btn.disabled=true;btn.textContent='모든 단계 공개됨';}}
+function reviewWrong(){state.reviewed=true;save();refresh();}
+function clearWrong(){for(const k of Object.keys(state.results)){if(state.results[k].correct===false)delete state.results[k];}save();refresh();}
+function startPractice(){const wrap=document.getElementById('practiceWrap');if(wrap.style.display==='block'){document.getElementById('pset_basic').scrollIntoView({behavior:'smooth'});}}
+
+function renderWrongList(boxId,list){
+  const box=document.getElementById(boxId);
+  const items=list.filter(q=>{const r=state.results[q.dataset.qid];return r&&r.correct===false;}).map(q=>state.results[q.dataset.qid]);
+  if(!items.length){box.innerHTML='<p class="empty">아직 틀린 문제가 없어요.</p>';return;}
+  box.innerHTML=items.map(w=>'<div class="wrong-item"><div class="wq">'+w.question+'</div><div class="wa">내 답: '+w.given+' · 정답: '+w.ans+'</div></div>').join('');
+}
+
+function refresh(){
+  state.done=state.done.filter(id=>document.getElementById(id));
+  const secs=document.querySelectorAll('.section');
+  secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
+  const total=secs.length;const p=Math.round(state.done.length/total*100);
+  document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
+  document.getElementById('b_first').classList.toggle('on',state.done.length>=1);
+  document.getElementById('b_half').classList.toggle('on',p>=50);
+  document.getElementById('b_master').classList.toggle('on',p>=100);
+  const d=document.getElementById('achDesc');
+  d.textContent=p>=100?'🏆 단원 마스터! 모든 섹션을 끝냈어요.':(p>=50?'🔥 절반 돌파! 끝까지 가볼까요?':'각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.');
+
+  document.querySelectorAll('[data-qid]').forEach(paint);
+
+  renderWrongList('wrongList',bodyEls());
+  renderWrongList('pwrongList',[...setEls('pb'),...setEls('pa'),...setEls('ph')]);
+  const rb=document.getElementById('reviewBtn');if(state.reviewed){rb.classList.add('done');rb.textContent='✓ 오답 정리 완료';}else{rb.classList.remove('done');rb.textContent='오답 정리 완료';}
+
+  const body=bodyEls();const bg=gradedIn(body);
+  document.getElementById('gradedCount').textContent=bg;
+  document.getElementById('quizTotal').textContent=body.length;
+  const quizDone=bg===body.length&&body.length>0;
+  document.getElementById('ck_quiz').classList.toggle('ok',quizDone);
+  document.getElementById('ck_review').classList.toggle('ok',state.reviewed);
+  const unlocked=quizDone&&state.reviewed;
+  const sb=document.getElementById('startBtn');
+  if(unlocked){sb.className='start-btn open';sb.textContent='✏️ 연습문제 풀기 →';}
+  else{sb.className='start-btn locked';sb.textContent='🔒 연습문제 풀기 (잠김)';}
+  document.getElementById('practiceWrap').style.display=unlocked?'block':'none';
+
+  const nb=setEls('pb').length, na=setEls('pa').length;
+  const gb=gradedIn(setEls('pb')),ga=gradedIn(setEls('pa')),gh=gradedIn(setEls('ph'));
+  setCount('cnt_basic',gb,nb);setCount('cnt_applied',ga,na);setCount('cnt_hard',gh,setEls('ph').length);
+  document.getElementById('pset_basic').classList.remove('locked');
+  document.getElementById('pset_applied').classList.toggle('locked',gb<nb);
+  document.getElementById('pset_hard').classList.toggle('locked',ga<na);
+
+  const cur={practice:unlocked,applied:gb>=nb,hard:ga>=na};
+  if(cel.init){
+    if(cur.practice&&!cel.practice)celebrate('🎉 축하합니다! 연습문제가 열렸어요!');
+    else if(cur.hard&&!cel.hard)celebrate('🏆 심화 레벨이 열렸어요!');
+    else if(cur.applied&&!cel.applied)celebrate('🔥 응용 레벨이 열렸어요!');
+  }
+  cel={init:true,practice:cur.practice,applied:cur.applied,hard:cur.hard};
+}
+function setCount(id,n,tot){const el=document.getElementById(id);el.textContent=n+' / '+tot;el.classList.toggle('clear',n>=tot);}
+
+load();
+if(document.documentElement.classList.contains('light'))document.getElementById('themeBtn').textContent='🌙 다크 모드';
+refresh();
+</script>
+</body>
+</html>
