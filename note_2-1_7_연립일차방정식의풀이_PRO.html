@@ -14,13 +14,13 @@
         crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>연립일차방정식 | 중2 1학기 6단원 | Isaac Math PRO</title>
-<meta name="description" content="미지수가 두 개인 일차방정식의 뜻과 해, 자연수 조건에서 해를 찾는 방법, 연립일차방정식의 해와 가감법·대입법까지 8단계로 정리한 중2 1학기 6단원 강의노트입니다.">
-<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_6_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D_PRO.html">
-<meta property="og:title" content="연립일차방정식 — 중2 1학기 6단원 강의노트">
-<meta property="og:description" content="미지수가 두 개인 일차방정식의 뜻과 해부터, 두 방정식을 한 세트로 묶은 연립일차방정식을 가감법·대입법으로 푸는 것까지 8단계로 정리한 중2 1학기 6단원 강의노트입니다. 연습문제 30문항 수록.">
+<title>연립일차방정식의 풀이 | 중2 1학기 7단원 | Isaac Math PRO</title>
+<meta name="description" content="괄호·소수·분수·순환소수 계수를 정리하는 법, A=B=C 꼴, 해가 무수히 많거나 없는 특수한 경우, 해의 조건이 주어진 문제와 잘못 보고 푼 문제까지 8단계로 정리한 중2 1학기 7단원 강의노트입니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_7_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%92%80%EC%9D%B4_PRO.html">
+<meta property="og:title" content="연립일차방정식의 풀이 — 중2 1학기 7단원 강의노트">
+<meta property="og:description" content="괄호·소수·분수·순환소수 계수를 정리해 가감법·대입법으로 끌고 가는 법부터, A=B=C 꼴, 해가 무수히 많거나 없는 특수한 경우, 해의 조건이 붙은 문제와 잘못 보고 푼 문제까지 8단계로 정리한 중2 1학기 7단원 강의노트입니다. 연습문제 30문항 수록.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_6_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D_PRO.html">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_7_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%92%80%EC%9D%B4_PRO.html">
 <style>
   :root {
     --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
@@ -457,77 +457,83 @@
 .od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
            margin-left:-.1em;border-radius:50%;background:currentColor}
 
-/* ── 2-1 6단원 「연립일차방정식」 전용 시각자료 CSS ── */
-/* ===== 2-1 6단원 시각자료 공통 CSS (u6- 접두사) =====
+/* ── 2-1 7단원 「연립일차방정식의 풀이」 전용 시각자료 CSS (u7- 접두사) ──
    공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
-.u6-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
-.u6-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
-.u6-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
-.u6-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
-.u6-eq i{font-style:italic;}
-.u6-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
-.u6-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);}
-.u6-card.on{border-color:var(--green);border-width:2px;}
-.u6-card.off{border-color:var(--red);border-width:2px;}
-.u6-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
-.u6-lab.g{color:var(--green);} .u6-lab.r{color:var(--red);}
-.u6-lab.b{color:var(--blue);} .u6-lab.o{color:var(--orange);} .u6-lab.p{color:var(--purple);}
-.u6-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
-.u6-note .u6-eq,.u6-cap .u6-eq{font-size:13px;}
-.u6-why .u6-eq{font-size:12px;}
-.u6-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
-.u6-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
-.u6-tb th,.u6-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
-.u6-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
-.u6-tb td.hit{color:var(--green);font-weight:700;}
-.u6-tb td.no{color:var(--red);}
-.u6-tb tr.pick td{background:rgba(52,211,153,.12);}
-.u6-list{margin:0;padding-left:18px;font-size:13px;line-height:1.9;}
-.u6-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
-.u6-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+.u7-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u7-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u7-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u7-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u7-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u7-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u7-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u7-card.on{border-color:var(--green);border-width:2px;}
+.u7-card.off{border-color:var(--red);border-width:2px;}
+.u7-card.pick{border-color:var(--blue);border-width:2px;}
+.u7-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u7-lab.g{color:var(--green);} .u7-lab.r{color:var(--red);}
+.u7-lab.b{color:var(--blue);} .u7-lab.o{color:var(--orange);} .u7-lab.p{color:var(--purple);}
+.u7-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u7-note .u7-eq,.u7-cap .u7-eq{font-size:13px;}
+.u7-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u7-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u7-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u7-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u7-tb th,.u7-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u7-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u7-tb td.hit{color:var(--green);font-weight:700;}
+.u7-tb td.no{color:var(--red);}
+.u7-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u7-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u7-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
         font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
-.u6-flow{display:flex;flex-direction:column;gap:8px;}
-.u6-step{display:flex;gap:9px;align-items:flex-start;font-size:13px;line-height:1.6;}
-.u6-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
-.u6-calc{font-family:"Times New Roman",Georgia,serif;font-size:16px;line-height:1.95;}
-.u6-calc .op{display:inline-block;width:1.1em;font-style:normal;color:var(--orange);font-weight:700;}
-.u6-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
-.u6-grid4{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
-.u6-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
-.u6-pair{color:var(--green);font-weight:700;}
-.u6-anat{text-align:center;padding:6px 0 2px;}
-.u6-anat .pc{display:inline-block;padding:0 1px;}
-.u6-anat .tag{display:block;font-size:10px;font-style:normal;margin-top:5px;line-height:1.35;}
-.u6-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
-
+.u7-num.o{background:var(--orange);} .u7-num.p{background:var(--purple);} .u7-num.g{background:var(--green);}
+.u7-flow{display:flex;flex-direction:column;gap:8px;}
+.u7-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u7-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u7-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u7-hl.o{background:rgba(251,146,60,.18);} .u7-hl.g{background:rgba(52,211,153,.18);}
+.u7-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u7-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u7-sys .rows{display:flex;flex-direction:column;gap:5px;}
 /* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
-.u6-anatg{display:grid;grid-template-columns:repeat(8,auto);justify-content:center;
-          column-gap:1px;row-gap:6px;padding:4px 0 2px;}
-.u6-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
-          font-size:22px;text-align:center;line-height:1.1;}
-.u6-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 7px;}
-.u6-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;
-          white-space:nowrap;}
-.u6-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+.u7-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
         font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
-.u6-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
-.u6-eqg span{text-align:right;font-style:italic;}
-.u6-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
-.u6-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
-.u6-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
-.u6-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
-.u6-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+.u7-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u7-eqg span{text-align:right;font-style:italic;}
+.u7-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u7-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u7-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u7-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u7-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
         column-gap:7px;row-gap:9px;justify-content:start;}
-.u6-mul .n{font-size:14px;color:var(--muted);}
-.u6-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
-.u6-mul .ar{color:var(--muted);}
-.u6-mulbar{border-top:2px solid var(--text);margin:9px 0 7px;}
+.u7-mul .n{font-size:14px;color:var(--muted);}
+.u7-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u7-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u7-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u7-fr{display:inline-flex;flex-direction:column;align-items:center;line-height:1.25;}
+.u7-fr .up{padding:0 6px;font-style:italic;}
+.u7-fr .dn{padding:0 6px;border-top:1.5px solid var(--text);font-style:italic;}
+.u7-fr.a .up,.u7-fr.a .dn{color:var(--blue);}
+.u7-fr.b .up,.u7-fr.b .dn{color:var(--purple);}
+.u7-fr.c .up,.u7-fr.c .dn{color:var(--orange);}
+.u7-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u7-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u7-eqrow{text-align:center;overflow-x:auto;}
+.u7-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u7-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u7-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
 @media (max-width:600px){
-  .u6-2col,.u6-grid4{grid-template-columns:1fr;}
-  .u6-anatg .pt{font-size:19px;}
-  .u6-eqg{font-size:15px;}
-  .u6-mul{column-gap:5px;}
-  .u6-eq{font-size:15px;} .u6-calc{font-size:14px;}
+  .u7-2col,.u7-3col{grid-template-columns:1fr;}
+  .u7-eqg{font-size:15px;} .u7-eq{font-size:15px;}
+  .u7-anatg .pt{font-size:18px;}
+  .u7-ratio{gap:9px;font-size:14px;}
 }
 </style>
 </head>
@@ -540,8 +546,8 @@
       <span class="pro-badge">PRO</span>
       <span class="label">Isaac Math 2-1 강의노트 · 프리미엄</span>
     </div>
-    <h1>연립일차방정식</h1>
-    <div class="sub">5단원까지는 활용 문제를 풀 때 미지수를 반드시 <strong>하나</strong>로 놓았습니다. 둘로 놓으면 그때는 풀 방법이 없었기 때문입니다. 이번 단원에서는 미지수가 두 개인 일차방정식의 뜻과 해부터, 두 방정식을 한 세트로 묶은 <strong>연립일차방정식</strong>을 가감법·대입법으로 푸는 것까지 8단계로 정리합니다.</div>
+    <h1>연립일차방정식의 풀이</h1>
+    <div class="sub">6단원에서 미지수가 두 개인 연립일차방정식의 뜻과 해, 그리고 가감법·대입법의 기본을 배웠습니다. 이번 단원에서는 <strong>괄호·소수·분수·순환소수</strong>가 섞인 지저분한 식을 정리해 그 두 방법으로 끌고 가는 법과, <strong>A = B = C</strong> 꼴, 해가 무수히 많거나 없는 특수한 경우, 해에 조건이 붙은 문제와 잘못 보고 푼 문제까지 8단계로 정리합니다.</div>
     <div class="header-tools">
       <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
       <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
@@ -567,441 +573,406 @@
 </div>
 
 <nav class="toc" id="toc">
-  <a href="#s1" class="tlink">① 미지수 둘</a>
-  <a href="#s2" class="tlink">② 뜻과 판별</a>
-  <a href="#s3" class="tlink">③ 순서쌍</a>
-  <a href="#s4" class="tlink">④ 무수한 해</a>
-  <a href="#s5" class="tlink">⑤ 자연수 해</a>
-  <a href="#s6" class="tlink">⑥ 상수 구하기</a>
-  <a href="#s7" class="tlink">⑦ 연립방정식</a>
-  <a href="#s8" class="tlink">⑧ 가감·대입</a>
+  <a href="#s1" class="tlink">① 두 풀이법</a>
+  <a href="#s2" class="tlink">② 괄호 정리</a>
+  <a href="#s3" class="tlink">③ 소수 계수</a>
+  <a href="#s4" class="tlink">④ 분수 계수</a>
+  <a href="#s5" class="tlink">⑤ A=B=C</a>
+  <a href="#s6" class="tlink">⑥ 특수한 해</a>
+  <a href="#s7" class="tlink">⑦ 해의 조건</a>
+  <a href="#s8" class="tlink">⑧ 잘못 봄</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
 
 <div class="content">
   <section class="section" id="s1">
-    <div class="section-head"><span class="section-num">1</span><span class="section-title">미지수가 두 개인 식이 필요할 때</span>
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">가감법과 대입법, 다시 한 번</span>
       <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
 
-<p>5단원까지는 활용 문제를 풀 때 미지수를 반드시 <strong>하나</strong>로 놓았습니다. 두 개로 놓으면 그때는 풀 방법이 없었기 때문입니다. 이번 단원에서 바로 그 방법을 배웁니다.</p>
-<p>서로 다른 두 가지를 한꺼번에 물으면 미지수가 자연스럽게 두 개가 됩니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">미지수가 하나일 때와 둘일 때</div>
-  <div class="u6-2col">
-    <div class="u6-card">
-      <div class="u6-lab b">5단원까지 &mdash; 미지수 1개</div>
-      <div class="u6-eq">2<i>x</i> &minus; 6 = 0</div>
-      <div class="u6-note">양변을 정리하면 <span class="u6-eq">
-        <i>x</i> = 3</span><br>해가 <strong>하나로 정해진다</strong></div>
-    </div>
-    <div class="u6-card">
-      <div class="u6-lab o">6단원부터 &mdash; 미지수 2개</div>
-      <div class="u6-eq">2<i>x</i> + 3<i>y</i> = 12</div>
-      <div class="u6-note"><span class="u6-eq"><i>x</i></span> 를 정할 때마다
-        <span class="u6-eq"><i>y</i></span> 가 따라 정해진다<br>해가 <strong>무수히 많다</strong></div>
-    </div>
+<p>6단원에서 가감법과 대입법으로 연립방정식을 푸는 법을 이미 배웠습니다. 이번 단원은 <strong>새로운 풀이법을 배우는 것이 아니라</strong>, 식이 괄호·소수·분수로 지저분할 때 그것을 어떻게 정리해서 그 두 방법으로 끌고 가는지를 배웁니다.</p>
+<p><strong>가감법(소거법)</strong>은 두 식을 통째로 더하거나 빼서 한 문자를 지우는 방법이고, <strong>대입법</strong>은 한 식을 y = &#8230; 꼴로 정리해 다른 식에 갈아 끼워 한 문자를 지우는 방법입니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">같은 연립방정식을 두 가지 방법으로</div>
+  <div class="u7-sys"><div class="u7-brace">{</div><div class="rows"><div class="u7-eq">2<i>x</i> + <i>y</i> = 12 &nbsp;&nbsp;&#8230;&#9312;</div><div class="u7-eq"><i>y</i> = <i>x</i> &minus; 3 &nbsp;&nbsp;&#8230;&#9313;</div></div></div>
+  <div class="u7-2col" style="margin-top:12px">
+    <div class="u7-card"><div class="u7-lab o">가감법 &mdash; 더하거나 빼서 지운다</div>
+      <div class="u7-eqg add">
+        <span class="sg">&nbsp;</span><span>2<i>x</i></span><span class="sg">+</span><span><i>y</i></span><span class="sg">=</span><span>12</span><span class="mk">&hellip;&#9312;</span>
+        <span class="sg">+</span><span><i>x</i></span><span class="sg">&minus;</span><span><i>y</i></span><span class="sg">=</span><span>3</span><span class="mk">&hellip;&#9313;&prime;</span>
+        <span class="bar"></span><span class="mk">&nbsp;</span>
+        <span class="sg">&nbsp;</span><span>3<i>x</i></span><span class="sg">&nbsp;</span><span>&nbsp;</span><span class="sg">=</span><span>15</span><span class="res">&rarr; <i>x</i> = 5</span>
+      </div>
+      <div class="u7-note">&#9312;와 &#9313;&prime;를 <b>더하면</b> <i>y</i>가 사라진다.</div>
+      <div class="u7-ok">&#9313;를 <i>x</i> &minus; <i>y</i> = 3 꼴로 옮겨 두면 세로로 더할 수 있다.</div></div>
+    <div class="u7-card"><div class="u7-lab b">대입법 &mdash; 갈아 끼워서 지운다</div>
+      <div class="u7-anatg" style="grid-template-columns:repeat(5,auto)">
+        <div class="pt">2<i>x</i></div><div class="pt op">+</div><div class="pt" style="color:var(--blue)"><i>y</i></div><div class="pt op">=</div><div class="pt">12</div>
+        <div class="tg">&nbsp;</div><div class="tg">&nbsp;</div><div class="tg" style="color:var(--blue)">&#8595; 여기에 &#9313;를</div><div class="tg">&nbsp;</div><div class="tg">&nbsp;</div>
+        <div class="pt">2<i>x</i></div><div class="pt op">+</div><div class="pt" style="color:var(--blue)">(<i>x</i>&minus;3)</div><div class="pt op">=</div><div class="pt">12</div>
+      </div>
+      <div class="u7-note">괄호를 풀면 3<i>x</i> &minus; 3 = 12, <span class="u7-hl g"><i>x</i> = 5</span></div>
+      <div class="u7-ok">&#9313;가 이미 <i>y</i> = &#8230; 꼴이라 그대로 넣을 수 있다.</div></div>
   </div>
-  <div class="u6-cap">5단원에서는 미지수를 하나로 놓아야 풀 수 있었습니다.
-    이제 미지수를 둘로 늘리면 무엇이 달라지는지 살펴봅니다.</div>
+  <div class="u7-cap">어느 쪽으로 풀어도 해는 (5, 2) 하나뿐이다. 지우는 방법이 다를 뿐이다.</div>
 </div>
-    <div class="quiz" data-qid="b1" data-ans="7" data-type="num">
-      <div class="quiz-q">Q. 사탕 x개와 초콜릿 y개를 합해 12개를 샀다. 이를 식으로 나타내면 x + y = 12 이다. 이때 x = 5 이면 y의 값은?</div>
+    <div class="quiz" data-qid="b1" data-ans="3" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 5x + 2y = 19, 3x + 2y = 13 } 을 가감법으로 풀 때, x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 5를 대입하고 남은 수를 세어 보자.</div>
+      <div class="quiz-hint">힌트: y 의 계수가 이미 같다. 두 식을 빼 보자.</div>
       <div class="quiz-fb"></div>
     </div>
-<div class="u6-wrap">
-  <div class="u6-t">상황을 미지수 두 개인 식으로 옮기기</div>
-  <div class="u6-scroll"><table class="u6-tb">
-    <tr><th style="width:62%">상황</th><th>식</th></tr>
-    <tr><td style="text-align:left">학생 <span class="u6-eq"><i>x</i></span>명과 선생님
-      <span class="u6-eq"><i>y</i></span>명이 모여 모두 30명이다</td>
-      <td class="u6-eq"><i>x</i> + <i>y</i> = 30</td></tr>
-    <tr><td style="text-align:left">500원짜리 볼펜 <span class="u6-eq"><i>x</i></span>자루와
-      800원짜리 공책 <span class="u6-eq"><i>y</i></span>권을 사고 4600원을 냈다</td>
-      <td class="u6-eq">500<i>x</i> + 800<i>y</i> = 4600</td></tr>
-    <tr><td style="text-align:left">가로 <span class="u6-eq"><i>x</i></span>cm, 세로
-      <span class="u6-eq"><i>y</i></span>cm 인 직사각형의 둘레가 20cm 이다</td>
-      <td class="u6-eq">2(<i>x</i> + <i>y</i>) = 20</td></tr>
+<p>시험에서는 &#12300;대입법으로 풀어라&#12301;처럼 방법을 지정하는 문제도 나옵니다. 그때는 지정된 방법을 따라야 하므로 두 방법을 모두 손에 익혀 두어야 합니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">주어진 꼴을 보고 고른다</div>
+  <div class="u7-scroll"><table class="u7-tb">
+    <tr><th>이런 꼴이면</th><th>고를 방법</th><th>이유</th></tr>
+    <tr class="pick"><td class="u7-eq"><i>y</i> = 2<i>x</i> &minus; 1</td><td class="hit">대입법</td><td>이미 한 문자로 정리돼 있다</td></tr>
+    <tr class="pick"><td class="u7-eq"><i>x</i> &minus; 3<i>y</i> = 5</td><td class="hit">대입법</td><td>계수가 1이라 옮기기 쉽다</td></tr>
+    <tr class="pick"><td class="u7-eq">3<i>x</i> + 2<i>y</i> = 7</td><td class="hit">가감법</td><td>계수가 모두 1이 아니다</td></tr>
+    <tr class="pick"><td class="u7-eq">2<i>x</i> &minus; 5<i>y</i> = 4</td><td class="hit">가감법</td><td>옮기면 분수가 생긴다</td></tr>
   </table></div>
-  <div class="u6-cap">서로 다른 두 가지를 한꺼번에 물으면 미지수가 자연스럽게 두 개가 됩니다.</div>
+  <div class="u7-cap">둘 중 어느 쪽으로 풀어도 답은 같다. 풀이가 한 줄 짧아질 뿐이므로 편한 쪽을 고르면 된다.</div>
 </div>
-    <div class="quiz" data-qid="b2" data-ans="6" data-type="num">
-      <div class="quiz-q">Q. 세 잎 클로버 x개와 네 잎 클로버 y개의 잎을 모두 세었더니 30장이었다. 이를 식으로 나타내면 3x + 4y = 30 이다. 이때 x = 2 이면 y의 값은?</div>
+    <div class="quiz" data-qid="b2" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { x = 3y − 2, 2x + 5y = 18 } 을 대입법으로 풀 때, x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 클로버 한 개의 잎 수가 곧 계수다.</div>
+      <div class="quiz-hint">힌트: 첫째 식을 둘째 식의 x 자리에 그대로 넣는다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s2">
-    <div class="section-head"><span class="section-num">2</span><span class="section-title">미지수가 두 개인 일차방정식의 뜻</span>
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">괄호가 있는 연립방정식</span>
       <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
 
-<p>미지수가 두 개인 일차방정식은 <strong>ax + by + c = 0</strong> 꼴로 나타나는 등식입니다(a, b, c는 상수). 이때 <strong>a &ne; 0, b &ne; 0</strong> 이어야 합니다 — 둘 중 하나라도 0이면 미지수가 하나뿐인 방정식이 되어 버립니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">미지수가 두 개인 일차방정식의 꼴</div>
-  <div class="u6-anatg">
-    <div class="pt" style="color:var(--blue)">a</div><div class="pt">x</div>
-    <div class="pt op">+</div>
-    <div class="pt" style="color:var(--orange)">b</div><div class="pt">y</div>
-    <div class="pt op">+</div>
-    <div class="pt" style="color:var(--purple)">c</div>
-    <div class="pt op">= 0</div>
-    <div class="tg" style="color:var(--blue)">x의 계수<br>a &ne; 0</div><div class="tg">&nbsp;</div>
-    <div class="tg">&nbsp;</div>
-    <div class="tg" style="color:var(--orange)">y의 계수<br>b &ne; 0</div><div class="tg">&nbsp;</div>
-    <div class="tg">&nbsp;</div>
-    <div class="tg" style="color:var(--purple)">상수항<br>0이어도 됨</div>
-    <div class="tg" style="color:var(--green)">등식이어야<br>한다</div>
+<p>괄호는 분배법칙으로 풀어 ax + by = c 꼴로 정리한 뒤에 연립합니다. 정리만 끝나면 6단원에서 풀던 것과 똑같습니다. 괄호가 여러 겹이면 <strong>가장 안쪽부터</strong> 풉니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">괄호는 먼저 풀어 <i>ax</i> + <i>by</i> = <i>c</i> 꼴로</div>
+  <div class="u7-3col">
+    <div class="u7-card"><div class="u7-lab">&#9312; 주어진 식</div>
+      <div class="u7-eq">2(<i>x</i> &minus; <i>y</i>) + 3<i>y</i> = 11</div></div>
+    <div class="u7-card"><div class="u7-lab o">&#9313; 분배해서 전개</div>
+      <div class="u7-eq">2<i>x</i> &minus; 2<i>y</i> + 3<i>y</i> = 11</div></div>
+    <div class="u7-card on"><div class="u7-lab g">&#9314; 동류항 정리</div>
+      <div class="u7-eq">2<i>x</i> + <i>y</i> = 11</div></div>
   </div>
-  <div class="u6-note" style="text-align:center">
-    <strong>a, b, c 는 상수</strong>이고 <span class="u6-eq"><i>x</i>, <i>y</i></span> 가 미지수입니다.
-    <span class="u6-hl">a &ne; 0, b &ne; 0</span> 이어야 미지수가 <strong>두 개</strong>로 남습니다.</div>
-  <div class="u6-cap">둘 중 하나라도 0이면 미지수가 하나뿐인 방정식이 되어 버립니다.</div>
+  <div class="u7-cap">&minus;2<i>y</i> 와 +3<i>y</i> 를 모으면 +<i>y</i> 다. 여기까지 오면 앞 단원에서 풀던 꼴과 똑같다.</div>
 </div>
-<p>어떤 식이 미지수가 두 개인 일차방정식인지는 다음 세 가지를 <strong>모두</strong> 만족하는지로 확인합니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">미지수가 두 개인 일차방정식인지 확인하는 세 가지</div>
-  <div class="u6-chk"><div class="u6-num">1</div><div>
-    <strong>등식인가?</strong> &mdash; 등호(=)가 있어야 방정식입니다.</div></div>
-  <div class="u6-chk"><div class="u6-num">2</div><div>
-    <strong>정리했을 때 미지수가 2개인가?</strong> &mdash; 이항해서 정리한 뒤에 세어야 합니다.</div></div>
-  <div class="u6-chk"><div class="u6-num">3</div><div>
-    <strong>두 미지수가 모두 일차인가?</strong> &mdash;
-    <span class="u6-eq"><i>x</i><sup>2</sup></span>, <span class="u6-eq"><i>xy</i></span> 같은 항이 남으면 안 됩니다.</div></div>
-  <div class="u6-note" style="border-top:1px solid var(--border);padding-top:9px;margin-top:11px">
-    세 가지를 <strong style="color:var(--green)">모두</strong> 만족해야 미지수가 두 개인 일차방정식입니다.</div>
-  <div class="u6-cap">2번이 가장 잘 틀립니다 &mdash; 반드시 <strong>정리한 뒤에</strong> 세세요.</div>
-</div>
-<p>예를 들어 <strong>2x + 5y = 7</strong> 은 세 조건을 모두 만족하는 미지수가 두 개인 일차방정식입니다.</p>
-    <div class="quiz" data-qid="b3" data-ans="2" data-type="num">
-      <div class="quiz-q">Q. 다음 중 미지수가 두 개인 일차방정식은 모두 몇 개인가?<br>ㄱ. x + y = 5<br>ㄴ. 2x − y<sup>2</sup> = 1<br>ㄷ. x/4 + y = 2<br>ㄹ. 5x − 3 = 0<br>ㅁ. y(x − 2) = xy + 1</div>
+    <div class="quiz" data-qid="b3" data-ans="1" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 3(x + y) − 2y = 13, 2x − (y − 3) = 10 } 의 해에서 y 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: ㅁ은 괄호를 풀어 정리한 뒤에 판단하자.</div>
+      <div class="quiz-hint">힌트: 괄호를 먼저 풀어 ax+by=c 꼴로 정리한다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>반면 x − 2y(등호가 없어 방정식이 아님), 3x + 1 = 0(미지수가 하나), xy − 4 = 0(이차항이 남음), 3x + y = 3x − 2(정리하면 y = −2로 미지수가 하나)는 모두 미지수가 두 개인 일차방정식이 <strong>아닙니다</strong>.</p>
-<div class="u6-wrap">
-  <div class="u6-t">미지수가 두 개인 일차방정식이 <em>아닌</em> 것들</div>
-  <div class="u6-grid4">
-    <div class="u6-card off"><div class="u6-eq"><i>x</i> &minus; 2<i>y</i></div>
-      <div class="u6-why">등호가 없다 &rarr; 방정식이 아니라 <strong>식</strong></div></div>
-    <div class="u6-card off"><div class="u6-eq">3<i>x</i> + 1 = 0</div>
-      <div class="u6-why">미지수가 <span class="u6-eq"><i>x</i></span> <strong>하나뿐</strong></div></div>
-    <div class="u6-card off"><div class="u6-eq"><i>xy</i> &minus; 4 = 0</div>
-      <div class="u6-why"><span class="u6-eq"><i>xy</i></span> 는 <strong>이차항</strong></div></div>
-    <div class="u6-card off"><div class="u6-eq">3<i>x</i> + <i>y</i> = 3<i>x</i> &minus; 2</div>
-      <div class="u6-why">정리하면 <span class="u6-eq"><i>y</i> = &minus;2</span> &rarr; 미지수 <strong>하나</strong></div></div>
+<p>괄호 앞에 마이너스가 있을 때는 부호를 놓치기 특히 쉬우니 주의합니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">괄호 앞에 &minus; 가 붙으면</div>
+  <div class="u7-2col">
+    <div class="u7-card off"><div class="u7-lab r">이렇게 하면 틀린다</div>
+      <div class="u7-eq">3<i>x</i> &minus; (<i>x</i> &minus; 2<i>y</i>) = 14</div>
+      <div class="u7-arrow">&#8595;</div>
+      <div class="u7-eq">3<i>x</i> &minus; <i>x</i> &minus; 2<i>y</i> = 14</div>
+      <div class="u7-why">뒤쪽 &minus;2<i>y</i> 의 부호를 바꾸지 않았다.</div></div>
+    <div class="u7-card on"><div class="u7-lab g">바르게 푼 것</div>
+      <div class="u7-eq">3<i>x</i> &minus; (<i>x</i> &minus; 2<i>y</i>) = 14</div>
+      <div class="u7-arrow">&#8595;</div>
+      <div class="u7-eq">3<i>x</i> &minus; <i>x</i> + 2<i>y</i> = 14</div>
+      <div class="u7-ok">괄호 안 <b>모든</b> 항의 부호가 바뀐다.</div></div>
   </div>
-  <div class="u6-cap">맨 오른쪽처럼 <strong>정리해 보아야</strong> 정체가 드러나는 것도 있습니다.</div>
+  <div class="u7-cap">정리하면 2<i>x</i> + 2<i>y</i> = 14, 곧 <i>x</i> + <i>y</i> = 7 이다. 양변을 2로 나눠 두면 계산이 가벼워진다.</div>
 </div>
-    <div class="quiz" data-qid="b4" data-ans="5" data-type="num">
-      <div class="quiz-q">Q. 등식 4x + ay − 7 = 2x + 5y + 1 이 x, y에 대한 미지수가 두 개인 일차방정식이 되도록 할 때, 상수 a가 될 수 없는 값은?</div>
+    <div class="quiz" data-qid="b4" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 5(x − 1) − 2y = −1, 2x + 3(y + 1) = 16 } 의 해에서 x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 한쪽으로 모아 정리했을 때 y항이 사라지면 안 된다.</div>
+      <div class="quiz-hint">힌트: 상수항을 우변으로 옮기면 정리가 끝난다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s3">
-    <div class="section-head"><span class="section-num">3</span><span class="section-title">해와 순서쌍</span>
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">계수가 소수인 연립방정식</span>
       <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
 
-<p>미지수가 두 개인 일차방정식을 <strong>참이 되게</strong> 하는 x, y 값의 짝을 그 방정식의 <strong>해</strong>라고 합니다. x = 3, y = 3 또는 순서쌍 <strong>(3, 3)</strong> 으로 씁니다.</p>
-<p>순서쌍은 <strong>순서가 중요</strong>합니다 — (3, 2)와 (2, 3)은 서로 다른 해입니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">순서쌍이 해인지 확인하기 &mdash; <span class="u6-eq">2<i>x</i> + <i>y</i> = 9</span></div>
-  <div class="u6-2col">
-    <div class="u6-card on">
-      <div class="u6-lab g">(3, 3) 을 대입</div>
-      <div class="u6-eq">2&times;3 + 3 = 9</div>
-      <div class="u6-note">좌변과 우변이 <strong style="color:var(--green)">같다</strong><br>&rarr; 해가 <strong>맞다</strong></div>
-    </div>
-    <div class="u6-card off">
-      <div class="u6-lab r">(1, 5) 를 대입</div>
-      <div class="u6-eq">2&times;1 + 5 = 7</div>
-      <div class="u6-note">9 가 아니라 7 &rarr; <strong style="color:var(--red)">다르다</strong><br>&rarr; 해가 <strong>아니다</strong></div>
-    </div>
-  </div>
-  <div class="u6-cap">해는 <span class="u6-eq"><i>x</i></span> 값과 <span class="u6-eq"><i>y</i></span> 값이 짝을 이루므로
-    <strong>순서쌍 (x, y)</strong> 로 씁니다. 순서를 바꾸면 다른 해가 됩니다.</div>
+<p>소수점 아래 자리 수만큼 양변에 10, 100, &#8230; 을 곱하면 정수 계수로 바꿀 수 있습니다. 여기까지 정리하고 나면 6단원에서 풀던 꼴이 그대로 나옵니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">소수점 아래 자리 수만큼 10을 곱한다</div>
+  <div class="u7-scroll"><table class="u7-tb">
+    <tr><th>주어진 식</th><th>가장 아래 자리</th><th>양변에 곱할 수</th><th>정수 계수로</th></tr>
+    <tr><td class="u7-eq">0.2<i>x</i> + 0.3<i>y</i> = 0.9</td><td>소수 첫째</td><td class="hit">&times; 10</td><td class="u7-eq">2<i>x</i> + 3<i>y</i> = 9</td></tr>
+    <tr><td class="u7-eq">0.05<i>x</i> &minus; 0.02<i>y</i> = 0.13</td><td>소수 둘째</td><td class="hit">&times; 100</td><td class="u7-eq">5<i>x</i> &minus; 2<i>y</i> = 13</td></tr>
+  </table></div>
+  <div class="u7-note">두 식에 곱하는 수가 서로 달라도 된다. 한 식 안에서 <b>모든 항</b>에 같은 수를 곱하기만 하면 된다.</div>
+  <div class="u7-cap">굳이 정수로 바꾸지 않고 소수인 채로 풀어도 답은 같다. 계산이 편한 쪽을 고르면 된다.</div>
 </div>
-    <div class="quiz" data-qid="b5" data-ans="-1" data-type="num">
-      <div class="quiz-q">Q. 순서쌍 (2, −3)이 일차방정식 4x + 3y = k의 해일 때, 상수 k의 값은?</div>
+    <div class="quiz" data-qid="b5" data-ans="1" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 0.3x − 0.4y = 0.2, 0.02x + 0.05y = 0.09 } 의 해에서 y 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 해를 그대로 대입하면 좌변의 값이 곧 k다.</div>
+      <div class="quiz-hint">힌트: 첫째 식과 둘째 식에 곱할 수가 서로 다르다.</div>
       <div class="quiz-fb"></div>
     </div>
-    <div class="quiz" data-qid="b6" data-ans="2" data-type="num">
-      <div class="quiz-q">Q. 다음 중 일차방정식 3x − 2y = 12 의 해인 것은?<br>① (2, 3)<br>② (4, 0)<br>③ (0, 6)</div>
+<p><strong>순환소수는 &times;10 으로 해결되지 않습니다.</strong> 끝이 없는 소수라 자리를 옮겨도 소수가 그대로 남기 때문입니다. 1단원에서 배운 대로 <strong>먼저 분수로 바꾼 뒤</strong> 정리합니다. 자주 쓰는 값은 아래에 정리했습니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">순환소수는 &times;10 이 아니라 분수로</div>
+  <div class="u7-2col">
+    <div class="u7-card off"><div class="u7-lab r">&times; 10 을 하면</div>
+      <div class="u7-eq">0.<span class="od">3</span><i>x</i> = 1 &nbsp;&#8594;&nbsp; 3.<span class="od">3</span><i>x</i> = 10</div>
+      <div class="u7-why">끝이 없는 소수라 자리를 옮겨도 소수가 그대로 남는다.</div></div>
+    <div class="u7-card on"><div class="u7-lab g">분수로 바꾸면</div>
+      <div class="u7-eq">0.<span class="od">3</span> = <sup>1</sup>&#8260;<sub>3</sub> &nbsp;&#8594;&nbsp; <sup>1</sup>&#8260;<sub>3</sub><i>x</i> = 1</div>
+      <div class="u7-ok">양변에 3을 곱해 <i>x</i> = 3. 1단원에서 배운 변환을 그대로 쓴다.</div></div>
+  </div>
+  <div class="u7-note">자주 쓰는 값 &mdash; 0.<span class="od">3</span> = <sup>1</sup>&#8260;<sub>3</sub>,
+    0.<span class="od">6</span> = <sup>2</sup>&#8260;<sub>3</sub>,
+    0.<span class="od">1</span> = <sup>1</sup>&#8260;<sub>9</sub>,
+    0.<span class="od">2</span><span class="od">7</span> = <sup>27</sup>&#8260;<sub>99</sub> = <sup>3</sup>&#8260;<sub>11</sub></div>
+  <div class="u7-cap">0.3 과 0.<span class="od">3</span> 은 다른 수다. 점이 붙어 있으면 반드시 분수로 먼저 바꾼다.</div>
+</div>
+    <div class="quiz" data-qid="b6" data-ans="6" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 0.<span class="od">3</span>x + y = 5, x − 0.<span class="od">6</span>y = 4 } 의 해에서 x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 세 순서쌍을 차례로 대입해 좌변이 12가 되는지 보자.</div>
+      <div class="quiz-hint">힌트: 순환소수를 먼저 분수로 바꾼다.</div>
       <div class="quiz-fb"></div>
     </div>
+<div class="box box-orange"><div class="box-title">🎯 수업에서 강조한 부분</div>
+정수로 바꾸는 것은 규칙이 아니라 선택입니다. 시험에서는 정리하는 데 쓰는 시간도 점수이므로, 계수를 보고 더 짧은 길을 고르는 연습을 해 두세요.</div>
   </section>
   <section class="section" id="s4">
-    <div class="section-head"><span class="section-num">4</span><span class="section-title">조건이 없으면 해가 무수히 많다</span>
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">계수가 분수인 연립방정식</span>
       <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
 
-<p>x에 어떤 수를 넣어도 y에 대한 일차방정식이 되므로 y가 하나 정해집니다. 넣을 수 있는 수가 끝이 없으니 해도 <strong>끝없이 많습니다</strong>.</p>
-<p><strong>해가 정수만은 아닙니다</strong> — 분수인 해도 똑같이 해입니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">조건이 없으면 해가 무수히 많다 &mdash; <span class="u6-eq">2<i>x</i> + 3<i>y</i> = 12</span></div>
-  <div class="u6-scroll"><table class="u6-tb">
-    <tr><th class="u6-eq" style="font-size:13px">x</th><td>0</td><td>1</td><td>3</td><td>6</td><td>&minus;3</td><td>&hellip;</td></tr>
-    <tr><th class="u6-eq" style="font-size:13px">y</th><td>4</td><td>10/3</td><td>2</td><td>0</td><td>6</td><td>&hellip;</td></tr>
-  </table></div>
-  <div class="u6-note"><span class="u6-eq"><i>x</i></span> 에 어떤 수를 넣어도
-    <span class="u6-eq"><i>y</i></span> 에 대한 일차방정식이 되므로 <span class="u6-eq"><i>y</i></span> 가 하나 정해집니다.
-    넣을 수 있는 수가 끝이 없으니 <strong style="color:var(--orange)">해도 끝없이 많습니다.</strong></div>
-  <div class="u6-cap">해가 정수만은 아닙니다 &mdash; 표의 두 번째 칸처럼 분수인 해도 똑같이 해입니다.</div>
+<p>그 식에 있는 <strong>분모들의 최소공배수</strong>를 양변에 곱합니다. 소수와 마찬가지로 두 식에 곱하는 수가 달라도 됩니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">분모의 최소공배수를 양변에 곱한다</div>
+  <div class="u7-mul" style="justify-content:center">
+    <div class="n u7-eq"><sup><i>x</i></sup>&#8260;<sub>3</sub> + <sup><i>y</i></sup>&#8260;<sub>2</sub> = 4</div>
+    <div class="x">&times; 6</div><div class="ar">&#8594;</div>
+    <div class="n u7-eq">2<i>x</i> + 3<i>y</i> = 24</div><div class="x">분모 3, 2</div>
+    <div class="n u7-eq"><sup><i>x</i></sup>&#8260;<sub>2</sub> &minus; <sup><i>y</i></sup>&#8260;<sub>4</sub> = 2</div>
+    <div class="x">&times; 4</div><div class="ar">&#8594;</div>
+    <div class="n u7-eq">2<i>x</i> &minus; <i>y</i> = 8</div><div class="x">분모 2, 4</div>
+  </div>
+  <div class="u7-cap">두 식의 분모가 서로 달라도 상관없다. 각 식마다 그 식의 분모들만 보고 최소공배수를 정한다.</div>
 </div>
     <div class="quiz" data-qid="b7" data-ans="3" data-type="num">
-      <div class="quiz-q">Q. 일차방정식 x + 2y = 10 의 해 중에서 x = 4 일 때, y의 값은?</div>
+      <div class="quiz-q">Q. 연립방정식 { x/6 + y/4 = 2, x/3 − y/2 = −2 } 의 해에서 x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 4를 넣으면 y에 대한 일차방정식이 된다.</div>
+      <div class="quiz-hint">힌트: 각 식의 분모들의 최소공배수를 곱한다.</div>
       <div class="quiz-fb"></div>
     </div>
-    <div class="quiz" data-qid="b8" data-ans="11/2" data-type="text">
-      <div class="quiz-q">Q. 일차방정식 3x + y = 7 의 해 중에서 x = 1/2 일 때, y의 값은? <strong>(기약분수로 답하시오)</strong></div>
-      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 해가 정수여야 한다는 법은 없다.</div>
+<p>&#9888; 곱하기를 빠뜨리는 자리는 정해져 있습니다. 아래 그림에서 붉게 표시한 곳을 눈에 익혀 두세요.</p>
+<div class="u7-wrap">
+  <div class="u7-t">곱할 때 빠뜨리기 쉬운 자리</div>
+  <div class="u7-anatg" style="grid-template-columns:repeat(5,auto)">
+    <div class="pt"><sup><i>x</i></sup>&#8260;<sub>3</sub></div><div class="pt op">+</div>
+    <div class="pt"><sup><i>y</i></sup>&#8260;<sub>2</sub></div><div class="pt op">=</div>
+    <div class="pt" style="color:var(--red)">4</div>
+    <div class="tg" style="color:var(--green)">&times;6 &#10003;</div><div class="tg">&nbsp;</div>
+    <div class="tg" style="color:var(--green)">&times;6 &#10003;</div><div class="tg">&nbsp;</div>
+    <div class="tg" style="color:var(--red)">여기도 &times;6</div>
+  </div>
+  <div class="u7-note">분수가 없는 항이라고 건너뛰면 등식이 깨진다. <span class="u7-hl o">우변의 상수항</span>이 가장 자주 빠진다.</div>
+  <div class="u7-cap">양변에 같은 수를 곱한다는 것은 <b>모든 항</b>에 곱한다는 뜻이다.</div>
+</div>
+    <div class="quiz" data-qid="b8" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 0.3x − 0.2y = 0.8, x/4 + y/2 = 2 } 의 해에서 x − y 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 소수인 식과 분수인 식을 따로 정리한다.</div>
       <div class="quiz-fb"></div>
     </div>
+<p>소수와 분수가 한 문제에 섞여 나오면 각 식을 따로 정리하면 됩니다.</p>
   </section>
   <section class="section" id="s5">
-    <div class="section-head"><span class="section-num">5</span><span class="section-title">자연수 조건이 붙으면 해가 유한해진다</span>
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">A = B = C 꼴의 연립방정식</span>
       <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
 
-<p>x, y가 자연수 같은 조건이 붙으면 넣어 볼 수가 유한해지므로 해도 유한개가 됩니다.</p>
 <div class="box box-orange"><div class="box-title">🎯 수업에서 특히 강조한 부분</div>
-대입할 때는 <strong>계수의 절댓값이 큰 문자부터</strong> 넣습니다. 그 문자가 조금만 커져도 합이 금방 넘어가서 확인할 경우가 적어집니다.</div>
-<div class="u6-wrap">
-  <div class="u6-t">자연수 조건이 붙으면 해가 유한해진다 &mdash;
-    <span class="u6-eq">2<i>x</i> + 5<i>y</i> = 24</span> (<span class="u6-eq"><i>x</i>, <i>y</i></span> 는 자연수)</div>
-  <div class="u6-scroll"><table class="u6-tb">
-    <tr><th class="u6-eq" style="font-size:13px">y</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
-    <tr><th class="u6-eq" style="font-size:13px">2x</th><td>19</td><td>14</td><td>9</td><td>4</td><td>&minus;1</td></tr>
-    <tr><th class="u6-eq" style="font-size:13px">x</th>
-      <td class="no">&times;</td><td class="hit">7</td><td class="no">&times;</td><td class="hit">2</td><td class="no">&times;</td></tr>
-  </table></div>
-  <div class="u6-note">해는 <span class="u6-pair">(7, 2)</span> 와 <span class="u6-pair">(2, 4)</span> 의
-    <strong>두 쌍뿐</strong>입니다. <span class="u6-eq"><i>y</i> &ge; 5</span> 부터는
-    <span class="u6-eq">2<i>x</i></span> 가 음수가 되어 더 볼 필요가 없습니다.</div>
-  <div class="u6-cap">&times; 는 나눗셈이 딱 떨어지지 않아 <span class="u6-eq"><i>x</i></span> 가
-    자연수가 되지 못하는 경우입니다.</div>
+등호가 두 개면 <strong>방정식이 두 개</strong>입니다. 한 줄로 쓰여 있다고 방정식 하나로 보면 안 됩니다.</div>
+<p><strong>A = B</strong>, <strong>B = C</strong>, <strong>A = C</strong> 세 가지를 만들 수 있고, 그중 <strong>두 개만 골라 연립</strong>하면 됩니다. 나머지 하나는 저절로 성립합니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">등호가 두 개면 방정식도 두 개</div>
+  <div class="u7-eqrow" style="margin-bottom:10px"><span class="u7-eq">
+    <span class="u7-hl">4<i>x</i> &minus; 3<i>y</i></span> = <span class="u7-hl o"><i>x</i> + 7<i>y</i></span> = <span class="u7-hl g">5<i>x</i> &minus; 2<i>y</i></span></span></div>
+  <div class="u7-3col">
+    <div class="u7-card"><div class="u7-lab b">A = B</div><div class="u7-eq">4<i>x</i> &minus; 3<i>y</i> = <i>x</i> + 7<i>y</i></div></div>
+    <div class="u7-card"><div class="u7-lab o">B = C</div><div class="u7-eq"><i>x</i> + 7<i>y</i> = 5<i>x</i> &minus; 2<i>y</i></div></div>
+    <div class="u7-card"><div class="u7-lab g">A = C</div><div class="u7-eq">4<i>x</i> &minus; 3<i>y</i> = 5<i>x</i> &minus; 2<i>y</i></div></div>
+  </div>
+  <div class="u7-cap">세 가지를 다 만들 수 있지만 <b>두 개만</b> 골라 연립하면 된다. 나머지 하나는 저절로 성립한다.</div>
 </div>
-    <div class="quiz" data-qid="b9" data-ans="4" data-type="num">
-      <div class="quiz-q">Q. x, y가 자연수일 때, 일차방정식 x + 3y = 14 의 해는 모두 몇 개인가?</div>
+    <div class="quiz" data-qid="b9" data-ans="3" data-type="num">
+      <div class="quiz-q">Q. x + 2y = 2x − y = 5 를 만족하는 x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 계수가 큰 y부터 1, 2, 3, … 을 넣어 보자.</div>
+      <div class="quiz-hint">힌트: 등호가 두 개면 방정식도 두 개다.</div>
       <div class="quiz-fb"></div>
     </div>
-<div class="u6-wrap">
-  <div class="u6-t">어느 문자부터 대입할까? &mdash; <span class="u6-eq">2<i>x</i> + 5<i>y</i> = 24</span></div>
-  <div class="u6-2col">
-    <div class="u6-card off">
-      <div class="u6-lab r"><span class="u6-eq">x</span> 부터 (계수 2)</div>
-      <div class="u6-eq" style="font-size:14px"><i>x</i> = 1, 2, 3, &hellip;, 11</div>
-      <div class="u6-note"><strong>11번</strong> 시도해야 한다</div>
-    </div>
-    <div class="u6-card on">
-      <div class="u6-lab g"><span class="u6-eq">y</span> 부터 (계수 5)</div>
-      <div class="u6-eq" style="font-size:14px"><i>y</i> = 1, 2, 3, 4</div>
-      <div class="u6-note"><strong>4번</strong>이면 끝난다</div>
-    </div>
+<p><strong>C 자리에 상수가 오면 A = C, B = C 로 묶는 것이 유리합니다</strong> &mdash; 우변이 이미 상수라 이항할 것이 없기 때문입니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">상수가 끼어 있으면 그것과 묶는다</div>
+  <div class="u7-eqrow" style="margin-bottom:10px"><span class="u7-eq">
+    3<i>x</i> + <i>y</i> = <i>x</i> + 2<i>y</i> = <span class="u7-hl o">10</span></span></div>
+  <div class="u7-2col">
+    <div class="u7-card pick"><div class="u7-lab b">A = C, B = C 로 묶으면</div>
+      <div class="u7-sys"><div class="u7-brace">{</div><div class="rows"><div class="u7-eq">3<i>x</i> + <i>y</i> = 10</div><div class="u7-eq"><i>x</i> + 2<i>y</i> = 10</div></div></div>
+      <div class="u7-ok">우변이 이미 상수라 바로 연립할 수 있다.</div></div>
+    <div class="u7-card"><div class="u7-lab">A = B 로 묶으면</div>
+      <div class="u7-eq" style="padding:14px 0">3<i>x</i> + <i>y</i> = <i>x</i> + 2<i>y</i></div>
+      <div class="u7-why">2<i>x</i> &minus; <i>y</i> = 0 으로 한 번 더 이항해야 한다.</div></div>
   </div>
-  <div class="u6-note" style="text-align:center;margin-top:10px">
-    <strong style="color:var(--green)">계수의 절댓값이 큰 문자부터</strong> 대입하면 확인할 경우가 줄어듭니다.</div>
-  <div class="u6-cap">계수가 클수록 그 문자가 조금만 커져도 합이 금방 넘어가기 때문입니다.</div>
+  <div class="u7-cap">어느 둘을 고르든 답은 같다. 이항이 적은 쪽을 고르면 계산이 짧아진다.</div>
 </div>
-    <div class="quiz" data-qid="b10" data-ans="0" data-type="num">
-      <div class="quiz-q">Q. x, y가 자연수일 때, 일차방정식 2x + 2y = 15 의 해는 모두 몇 개인가?</div>
+    <div class="quiz" data-qid="b10" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 2x − y = x + y − 3 = 6 을 만족하는 x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 좌변에 들어갈 수 있는 수가 홀수일 수 있는지 생각해 보자.</div>
+      <div class="quiz-hint">힌트: 상수 6과 각각 묶으면 이항할 것이 없다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s6">
-    <div class="section-head"><span class="section-num">6</span><span class="section-title">해가 주어질 때 상수 구하기</span>
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">해가 무수히 많거나 없는 경우</span>
       <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
 
-<p>해를 안다는 것은 x, y 자리에 넣을 수를 안다는 뜻입니다. 대입하면 <strong>상수 하나만 미지수로 남는</strong> 일차방정식이 됩니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">해가 주어지면 상수를 구할 수 있다</div>
-  <div class="u6-flow">
-    <div class="u6-step"><div class="u6-num">1</div><div>해를 방정식에 <strong>그대로 대입</strong>한다
-      &mdash; <span class="u6-eq">(2, &minus;1)</span> 을 <span class="u6-eq">3<i>x</i> + a<i>y</i> = 8</span> 에</div></div>
-    <div class="u6-arrow">&darr;</div>
-    <div class="u6-step"><div class="u6-num">2</div><div>미지수가 사라지고
-      <strong>상수에 대한 일차방정식</strong>이 된다 &mdash; <span class="u6-eq">6 &minus; a = 8</span></div></div>
-    <div class="u6-arrow">&darr;</div>
-    <div class="u6-step"><div class="u6-num">3</div><div>그 일차방정식을 푼다 &mdash;
-      <span class="u6-eq" style="color:var(--green)">a = &minus;2</span></div></div>
+<p>보통 연립방정식은 해가 <strong>한 쌍</strong>입니다. 그렇지 않은 경우를 특수한 경우라고 합니다. 판별은 두 식의 계수끼리 비를 견주는 것으로 끝납니다. <i>x</i>의 계수, <i>y</i>의 계수, 상수항으로 각각 비를 만들어 견주면 됩니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">해가 몇 개인지는 계수의 비로 갈린다</div>
+  <div class="u7-eqrow" style="margin-bottom:6px"><span class="u7-eq">
+    <i>a</i><sub>1</sub><i>x</i> + <i>b</i><sub>1</sub><i>y</i> = <i>c</i><sub>1</sub> &nbsp;,&nbsp;
+    <i>a</i><sub>2</sub><i>x</i> + <i>b</i><sub>2</sub><i>y</i> = <i>c</i><sub>2</sub></span></div>
+  <div class="u7-ratio" style="margin:10px 0 4px">
+    <span class="u7-fr a"><span class="up"><i>a</i><sub>1</sub></span><span class="dn"><i>a</i><sub>2</sub></span></span>
+    <span class="u7-rel">,</span>
+    <span class="u7-fr b"><span class="up"><i>b</i><sub>1</sub></span><span class="dn"><i>b</i><sub>2</sub></span></span>
+    <span class="u7-rel">,</span>
+    <span class="u7-fr c"><span class="up"><i>c</i><sub>1</sub></span><span class="dn"><i>c</i><sub>2</sub></span></span>
   </div>
-  <div class="u6-cap">해를 안다는 것은 <span class="u6-eq"><i>x</i>, <i>y</i></span> 자리에 넣을 수를 안다는 뜻이므로,
-    남는 미지수는 상수 하나뿐입니다.</div>
+  <div class="u7-note" style="text-align:center">위아래 순서를 뒤집지 말 것 &mdash; 세 분수 모두 <b>첫째 식이 분자</b>, 둘째 식이 분모다.</div>
+  <div class="u7-flow" style="margin-top:12px">
+    <div class="u7-chk"><div class="u7-num g">1</div><div>
+      <span class="u7-eq"><i>a</i> 비 &ne; <i>b</i> 비</span> &rarr; <b style="color:var(--green)">해가 한 쌍</b> (보통의 경우)</div></div>
+    <div class="u7-chk"><div class="u7-num p">2</div><div>
+      <span class="u7-eq"><i>a</i> 비 = <i>b</i> 비 = <i>c</i> 비</span> &rarr; <b style="color:var(--purple)">해가 무수히 많다</b></div></div>
+    <div class="u7-chk"><div class="u7-num o">3</div><div>
+      <span class="u7-eq"><i>a</i> 비 = <i>b</i> 비 &ne; <i>c</i> 비</span> &rarr; <b style="color:var(--orange)">해가 없다</b></div></div>
+  </div>
+  <div class="u7-cap">먼저 <i>a</i> 비와 <i>b</i> 비를 본다. 다르면 거기서 끝이고, 같을 때만 <i>c</i> 비를 확인한다.</div>
 </div>
-    <div class="quiz" data-qid="b11" data-ans="1" data-type="num">
-      <div class="quiz-q">Q. 순서쌍 (3, −2)가 일차방정식 ax − 5y = 13 의 해일 때, 상수 a의 값은?</div>
+    <div class="quiz" data-qid="b11" data-ans="15" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 4x + 5y = 3, 12x + ay = 9 } 의 해가 무수히 많을 때, 상수 a 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 대입하면 a에 대한 일차방정식이 된다.</div>
+      <div class="quiz-hint">힌트: 첫째 식에 몇을 곱해야 둘째 식이 되는지 본다.</div>
       <div class="quiz-fb"></div>
     </div>
-    <div class="quiz" data-qid="b12" data-ans="5" data-type="num">
-      <div class="quiz-q">Q. 순서쌍 (2, 1)과 (4, 4)가 모두 일차방정식 ax − by = 4 의 해일 때, a + b의 값은?</div>
+<p>식의 꼴로 보면 &mdash; <strong>해가 무수히 많다</strong>는 한 식에 수를 곱했을 때 양변이 <strong>완전히 같아지는</strong> 경우이고, <strong>해가 없다</strong>는 좌변은 같아지는데 <strong>우변만 다른</strong> 경우입니다.</p>
+<div class="box box-blue"><div class="box-title">&#128302; 다음 과정 예고</div>
+지금은 식의 꼴만으로 판단합니다. 다음 과정에서 일차함수를 배우면 같은 내용을 눈으로 확인하는 방법도 함께 배우게 됩니다.</div>
+<div class="u7-wrap">
+  <div class="u7-t">두 식을 나란히 놓고 본다</div>
+  <div class="u7-2col">
+    <div class="u7-card"><div class="u7-lab p">해가 무수히 많다</div>
+      <div class="u7-sys"><div class="u7-brace">{</div><div class="rows"><div class="u7-eq"><i>x</i> + 2<i>y</i> = 3</div><div class="u7-eq">2<i>x</i> + 4<i>y</i> = 6</div></div></div>
+      <div class="u7-note">아래 식은 위 식의 <span class="u7-hl">2배</span> &mdash; 양변이 <b>완전히 같아진다</b>.</div>
+      <div class="u7-ok">한 식을 만족하면 다른 식도 저절로 만족한다.</div></div>
+    <div class="u7-card"><div class="u7-lab o">해가 없다</div>
+      <div class="u7-sys"><div class="u7-brace">{</div><div class="rows"><div class="u7-eq"><i>x</i> + 2<i>y</i> = 3</div><div class="u7-eq">2<i>x</i> + 4<i>y</i> = 7</div></div></div>
+      <div class="u7-note">위 식을 2배 하면 2<i>x</i> + 4<i>y</i> = <span class="u7-hl o">6</span> &mdash; 좌변은 같은데 <b>우변만 다르다</b>.</div>
+      <div class="u7-why">6 과 7 이 동시에 될 수는 없다.</div></div>
+  </div>
+  <div class="u7-cap">좌변끼리 같아지도록 배수를 맞춘 다음, 우변까지 같은지를 보는 것이 판별의 전부다.</div>
+</div>
+    <div class="quiz" data-qid="b12" data-ans="9" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 6x + ay = 11, 2x + 3y = 5 } 의 해가 없을 때, 상수 a 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 해가 두 개면 식도 두 개가 나온다.</div>
+      <div class="quiz-hint">힌트: x 의 계수 비와 y 의 계수 비가 같아야 한다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s7">
-    <div class="section-head"><span class="section-num">7</span><span class="section-title">연립일차방정식의 뜻과 해</span>
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">해에 조건이 붙은 연립방정식</span>
       <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
 
-<p>두 일차방정식을 <strong>한 세트로 묶은 것</strong>이 연립일차방정식입니다(중괄호로 묶어 씁니다).</p>
-<p>한 문제 안에서 x는 어느 식에서나 같은 수, y도 마찬가지입니다. 그래서 <strong>두 방정식을 동시에 만족시키는</strong> 해, 곧 <strong>공통해</strong>를 찾게 됩니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">연립일차방정식 &mdash; 두 방정식을 한 세트로 묶은 것</div>
-  <div style="display:flex;justify-content:center;align-items:center;gap:12px;padding:8px 0">
-    <div style="font-size:44px;line-height:.9;color:var(--blue);font-weight:300">{</div>
-    <div class="u6-eq" style="line-height:1.85"><i>x</i> + <i>y</i> = 6<br><i>x</i> &minus; <i>y</i> = 2</div>
+<p>두 연립방정식의 해가 <strong>같을 때</strong>는 네 식의 해가 모두 같다는 뜻입니다. <strong>상수(a, b)가 없는 두 식을 먼저 골라</strong> 풀어 해를 구하고, 그 해를 나머지 두 식에 대입해 상수를 구합니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">상수가 없는 두 식을 먼저 고른다</div>
+  <div class="u7-2col">
+    <div class="u7-card pick"><div class="u7-lab b">&#9312; 먼저 풀 두 식</div>
+      <div class="u7-sys"><div class="u7-brace">{</div><div class="rows"><div class="u7-eq"><i>x</i> + <i>y</i> = 6</div><div class="u7-eq"><i>x</i> &minus; <i>y</i> = 2</div></div></div>
+      <div class="u7-ok"><i>a</i>, <i>b</i> 가 없으니 바로 풀린다.</div></div>
+    <div class="u7-card"><div class="u7-lab">&#9313; 나중에 쓸 두 식</div>
+      <div class="u7-sys"><div class="u7-brace">{</div><div class="rows"><div class="u7-eq"><i>ax</i> + <i>y</i> = 14</div><div class="u7-eq">3<i>x</i> &minus; <i>by</i> = 8</div></div></div>
+      <div class="u7-note">&#9312;에서 구한 해를 여기에 대입한다.</div></div>
   </div>
-  <div class="u6-note" style="text-align:center">
-    한 문제 안에서 <span class="u6-eq"><i>x</i></span> 는 어느 식에서나 같은 수,
-    <span class="u6-eq"><i>y</i></span> 도 어느 식에서나 같은 수입니다.</div>
-  <div class="u6-cap">그래서 <strong>두 방정식을 동시에 만족시키는</strong> 순서쌍을 찾게 됩니다.</div>
+  <div class="u7-note" style="margin-top:10px">네 식의 해가 모두 같다는 뜻이므로, <b>어느 두 식을 골라 풀어도 그 해는 나머지 두 식도 만족</b>한다. 그래서 가장 쉬운 두 식부터 고르는 것이다.</div>
+  <div class="u7-cap">네 식을 한꺼번에 연립하려 들면 미지수가 넷이 되어 손을 댈 수 없다.</div>
 </div>
-<div class="u6-wrap">
-  <div class="u6-t">연립방정식의 해 = 두 방정식이 <strong>공통으로</strong> 갖는 해</div>
-  <div class="u6-scroll"><table class="u6-tb">
-    <tr><th style="width:32%">방정식</th><th>자연수인 해</th></tr>
-    <tr><td class="u6-eq"><i>x</i> + <i>y</i> = 6</td>
-      <td>(1,5) (2,4) (3,3) <span class="u6-pair">(4,2)</span> (5,1)</td></tr>
-    <tr><td class="u6-eq"><i>x</i> &minus; <i>y</i> = 2</td>
-      <td>(3,1) <span class="u6-pair">(4,2)</span> (5,3) (6,4) &hellip;</td></tr>
-  </table></div>
-  <div class="u6-note" style="text-align:center;margin-top:10px">
-    양쪽 목록에 모두 있는 <span class="u6-pair">(4, 2)</span> 하나가 이 연립방정식의 해입니다.</div>
-  <div class="u6-cap">두 방정식 <strong>어느 쪽에 넣어도 성립</strong>하기 때문입니다.</div>
-</div>
-    <div class="quiz" data-qid="b13" data-ans="12" data-type="num">
-      <div class="quiz-q">Q. 연립방정식 { x + y = 7, 2x − y = 2 } 의 해가 x = a, y = b 일 때, a &times; b의 값은?</div>
+    <div class="quiz" data-qid="b13" data-ans="21" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 3x − y = 11, x + 2y = 6 } 과 { ax + 2y = 30, 2x − by = 5 } 의 해가 같을 때, ab 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 두 식을 더하면 한 문자가 사라진다.</div>
+      <div class="quiz-hint">힌트: 상수가 없는 두 식을 먼저 푼다.</div>
       <div class="quiz-fb"></div>
     </div>
-    <div class="quiz" data-qid="b14" data-ans="3" data-type="num">
-      <div class="quiz-q">Q. 다음 중 연립방정식 { x + 2y = 8, 3x − y = 3 } 의 해인 것은?<br>① (5, 1)<br>② (0, 4)<br>③ (2, 3)</div>
+<p>조건이 한 줄 더 붙는 문제는 <strong>그 조건을 반드시 식으로 옮겨 적고</strong> 시작하세요. 머릿속에만 두면 세 번째 식이 있다는 사실을 잊은 채 미지수 하나를 남기고 막히게 됩니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">조건 한 줄이 방정식 한 개다</div>
+  <div class="u7-3col">
+    <div class="u7-card"><div class="u7-lab">말로 쓴 조건</div>
+      <div style="font-size:13px;line-height:1.7;padding:8px 0"><i>y</i>의 값이<br><i>x</i>의 값의 2배</div></div>
+    <div class="u7-card"><div class="u7-lab o">식으로</div>
+      <div class="u7-eq" style="padding:16px 0"><i>y</i> = 2<i>x</i></div></div>
+    <div class="u7-card"><div class="u7-lab">말로 쓴 조건</div>
+      <div style="font-size:13px;line-height:1.7;padding:8px 0"><i>x</i>와 <i>y</i>의 비가<br>3 : 1</div></div>
+  </div>
+  <div class="u7-note" style="margin-top:10px"><i>x</i> : <i>y</i> = 3 : 1 은 <span class="u7-eq"><i>x</i> = 3<i>y</i></span> 로 옮긴다.
+    비의 <b>앞쪽</b>이 <i>x</i> 이므로 <i>x</i> 가 커지는 쪽이다.</div>
+  <div class="u7-cap">미지수가 <i>x</i>, <i>y</i>, 상수 셋이면 식도 세 개가 필요하다. 조건 한 줄이 모자란 한 개를 채워 준다.</div>
+</div>
+    <div class="quiz" data-qid="b14" data-ans="12" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 3x + 2y = 28, 5x − y = a } 를 만족하는 y 의 값이 x 의 값의 2배일 때, 상수 a 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 두 식 모두를 만족시켜야 연립방정식의 해다.</div>
+      <div class="quiz-hint">힌트: 조건을 y = 2x라는 식으로 바꿔 쓴다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">연립방정식을 푸는 두 가지 방법</span>
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">잘못 보고 푼 연립방정식</span>
       <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
 
-<p>조건이 없으면 해를 일일이 대입해서 찾을 수 없습니다. 그래서 <strong>가감법</strong>과 <strong>대입법</strong>을 씁니다.</p>
-<p><strong>가감법(소거법)</strong>은 두 식을 통째로 더하거나 빼서 한 문자를 지우는(소거) 방법입니다. 계수가 안 맞으면 먼저 맞춥니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">가감법 &mdash; 두 식을 더하거나 빼서 한 문자를 지운다</div>
-  <div class="u6-eqg add">
-    <span class="sg">&nbsp;</span><span>2x</span><span class="sg">+</span><span>y</span>
-    <span class="sg">=</span><span>13</span><span class="mk">&hellip;&#9312;</span>
-    <span class="sg">+</span><span>x</span><span class="sg">&minus;</span><span>y</span>
-    <span class="sg">=</span><span>2</span><span class="mk">&hellip;&#9313;</span>
-    <span class="bar"></span><span class="mk">&nbsp;</span>
-    <span class="sg">&nbsp;</span><span>3x</span><span class="sg">&nbsp;</span><span>&nbsp;</span>
-    <span class="sg">=</span><span>15</span><span class="res">&rarr; x = 5</span>
+<p>시험에 자주 나오는 유형입니다. 핵심은 <strong>두 식을 나눠 보는 것</strong>입니다 &mdash; <strong>바르게 본 식</strong>은 잘못 푼 사람의 해도 그대로 만족하고, <strong>잘못 본 식</strong>은 그 값을 모르므로 미지수로 놓거나 잘못 푼 해를 대입해 되찾습니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">잘못 본 문제는 두 덩어리로 나눈다</div>
+  <div class="u7-sys"><div class="u7-brace">{</div><div class="rows"><div class="u7-eq">3<i>x</i> + 2<i>y</i> = <span class="u7-hl o">12</span> &nbsp;&nbsp;&#8230;&#9312;</div><div class="u7-eq"><i>x</i> &minus; <i>y</i> = 1 &nbsp;&nbsp;&#8230;&#9313;</div></div></div>
+  <div class="u7-note" style="text-align:center;margin-top:4px">&#9312;의 12 를 잘못 보고 풀었더니 <i>x</i> = 1 이 나왔다.</div>
+  <div class="u7-2col" style="margin-top:12px">
+    <div class="u7-card on"><div class="u7-lab g">&#9313; 바르게 본 식</div>
+      <div class="u7-eq"><i>x</i> &minus; <i>y</i> = 1</div>
+      <div class="u7-ok">잘못 푼 해도 이 식은 <b>그대로 만족</b>한다.<br><i>x</i> = 1 을 넣어 <i>y</i> = 0.</div></div>
+    <div class="u7-card off"><div class="u7-lab r">&#9312; 잘못 본 식</div>
+      <div class="u7-eq">3<i>x</i> + 2<i>y</i> = ?</div>
+      <div class="u7-why">우변을 모르니 손댈 수 없다.<br>대신 (1, 0)을 좌변에 넣어 되찾는다.</div></div>
   </div>
-  <div class="u6-note"><span class="u6-eq"><i>y</i></span> 의 계수가 <span class="u6-eq">+1</span> 과
-    <span class="u6-eq">&minus;1</span> 이라 <strong>더하기만 해도</strong> 사라집니다.
-    구한 <span class="u6-eq"><i>x</i> = 5</span> 를 &#9313; 에 넣으면
-    <span class="u6-eq">5 &minus; <i>y</i> = 2</span> 이므로
-    <strong style="color:var(--green)"><span class="u6-eq"><i>y</i> = 3</span></strong> 입니다.</div>
-  <div class="u6-cap">한 문자를 지우는 것을 <strong>소거</strong>라고 해서, 가감법을 소거법이라고도 부릅니다.</div>
+  <div class="u7-cap">잘못 푼 해 (1, 0)을 3<i>x</i> + 2<i>y</i> 에 넣으면 3. 12 를 3 으로 잘못 본 것이다.</div>
 </div>
-<div class="u6-wrap">
-  <div class="u6-t">계수가 안 맞으면 먼저 맞춘다</div>
-  <div class="u6-scroll"><div style="min-width:300px">
-    <div class="u6-mul">
-      <div class="n">&#9312;</div><div class="u6-eq">2<i>x</i> + 5<i>y</i> = 16</div>
-      <div class="x">&times;3</div><div class="ar">&rarr;</div>
-      <div class="u6-eq">6<i>x</i> + 15<i>y</i> = 48</div>
-      <div class="n">&#9313;</div><div class="u6-eq">3<i>x</i> &minus; 2<i>y</i> = 5</div>
-      <div class="x">&times;2</div><div class="ar">&rarr;</div>
-      <div class="u6-eq">6<i>x</i> &minus; 4<i>y</i> = 10</div>
-    </div>
-    <div class="u6-mulbar"></div>
-    <div style="text-align:center">
-      <span class="u6-eq">6<i>x</i></span> 가 같으므로 <strong>빼면</strong>
-      <span class="u6-eq">19<i>y</i> = 38</span> &rarr;
-      <strong style="color:var(--green)"><span class="u6-eq"><i>y</i> = 2</span></strong></div>
-  </div></div>
-  <div class="u6-note">지우고 싶은 문자를 먼저 고른 다음, 그 문자의
-    <strong>계수의 절댓값이 같아지도록</strong> 각 식에 알맞은 수를 곱합니다.
-    부호가 같으면 빼고, 다르면 더합니다.</div>
-  <div class="u6-cap">여기서는 <span class="u6-eq"><i>x</i></span> 를 지우려고 계수를 둘 다 6으로 맞췄습니다.</div>
-</div>
-    <div class="quiz" data-qid="b15" data-ans="4" data-type="num">
-      <div class="quiz-q">Q. 연립방정식 { 5x + 2y = 24, 3x − 2y = 8 } 을 가감법으로 풀 때, x의 값은?</div>
+    <div class="quiz" data-qid="b15" data-ans="6" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 { 2x − y = 5, x + 3y = k } 에서 k 를 잘못 보고 풀었더니 y = 1 이 되었다. k 를 얼마로 잘못 보았는가?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: y의 계수가 +2와 −2다.</div>
+      <div class="quiz-hint">힌트: 2x − y = 5 는 바르게 본 식이다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p><strong>대입법</strong>은 한 식을 <strong>한 문자 = (다른 문자의 식)</strong> 꼴로 바꿔 다른 식에 통째로 넣는 방법입니다.</p>
-<div class="u6-wrap">
-  <div class="u6-t">대입법 &mdash; 한 문자를 다른 문자로 나타내어 넣는다</div>
-  <div style="display:flex;justify-content:center;align-items:center;gap:11px;padding:2px 0 12px">
-    <div style="font-size:38px;line-height:.9;color:var(--purple);font-weight:300">{</div>
-    <div class="u6-eq" style="line-height:1.8"><i>y</i> = <i>x</i> + 2<span style="font-style:normal;font-size:12px;color:var(--muted)"> &hellip;&#9312;</span><br>3<i>x</i> + 2<i>y</i> = 19<span style="font-style:normal;font-size:12px;color:var(--muted)"> &hellip;&#9313;</span></div>
+<p>이 유형에서 가장 많이 하는 실수는 <strong>잘못 푼 해를 쓸모없다고 버리는 것</strong>입니다. 잘못 푼 해도 바르게 본 식은 그대로 만족하므로, 그것이 잘못 본 값을 되찾는 열쇠가 됩니다.</p>
+<div class="u7-wrap">
+  <div class="u7-t">푸는 순서</div>
+  <div class="u7-flow">
+    <div class="u7-chk"><div class="u7-num">1</div><div>두 식 중 <b>바르게 본 식</b>을 찾는다. 잘못 본 값이 없는 쪽이다.</div></div>
+    <div class="u7-chk"><div class="u7-num">2</div><div>잘못 푼 해를 그 식에 넣어 <b>나머지 한 값</b>을 구한다.</div></div>
+    <div class="u7-chk"><div class="u7-num o">3</div><div>이제 잘못 푼 해가 완성됐다. 이것을 <b>잘못 본 식</b>에 넣어 잘못 본 값을 되찾는다.</div></div>
+    <div class="u7-chk"><div class="u7-num g">4</div><div>원래 값으로 되돌린 연립방정식을 풀어 <b>진짜 해</b>를 구한다.</div></div>
   </div>
-  <div class="u6-flow">
-    <div class="u6-step"><div class="u6-num">1</div><div>&#9312; 는 이미
-      <strong>한 문자 = (다른 문자의 식)</strong> 꼴이다 &mdash;
-      <span class="u6-eq"><i>y</i> = <i>x</i> + 2</span></div></div>
-    <div class="u6-arrow">&darr;</div>
-    <div class="u6-step"><div class="u6-num">2</div><div>&#9313; 의 <span class="u6-eq"><i>y</i></span> 자리에
-      <span class="u6-eq"><i>x</i> + 2</span> 를 <strong>통째로 대입</strong>한다 &mdash;
-      <span class="u6-eq">3<i>x</i> + 2(<i>x</i> + 2) = 19</span></div></div>
-    <div class="u6-arrow">&darr;</div>
-    <div class="u6-step"><div class="u6-num">3</div><div>미지수가 하나인 일차방정식이 되므로 푼다 &mdash;
-      <span class="u6-eq">5<i>x</i> = 15</span>, 곧
-      <strong style="color:var(--green)"><span class="u6-eq"><i>x</i> = 3</span></strong>,
-      다시 &#9312; 에 넣어 <strong style="color:var(--green)"><span class="u6-eq"><i>y</i> = 5</span></strong></div></div>
-  </div>
-  <div class="u6-cap">숫자를 대입하던 것과 달리, 여기서는 <strong>문자로 된 식</strong>을 대입합니다.</div>
+  <div class="u7-note">문제가 묻는 것이 &lsquo;잘못 본 값&rsquo;이면 3단계에서 끝나고, &lsquo;원래 해&rsquo;까지 물으면 4단계를 마저 한다.</div>
+  <div class="u7-cap">잘못 본 값을 <i>k</i> 로 놓고 시작해도 된다. 어느 쪽이든 바르게 본 식을 먼저 쓰는 것이 핵심이다.</div>
 </div>
     <div class="quiz" data-qid="b16" data-ans="7" data-type="num">
-      <div class="quiz-q">Q. x = 2y + 1 을 3x − y = 18 에 대입하여 풀 때, x의 값은?</div>
+      <div class="quiz-q">Q. 연립방정식 { ax + y = 9, x − 2y = −3 } 에서 a 를 잘못 보고 풀었더니 (1, 2) 가 나왔다. a 를 얼마로 잘못 보았는가?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 대입하면 y에 대한 일차방정식이 된다. y를 먼저 구하자.</div>
+      <div class="quiz-hint">힌트: 잘못 푼 해를 잘못 본 식에 넣는다.</div>
       <div class="quiz-fb"></div>
     </div>
-<div class="u6-wrap">
-  <div class="u6-t">어느 방법으로 풀까?</div>
-  <div class="u6-2col">
-    <div class="u6-card">
-      <div class="u6-lab b">가감법이 빠를 때</div>
-      <div class="u6-note" style="text-align:left">같은 문자의 계수가 이미
-        <strong>같거나 부호만 다를 때</strong><br>
-        <span class="u6-eq" style="font-size:14px">3<i>x</i> + 2<i>y</i> = 7</span><br>
-        <span class="u6-eq" style="font-size:14px">3<i>x</i> &minus; 2<i>y</i> = 1</span></div>
-    </div>
-    <div class="u6-card">
-      <div class="u6-lab p">대입법이 빠를 때</div>
-      <div class="u6-note" style="text-align:left">한 문자가 이미 <strong>다른 문자로 표현</strong>돼 있거나
-        계수가 1인 항이 있을 때<br>
-        <span class="u6-eq" style="font-size:14px"><i>y</i> = 2<i>x</i> &minus; 1</span><br>
-        <span class="u6-eq" style="font-size:14px">4<i>x</i> + 3<i>y</i> = 17</span></div>
-    </div>
-  </div>
-  <div class="u6-note" style="text-align:center;margin-top:10px">
-    어느 쪽으로 풀어도 <strong>답은 같습니다.</strong> 식의 생김새를 보고 더 편한 쪽을 고르면 됩니다.</div>
-  <div class="u6-cap">고등학교에서 배우는 연립이차방정식은 대입법이 기본이 되므로,
-    대입법에도 충분히 익숙해져 두세요.</div>
-</div>
   </section>
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
@@ -1025,208 +996,207 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용 10문제를 모두 채점하면 심화가 열립니다. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 — 뜻과 판별·해와 순서쌍·자연수 조건·연립방정식</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 &mdash; 괄호&middot;소수&middot;분수 정리와 A=B=C&middot;특수한 해&middot;잘못 봄</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
         <div class="prob" data-qid="pb1" data-ans="4" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>세 잎 클로버 x개와 네 잎 클로버 y개의 잎이 모두 34장일 때 3x + 4y = 34 이다. x = 6 일 때 y의 값을 구하시오.</div>
+          <div class="pq"><span class="pnum">1.</span>연립방정식 { 2(x + y) − y = 9, x − (y − 3) = 6 } 의 해에서 x 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 6을 대입해 남은 잎 수를 4로 나눈다.</div>
+          <div class="quiz-hint">힌트: 괄호를 먼저 풀어 정리한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb2" data-ans="2" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>다음 중 미지수가 두 개인 일차방정식은 모두 몇 개인지 구하시오.<br>ㄱ. 2x + y = 5<br>ㄴ. x<sup>2</sup> + y = 3<br>ㄷ. x − y<br>ㄹ. x/2 − 3y = 1<br>ㅁ. 4x = 4x + y − 2</div>
+        <div class="prob" data-qid="pb2" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>연립방정식 { 3(x − 1) + 2y = 8, 2x − (y + 4) = 1 } 의 해에서 y 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: ㅁ은 정리하면 x항이 사라진다.</div>
+          <div class="quiz-hint">힌트: 상수항을 우변으로 옮기면 정리가 끝난다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb3" data-ans="1" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>순서쌍 (2, 3)이 일차방정식 4x − ay = 5 의 해일 때, 상수 a의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb3" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>연립방정식 { 0.4x + 0.3y = 1.8, 0.2x − 0.1y = 0.4 } 의 해에서 x + y 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 대입하면 8 − 3a = 5 다.</div>
+          <div class="quiz-hint">힌트: 양변에 10을 곱해 정수 계수로 바꾼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb4" data-ans="2" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>다음 중 일차방정식 2x + 5y = 20 의 해가 <strong>아닌</strong> 것은?<br>① (0, 4)<br>② (5, 3)<br>③ (−5, 6)</div>
+        <div class="prob" data-qid="pb4" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>연립방정식 { 0.05x + 0.02y = 0.19, 0.3x − 0.1y = −0.4 } 의 해에서 y 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 해가 아닌 것을 고르는 문제다.</div>
+          <div class="quiz-hint">힌트: 각 식의 소수점 아래 자리 수만큼 곱한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb5" data-ans="5" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>x, y가 자연수일 때, 일차방정식 x + 2y = 11 의 해의 개수를 구하시오.</div>
+        <div class="prob" data-qid="pb5" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>연립방정식 { x/2 + y/3 = 5, x/4 − y/3 = 1 } 의 해에서 x 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: y부터 1씩 늘려 가며 x가 자연수인지 확인한다.</div>
+          <div class="quiz-hint">힌트: 분모의 최소공배수를 곱한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb6" data-ans="8" data-type="num">
-          <div class="pq"><span class="pnum">6.</span>일차방정식 2x + 3y = 28 의 해 중에서 x의 값이 y의 값의 2배인 해가 있다. 이때 x의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb6" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>연립방정식 { x/3 − y/4 = 1, x/6 + y/2 = 3 } 의 해에서 x + y 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x = 2y를 대입하면 미지수가 하나가 된다.</div>
+          <div class="quiz-hint">힌트: 분수가 없는 항에도 빠짐없이 곱한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb7" data-ans="18" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>연립방정식 { x + y = 9, x − y = 3 } 의 해가 x = a, y = b 일 때, a &times; b의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb7" data-ans="2" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>x + 2y = 3x − y = 7 을 만족하는 y 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 식을 더해 y를 소거한다.</div>
+          <div class="quiz-hint">힌트: 등호가 두 개면 방정식도 두 개다.</div>
           <div class="quiz-fb"></div>
         </div>
         <div class="prob" data-qid="pb8" data-ans="3" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>다음 중 연립방정식 { 2x + y = 7, x − y = 2 } 의 해인 것은?<br>① (1, 5)<br>② (2, 3)<br>③ (3, 1)</div>
+          <div class="pq"><span class="pnum">8.</span>다음 세 연립방정식 중 해가 나머지 둘과 <strong>다른</strong> 것의 번호를 쓰시오. &#9312; { x + y = 5, x − y = 1 } &#9313; { 2x + y = 8, x − y = 1 } &#9314; { 2x + 3y = 11, x − 2y = 2 }</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 한 식만 만족시키는 것은 해가 아니다.</div>
+          <div class="quiz-hint">힌트: 세 연립방정식의 해를 각각 구해 비교한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb9" data-ans="7" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>연립방정식 { 3x + 2y = 25, 3x − 2y = 17 } 을 가감법으로 풀 때, x의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb9" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>연립방정식 { 2x − y = 3, 4x − 2y = a } 의 해가 무수히 많을 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: y의 계수의 부호가 서로 다르다.</div>
+          <div class="quiz-hint">힌트: 한 식에 몇을 곱해야 다른 식이 되는지 본다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb10" data-ans="9" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>y = x − 6 을 2x + y = 21 에 대입하여 풀 때, x의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb10" data-ans="13" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>연립방정식 { x + 2y = 9, 3x − y = k } 에서 k 를 잘못 보고 풀었더니 x = 5 가 되었다. k 를 얼마로 잘못 보았는지 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 대입하면 3x − 6 = 21 이 된다.</div>
+          <div class="quiz-hint">힌트: 대입하면 어느 식이 바르게 본 식인지 알 수 있다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
     </div>
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 — 활용 문제와 두 단계 추론</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 &mdash; 여러 방법을 섞어 쓰는 연립방정식</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="20" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>x, y가 자연수일 때, 일차방정식 x + 5y = 103 의 해의 개수를 구하시오.</div>
+        <div class="prob" data-qid="pa1" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>연립방정식 { 3(x + 1) − y = 12, x − 2 = 2(x − y) } 의 해가 (a, b) 일 때, a − b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: y가 가질 수 있는 값의 범위를 먼저 생각한다. 일일이 세지 않아도 된다.</div>
+          <div class="quiz-hint">힌트: 괄호를 풀어 정리한 뒤 연립한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa2" data-ans="2" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>x, y가 자연수일 때, 다음 일차방정식 중 해가 <strong>하나도 없는</strong> 것은?<br>① 3x + 2y = 9<br>② 4x + 6y = 13<br>③ 2x + 5y = 12</div>
+        <div class="prob" data-qid="pa2" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>연립방정식 { 0.2x − 0.5y = 0.2, x/3 + y/2 = 3 } 의 해가 x = a, y = b 일 때, a − b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 좌변이 항상 짝수인데 우변이 홀수인 경우가 있는지 보자.</div>
+          <div class="quiz-hint">힌트: 소수인 식과 분수인 식을 각각 정리한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa3" data-ans="6" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>순서쌍 (1, 2)와 (4, −4)가 모두 일차방정식 ax + by = 8 의 해일 때, a + b의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa3" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>연립방정식 { 0.<span class="od">6</span>x + y = 4, x − 0.5y = 2 } 의 해가 (a, b) 일 때, a + b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 순서쌍을 각각 대입하면 a, b에 대한 연립방정식이 된다.</div>
+          <div class="quiz-hint">힌트: 순환소수를 먼저 분수로 바꾼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa4" data-ans="4" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>연립방정식 { 2x + y = 14, x − y = a } 의 해에서 x의 값이 y의 값의 3배일 때, 상수 a의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa4" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>연립방정식 { 3x + 4y = 10 &#8230;㉠, 5x − 3y = 7 &#8230;㉡ } 에서 y 를 없애려고 한다. ㉠ &times; m + ㉡ &times; n 이 되도록 하는 가장 작은 자연수 m, n 에 대하여 m + n 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x = 3y를 첫 번째 식에 넣어 해부터 구한다.</div>
+          <div class="quiz-hint">힌트: y의 계수의 절댓값이 같아지도록 곱한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa5" data-ans="12" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>시속 4km로 xkm를 걷고, 시속 12km로 ykm를 자전거로 달렸더니 모두 1시간이 걸렸다. 이 관계를 3x + y = k 꼴로 나타낼 때, k의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa5" data-ans="20" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>연립방정식 { x + y = 7, x + 3y = a } 와 { 2x − y = 2, x = 2y − b } 의 해가 서로 같을 때, a + b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: (시간) = (거리) &divide; (속력)로 식을 세운 뒤 분모를 없앤다.</div>
+          <div class="quiz-hint">힌트: 상수가 없는 두 식을 먼저 연립해 해를 구한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa6" data-ans="56" data-type="num">
-          <div class="pq"><span class="pnum">6.</span>어느 문구점에서 연필 한 자루는 a원, 지우개 한 개는 b원이다. 준서는 연필 24자루와 지우개 11개를, 민서는 연필 26자루와 지우개 9개를 샀다. 모든 물건을 20% 할인하여 판매할 때, 두 사람이 지불해야 할 금액이 (ma + nb)원이라 하면 m + n의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa6" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>연립방정식 { 3x − y = a − 1, x + 2y = 2a + 4 } 를 만족하는 y 의 값이 x 의 값의 2배일 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 사람의 것을 먼저 합한 뒤 정가의 80%를 계산한다.</div>
+          <div class="quiz-hint">힌트: 조건을 y = 2x라는 식으로 바꿔 쓴다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa7" data-ans="1" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>x = 2, y = 3 이 일차방정식 2x + ay = 19 의 해이다. 이 방정식의 해 중에서 x = 7 일 때 y의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa7" data-ans="15" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>연립방정식 { 2x − y = a, x + 2y = a + 5 } 를 만족하는 x 와 y 의 비가 2 : 1 일 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 먼저 a를 구해 방정식을 완성한 다음 x = 7을 넣는다.</div>
+          <div class="quiz-hint">힌트: 비를 x = 2y 꼴의 식으로 바꾼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa8" data-ans="3" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>x, y가 자연수일 때, 일차방정식 2x + 3y = 29 의 해 중에서 x &gt; y 인 것의 개수를 구하시오.</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 해를 모두 구한 뒤 조건을 만족하는 것만 센다.</div>
+        <div class="prob" data-qid="pa8" data-ans="3/2" data-type="text">
+          <div class="pq"><span class="pnum">8.</span>연립방정식 { 3x + 2y = 5, 6x + 4(y − a) = 4 } 의 해가 무수히 많을 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 식이 완전히 같아지도록 정리한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa9" data-ans="8" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>연립방정식 { x + y = 10, 2x − y = a } 의 해가 일차방정식 3x + y = 22 도 만족시킬 때, 상수 a의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa9" data-ans="-1" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>연립방정식 { 3x + y = 2a, 6x + 2y = −4 } 가 해를 갖지 않도록 하는 상수 a 의 값을 구하시오. (즉 a 가 이 값이면 해가 없다)</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: a가 없는 두 식을 먼저 연립해 해를 구한다.</div>
+          <div class="quiz-hint">힌트: 두 식의 좌변이 같아지도록 배수를 맞춰 본다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa10" data-ans="-8" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>순서쌍 (−3, 2)와 (a, 4)가 모두 일차방정식 x + by = 7 의 해일 때, a + b의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa10" data-ans="11" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>연립방정식 { ax + by = 10, cx + y = 6 } 을 푸는데 c 를 잘못 보고 풀어 (3, 1) 을 얻었다. 실제 해가 (4, 2) 일 때, a − b + c 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 상수가 하나뿐인 순서쌍부터 대입한다.</div>
+          <div class="quiz-hint">힌트: 바르게 본 식에 두 해를 각각 대입한다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
     </div>
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 — 자연수 해의 조건과 방정식의 결합</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 &mdash; 조건과 잘못 봄이 뒤섞인 연립방정식</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
         <div class="solution">
-          <div class="sol-head">🧩 단계별 풀이 &mdash; 자연수 해를 빠짐없이 찾는 법</div>
-          <div class="sol-q"><i>x</i>, <i>y</i> 가 자연수일 때, 일차방정식 2<i>x</i> + 5<i>y</i> = 46 의 해는 모두 몇 개인가?</div>
-          <div class="step"><span class="s-label">STEP 1 · 어느 문자부터</span><br>계수의 절댓값이 큰 <i>y</i> 부터 대입합니다. <i>x</i> 부터 하면 <i>x</i> = 1 &sim; 20 으로 20번을 확인해야 하지만, <i>y</i> 는 1 &sim; 8 로 8번이면 끝납니다.</div>
-          <div class="step"><span class="s-label">STEP 2 · 조건 좁히기</span><br>2<i>x</i> = 46 &minus; 5<i>y</i> 인데 좌변 2<i>x</i> 는 짝수이므로 5<i>y</i> 도 짝수여야 합니다. 곧 <strong><i>y</i> 가 짝수인 경우만</strong> 확인하면 됩니다. 확인할 것이 8번에서 4번으로 또 줄었습니다.</div>
-          <div class="step"><span class="s-label">STEP 3 · 대입</span><br><i>y</i> = 2 → 2<i>x</i> = 36 → <i>x</i> = 18<br><i>y</i> = 4 → 2<i>x</i> = 26 → <i>x</i> = 13<br><i>y</i> = 6 → 2<i>x</i> = 16 → <i>x</i> = 8<br><i>y</i> = 8 → 2<i>x</i> = 6 → <i>x</i> = 3</div>
-          <div class="step"><span class="s-label">STEP 4 · 멈추는 곳</span><br><i>y</i> = 10 이면 2<i>x</i> = 46 &minus; 50 = &minus;4 로 음수가 되어 자연수 <i>x</i> 가 없습니다. 더 큰 <i>y</i> 는 볼 필요가 없으므로 여기서 멈춥니다.</div>
-          <div class="step"><span class="s-label">STEP 5 · 답</span><br>(18, 2), (13, 4), (8, 6), (3, 8) 의 <strong>4개</strong>입니다. 순서쌍을 빠짐없이 적어 두면 뒤에 「<i>x</i> &gt; <i>y</i> 인 것」 같은 조건이 붙어도 바로 세어 볼 수 있습니다.</div>
-          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 →</button>
+          <div class="sol-head">🧩 단계별 풀이 &mdash; 문자로 된 상수가 껴 있을 때</div>
+          <div class="sol-q">연립방정식 { 3x + 2y = 10 + m, 2x + 3y = 4 + m } 의 해가 (a, b) 일 때, a − b 의 값을 구하시오. (단, m 은 상수)</div>
+          <div class="step"><span class="s-label">STEP 1 &middot; 상수를 어떻게 다룰까</span><br>m 의 값을 모르니 그대로는 풀 수 없습니다. 두 식에 <strong>+m 이 똑같이</strong> 들어 있다는 점을 이용합니다.</div>
+          <div class="step"><span class="s-label">STEP 2 &middot; 빼서 없앤다</span><br>두 식을 <strong>빼면</strong> m 이 사라집니다 &mdash; (3x + 2y) − (2x + 3y) = (10 + m) − (4 + m).</div>
+          <div class="step"><span class="s-label">STEP 3 &middot; 정리</span><br>정리하면 <strong>x − y = 6</strong> 입니다.</div>
+          <div class="step"><span class="s-label">STEP 4 &middot; 답</span><br>구하는 것이 a − b, 곧 x − y 이므로 <strong>답은 6</strong>입니다. x, y 를 각각 구할 필요가 없습니다. (다음 문항 ph1 은 +m 과 −m 이 하나씩이라 <strong>더해야</strong> 사라집니다 &mdash; 어느 쪽인지 부호를 보고 정하세요.)</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 &rarr;</button>
         </div>
-        <div class="prob" data-qid="ph1" data-ans="5" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>x, y가 자연수일 때, 일차방정식 3x + 7y = 100 을 만족시키는 순서쌍 (x, y)의 개수를 구하시오.</div>
+        <div class="prob" data-qid="ph1" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>연립방정식 { 2x + 6y = 9 − m, 3x − y = 11 + m } 의 해가 (a, b) 일 때, a + b 의 값을 구하시오. (단, m 은 상수)</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 100 − 7y가 3의 배수가 되는 y를 찾는다. y가 3씩 커질 때마다 조건이 되풀이된다.</div>
+          <div class="quiz-hint">힌트: 부호가 같은 m은 더해서, 다른 m은 빼서 없앤다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph2" data-ans="11" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>일차방정식 2x − y = 4 를 만족시키는 두 자연수 x, y의 최소공배수가 30일 때, x + y의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph2" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>연립방정식 { x − 3y = (a − 2)/2, 2x − 5y = a + 1 } 을 만족하는 x 와 y 의 비가 4 : 1 일 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 자연수 해를 순서쌍으로 나열한 뒤 최소공배수를 하나씩 확인한다.</div>
+          <div class="quiz-hint">힌트: 비를 식으로 바꿔 연립한다.</div>
           <div class="quiz-fb"></div>
         </div>
         <div class="prob" data-qid="ph3" data-ans="-3" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>일차방정식 2x + ay = 4 가 (b, 1), (1, −1/2), (−4, c) 를 해로 갖는다. 상수 a, b, c에 대하여 a + b + c의 값을 구하시오.</div>
+          <div class="pq"><span class="pnum">3.</span>연립방정식 { ax + 2y = 3, 6x − 4y = 5 } 의 해가 없을 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x, y가 모두 주어진 순서쌍부터 대입해 a를 먼저 구한다.</div>
+          <div class="quiz-hint">힌트: x의 계수 비와 y의 계수 비가 같아야 한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph4" data-ans="15" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>x = 4, y = 3 이 일차방정식 2x + ay = 23 의 해이다. x, y가 자연수일 때 이 방정식의 <strong>다른</strong> 해를 x = m, y = n 이라 하면 a + m + n의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph4" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>연립방정식 { ax + y = 7, 3x − y = 5 } 에서 a 를 b 로 잘못 보고 풀었더니 (2, 1) 이 나왔다. b 가 a 보다 2 만큼 클 때, 원래 연립방정식의 해 (x, y) 에 대하여 xy 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: a를 구한 뒤 자연수 해를 모두 찾아 주어진 해가 아닌 것을 고른다.</div>
+          <div class="quiz-hint">힌트: b를 먼저 구한 뒤 a와의 관계를 이용한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph5" data-ans="24" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>어른 5명과 아이 3명으로 이루어진 모임에서 사탕 44개를 하나도 남기지 않고 나누어 가지려 한다. 어른 한 명이 받는 개수를 x, 아이 한 명이 받는 개수를 y라 할 때, 가능한 y의 값들의 총합을 구하시오. (단, 같은 그룹의 구성원은 각각 같은 개수를 받으며, <strong>어른들은 하나도 받지 못할 수 있다.</strong>)</div>
+        <div class="prob" data-qid="ph5" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>x/3 − y + 2 = x − 0.5y − 1 = 6 을 푸는데 6 을 다른 수로 잘못 보고 풀었더니 x = 3 이 되었다. 6 을 어떤 수로 잘못 보았는지 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 5x + 3y = 44 를 세운다. x = 0 인 경우도 따져야 하지만 y = 0 은 따지지 않는다.</div>
+          <div class="quiz-hint">힌트: 등호가 두 개인 식임을 먼저 알아본다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph6" data-ans="2" data-type="num">
-          <div class="pq"><span class="pnum">6.</span>연립방정식 { ax + y = 7, 2x − 3y = −5 } 의 해가 일차방정식 x + y = 5 도 만족시킬 때, 상수 a의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph6" data-ans="21" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>두 순서쌍 (c, 1), (d, 5) 가 모두 연립방정식 { 2x + 5y = 6, ax + by = 18 } 을 만족할 때, a + b 의 값을 구하시오. (단, a, b 는 상수)</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: a가 들어 있지 않은 두 식을 먼저 연립한다.</div>
+          <div class="quiz-hint">힌트: 두 순서쌍을 각각 대입해 연립방정식을 만든다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph7" data-ans="19" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>x, y가 자연수일 때, 일차방정식 4x + 3y = 60 의 해 중에서 x + y의 값이 가장 클 때, 그 x + y의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph7" data-ans="-15" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>연립방정식 { x − ay = 5, 4x + 3y = b } 의 해가 무수히 많을 때, ab 의 값을 구하시오. (단, a, b 는 상수)</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 해를 모두 구한 뒤 x + y를 비교한다. 계수가 작은 쪽이 커질수록 합이 커진다.</div>
+          <div class="quiz-hint">힌트: 세 비가 모두 같아야 한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph8" data-ans="6" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>등식 (a − 2)x<sup>2</sup> + 3x + by = 4x<sup>2</sup> − x + 6 이 x, y에 대한 미지수가 두 개인 일차방정식이 될 때, a의 값과 b가 될 수 <strong>없는</strong> 값의 합을 구하시오.</div>
+        <div class="prob" data-qid="ph8" data-ans="-5" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>연립방정식 { px + qy = 8, 3x + 2y = 16 } 의 해가 (a, b) 이고, 연립방정식 { x − 2y = −6, px + 3y = 10 } 의 해가 (b, a) 이다. a − b + p − q 의 값을 구하시오. (단, p, q 는 상수)</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 한쪽으로 모았을 때 이차항이 사라져야 하고, y항은 남아야 한다.</div>
+          <div class="quiz-hint">힌트: 두 연립방정식에 공통으로 들어 있는 문자를 먼저 본다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph9" data-ans="3" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>어느 가게에서 한 개에 1200원인 사과 x개와 한 개에 2000원인 배 y개를 담은 선물 세트를 만든다. 한 세트에 담긴 과일 값의 합이 20000원이 되도록 하고 사과와 배를 각각 한 개 이상 담을 때, 만들 수 있는 세트는 모두 몇 가지인지 구하시오.</div>
+        <div class="prob" data-qid="ph9" data-ans="-11" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>지호와 서연이가 연립방정식 { ax + by = 10, x + cy = 6 } 을 푸는데, 지호는 바르게 풀어 (3, 1) 을 얻었고 서연이는 c 를 잘못 보고 풀어 (1, −3) 을 얻었다. 상수 a, b, c 에 대하여 ab − c 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 식을 세운 뒤 양변을 400으로 나누어 간단히 한다.</div>
+          <div class="quiz-hint">힌트: 바르게 구한 해를 c가 없는 식에 대입한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph10" data-ans="9" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>x, y가 자연수일 때, 일차방정식 2x + 5y = 24 의 한 해가 일차방정식 4x − ay = 10 의 해도 된다. 이때 자연수 a의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph10" data-ans="2" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>연립방정식 { 4x + y = 5 + m, x + 4y = 15 − m } 의 해가 (a, b) 이고 a : b = 1 : 3 일 때, 상수 m 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 먼저 2x + 5y = 24 의 자연수 해를 모두 구한 뒤, 각각을 넣어 a가 자연수가 되는 것을 고른다.</div>
+          <div class="quiz-hint">힌트: 비를 이용해 a, b를 m으로 나타낸다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
@@ -1241,13 +1211,9 @@
 </div>
 
 <nav class="unit-nav" aria-label="단원 이동">
-    <a class="pv" href="note_2-1_5_%EC%9D%BC%EC%B0%A8%EB%B6%80%EB%93%B1%EC%8B%9D%EC%9D%98%ED%99%9C%EC%9A%A9_PRO.html">
+    <a class="pv" href="note_2-1_6_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D_PRO.html">
       <span class="un-lbl">← 이전 단원</span>
-      <span class="un-t">5단원 · 일차부등식의 활용</span>
-    </a>
-    <a class="nx" href="note_2-1_7_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%92%80%EC%9D%B4_PRO.html">
-      <span class="un-lbl">다음 단원 →</span>
-      <span class="un-t">7단원 · 연립일차방정식의 풀이</span>
+      <span class="un-t">6단원 · 연립일차방정식</span>
     </a>
 </nav>
 
@@ -1257,7 +1223,7 @@
 </footer>
 
 <script>
-const LS='isaacmath_note_2-1-6_v1';
+const LS='isaacmath_note_2-1-7_v1';
 let state={done:[],results:{},reviewed:false};
 function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
 function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
