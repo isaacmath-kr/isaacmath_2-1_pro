@@ -14,13 +14,13 @@
         crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>연립일차방정식의 활용 | 중2 1학기 8단원 | Isaac Math PRO</title>
-<meta name="description" content="사탕과 초콜릿, 자릿수와 나이, 개수와 금액, 증가와 감소, 거리·속력·시간, 강물과 기차, 일과 농도까지 — 미지수 두 개를 잡고 조건을 식 두 개로 옮기는 법을 여덟 가지 활용 유형으로 정리한 중2 1학기 8단원 강의노트입니다.">
-<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_8_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%99%9C%EC%9A%A9_PRO.html">
-<meta property="og:title" content="연립일차방정식의 활용 — 중2 1학기 8단원 강의노트">
-<meta property="og:description" content="상황 안의 서로 다른 두 그룹을 찾아 미지수를 둘로 잡고 조건을 식 두 개로 옮기는 법을, 수와 나이·개수와 금액·증가와 감소·거리속력시간·강물과 기차·일과 농도까지 여덟 가지 유형으로 정리한 중2 1학기 8단원 강의노트입니다. 연습문제 30문항 수록.">
+<title>일차함수와 그래프(1) | 중2 1학기 9단원 | Isaac Math PRO</title>
+<meta name="description" content="함수의 뜻과 판별, 함숫값 f(x), 일차함수의 정의, 평행이동, x절편·y절편, 기울기, 그래프와 좌표축이 만드는 넓이까지 — 정비례·반비례가 사실 함수였음을 잇고 그래프의 모양과 위치를 정하는 법을 정리한 중2 1학기 9단원 강의노트입니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_9_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%841_PRO.html">
+<meta property="og:title" content="일차함수와 그래프(1) — 중2 1학기 9단원 강의노트">
+<meta property="og:description" content="하나의 x에 하나의 y — 함수의 뜻과 판별부터 함숫값, 일차함수, 평행이동, 두 절편, 기울기, 좌표축이 만드는 넓이까지 여덟 개 섹션으로 정리한 중2 1학기 9단원 강의노트입니다. 연습문제 30문항 수록.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_8_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%99%9C%EC%9A%A9_PRO.html">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_9_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%841_PRO.html">
 <style>
   :root {
     --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
@@ -642,6 +642,106 @@
 .u8-step .k.g{background:var(--green);} .u8-step .k.o{background:var(--orange);}
 .u8-step .h{font-size:12.5px;font-weight:700;color:var(--text);line-height:1.4;}
 .u8-step .d{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px;}
+
+/* ── 2-1 9단원 「일차함수와 그래프(1)」 전용 시각자료 CSS (u9- 접두사) ──
+   공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
+.u9-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u9-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u9-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u9-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u9-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u9-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u9-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u9-card.on{border-color:var(--green);border-width:2px;}
+.u9-card.off{border-color:var(--red);border-width:2px;}
+.u9-card.pick{border-color:var(--blue);border-width:2px;}
+.u9-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u9-lab.g{color:var(--green);} .u9-lab.r{color:var(--red);}
+.u9-lab.b{color:var(--blue);} .u9-lab.o{color:var(--orange);} .u9-lab.p{color:var(--purple);}
+.u9-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u9-note .u9-eq,.u9-cap .u9-eq{font-size:13px;}
+.u9-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u9-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u9-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u9-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u9-tb th,.u9-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u9-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u9-tb td.hit{color:var(--green);font-weight:700;}
+.u9-tb td.no{color:var(--red);}
+.u9-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u9-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u9-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+        font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.u9-num.o{background:var(--orange);} .u9-num.p{background:var(--purple);} .u9-num.g{background:var(--green);}
+.u9-flow{display:flex;flex-direction:column;gap:8px;}
+.u9-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u9-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u9-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u9-hl.o{background:rgba(251,146,60,.18);} .u9-hl.g{background:rgba(52,211,153,.18);}
+.u9-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u9-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u9-sys .rows{display:flex;flex-direction:column;gap:5px;}
+/* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
+.u9-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+        font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
+.u9-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u9-eqg span{text-align:right;font-style:italic;}
+.u9-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u9-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u9-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u9-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u9-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+        column-gap:7px;row-gap:9px;justify-content:start;}
+.u9-mul .n{font-size:14px;color:var(--muted);}
+.u9-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u9-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u9-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u9-fr{display:inline-flex;flex-direction:column;align-items:center;line-height:1.25;}
+.u9-fr .up{padding:0 6px;font-style:italic;}
+.u9-fr .dn{padding:0 6px;border-top:1.5px solid var(--text);font-style:italic;}
+.u9-fr.a .up,.u9-fr.a .dn{color:var(--blue);}
+.u9-fr.b .up,.u9-fr.b .dn{color:var(--purple);}
+.u9-fr.c .up,.u9-fr.c .dn{color:var(--orange);}
+.u9-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u9-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u9-eqrow{text-align:center;overflow-x:auto;}
+.u9-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u9-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u9-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+@media (max-width:600px){
+  .u9-2col,.u9-3col{grid-template-columns:1fr;}
+  .u9-eqg{font-size:15px;} .u9-eq{font-size:15px;}
+  .u9-anatg .pt{font-size:18px;}
+  .u9-ratio{gap:9px;font-size:14px;}
+}
+
+/* ── 9단원 추가: 대응 그림 · 함수 공장 · 좌표평면 SVG ── */
+.u9-map{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;margin:6px 0;}
+.u9-col{display:flex;flex-direction:column;gap:6px;}
+.u9-box{border:1px solid var(--border);border-radius:8px;padding:6px 4px;text-align:center;
+        font-size:13px;background:var(--bg);font-family:"Times New Roman",Georgia,serif;}
+.u9-box.hit{border-color:var(--green);color:var(--green);font-weight:700;}
+.u9-box.bad{border-color:var(--red);color:var(--red);font-weight:700;}
+.u9-mapl{font-size:10px;color:var(--muted);text-align:center;margin-bottom:4px;letter-spacing:.03em;}
+.u9-to{font-size:16px;color:var(--muted);text-align:center;line-height:1.6;}
+.u9-fact{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:8px 0 2px;}
+.u9-in,.u9-outb{border:2px solid var(--blue);border-radius:8px;padding:7px 11px;font-size:14px;
+        font-family:"Times New Roman",Georgia,serif;font-style:italic;color:var(--blue);font-weight:700;}
+.u9-outb{border-color:var(--green);color:var(--green);}
+.u9-mach{border:2px solid var(--orange);border-radius:10px;padding:8px 13px;background:var(--bg);text-align:center;}
+.u9-mach .nm{font-size:11px;color:var(--orange);font-weight:700;margin-bottom:3px;}
+.u9-mach .st{font-size:12px;color:var(--text);line-height:1.5;font-family:"Times New Roman",Georgia,serif;}
+.u9-ar{font-size:18px;color:var(--muted);line-height:1;}
+.diagram-wrap svg.dia{width:100%;height:auto;display:block;}
+@media (max-width:600px){ .u9-map{gap:4px;} .u9-box{font-size:12px;} }
+
 </style>
 </head>
 <body>
@@ -653,8 +753,8 @@
       <span class="pro-badge">PRO</span>
       <span class="label">Isaac Math 2-1 강의노트 · 프리미엄</span>
     </div>
-    <h1>연립일차방정식의 활용</h1>
-    <div class="sub">지난 단원에서 괄호·소수·분수가 섞인 연립방정식을 정리해 푸는 법을 배웠습니다. 이번 단원의 목표는 <strong>식을 어떻게 세우는지</strong>입니다. 5단원(일차부등식의 활용)에서는 미지수를 하나로 줄였지만, 이 단원에서는 상황 안의 서로 다른 두 그룹을 찾아 미지수를 <strong>둘</strong>로 잡습니다. 수와 나이, 개수와 금액, 증가와 감소, 거리·속력·시간, 강물과 기차, 일과 농도까지 여덟 가지 유형으로 정리합니다.</div>
+    <h1>일차함수와 그래프(1)</h1>
+    <div class="sub">1-1에서 배운 정비례와 반비례는 사실 이름만 몰랐을 뿐 이미 함수였습니다. 이 단원에서는 그 이름 &laquo;함수&raquo;를 정식으로 배웁니다. 함수는 두 변수 사이의 관계인데, 아무 관계나 함수가 아니라 <strong>&laquo;하나의 x에 하나의 y&raquo;</strong>여야 합니다. 함수 중에서도 그래프가 직선인 <strong>일차함수</strong>를 배우고, 그래프를 그리는 데 필요한 두 가지 — <strong>모양(기울기)</strong>과 <strong>위치(y절편)</strong> — 를 여덟 개 섹션으로 정리합니다.</div>
     <div class="header-tools">
       <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
       <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
@@ -680,463 +780,477 @@
 </div>
 
 <nav class="toc" id="toc">
-  <a href="#s1" class="tlink">① 다섯 단계</a>
-  <a href="#s2" class="tlink">② 수와 나이</a>
-  <a href="#s3" class="tlink">③ 개수·금액</a>
-  <a href="#s4" class="tlink">④ 증가·감소</a>
-  <a href="#s5" class="tlink">⑤ 거리·속력</a>
-  <a href="#s6" class="tlink">⑥ 만남·트랙</a>
-  <a href="#s7" class="tlink">⑦ 강물·기차</a>
-  <a href="#s8" class="tlink">⑧ 일·농도</a>
+  <a href="#s1" class="tlink">① 함수의 뜻</a>
+  <a href="#s2" class="tlink">② 함수 판별</a>
+  <a href="#s3" class="tlink">③ 함숫값</a>
+  <a href="#s4" class="tlink">④ 일차함수</a>
+  <a href="#s5" class="tlink">⑤ 평행이동</a>
+  <a href="#s6" class="tlink">⑥ 두 절편</a>
+  <a href="#s7" class="tlink">⑦ 기울기</a>
+  <a href="#s8" class="tlink">⑧ 넓이</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
 
 <div class="content">
   <section class="section" id="s1">
-    <div class="section-head"><span class="section-num">1</span><span class="section-title">활용 문제의 다섯 단계 &mdash; 만드는 것이 목적</span>
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">함수의 뜻 &mdash; 두 변수 사이의 관계</span>
       <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
 
-<p>지금부터는 지난 두 단원에서 배운 풀이법을 문장제에 적용합니다. 이 단원의 목적은 방정식을 &laquo;푸는&raquo; 것이 아니라 &laquo;만드는&raquo; 것입니다 &mdash; 수업에서 선생님이 세 번 반복해 강조한 말입니다. 푸는 법은 이미 끝났습니다. 여기서 배우는 것은 미지수 두 개를 어떻게 잡고 식 두 개를 어떻게 세우느냐입니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">활용 문제를 푸는 다섯 단계</div>
-<div class="u8-flow">
-  <div class="u8-step"><div class="k">1</div><div>
-    <div class="h">무엇을 미지수로 놓을지 정한다</div>
-    <div class="d">상황 안에 <b>서로 다른 두 그룹</b>이 있는지 먼저 찾는다. 보통 문제가 묻는 것을 <span class="u8-eq">x</span>, <span class="u8-eq">y</span>로 놓는다.</div></div></div>
-  <div class="u8-arrow">&#8595;</div>
-  <div class="u8-step"><div class="k">2</div><div>
-    <div class="h">조건을 식 <b>두 개</b>로 옮긴다</div>
-    <div class="d">조건이 두 줄이면 식도 두 줄이다. 개수와 금액, 거리와 시간처럼 <b>서로 다른 관점</b>에서 하나씩.</div></div></div>
-  <div class="u8-arrow">&#8595;</div>
-  <div class="u8-step"><div class="k">3</div><div>
-    <div class="h">연립방정식을 푼다</div>
-    <div class="d">가감법과 대입법 &mdash; 바로 앞 단원에서 익힌 그대로.</div></div></div>
-  <div class="u8-arrow">&#8595;</div>
-  <div class="u8-step"><div class="k o">4</div><div>
-    <div class="h">구한 값으로 <b>답을 정한다</b></div>
-    <div class="d"><span class="u8-eq">x</span>, <span class="u8-eq">y</span>의 값이 곧 답이 아닐 수 있다. 문제가 무엇을 물었는지 다시 읽는다.</div></div></div>
-  <div class="u8-arrow">&#8595;</div>
-  <div class="u8-step"><div class="k g">5</div><div>
-    <div class="h">문제의 조건에 맞는지 확인한다</div>
-    <div class="d">사람 수가 소수로 나오거나 나이가 음수인 답은 여기서 걸러진다.</div></div></div>
+<p>이 단원은 <strong>함수</strong>라는 낱말로 시작합니다. 함수는 두 변수 사이의 관계를 다루는 이야기입니다. 변하는 값을 <strong>변수</strong>, 그 반대로 고정되어 변하지 않는 값을 <strong>상수</strong>라고 부릅니다. 다만 두 변수 사이의 관계라고 다 함수인 것은 아닙니다. 수업에서 선생님이 못박은 조건은 단 하나, <strong>&laquo;하나의 x에 하나의 y&raquo;</strong>여야 한다는 것입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">y = 3x 에서 x에 7을 넣으면 y는 21 하나로 정해진다.</p>
+<p style="margin-bottom:0">y = 4x &minus; 1 에서 y가 15가 되게 하는 x는? 4x &minus; 1 = 15, x = 4</p>
 </div>
-<div class="u8-cap">&#9314;와 &#9315;가 이 단원에서 가장 많이 틀리는 자리다.</div></div>
-<p>왜 미지수를 굳이 둘로 놓을까요? 하나로 줄이면 나머지 하나를 항상 &laquo;전체 &minus; x&raquo; 꼴로 계속 표현해야 해서, 조건이 조금만 늘어도 식이 손댈 수 없이 복잡해집니다.</p>
-<div class="box box-green"><div class="box-title">학생이 지켜야 할 원칙 4가지</div>
-<ol>
-<li>상황 안의 서로 다른 두 그룹을 찾아 미지수 둘을 잡는다.</li>
-<li>구한 미지수의 값이 곧 답이 아닐 수 있다. 문제가 물은 것을 다시 읽는다.</li>
-<li>마지막에 답이 문제의 조건에 맞는지 확인한다(사람 수&middot;나이&middot;개수는 자연수).</li>
-<li>단위를 통일한다(분과 시간, m와 km).</li>
-</ol></div>
-<div class="u8-wrap">
-<div class="u8-t">5단원과 8단원, 미지수를 잡는 방식이 정반대다</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab o">5단원 &middot; 일차부등식의 활용</div>
-    <div class="u8-eq" style="font-size:15px">미지수는 <b>하나</b></div>
-    <div class="u8-note" style="text-align:left">사탕을 <span class="u8-eq">x</span>개 사면 초콜릿은 <span class="u8-eq">11 &minus; x</span>개.<br>
-    나머지를 <b>식으로 표현</b>해 하나로 줄였다.</div>
-    <div class="u8-eqrow" style="margin-top:8px"><span class="u8-eq">400x + 700(11 &minus; x) = 6200</span></div></div>
-  <div class="u8-card pick"><div class="u8-lab b">8단원 &middot; 연립일차방정식의 활용</div>
-    <div class="u8-eq" style="font-size:15px">미지수는 <b>둘</b></div>
-    <div class="u8-note" style="text-align:left">사탕 <span class="u8-eq">x</span>개, 초콜릿 <span class="u8-eq">y</span>개로 <b>따로</b> 놓는다.<br>
-    대신 조건 하나마다 식을 하나씩 만든다.</div>
-    <div class="u8-sys" style="margin-top:8px"><div class="u8-brace">{</div><div class="rows">
-      <div class="u8-eq">x + y = 11</div><div class="u8-eq">400x + 700y = 6200</div></div></div></div>
+<!-- ============ 함수는 「하나의 x 에 하나의 y」다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">함수는 「하나의 x 에 하나의 y」다</div>
+<div class="u9-2col">
+  <div class="u9-card on"><div class="u9-lab g">함수다</div>
+    <div class="u9-note" style="margin-top:0">y = 3x</div>
+    <div class="u9-map">
+      <div class="u9-col"><div class="u9-mapl">x</div>
+        <div class="u9-box">1</div><div class="u9-box">4</div><div class="u9-box">7</div></div>
+      <div class="u9-to">&rarr;<br>&rarr;<br>&rarr;</div>
+      <div class="u9-col"><div class="u9-mapl">y</div>
+        <div class="u9-box hit">3</div><div class="u9-box hit">12</div><div class="u9-box hit">21</div></div>
+    </div>
+    <div class="u9-ok">화살표가 하나씩만 나간다</div>
+  </div>
+  <div class="u9-card off"><div class="u9-lab r">함수가 아니다</div>
+    <div class="u9-note" style="margin-top:0">자연수 x 의 약수 y</div>
+    <div class="u9-map">
+      <div class="u9-col"><div class="u9-mapl">x</div>
+        <div class="u9-box">1</div><div class="u9-box">2</div><div class="u9-box">4</div></div>
+      <div class="u9-to">&rarr;<br>&rarr;<br>&rArr;</div>
+      <div class="u9-col"><div class="u9-mapl">y</div>
+        <div class="u9-box">1</div><div class="u9-box">1, 2</div><div class="u9-box bad">1, 2, 4</div></div>
+    </div>
+    <div class="u9-why">x = 4 하나에 y 가 셋이나 딸려 나온다</div>
+  </div>
 </div>
-<div class="u8-cap">두 방법 모두 답은 같다. 8단원이 요구하는 것은 오른쪽 방식이다.</div></div>
-<p>두 그룹은 어떻게 알아볼까요? 문제에 서로 다른 두 대상(어른과 어린이, 사탕과 초콜릿, 걸은 구간과 뛴 구간)이 나오면 그 둘입니다. 문제가 직접 말해 주지 않는 것도 있습니다 &mdash; &laquo;회의에 참석한 사람&raquo;은 &laquo;찬성한 사람 + 반대한 사람&raquo;이라는 상식적인 읽기가 필요합니다.</p>
-<p>사탕 x개와 초콜릿 y개를 합해 11개 사고 6200원을 낸 경우라면 x + y = 11, 400x + 700y = 6200으로 풀려 사탕 5개, 초콜릿 6개가 나옵니다.</p>
-    <div class="quiz" data-qid="b1" data-ans="7" data-type="num">
-      <div class="quiz-q">Q. 한 자루 500원인 볼펜과 한 권 800원인 공책을 합해 13개 사고 8300원을 냈다. 볼펜은 몇 자루 샀는가?</div>
+<div class="u9-cap">x 를 하나 정했을 때 그에 맞는 y 가 <b>딱 하나</b>로 정해지면 y 는 x 의 함수다. 하나라도 여러 개가 나오는 x 가 있으면 함수가 아니다.</div>
+</div>
+    <div class="quiz" data-qid="b1" data-ans="11" data-type="num">
+      <div class="quiz-q">Q. y = 3x − 1 에서 x = 4 에 대응하는 y 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 볼펜 개수를 x, 공책 개수를 y로 놓고 개수의 식과 금액의 식을 각각 세운다.</div>
+      <div class="quiz-hint">힌트: x 자리에 4를 그대로 대입해 계산한다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>때로는 연립방정식을 풀어 얻은 x, y의 값이 아니라 그것으로 다시 계산한 값이 답입니다. 연립방정식을 세우고 푸는 데까지 다 해내고도 이 마지막 한 걸음에서 틀리면 점수를 받지 못합니다 &mdash; 시험에서 정답률이 갈리는 자리가 대체로 여기입니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">구한 값이 곧 답이 아닌 경우</div>
-<div class="u8-flow">
-  <div class="u8-card"><div class="u8-lab b">연립방정식을 풀어 얻은 값</div>
-    <div class="u8-eq">x = 12,&nbsp; y = 6</div>
-    <div class="u8-note">가로 12&#8202;cm, 세로 6&#8202;cm</div></div>
-  <div class="u8-arrow">&#8595;&nbsp; 문제가 물은 것은?</div>
-  <div class="u8-card on"><div class="u8-lab g">넓이를 물었다</div>
-    <div class="u8-eq">12 &times; 6 = 72</div>
-    <div class="u8-note">답은 72&#8202;cm<sup>2</sup></div></div>
+
+<p>1-1에서 이미 정비례와 반비례를 배웠습니다. 그때는 &laquo;함수&raquo;라는 이름을 쓰지 않았을 뿐, 사실 둘 다 함수였습니다.</p>
+<!-- ============ 작년에 배운 정비례 &middot; 반비례도 사실 함수였다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">작년에 배운 정비례 &middot; 반비례도 사실 함수였다</div>
+<div class="u9-2col">
+  <div class="u9-card pick"><div class="u9-lab b">정비례</div>
+    <div class="u9-eq">y = 3x</div>
+    <div class="u9-note">x 를 7 로 정하면 y 는 21 <b>하나뿐</b></div>
+    <div class="u9-ok">&rarr; 이 단원에서 배울 <b>일차함수</b></div>
+  </div>
+  <div class="u9-card pick"><div class="u9-lab p">반비례</div>
+    <div class="u9-eq">y = <span class="u9-fr"><span class="up">12</span><span class="dn">x</span></span></div>
+    <div class="u9-note">x 를 &minus;6 으로 정하면 y 는 &minus;2 <b>하나뿐</b></div>
+    <div class="u9-ok">&rarr; 고등학교에서 배울 다른 종류의 함수</div>
+  </div>
 </div>
-<div class="u8-note" style="text-align:center">묻는 것이 <b>넓이 &middot; 차 &middot; 합 &middot; 올해의 값</b>이면 한 걸음이 더 남아 있다.</div>
-<div class="u8-cap">구한 값에 밑줄을 긋고 문제의 마지막 문장을 다시 읽는 습관을 들이자.</div></div>
-    <div class="quiz" data-qid="b2" data-ans="44" data-type="num">
-      <div class="quiz-q">Q. 둘레가 30 cm인 직사각형에서 가로가 세로보다 7 cm 길다. 이 직사각형의 넓이는? (cm²)</div>
+<div class="u9-cap">둘 다 「하나의 x 에 하나의 y」를 만족하므로 함수다. 작년에는 <b>함수</b>라는 이름만 쓰지 않았을 뿐, 이미 함수를 두 가지 배운 셈이다.</div>
+</div>
+<p>그런데 왜 &laquo;하나의 y에 하나의 x&raquo;가 아니라 반대로 말할까요? 여기서 중요한 것은 <strong>순서</strong>입니다. x를 먼저 정하고, 그에 따라 y가 결정되는 방향으로 약속합니다. x처럼 내가 먼저 값을 고르는 쪽을 <strong>독립변수</strong>, y처럼 그 값에 딸려 정해지는 쪽을 <strong>종속변수</strong>라고 부릅니다.</p>
+<!-- ============ 누가 먼저 정해지는가 &mdash; x 가 주인공이다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">누가 먼저 정해지는가 &mdash; x 가 주인공이다</div>
+<div class="u9-fact">
+  <div class="u9-in">x</div>
+  <div class="u9-ar">&rarr;</div>
+  <div class="u9-mach"><div class="nm">관계식에 넣는다</div>
+    <div class="st">y = 2x + 5</div></div>
+  <div class="u9-ar">&rarr;</div>
+  <div class="u9-outb">y</div>
+</div>
+<div class="u9-2col" style="margin-top:10px">
+  <div class="u9-card"><div class="u9-lab b">독립변수 &nbsp;x</div>
+    <div class="u9-note" style="margin-top:0">혼자 알아서 변한다. 내가 <b>먼저</b> 아무 값이나 고른다.</div></div>
+  <div class="u9-card"><div class="u9-lab g">종속변수 &nbsp;y</div>
+    <div class="u9-note" style="margin-top:0">x 에 <b>딸려</b> 정해진다. 從(종)은 「따라간다」는 뜻이다.</div></div>
+</div>
+<div class="u9-cap">그래서 「하나의 y 에 하나의 x」가 아니라 <b>「하나의 x 에 하나의 y」</b> 라고 말한다. 변하지 않는 정해진 값은 <b>상수</b> &mdash; 변수의 반대말이다.</div>
+</div>
+    <div class="quiz" data-qid="b2" data-ans="6" data-type="num">
+      <div class="quiz-q">Q. y = 2x + 5 에서 y 의 값이 17 이 되게 하는 x 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 가로와 세로를 각각 x, y로 놓고 둘레의 식과 차의 식을 세운다. 구한 값이 곧 답이 아니다.</div>
+      <div class="quiz-hint">힌트: y 자리에 17을 넣어 x에 대한 방정식을 푼다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>확인 단계는 왜 필요할까요? 사람 수가 소수로 나오거나 나이가 음수면, 답이 아니라 식을 잘못 세운 것입니다. 구한 값을 넣어 원래 조건이 맞는지 항상 확인하세요.</p>
   </section>
   <section class="section" id="s2">
-    <div class="section-head"><span class="section-num">2</span><span class="section-title">수와 나이</span>
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">함수 판별</span>
       <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
 
-<p>수에 관한 문제에서는 나눗셈을 몫과 나머지로 따로 두지 않고, <strong>(나누어지는 수) = (나누는 수) &times; (몫) + (나머지)</strong> 꼴로 씁니다. 이 꼴이라야 나머지가 식 안으로 들어옵니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">두 자리 자연수를 식으로 옮기는 법</div>
-<div class="u8-2col">
-  <div class="u8-card off"><div class="u8-lab r">이렇게 쓰면 안 된다</div>
-    <div class="u8-eq" style="font-size:22px">xy</div>
-    <div class="u8-why">두 수의 <b>곱</b>으로 읽힌다.</div></div>
-  <div class="u8-card on"><div class="u8-lab g">자릿값을 드러낸다</div>
-    <div class="u8-eq" style="font-size:22px">10x + y</div>
-    <div class="u8-ok">십의 자리 숫자 <span class="u8-eq">x</span>, 일의 자리 숫자 <span class="u8-eq">y</span></div></div>
+<p>함수인지 판별할 때 실제로 하는 일은 하나뿐입니다. x에 값을 하나 넣어 보고, 그 x에 대응하는 y가 몇 개 나오는지 세어 보는 것입니다. <strong>반례 하나만</strong> 찾으면 더 볼 것 없이 함수가 아니라고 판정할 수 있습니다 &mdash; 모든 x 를 확인할 필요가 없습니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">자연수 x의 배수 y &mdash; x = 3 이면 3, 6, 9, &hellip; 로 무수히 많다 &rarr; 함수가 아니다.</p>
+<p style="margin-bottom:0">자연수 x의 약수의 개수 y &mdash; x = 15 면 1, 3, 5, 15 로 4개, 세어 보면 언제나 하나 &rarr; 함수다.</p>
 </div>
-<div class="u8-scroll"><table class="u8-tb" style="margin-top:10px">
-  <tr><th></th><th>십의 자리</th><th>일의 자리</th><th>수의 값</th></tr>
-  <tr class="pick"><th>처음 수</th><td class="hit">x</td><td class="hit">y</td><td class="hit">10x + y</td></tr>
-  <tr><th>자리를 바꾼 수</th><td>y</td><td>x</td><td>10y + x</td></tr>
+<!-- ============ 가르는 기준은 하나뿐이다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">가르는 기준은 하나뿐이다</div>
+<div class="u9-scroll"><table class="u9-tb">
+  <tr><th>x 와 y 의 관계</th><th>x = 6 일 때 y</th><th>함수?</th></tr>
+  <tr class="pick"><td>자연수 x 의 약수의 개수 y</td><td class="hit">4 &nbsp;(1, 2, 3, 6 이 네 개)</td><td class="hit">함수다</td></tr>
+  <tr><td>자연수 x 의 약수 y</td><td class="no">1, 2, 3, 6 &nbsp;&mdash; 네 개</td><td class="no">아니다</td></tr>
+  <tr><td>자연수 x 의 배수 y</td><td class="no">6, 12, 18, &hellip; &mdash; 무수히 많다</td><td class="no">아니다</td></tr>
+  <tr class="pick"><td>한 변이 x cm 인 정삼각형의 둘레 y cm</td><td class="hit">18</td><td class="hit">함수다</td></tr>
+  <tr><td>절댓값이 x 인 수 y</td><td class="no">6 과 &minus;6 &mdash; 두 개</td><td class="no">아니다</td></tr>
 </table></div>
-<div class="u8-cap">세 자리 수라면 백의 자리 숫자에 100을 곱한다.</div></div>
-<p>&laquo;각 자리 숫자의 합&raquo;과 &laquo;수의 값&raquo;은 다릅니다 &mdash; 앞의 것은 x + y, 뒤의 것은 10x + y입니다. 세 자리 수라면 백의 자리 숫자에 100을 곱합니다.</p>
-    <div class="quiz" data-qid="b3" data-ans="40" data-type="num">
-      <div class="quiz-q">Q. 합이 47인 두 자연수가 있다. 큰 수를 작은 수로 나누면 몫이 5이고 나머지가 5이다. 큰 수는?</div>
+<div class="u9-cap">「약수」와 「약수의 <b>개수</b>」는 한 글자 차이지만 결과가 정반대다. 개수는 세어 보면 언제나 <b>하나의 수</b>로 떨어지기 때문이다.</div>
+</div>
+<p>시험에는 한 글자 차이로 답이 갈리는 보기가 자주 나옵니다. &laquo;약수&raquo;와 &laquo;약수의 <strong>개수</strong>&raquo;, &laquo;배수&raquo;와 &laquo;배수 중 100보다 작은 것의 <strong>개수</strong>&raquo;처럼, 개수를 세는 순간 여러 값이 하나의 수로 정리되어 함수가 됩니다.</p>
+    <div class="quiz" data-qid="b3" data-ans="1" data-type="num">
+      <div class="quiz-q">Q. 다음 중 y 가 x 의 함수가 <strong>아닌</strong> 것의 번호를 쓰시오.<br>① 자연수 x 의 약수 y &nbsp; ② 자연수 x 의 약수의 개수 y &nbsp; ③ 한 변이 x cm 인 정사각형의 넓이 y cm²</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: (큰 수) = (작은 수) × 5 + 5 꼴로 식을 세운다.</div>
+      <div class="quiz-hint">힌트: 각 보기에서 x에 값을 하나씩 넣어 y가 몇 개 나오는지 세어 본다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>나이 문제에서 미지수는 왜 <strong>현재</strong>를 기준으로 잡을까요? 미래를 기준으로 잡으면 &laquo;몇 년 후&raquo;를 다시 표현할 방법이 없기 때문입니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">나이 &mdash; 모두에게 시간은 똑같이 흐른다</div>
-<div class="u8-scroll"><table class="u8-tb">
-  <tr><th></th><th>아버지</th><th>아들</th><th>이때 세우는 식</th></tr>
-  <tr class="pick"><th>현재</th><td class="hit">x</td><td class="hit">y</td><td>x + y = 56</td></tr>
-  <tr><th>10년 후</th><td>x + 10</td><td>y + 10</td><td>x + 10 = 3(y + 10)</td></tr>
-</table></div>
-<div class="u8-note">두 사람 <b>모두</b>에게 10을 더한다. 한쪽에만 더하는 것이 가장 흔한 실수다.</div>
-<div class="u8-cap">미지수는 언제나 <b>현재</b>의 나이로 잡는다.</div></div>
-    <div class="quiz" data-qid="b4" data-ans="14" data-type="num">
-      <div class="quiz-q">Q. 현재 어머니와 딸의 나이의 합은 54살이다. 12년 후에 어머니의 나이가 딸의 나이의 2배가 된다. 현재 딸의 나이는?</div>
+
+    <div class="quiz" data-qid="b4" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. 다음 중 y 가 x 의 함수인 것은 모두 몇 개인가?<br>ㄱ. 자연수 x 의 약수의 개수 y &nbsp; ㄴ. 절댓값이 x 인 수 y<br>ㄷ. 한 변이 x cm 인 정삼각형의 둘레 y cm &nbsp; ㄹ. 자연수 x 보다 큰 자연수 y</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 12년 후 두 사람의 나이에 모두 12를 더한다.</div>
+      <div class="quiz-hint">힌트: ㄱ~ㄹ 하나씩 x에 값을 넣어 그때 y가 몇 개 나오는지 세어 본다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s3">
-    <div class="section-head"><span class="section-num">3</span><span class="section-title">개수&middot;금액&middot;점수</span>
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">함숫값</span>
       <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
 
-<p>동물의 마릿수나 문제의 개수처럼 세는 관점과, 금액이나 다리의 개수처럼 재는 관점이 있으면 식이 두 개 나옵니다. <strong>개수와 금액은 단위가 다르기 때문</strong>입니다 &mdash; 같은 관점으로 두 번 세면 똑같은 식이 두 번 나와 아무것도 못 풉니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">개수와 금액 &mdash; 관점이 다른 식 두 개</div>
-<div class="u8-scroll"><table class="u8-tb">
-  <tr><th></th><th>빵</th><th>우유</th><th>합계</th></tr>
-  <tr class="pick"><th>개수</th><td class="hit">x</td><td class="hit">y</td><td class="hit">14</td></tr>
-  <tr><th>한 개의 값(원)</th><td>900</td><td>600</td><td>&mdash;</td></tr>
-  <tr class="pick"><th>금액(원)</th><td>900x</td><td>600y</td><td>10200</td></tr>
-</table></div>
-<div class="u8-sys" style="margin-top:10px"><div class="u8-brace">{</div><div class="rows">
-  <div class="u8-eq">x + y = 14</div><div class="u8-eq">900x + 600y = 10200</div></div></div>
-<div class="u8-note">표의 <b>가로줄 하나가 식 하나</b>가 된다 &mdash; 개수줄에서 하나, 금액줄에서 하나.</div>
-<div class="u8-cap">동물의 마릿수와 다리 수, 문제 수와 점수도 같은 표로 정리된다.</div></div>
-<p>개와 닭이 합해 15마리, 다리가 모두 46개인 경우라면 x + y = 15, 4x + 2y = 46으로 풀려 개 8마리, 닭 7마리가 나옵니다.</p>
-    <div class="quiz" data-qid="b5" data-ans="11" data-type="num">
-      <div class="quiz-q">Q. 오리와 돼지가 합해서 20마리이고 다리는 모두 62개이다. 돼지는 몇 마리인가?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 마릿수의 합과 다리 수의 합, 두 식을 세운다.</div>
-      <div class="quiz-fb"></div>
-    </div>
-<div class="box box-orange"><div class="box-title">🎯 수업에서 특히 강조한 부분</div>
-계수는 약분해서 최대한 간결하게 쓰세요. 오히려 계수를 키워서 푸는 학생이 많습니다.</div>
-<div class="u8-wrap">
-<div class="u8-t">과부족 &mdash; 같은 금액을 두 방법으로 센다</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab o">한 사람당 500원씩</div>
-    <div class="u8-eq">500x</div>
-    <div class="u8-note">3000원이 <b>모자란다</b><br>&#8594; 3000원을 더해야 값이 된다</div>
-    <div class="u8-eqrow" style="margin-top:6px"><span class="u8-eq">500x + 3000 = y</span></div></div>
-  <div class="u8-card"><div class="u8-lab p">한 사람당 700원씩</div>
-    <div class="u8-eq">700x</div>
-    <div class="u8-note">1000원이 <b>남는다</b><br>&#8594; 1000원을 빼야 값이 된다</div>
-    <div class="u8-eqrow" style="margin-top:6px"><span class="u8-eq">700x &minus; 1000 = y</span></div></div>
+<p><strong>f(x)</strong>는 기호일 뿐 f와 x의 곱이 아닙니다. 공장 이름은 g, h로 바꿔도 됩니다. y = f(x)라고 쓰면 y와 f(x)는 같은 것을 가리킵니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">f(x) = 5x 일 때 f(3) = 15</p>
 </div>
-<div class="u8-tot">두 식이 가리키는 <span class="u8-eq">y</span>는 같은 금액이다</div>
-<div class="u8-cap">모자라면 더하고 남으면 뺀다 &mdash; 방향을 반대로 잡는 실수가 잦다.</div></div>
-<p>평균이 나오면 <strong>총합</strong>으로 바꿉니다: (평균) &times; (인원) = (총합). 그리고 개수를 물으면 &laquo;몇 개&raquo;, 값을 물으면 &laquo;얼마&raquo; &mdash; 마지막 문장을 놓치면 다른 미지수를 답하게 됩니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">계단 &mdash; 두 사람이 같은 게임을 한다</div>
-<div class="u8-note" style="margin-bottom:8px;text-align:center">
-  <span class="u8-eq">x</span> = A가 이긴 횟수 &nbsp;&middot;&nbsp; <span class="u8-eq">y</span> = B가 이긴 횟수 (비기는 경우는 없다)</div>
-<div class="u8-scroll"><table class="u8-tb">
-  <tr><th></th><th>이긴 횟수</th><th>진 횟수</th><th>움직인 계단</th></tr>
-  <tr class="pick"><th>A</th><td class="hit">x</td><td>y</td><td>3x &minus; 2y</td></tr>
-  <tr class="pick"><th>B</th><td class="hit">y</td><td>x</td><td>3y &minus; 2x</td></tr>
-</table></div>
-<div class="u8-note"><b>A가 이긴 횟수가 곧 B가 진 횟수다.</b> 미지수를 새로 만들지 않고 <span class="u8-eq">x</span>, <span class="u8-eq">y</span>의 자리만 바꿔 쓴다.</div>
-<div class="u8-cap">B의 식에서 <span class="u8-eq">x</span>와 <span class="u8-eq">y</span>가 뒤바뀌는 것이 이 유형의 전부다.</div></div>
-<p><strong>예제 &mdash; 평균은 총합으로.</strong> 두 과목의 평균이 80점이고 한 과목이 다른 과목보다 10점 높다면, x + y = 160과 x &minus; y = 10을 연립해 <strong>85점과 75점</strong>임을 알 수 있습니다. 평균이 나오면 먼저 총합으로 바꿔 두는 것이 요령입니다.</p>
-
-    <div class="quiz" data-qid="b6" data-ans="88" data-type="num">
-      <div class="quiz-q">Q. 수학과 과학 점수의 평균이 84점이고, 수학이 과학보다 8점 높다. 수학 점수는?</div>
+<!-- ============ f 는 재료를 넣으면 결과가 나오는 공장이다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">f 는 재료를 넣으면 결과가 나오는 공장이다</div>
+<div class="u9-fact">
+  <div class="u9-in">3</div>
+  <div class="u9-ar">&rarr;</div>
+  <div class="u9-mach"><div class="nm">공장 f</div>
+    <div class="st">&times; 5 한 다음<br>+ 2 한다</div></div>
+  <div class="u9-ar">&rarr;</div>
+  <div class="u9-outb">17</div>
+</div>
+<div class="u9-anatg" style="grid-template-columns:auto auto auto auto auto">
+  <span class="pt">f</span><span class="pt op">(</span><span class="pt">3</span><span class="pt op">)</span><span class="pt">&nbsp;= 17</span>
+  <span class="tg" style="color:var(--orange)">어느 공장</span><span class="tg"></span>
+  <span class="tg" style="color:var(--blue)">넣은 재료</span><span class="tg"></span>
+  <span class="tg" style="color:var(--green)">함숫값</span>
+</div>
+<div class="u9-cap">함수의 영어 이름 function 의 첫 글자를 따서 f 라 쓴다. 공장 이름은 g, h 로 바꿔도 되고, 나온 결과를 <b>함숫값</b>이라고 부른다.</div>
+</div>
+    <div class="quiz" data-qid="b5" data-ans="17" data-type="num">
+      <div class="quiz-q">Q. f(x) = 3x + 2 일 때 f(5) 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 평균을 총합으로 바꾼 뒤 두 점수의 차 조건을 함께 식으로 쓴다.</div>
+      <div class="quiz-hint">힌트: x 자리에 5를 대입해 계산한다.</div>
       <div class="quiz-fb"></div>
     </div>
+
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">f(x) = ax &minus; 1 에서 f(3) = 8 이면 3a &minus; 1 = 8, a = 3</p>
+</div>
+<!-- ============ 결과를 알려 주면 공장의 설정을 거꾸로 찾을 수 있다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">결과를 알려 주면 공장의 설정을 거꾸로 찾을 수 있다</div>
+<div class="u9-flow">
+  <div class="u9-chk"><div class="u9-num">1</div><div>
+    <b>공장 설정에 모르는 수가 있다</b> &nbsp;<span class="u9-eq">f(x) = ax &minus; 1</span></div></div>
+  <div class="u9-chk"><div class="u9-num o">2</div><div>
+    <b>아는 것을 대입한다</b> &mdash; 3 을 넣었더니 8 이 나왔다면
+    <span class="u9-eq">f(3) = 3a &minus; 1 = 8</span></div></div>
+  <div class="u9-chk"><div class="u9-num g">3</div><div>
+    <b>방정식을 푼다</b> &nbsp;<span class="u9-eq">3a = 9</span> 이므로
+    <span class="u9-eq">a = 3</span> &mdash; 공장 설정이 밝혀졌다</div></div>
+  <div class="u9-chk"><div class="u9-num p">4</div><div>
+    이제 <span class="u9-eq">f(x) = 3x &minus; 1</span> 이므로
+    <b>어떤 값을 넣어도</b> 함숫값을 구할 수 있다</div></div>
+</div>
+<div class="u9-cap">함숫값을 구하는 것은 대입뿐이라 어렵지 않다. 시험에 자주 나오는 것은 이렇게 <b>거꾸로</b> 공장의 설정(상수)을 찾는 문제다.</div>
+</div>
+    <div class="quiz" data-qid="b6" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. f(x) = ax + 1 에 대하여 f(2) = 9 일 때 상수 a 의 값은?</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: x에 2를 대입한 식을 9와 같다고 놓고 a에 대한 방정식을 푼다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<p>규칙을 말로 정의한 함수도 함수입니다. 식이 없어도 x 하나에 결과가 하나면 충분합니다 &mdash; 시험에도 자주 나옵니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">f(x) = 12/x 일 때 f(&minus;6) = &minus;2 (분모에 x가 있어도 함수다)</p>
+<p style="margin-bottom:0">f(x) = (x를 3으로 나눈 나머지) 일 때 f(10) = 1</p>
+</div>
   </section>
   <section class="section" id="s4">
-    <div class="section-head"><span class="section-num">4</span><span class="section-title">증가와 감소 (%)</span>
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">일차함수</span>
       <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
 
-<p>&laquo;작년에 비해 몇 % 늘었다&raquo;처럼 문제의 조건이 전부 <strong>과거</strong>를 기준으로 한 말이기 때문에, 미지수는 과거(작년, 원가)의 값으로 잡습니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">증가와 감소 &mdash; 기준은 언제나 과거다</div>
-<div class="u8-scroll"><table class="u8-tb">
-  <tr><th></th><th>남학생</th><th>여학생</th><th>전체</th></tr>
-  <tr class="pick"><th>작년(기준)</th><td class="hit">x</td><td class="hit">y</td><td class="hit">900</td></tr>
-  <tr><th>변화</th><td style="color:var(--green)">4% 증가</td><td style="color:var(--red)">2% 감소</td><td style="color:var(--green)">24명 증가</td></tr>
-  <tr><th>올해</th><td>(1 + <sup>4</sup>&#8260;<sub>100</sub>)x</td><td>(1 &minus; <sup>2</sup>&#8260;<sub>100</sub>)y</td><td>924</td></tr>
-</table></div>
-<div class="u8-note">미지수는 <b>작년</b>의 값으로 잡는다. 올해로 잡으면 &laquo;작년에 비해 몇 %&raquo;를 식으로 옮길 수 없다.</div>
-<div class="u8-cap"><span class="u8-eq">1 &plusmn;</span> 백분율 꼴로 먼저 쓰고 나중에 정리하면 구조가 보인다.</div></div>
-<p>원가와 정가는 <strong>구조를 먼저 봅니다</strong>: 이익을 붙이면 (원가) &times; (1 + 이익률), 할인하면 (원가) &times; (1 &minus; 할인율)입니다. 110/100으로 바로 정리해도 되지만, 처음에는 1 + 10/100 꼴로 써야 구조가 보입니다.</p>
-<p>전체가 몇 명 늘었다&middot;줄었다처럼 <strong>변화량이 주어질 때</strong>는 변화량만으로 식을 세워도 됩니다. 계수가 작아져 계산이 훨씬 편해집니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">변화량만 보면 계수가 훨씬 간단해진다</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab o">올해의 값을 그대로 쓰면</div>
-    <div class="u8-eqrow"><span class="u8-eq">(1 + <sup>4</sup>&#8260;<sub>100</sub>)x + (1 &minus; <sup>2</sup>&#8260;<sub>100</sub>)y = 924</span></div>
-    <div class="u8-note">양변에 100을 곱하면 <span class="u8-eq">104x + 98y = 92400</span></div></div>
-  <div class="u8-card pick"><div class="u8-lab b">변화량만 쓰면</div>
-    <div class="u8-eqrow"><span class="u8-eq"><sup>4</sup>&#8260;<sub>100</sub>x &minus; <sup>2</sup>&#8260;<sub>100</sub>y = 24</span></div>
-    <div class="u8-note">양변에 100을 곱하면 <span class="u8-eq">4x &minus; 2y = 2400</span></div></div>
+<p>일차함수는 <strong>y = ax + b</strong> (a, b는 상수, a &ne; 0) 꼴로 나타나는 함수입니다. 여기서 x의 계수 a를 <strong>일차항의 계수</strong>라 부르는데, 이것이 0이면 x가 통째로 사라져 상수함수가 되어 버리므로 <strong>a &ne; 0</strong>이라는 조건이 꼭 필요합니다. &laquo;일차식&raquo;은 앞 단원에서 배운 그대로 &mdash; 정리했을 때 x의 차수가 1인 식을 말합니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = (a + 2)x &minus; 1 이 일차함수이려면 일차항의 계수가 0이면 안 되므로 a + 2 &ne; 0, 즉 a &ne; &minus;2</p>
 </div>
-<div class="u8-note">두 식은 <span class="u8-eq">x + y = 900</span>과 함께 쓰면 완전히 같은 답을 준다.</div>
-<div class="u8-cap">늘어난 만큼은 <span style="color:var(--green)">+</span>, 줄어든 만큼은 <span style="color:var(--red)">&minus;</span>로 놓고 전체 변화량과 맞춘다.</div></div>
-    <div class="quiz" data-qid="b7" data-ans="300" data-type="num">
-      <div class="quiz-q">Q. 작년 전체 학생이 500명이었다. 올해는 남학생이 4% 증가하고 여학생이 5% 감소하여 전체가 2명 늘었다. 작년 남학생 수는?</div>
+<!-- ============ y 가 x 에 대한 <b>일차식</b>이어야 일차함수다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">y 가 x 에 대한 <b>일차식</b>이어야 일차함수다</div>
+<div class="u9-3col">
+  <div class="u9-card on"><div class="u9-lab g">일차함수</div>
+    <div class="u9-eq">y = 2x + 5</div><div class="u9-eq">y = &minus;x</div>
+    <div class="u9-ok">y = ax + b 꼴 (a &ne; 0)</div></div>
+  <div class="u9-card off"><div class="u9-lab r">아니다</div>
+    <div class="u9-eq">y = 7</div>
+    <div class="u9-why">x 가 없다 &mdash; 일차항의 계수가 0 이면 안 된다</div></div>
+  <div class="u9-card off"><div class="u9-lab r">아니다</div>
+    <div class="u9-eq">y = <span class="u9-fr"><span class="up">5</span><span class="dn">x</span></span></div>
+    <div class="u9-why">x 가 분모에 있으면 차수를 정할 수 없다</div></div>
+</div>
+<div class="u9-note" style="text-align:center">
+  괄호가 있으면 <b>먼저 정리한 뒤</b> 판단한다 &mdash;
+  <span class="u9-eq">y = x(x + 2) &minus; x<sup>2</sup></span> 은 정리하면
+  <span class="u9-eq">y = 2x</span> 라서 일차함수가 맞다.</div>
+<div class="u9-cap">겉모습만 보고 판단하면 틀린다. <b>정리한 결과</b>가 x 에 대한 일차식인지를 본다.</div>
+</div>
+<p>1-1의 반비례 y = a/x를 떠올려 보세요. 방금 ①에서 반비례도 &laquo;함수&raquo;라고 확인했지만, 이 반비례는 &laquo;일차함수&raquo;는 아닙니다. 함수인지와 일차함수인지는 서로 다른 질문입니다 &mdash; 반비례는 첫 번째 관문(하나의 x에 하나의 y)은 통과하지만, 두 번째 관문(정리했을 때 x에 대한 일차식)을 통과하지 못합니다.</p>
+    <div class="quiz" data-qid="b7" data-ans="3" data-type="num">
+      <div class="quiz-q">Q. y = (a − 3)x + 5 가 x 에 대한 일차함수가 되도록 하는 상수 a 의 조건은 a ≠ □ 이다. □ 는?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 작년 남학생 수, 여학생 수를 미지수로 놓고 전체 인원의 식과 변화량의 식을 세운다.</div>
+      <div class="quiz-hint">힌트: 일차항의 계수가 0이 아니어야 한다는 조건을 a에 대한 식으로 쓴다.</div>
       <div class="quiz-fb"></div>
     </div>
-<div class="box box-red"><div class="box-title">&#9888; 이 유형에서 특히 조심할 것</div>
-미지수 값이 답이 아닌 경우가 특히 많습니다 &mdash; 미지수는 작년인데 묻는 것은 올해인 경우가 잦습니다. 구한 값을 문제가 물은 것과 다시 맞춰 보세요.</div>
-<p><strong>예제 &mdash; 원가에 이익을 붙이면.</strong> 두 상품 A, B의 원가의 합이 50000원인데 A에는 20%, B에는 10%의 이익을 붙여 정가를 정했더니 정가의 합이 57000원이 되었다고 합시다. x + y = 50000과 (1 + <sup>20</sup>&#8260;<sub>100</sub>)x + (1 + <sup>10</sup>&#8260;<sub>100</sub>)y = 57000을 연립하면 <strong>A의 원가는 20000원, B의 원가는 30000원</strong>입니다.</p>
 
-    <div class="quiz" data-qid="b8" data-ans="9000" data-type="num">
-      <div class="quiz-q">Q. 두 상품 A, B의 원가의 합이 15000원이다. A에는 10%, B에는 20%의 이익을 붙여 팔았더니 이익의 합이 2100원이었다. A의 원가는? (원)</div>
+    <div class="quiz" data-qid="b8" data-ans="8" data-type="num">
+      <div class="quiz-q">Q. y = 2x(x − 1) − 2x² + 6 을 y = ax + b 꼴로 정리했을 때 b − a 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 두 원가의 합의 식과, 각각의 이익(원가 × 이익률)의 합의 식을 세운다.</div>
+      <div class="quiz-hint">힌트: 괄호를 먼저 전개하고 동류항을 정리해 y = ax + b 꼴로 만든다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s5">
-    <div class="section-head"><span class="section-num">5</span><span class="section-title">거리&middot;속력&middot;시간 (1) &mdash; 표와 구간 분할</span>
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">평행이동</span>
       <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
 
-<p>거리, 속력, 시간 중 <strong>둘을 알면 나머지 하나가 정해집니다</strong> &mdash; 그래서 무엇을 미지수로 잡느냐가 식의 모양을 정합니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">거리 &middot; 속력 &middot; 시간 &mdash; 구간을 잘라 표로 정리한다</div>
-<div class="u8-band">
-  <div class="seg a" style="flex:2">뛰어간 구간</div>
-  <div class="seg b" style="flex:1">걸어간 구간</div></div>
-<div class="u8-ends"><span>집</span><span>학교</span></div>
-<div class="u8-tot">두 구간의 거리를 더하면 3&#8202;km</div>
-<div class="u8-scroll"><table class="u8-tb" style="margin-top:10px">
-  <tr><th></th><th>뛴 구간</th><th>걸은 구간</th><th>합계</th></tr>
-  <tr class="pick"><th>거리(km)</th><td class="hit">x</td><td class="hit">y</td><td class="hit">3</td></tr>
-  <tr><th>속력(시속 km)</th><td>6</td><td>3</td><td>&mdash;</td></tr>
-  <tr class="pick"><th>시간(시간)</th><td><sup>x</sup>&#8260;<sub>6</sub></td><td><sup>y</sup>&#8260;<sub>3</sub></td><td><sup>2</sup>&#8260;<sub>3</sub></td></tr>
-</table></div>
-<div class="u8-note">거리줄에서 식 하나, 시간줄에서 식 하나. 40분은 시속과 단위를 맞추어 <span class="u8-eq"><sup>2</sup>&#8260;<sub>3</sub></span>시간으로 고쳐 쓴다.</div>
-<div class="u8-cap">속력의 단위가 시속이면 시간도 시간 단위로, 분속이면 분 단위로 맞춘다.</div></div>
-<p>단위는 <strong>식을 세우기 전에</strong> 하나로 고쳐 두는 편이 안전합니다. 식을 다 세운 뒤에 고치려 하면 어느 항에 무엇을 곱하고 나눠야 하는지 헷갈려 오히려 실수가 늘어납니다. 40분을 <sup>2</sup>&#8260;<sub>3</sub>시간으로, 1.4 km를 1400 m로 바꿔 놓고 시작하세요.</p>
-<p>상황이 잘 안 잡히면 그림을 그려 보세요 &mdash; 수업에서 특히 강조한 부분입니다. 어디서 출발해 어디서 무엇이 바뀌는지 선 위에 표시하면 구간이 보입니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">거리를 미지수로? 시간을 미지수로?</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab b">거리를 미지수로 잡으면</div>
-    <div class="u8-eq" style="font-size:15px">거리 = x, y</div>
-    <div class="u8-arrow" style="margin:7px 0">&#8595;</div>
-    <div class="u8-note"><b>시간</b>에 대한 식을 만든다<br>
-      <span class="u8-eq">(시간) = <sup>(거리)</sup>&#8260;<sub>(속력)</sub></span></div></div>
-  <div class="u8-card"><div class="u8-lab p">시간을 미지수로 잡으면</div>
-    <div class="u8-eq" style="font-size:15px">시간 = x, y</div>
-    <div class="u8-arrow" style="margin:7px 0">&#8595;</div>
-    <div class="u8-note"><b>거리</b>에 대한 식을 만든다<br>
-      <span class="u8-eq">(거리) = (속력) &times; (시간)</span></div></div>
+<p>일차함수의 그래프를 그리는 절차는 간단합니다. x 값을 몇 개 정한다 &rarr; 함숫값을 구한다 &rarr; 순서쌍으로 점을 찍는다 &rarr; 점을 잇는다.</p>
+<!-- ============ 표에서 얻은 점을 이으면 그래프가 된다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">표에서 얻은 점을 이으면 그래프가 된다</div>
+<div class="diagram-wrap" style="max-width:216px;margin:14px auto"><svg class="dia" viewBox="0 0 216 348" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="214.0" x2="190.0" y2="214.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="86.0" y1="318.0" x2="86.0" y2="32.0" stroke="var(--muted)" stroke-width="1.5"/><text x="199.0" y="218.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="86.0" y="24.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="75.0" y="231.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="164.0" y1="211.0" x2="164.0" y2="217.0" stroke="var(--muted)" stroke-width="1.2"/><text x="164.0" y="233.0" font-size="11" fill="var(--muted)" text-anchor="middle">3</text><polyline points="60.0,318.0 155.3,32.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><text x="155.3" y="18.0" font-size="11" fill="var(--green)" text-anchor="middle">y = 3x − 1</text><circle cx="86.0" cy="240.0" r="3.6" fill="var(--orange)"/><text x="99.0" y="258.0" font-size="11" fill="var(--orange)" text-anchor="start">(0, −1)</text><circle cx="112.0" cy="162.0" r="3.6" fill="var(--orange)"/><text x="125.0" y="174.0" font-size="11" fill="var(--orange)" text-anchor="start">(1, 2)</text><circle cx="138.0" cy="84.0" r="3.6" fill="var(--orange)"/><text x="151.0" y="96.0" font-size="11" fill="var(--orange)" text-anchor="start">(2, 5)</text></svg></div>
+<div class="u9-cap">x 에 0, 1, 2 를 차례로 넣어 얻은 세 순서쌍을 찍고 이었다. 일차함수의 그래프는 언제나 <b>직선</b>이라 점 두어 개면 바로 이을 수 있다.</div>
 </div>
-<div class="u8-note">속력을 미지수로 잡는 것은 <b>속력 자체를 물을 때</b>로 제한된다 &mdash; 트랙을 도는 문제, 강물과 배 문제가 그것이다.</div>
-<div class="u8-cap">문제가 마지막에 무엇을 물었는지 보고 둘 중 하나를 고른다.</div></div>
-    <div class="quiz" data-qid="b9" data-ans="4" data-type="num">
-      <div class="quiz-q">Q. 13 km를 가는데 시속 4 km로 걷다가 도중에 시속 6 km로 뛰어 모두 2시간 30분이 걸렸다. 걸은 거리는? (km)</div>
+<p>그런데 왜 점 두어 개면 충분할까요? 일차함수의 그래프가 <strong>직선</strong>이기 때문입니다. 1-1의 정비례 그래프는 원점을 지나는 직선이었는데, 일차함수는 여기에 상수항이 붙어 위아래로 옮겨진 것뿐이라 마찬가지로 직선입니다.</p>
+<p>평행이동이란 도형을 일정한 방향으로 같은 거리만큼 밀어 옮기는 것입니다. 직선은 x축 방향으로 옮긴 것으로도, y축 방향으로 옮긴 것으로도 설명할 수 있지만, 두 가지를 동시에 생각하면 헷갈리므로 <strong>y축 방향 한 가지로 통일</strong>해서 봅니다. 직선이라서 가능한 편의입니다.</p>
+<!-- ============ 모양은 그대로, 위치만 위아래로 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">모양은 그대로, 위치만 위아래로</div>
+<div class="diagram-wrap" style="max-width:294px;margin:14px auto"><svg class="dia" viewBox="0 0 294 314" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="180.0" x2="268.0" y2="180.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="284.0" x2="138.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="277.0" y="184.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><line x1="216.0" y1="177.0" x2="216.0" y2="183.0" stroke="var(--muted)" stroke-width="1.2"/><text x="216.0" y="199.0" font-size="11" fill="var(--muted)" text-anchor="middle">3</text><polyline points="34.0,284.0 268.0,50.0" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="6,4"/><polyline points="34.0,232.0 242.0,24.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="60.0,284.0 268.0,76.0" fill="none" stroke="var(--orange)" stroke-width="2.0"/><rect x="39.2" y="34.2" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="54.2" y="42.2" font-size="11" fill="var(--blue)" text-anchor="start">y = x + 2</text><rect x="39.2" y="56.2" width="10" height="10" fill="var(--muted)" fill-opacity="0.45" stroke="var(--muted)" stroke-width="1.4"/><text x="54.2" y="64.2" font-size="11" fill="var(--muted)" text-anchor="start">y = x</text><rect x="39.2" y="78.2" width="10" height="10" fill="var(--orange)" fill-opacity="0.45" stroke="var(--orange)" stroke-width="1.4"/><text x="54.2" y="86.2" font-size="11" fill="var(--orange)" text-anchor="start">y = x − 1</text><circle cx="138.0" cy="180.0" r="3.0" fill="var(--muted)"/><circle cx="138.0" cy="128.0" r="3.8" fill="var(--blue)"/><circle cx="138.0" cy="206.0" r="3.8" fill="var(--orange)"/></svg></div>
+<div class="u9-cap">세 직선은 기울어진 정도가 똑같고 <b>높이만</b> 다르다. 가운데 점선(y = x)을 기준으로 위의 것은 y축 방향으로 2만큼, 아래의 것은 &minus;1만큼 옮긴 것이다.</div>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">y = 2x &minus; 1 에서 x = 3 이면 y = 5 &rarr; 점 (3, 5)</p>
+<p style="margin-bottom:0">y = 2x 를 y축 방향으로 3만큼 평행이동하면 y = 2x + 3 이고, 이 그래프가 점 (&minus;1, k) 를 지나면 k = 1</p>
+</div>
+    <div class="quiz" data-qid="b9" data-ans="7" data-type="num">
+      <div class="quiz-q">Q. y = 3x 의 그래프를 y축 방향으로 −5 만큼 평행이동한 그래프가 점 (4, k) 를 지날 때 k 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 걸은 거리와 뛴 거리를 미지수로 놓고, 거리의 합과 시간의 합을 각각 식으로 쓴다.</div>
+      <div class="quiz-hint">힌트: y = 3x 를 y축 방향으로 −5만큼 이동한 식을 먼저 쓰고 x = 4를 대입한다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>속력이 셋으로 늘어나거나 구간이 셋으로 나뉘어도 표를 한 줄 더 그리면 됩니다.</p>
-    <div class="quiz" data-qid="b10" data-ans="5" data-type="num">
-      <div class="quiz-q">Q. 1800 m를 가는데 분속 60 m로 걷다가 도중에 분속 180 m로 뛰어 모두 20분이 걸렸다. 뛴 시간은? (분)</div>
+
+<p>직선의 식에서 상수항이 커지거나 작아지면 그래프도 그만큼 위아래로 움직입니다. 상수항이 곧 이동한 칸 수라는 것을 표로 확인해 봅시다.</p>
+<!-- ============ 뒤에 붙은 상수항이 위아래로 옮긴 칸 수다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">뒤에 붙은 상수항이 위아래로 옮긴 칸 수다</div>
+<div class="u9-anatg" style="grid-template-columns:auto auto auto">
+  <span class="pt">y = ax</span><span class="pt op">+</span><span class="pt" style="color:var(--orange)">b</span>
+  <span class="tg" style="color:var(--blue)">1&minus;1 에서 배운 정비례</span><span class="tg"></span>
+  <span class="tg" style="color:var(--orange)">y축 방향으로 b 만큼 평행이동</span>
+</div>
+<div class="u9-scroll" style="margin-top:8px"><table class="u9-tb">
+  <tr><th>x</th><td>&minus;2</td><td>&minus;1</td><td>0</td><td>1</td><td>2</td></tr>
+  <tr><th>y = &minus;x</th><td>2</td><td>1</td><td>0</td><td>&minus;1</td><td>&minus;2</td></tr>
+  <tr class="pick"><th>y = &minus;x + 4</th><td class="hit">6</td><td class="hit">5</td><td class="hit">4</td>
+      <td class="hit">3</td><td class="hit">2</td></tr>
+</table></div>
+<div class="u9-cap">같은 x 에 대해 함숫값이 <b>언제나 4 만큼 크다</b>. 그래서 그래프 위의 모든 점이 똑같이 4 칸씩 올라가고, 이것을 <b>y축 방향으로 4 만큼 평행이동</b>했다고 말한다.</div>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = x + 2 를 y축 방향으로 q 만큼 평행이동해 y = x + 6 이 되었다면 q = 4</p>
+</div>
+    <div class="quiz" data-qid="b10" data-ans="-9" data-type="num">
+      <div class="quiz-q">Q. y = −2x + 1 의 그래프를 y축 방향으로 q 만큼 평행이동했더니 y = −2x − 8 가 되었다. q 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 걸은 시간과 뛴 시간을 미지수로 놓고, 시간의 합과 거리의 합을 각각 식으로 쓴다.</div>
+      <div class="quiz-hint">힌트: 이동 후 상수항에서 이동 전 상수항을 뺀 값이 이동량이다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s6">
-    <div class="section-head"><span class="section-num">6</span><span class="section-title">거리&middot;속력&middot;시간 (2) &mdash; 만남과 트랙</span>
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">두 절편</span>
       <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
 
-<p>이 유형은 문제가 직접 말해 주지 않는 조건을 읽어 내는 것이 전부입니다. &laquo;만났다&raquo; 한 마디에 조건이 하나 더 숨어 있습니다 &mdash; 마주 보고 가면 거리가 합쳐지고, 뒤따라가면 거리가 같아집니다. 두 사람이 같은 방향인지 반대 방향인지부터 확인하세요.</p>
-<div class="u8-wrap">
-<div class="u8-t">만난다 &mdash; 숨어 있는 조건 하나가 더 있다</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab b">마주 보고 동시에 출발</div>
-    <div class="u8-band"><div class="seg a" style="flex:2">A가 간 거리</div>
-      <div class="seg b" style="flex:3">B가 간 거리</div></div>
-    <div class="u8-ends"><span>A 출발</span><span>B 출발</span></div>
-    <div class="u8-note" style="text-align:left">거리 &#8594; <b>두 거리의 합 = 전체 거리</b><br>
-      시간 &#8594; 동시에 출발해 만났으니 <b>걸린 시간이 같다</b></div></div>
-  <div class="u8-card"><div class="u8-lab p">같은 곳에서 시간차를 두고 출발</div>
-    <div class="u8-band"><div class="seg a" style="flex:1">형이 간 거리</div></div>
-    <div class="u8-band" style="margin-top:4px"><div class="seg b" style="flex:1">동생이 간 거리</div></div>
-    <div class="u8-ends"><span>집</span><span>만난 지점</span></div>
-    <div class="u8-note" style="text-align:left">거리 &#8594; 같은 길을 갔으니 <b>두 거리가 같다</b><br>
-      시간 &#8594; 늦게 출발한 만큼 <b>시간의 차</b>가 생긴다</div></div>
+<p><strong>x절편을 알면 점 하나, y절편을 알면 점 하나</strong>를 알게 됩니다. 그래서 두 절편만 알면 그래프를 그릴 수 있습니다.</p>
+<!-- ============ 그래프가 두 축을 만나는 자리 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">그래프가 두 축을 만나는 자리</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 288" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="180.0" x2="242.0" y2="180.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="164.0" y1="258.0" x2="164.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="184.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="164.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="153.0" y="197.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="216.0" y1="177.0" x2="216.0" y2="183.0" stroke="var(--muted)" stroke-width="1.2"/><text x="216.0" y="199.0" font-size="11" fill="var(--muted)" text-anchor="middle">2</text><polyline points="73.0,258.0 190.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><text x="125.7" y="237.8" font-size="11" fill="var(--green)" text-anchor="middle">y = 2x + 4</text><circle cx="112.0" cy="180.0" r="4.4" fill="var(--orange)"/><circle cx="164.0" cy="76.0" r="4.4" fill="var(--blue)"/><text x="121.0" y="202.0" font-size="12" fill="var(--orange)" text-anchor="start">−2</text><text x="153.0" y="69.0" font-size="12" fill="var(--blue)" text-anchor="end">4</text></svg></div>
+<div class="u9-cap">이 그래프는 x축과 (&minus;2, 0) 에서, y축과 (0, 4) 에서 만난다. 그래서 <b>x절편은 &minus;2</b>, <b>y절편은 4</b> 다 &mdash; 점이 아니라 수 하나로 답한다.</div>
 </div>
-<div class="u8-cap">&laquo;만났다&raquo;는 같은 시각에 같은 위치에 있다는 뜻이다.</div></div>
-<p>24 km 떨어진 두 지점에서 마주 보고 걸어 만나는 경우라면 x + y = 24, x/3 = y/5로 풀려 9 km와 15 km를 걸었다는 것을 알 수 있습니다 &mdash; 두 사람 모두 3시간을 걸은 셈입니다.</p>
-<p><strong>예제 &mdash; 뒤따라가서 만나기.</strong> 동생이 분속 80 m로 집을 나선 지 18분 후에 형이 분속 240 m로 뒤따라갔다고 합시다. 동생이 걸린 시간을 x분, 형이 걸린 시간을 y분이라 하면 시간의 차가 x &minus; y = 18이고, 같은 지점에서 만났으니 거리가 같아 80x = 240y입니다. 풀면 <strong>형이 출발한 지 9분 후</strong>에 만납니다(동생은 27분을 걸었습니다).</p>
-
-    <div class="quiz" data-qid="b11" data-ans="8" data-type="num">
-      <div class="quiz-q">Q. 동생이 분속 60 m로 집을 나선 지 12분 후에 형이 분속 150 m로 뒤따라갔다. 형이 출발한 지 몇 분 후에 동생을 만나는가?</div>
+<p>절편을 답할 때는 좌표가 아니라 <strong>값 하나</strong>로 답해야 합니다.</p>
+<!-- ============ 절편을 물으면 <b>수 하나</b>로 답한다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">절편을 물으면 <b>수 하나</b>로 답한다</div>
+<div class="u9-2col">
+  <div class="u9-card off"><div class="u9-lab r">이렇게 답하면 안 된다</div>
+    <div class="u9-eq">x절편 = (&minus;3, 0)</div>
+    <div class="u9-why">이것은 <b>점</b>이지 절편이 아니다</div></div>
+  <div class="u9-card on"><div class="u9-lab g">이렇게 답한다</div>
+    <div class="u9-eq">x절편 = &minus;3</div>
+    <div class="u9-ok">절편은 <b>좌표 하나</b>, 즉 수다</div></div>
+</div>
+<div class="u9-flow" style="margin-top:10px">
+  <div class="u9-chk"><div class="u9-num o">x</div><div>
+    <b>x절편</b>을 구하려면 &nbsp;<span class="u9-eq">y</span> 에 0 을 대입한다
+    &mdash; x축 위의 점은 y좌표가 0 이기 때문</div></div>
+  <div class="u9-chk"><div class="u9-num">y</div><div>
+    <b>y절편</b>을 구하려면 &nbsp;<span class="u9-eq">x</span> 에 0 을 대입한다
+    &mdash; 그러면 x 가 든 항이 모두 사라지고 <b>상수항만</b> 남는다</div></div>
+</div>
+<div class="u9-cap">구하려는 절편과 <b>반대쪽</b> 문자에 0 을 넣는다는 점이 헷갈리기 쉽다. y 에 0 을 대입한 식은 곧 일차방정식이라, x절편은 그 방정식의 <b>해</b>와 같다.</div>
+</div>
+<div class="box box-orange"><div class="box-title">한 걸음 더</div>
+<p style="margin-bottom:0">x절편은 y = 0 을 넣어 푼 <strong>일차방정식의 해</strong>와 같습니다. 이 사실은 고등학교의 이차함수에서 아주 많이 쓰입니다 &mdash; 지금은 한 줄로만 기억해 두어도 충분합니다.</p>
+</div>
+    <div class="quiz" data-qid="b11" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. y = 4x − 20 의 그래프의 x절편은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 형이 출발한 시각을 기준으로 두 사람이 그때까지 이동한 거리를 각각 식으로 쓴다.</div>
+      <div class="quiz-hint">힌트: y에 0을 대입해 x에 대한 방정식을 푼다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>트랙 문제에서는 왜 <strong>속력</strong>을 미지수로 잡을까요? 묻는 것이 속력이고, 각자 움직인 거리도 걸린 시간도 따로는 알 수 없기 때문입니다. 거리를 미지수로 잡는 평소 방식이 통하지 않는 드문 경우입니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">트랙을 돈다 &mdash; 방향에 따라 한 바퀴의 뜻이 달라진다</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab o">같은 방향으로 돌면</div>
-    <div class="u8-ring">
-      <i class="p1" style="left:44px;top:-8px"></i>
-      <i class="p2" style="left:-8px;top:44px"></i>
-      <em>&#8635;</em></div>
-    <div class="u8-lgd"><span><i class="p1"></i>빠른 사람</span><span><i class="p2"></i>느린 사람</span></div>
-    <div class="u8-note">빠른 사람이 느린 사람보다 <b>한 바퀴를 더</b> 돌아 뒤에서 따라잡는다</div>
-    <div class="u8-eqrow" style="margin-top:6px"><span class="u8-eq">(거리의 차) = 한 바퀴</span></div></div>
-  <div class="u8-card"><div class="u8-lab p">반대 방향으로 돌면</div>
-    <div class="u8-ring">
-      <i class="p1" style="left:44px;top:-8px"></i>
-      <i class="p2" style="left:44px;bottom:-8px"></i>
-      <em>&#8646;</em></div>
-    <div class="u8-lgd"><span><i class="p1"></i>한 사람</span><span><i class="p2"></i>다른 사람</span></div>
-    <div class="u8-note">둘이 움직인 거리를 합치면 <b>딱 한 바퀴</b>가 된다</div>
-    <div class="u8-eqrow" style="margin-top:6px"><span class="u8-eq">(거리의 합) = 한 바퀴</span></div></div>
+
+<p>x절편과 y절편은 각각 점을 하나씩 알려 주므로, 둘을 알면 표를 만들 필요 없이 두 점을 찍어 자로 이으면 됩니다. 예를 들어 x절편이 2, y절편이 &minus;6인 직선이 있다고 합시다.</p>
+<!-- ============ 점 두 개면 직선 하나가 정해진다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">점 두 개면 직선 하나가 정해진다</div>
+<div class="diagram-wrap" style="max-width:228px;margin:14px auto"><svg class="dia" viewBox="0 0 228 306" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="129.0" x2="202.0" y2="129.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="97.0" y1="276.0" x2="97.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="211.0" y="133.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="97.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="86.0" y="146.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="55.0" y1="126.0" x2="55.0" y2="132.0" stroke="var(--muted)" stroke-width="1.2"/><text x="55.0" y="148.0" font-size="11" fill="var(--muted)" text-anchor="middle">-2</text><line x1="94.0" y1="213.0" x2="100.0" y2="213.0" stroke="var(--muted)" stroke-width="1.2"/><text x="88.0" y="217.1" font-size="11" fill="var(--muted)" text-anchor="end">-4</text><polyline points="90.0,276.0 174.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><text x="134.8" y="26.8" font-size="11" fill="var(--green)" text-anchor="middle">y = 3x − 6</text><circle cx="139.0" cy="129.0" r="4.4" fill="var(--orange)"/><circle cx="97.0" cy="255.0" r="4.4" fill="var(--orange)"/><text x="148.0" y="151.0" font-size="11" fill="var(--orange)" text-anchor="start">(2, 0)</text><text x="108.0" y="271.0" font-size="11" fill="var(--orange)" text-anchor="start">(0, −6)</text></svg></div>
+<div class="u9-cap">x절편 2 와 y절편 &minus;6 은 각각 <b>점 하나</b>를 알려 준다. 두 점을 찍어 자로 이으면 그래프가 완성된다 &mdash; 표를 만들 필요가 없다.</div>
 </div>
-<div class="u8-cap">둘 다 &laquo;처음으로 다시 만날 때&raquo;를 기준으로 세운 식이다.</div></div>
-    <div class="quiz" data-qid="b12" data-ans="100" data-type="num">
-      <div class="quiz-q">Q. 둘레가 900 m인 호수를 두 사람이 같은 지점에서 동시에 출발한다. 반대 방향으로 돌면 5분 후, 같은 방향으로 돌면 45분 후에 처음 만난다. 빠른 사람의 속력은 분속 몇 m인가?</div>
+    <div class="quiz" data-qid="b12" data-ans="9" data-type="num">
+      <div class="quiz-q">Q. y = −2x + 6 의 그래프의 x절편과 y절편의 합은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 반대 방향은 거리의 합, 같은 방향은 거리의 차가 둘레와 같다는 식을 세운다.</div>
+      <div class="quiz-hint">힌트: x절편과 y절편을 각각 구한 뒤 두 값을 더한다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s7">
-    <div class="section-head"><span class="section-num">7</span><span class="section-title">강물&middot;바람과 기차</span>
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">기울기 &mdash; 오늘 가장 중요한 이야기</span>
       <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
 
-<p>왜 속력이 더해지고 빼질까요? 강물이나 바람이 밀어 주거나 막아서기 때문입니다. 배와 강물처럼 <strong>움직이는 것이 둘</strong>이면 각각의 속력을 미지수로 잡습니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">강물과 바람 &mdash; 속력이 더해지고 빼진다</div>
-<div class="u8-note" style="text-align:center;margin-bottom:8px">
-  <span class="u8-eq">x</span> = 정지한 물에서 배의 속력 &nbsp;&middot;&nbsp; <span class="u8-eq">y</span> = 강물의 속력</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab g">강물을 타고 내려갈 때</div>
-    <div class="u8-band"><div class="seg a" style="flex:1">&#8594;&nbsp; 밀어 준다</div></div>
-    <div class="u8-eq" style="font-size:19px;margin-top:6px">x + y</div></div>
-  <div class="u8-card"><div class="u8-lab r">강물을 거슬러 올라갈 때</div>
-    <div class="u8-band"><div class="seg c" style="flex:1">&#8592;&nbsp; 막아선다</div></div>
-    <div class="u8-eq" style="font-size:19px;margin-top:6px">x &minus; y</div></div>
+<p>수업에서 선생님이 &laquo;오늘 가장 중요한 이야기&raquo;라고 못박은 것이 바로 <strong>기울기</strong>입니다. 기울기는 <strong>(y의 증가량) &divide; (x의 증가량)</strong>입니다. 두 점 (x&#8321;, y&#8321;), (x&#8322;, y&#8322;) 에서는 (y&#8322; &minus; y&#8321;) / (x&#8322; &minus; x&#8321;) 로 계산합니다.</p>
+<!-- ============ 가로로 간 만큼 세로로 얼마나 올라갔나 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">가로로 간 만큼 세로로 얼마나 올라갔나</div>
+<div class="diagram-wrap" style="max-width:252px;margin:14px auto"><svg class="dia" viewBox="0 0 252 270" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="216.0" x2="226.0" y2="216.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="58.0" y1="240.0" x2="58.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="235.0" y="220.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="58.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="69.0" y="233.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="202.0" y1="213.0" x2="202.0" y2="219.0" stroke="var(--muted)" stroke-width="1.2"/><text x="202.0" y="235.0" font-size="11" fill="var(--muted)" text-anchor="middle">6</text><line x1="55.0" y1="144.0" x2="61.0" y2="144.0" stroke="var(--muted)" stroke-width="1.2"/><text x="49.0" y="148.1" font-size="11" fill="var(--muted)" text-anchor="end">3</text><polyline points="34.0,228.0 170.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><circle cx="58.0" cy="192.0" r="4.2" fill="var(--orange)"/><circle cx="154.0" cy="48.0" r="4.2" fill="var(--orange)"/><line x1="58.0" y1="192.0" x2="154.0" y2="192.0" stroke="var(--purple)" stroke-width="1.8" stroke-dasharray="5,4"/><line x1="154.0" y1="192.0" x2="154.0" y2="48.0" stroke="var(--purple)" stroke-width="1.8" stroke-dasharray="5,4"/><text x="106.0" y="180.0" font-size="11" fill="var(--purple)" text-anchor="middle">Δx = 4</text><text x="165.0" y="124.0" font-size="11" fill="var(--purple)" text-anchor="start">Δy = 6</text><text x="47.0" y="179.0" font-size="11" fill="var(--orange)" text-anchor="end">A(0, 1)</text><text x="144.0" y="35.0" font-size="11" fill="var(--orange)" text-anchor="end">B(4, 7)</text></svg></div>
+<div class="u9-cap">A 에서 B 까지 가는 동안 가로로 4, 세로로 6 만큼 갔다. 이 두 값의 <b>비</b> 가 기울기다. &Delta;x 는 x의 증가량, &Delta;y 는 y의 증가량을 줄여 쓴 기호다.</div>
 </div>
-<div class="u8-note">각각의 속력으로 <span class="u8-eq">(거리) = (속력) &times; (시간)</span> 식을 하나씩 만들면 연립방정식이 된다.</div>
-<div class="u8-cap">비행기와 바람도 구조가 완전히 같다.</div></div>
-<p>내려갈 때와 거슬러 올라갈 때 걸린 시간이 다르게 주어지면, 두 식 (거리) = (속력) &times; (시간)을 세워 연립하면 됩니다.</p>
-<p><strong>예제 &mdash; 강을 오르내리기.</strong> 40 km를 강물을 타고 내려가는 데 2시간, 거슬러 올라가는 데 5시간이 걸렸다고 합시다. 내려갈 때의 속력은 x + y, 거슬러 올라갈 때는 x &minus; y이므로 2(x + y) = 40, 5(x &minus; y) = 40입니다. 풀면 <strong>배의 속력은 시속 14 km, 강물의 속력은 시속 6 km</strong>입니다.</p>
-
-    <div class="quiz" data-qid="b13" data-ans="10" data-type="num">
-      <div class="quiz-q">Q. 배로 강을 따라 24 km를 내려가는 데 2시간, 같은 거리를 거슬러 올라가는 데 3시간이 걸렸다. 정지한 물에서 배의 속력은 시속 몇 km인가?</div>
+<div class="box box-red"><div class="box-title">⚠ 순서를 맞춘다</div>
+<p style="margin-bottom:0">분모와 분자에서 빼는 순서를 맞춰야 합니다. 분모를 &laquo;2에서 1을 뺐다&raquo;면 분자도 그래야 합니다. 뒤집으면 부호가 반대가 됩니다.</p>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">두 점 (1, 3), (5, 11) 을 지나는 직선의 기울기는 (11 &minus; 3) / (5 &minus; 1) = 2</p>
+</div>
+<p>기울기가 곧 일차항의 계수인 이유는, 정비례에서 x와 y가 같은 비율로 변하고 그 비율을 정하는 것이 a이기 때문입니다. 그래서 그래프 위 <strong>어느 두 점</strong>을 골라도 기울기는 같습니다.</p>
+<!-- ============ 기울기가 다르면 다른 직선이다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">기울기가 다르면 다른 직선이다</div>
+<div class="diagram-wrap" style="max-width:356px;margin:14px auto"><svg class="dia" viewBox="0 0 356 320" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="160.0" x2="294.0" y2="160.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="164.0" y1="290.0" x2="164.0" y2="30.0" stroke="var(--muted)" stroke-width="1.5"/><text x="303.0" y="164.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="164.0" y="22.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><line x1="60.0" y1="157.0" x2="60.0" y2="163.0" stroke="var(--muted)" stroke-width="1.2"/><text x="60.0" y="179.0" font-size="11" fill="var(--muted)" text-anchor="middle">-4</text><line x1="268.0" y1="157.0" x2="268.0" y2="163.0" stroke="var(--muted)" stroke-width="1.2"/><text x="268.0" y="179.0" font-size="11" fill="var(--muted)" text-anchor="middle">4</text><polyline points="120.7,290.0 207.3,30.0" fill="none" stroke="var(--red)" stroke-width="1.9"/><polyline points="34.0,290.0 294.0,30.0" fill="none" stroke="var(--orange)" stroke-width="1.9"/><polyline points="34.0,203.3 294.0,116.7" fill="none" stroke="var(--green)" stroke-width="1.9"/><polyline points="34.0,30.0 294.0,290.0" fill="none" stroke="var(--blue)" stroke-width="1.9"/><text x="207.3" y="15.0" font-size="11" fill="var(--red)" text-anchor="middle">y = 3x</text><text x="302.0" y="34.0" font-size="11" fill="var(--orange)" text-anchor="start">y = x</text><text x="302.0" y="120.7" font-size="11" fill="var(--green)" text-anchor="start">y = x/3</text><text x="302.0" y="294.0" font-size="11" fill="var(--blue)" text-anchor="start">y = −x</text></svg></div>
+<div class="u9-cap">네 직선 모두 원점을 지나지만 기울어진 정도가 전부 다르다. 기울기가 클수록 가파르고, <b>음수</b>면 오른쪽으로 갈수록 내려간다.</div>
+</div>
+    <div class="quiz" data-qid="b13" data-ans="-3" data-type="num">
+      <div class="quiz-q">Q. 두 점 (−1, 5), (3, −7) 을 지나는 직선의 기울기는?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 배의 속력과 강물의 속력을 미지수로 놓고, 내려갈 때는 (배)+(강물), 거슬러 갈 때는 (배)−(강물)로 식을 세운다.</div>
+      <div class="quiz-hint">힌트: (y의 증가량)÷(x의 증가량)을 계산할 때 두 점에서 빼는 순서를 통일한다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>기차는 왜 다를까요? 배와 강물처럼 움직이는 것이 둘인 경우와 달리, <strong>짝이 될 두 번째 속력이 없습니다.</strong> &laquo;완전히 지난다&raquo;와 &laquo;보이지 않는다&raquo;는 재는 구간이 다르지만, 어느 쪽이든 <strong>코가 움직인 거리</strong>를 재는 것이 기준입니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">기차 &mdash; 실제로 움직인 거리는 코에서 코까지다</div>
-<div class="u8-2col">
-  <div class="u8-card"><div class="u8-lab b">다리를 완전히 지날 때</div>
-    <div class="u8-band"><div class="seg a" style="flex:4">다리의 길이</div>
-      <div class="seg c" style="flex:1">기차</div></div>
-    <div class="u8-ends"><span>코가 들어간다</span><span>꼬리가 빠져나온다</span></div>
-    <div class="u8-note">다리를 다 건넌 뒤 <b>기차 길이만큼</b> 더 가야 꼬리가 빠진다</div>
-    <div class="u8-eqrow" style="margin-top:6px"><span class="u8-eq">(다리) + (기차)</span></div></div>
-  <div class="u8-card"><div class="u8-lab p">터널에 완전히 가려질 때</div>
-    <div class="u8-band"><div class="seg c" style="flex:1">기차</div>
-      <div class="seg a" style="flex:3">터널 &minus; 기차</div></div>
-    <div class="u8-ends"><span>꼬리가 들어간다</span><span>코가 나온다</span></div>
-    <div class="u8-note">띠 전체가 터널이다. 꼬리가 다 들어간 뒤부터 재므로 <b>기차 길이만큼 짧다</b></div>
-    <div class="u8-eqrow" style="margin-top:6px"><span class="u8-eq">(터널) &minus; (기차)</span></div></div>
+
+<p>증가량이 음수일 수도 있습니다 &mdash; &laquo;감소했다&raquo;는 말은 &laquo;음수만큼 증가했다&raquo;와 같은 말입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = &minus;2x + 1 에서 x가 4만큼 증가하면 y는 &minus;8만큼 증가한다(= 8만큼 감소한다)</p>
 </div>
-<div class="u8-cap">기차는 한 대뿐이라 속력과 <b>길이</b>를 두 미지수로 잡는다.</div></div>
-    <div class="quiz" data-qid="b14" data-ans="20" data-type="num">
-      <div class="quiz-q">Q. 일정한 속력의 기차가 길이 600 m인 다리를 완전히 지나는 데 40초, 길이 1400 m인 터널에 완전히 가려지는 데 60초가 걸렸다. 기차의 속력은 초속 몇 m인가?</div>
+<!-- ============ a 는 모양을, b 는 위치를 정한다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">a 는 모양을, b 는 위치를 정한다</div>
+<div class="u9-anatg" style="grid-template-columns:auto auto auto auto">
+  <span class="pt">y =</span><span class="pt" style="color:var(--orange)">a</span>
+  <span class="pt">x +</span><span class="pt" style="color:var(--blue)">b</span>
+  <span class="tg"></span><span class="tg" style="color:var(--orange)">기울기<br>= 모양</span>
+  <span class="tg"></span><span class="tg" style="color:var(--blue)">y절편<br>= 위치</span>
+</div>
+<div class="u9-2col" style="margin-top:8px">
+  <div class="u9-card"><div class="u9-lab o">a &mdash; 어떻게 그릴 것인가</div>
+    <div class="u9-note" style="margin-top:0">일차항의 계수가 곧 기울기다.
+      얼마나 가파른지, 올라가는지 내려가는지를 정한다.</div></div>
+  <div class="u9-card"><div class="u9-lab b">b &mdash; 어디에 그릴 것인가</div>
+    <div class="u9-note" style="margin-top:0">상수항이 곧 y절편이다.
+      기울기가 같아도 b 가 다르면 위아래로 다른 자리에 놓인다.</div></div>
+</div>
+<div class="u9-cap">그래프를 그리려면 <b>모양</b>과 <b>위치</b> 두 가지만 있으면 된다. 그래서 기울기와 y절편을 알려 주면 일차함수의 식이 곧바로 하나로 정해진다.</div>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = 7x &minus; 2 의 기울기는 7</p>
+</div>
+    <div class="quiz" data-qid="b14" data-ans="-6" data-type="num">
+      <div class="quiz-q">Q. y = −3x + 2 에서 x 의 값이 2 만큼 증가할 때 y 의 증가량은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 기차의 속력과 길이를 미지수로 놓고 (다리)+(기차), (터널)−(기차)를 각각 속력 × 시간으로 나타낸다.</div>
+      <div class="quiz-hint">힌트: 기울기는 일차항의 계수와 같다. 그 값에 x의 증가량을 곱한다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">일과 농도&middot;비율</span>
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">넓이</span>
       <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
 
-<p>왜 전체를 <strong>1</strong>로 놓을까요? 전체 일의 양이 얼마인지 문제가 말해 주지 않기 때문입니다. 어떤 수로 놓아도 상관없지만 1로 놓으면 계산이 가장 깔끔합니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">일 &mdash; 전체를 1로 놓는다</div>
-<div class="u8-scroll"><table class="u8-tb">
-  <tr><th></th><th>A</th><th>B</th></tr>
-  <tr class="pick"><th>하루에 하는 일의 양</th><td class="hit">x</td><td class="hit">y</td></tr>
-  <tr><th>함께 6일 하면</th><td>6x</td><td>6y</td></tr>
-  <tr><th>A가 4일, B가 9일 하면</th><td>4x</td><td>9y</td></tr>
-</table></div>
-<div class="u8-sys" style="margin-top:10px"><div class="u8-brace">{</div><div class="rows">
-  <div class="u8-eq">6x + 6y = 1</div><div class="u8-eq">4x + 9y = 1</div></div></div>
-<div class="u8-note">미지수는 <b>하루에 하는 일의 양</b>이지 걸리는 날수가 아니다.
-  하루에 <span class="u8-eq"><sup>1</sup>&#8260;<sub>10</sub></span>씩 하면 혼자서는 10일이 걸린다 &mdash; <b>역수를 취해야</b> 답이 된다.</div>
-<div class="u8-cap">물탱크를 채우거나 빼는 문제도 같은 표로 정리된다.</div></div>
-<p>이 유형은 답이 <strong>미지수의 역수</strong>인 경우가 많습니다. 하루에 하는 일의 양을 구했다면 한 번 더 뒤집어야 &laquo;며칠&raquo;이 나옵니다 &mdash; ①의 원칙 2가 가장 자주 걸리는 자리입니다.</p>
+<p>이 섹션은 새 개념이 아니라 ⑥에서 배운 두 절편을 <strong>길이</strong>로 바꿔 쓰는 것입니다.</p>
+<div class="box box-red"><div class="box-title">⚠ 길이는 음수가 될 수 없다</div>
+<p style="margin-bottom:0">절편은 음수일 수 있지만 길이는 음수가 될 수 없습니다 &mdash; 넓이를 구할 때는 <strong>절댓값</strong>을 씁니다. 여기서 부호를 그대로 넣어 넓이가 음수로 나오는 실수가 가장 많습니다.</p>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = &minus;4x + 8 의 그래프와 두 축이 둘러싼 삼각형의 넓이는 ½ &times; 2 &times; 8 = 8</p>
+</div>
+<!-- ============ 두 절편이 직각삼각형의 두 변이 된다 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">두 절편이 직각삼각형의 두 변이 된다</div>
+<div class="diagram-wrap" style="max-width:207px;margin:14px auto"><svg class="dia" viewBox="0 0 207 335" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="234.0" x2="181.0" y2="234.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="76.0" y1="297.0" x2="76.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="190.0" y="238.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="76.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="65.0" y="251.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="160.0" y1="231.0" x2="160.0" y2="237.0" stroke="var(--muted)" stroke-width="1.2"/><text x="160.0" y="253.0" font-size="11" fill="var(--muted)" text-anchor="middle">4</text><polygon points="76.0,234.0 118.0,234.0 76.0,66.0" fill="var(--green)" fill-opacity="0.22" stroke="none" stroke-width="1.2"/><polyline points="65.5,24.0 133.8,297.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><text x="133.8" y="322.0" font-size="11" fill="var(--green)" text-anchor="middle">y = −4x + 8</text><circle cx="118.0" cy="234.0" r="4.2" fill="var(--orange)"/><circle cx="76.0" cy="66.0" r="4.2" fill="var(--orange)"/><text x="97.0" y="256.0" font-size="12" fill="var(--orange)" text-anchor="middle">2</text><text x="65.0" y="149.8" font-size="12" fill="var(--orange)" text-anchor="end">8</text></svg></div>
+<div class="u9-cap">그래프와 x축, y축이 만드는 도형은 <b>직각삼각형</b>이다. 두 변의 길이는 x절편 2 와 y절편 8 의 <b>절댓값</b>이다 &mdash; 길이에는 음수가 없다.</div>
+</div>
     <div class="quiz" data-qid="b15" data-ans="16" data-type="num">
-      <div class="quiz-q">Q. 어떤 물탱크를 A호스로 6시간 채운 뒤 B호스로 4시간 채우면 가득 차고, A호스로 3시간 채운 뒤 B호스로 10시간 채워도 가득 찬다. B호스만으로 채우면 몇 시간이 걸리는가?</div>
+      <div class="quiz-q">Q. y = 2x + 8 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이는?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: A, B 호스가 한 시간에 채우는 양을 미지수로 놓고 식을 세운다. 구한 값의 역수가 걸리는 시간이다.</div>
+      <div class="quiz-hint">힌트: x절편과 y절편의 절댓값을 두 변으로 하는 직각삼각형의 넓이 공식을 쓴다.</div>
       <div class="quiz-fb"></div>
     </div>
-<p>농도에서는 왜 <strong>소금의 양</strong>을 쫓을까요? 농도끼리는 그냥 더할 수 없지만(5%와 10%를 섞어도 15%가 되지 않습니다) 소금의 양은 그대로 더해지기 때문입니다. 물을 더 붓거나 증발시키면 소금물의 양은 변하지만 소금의 양은 변하지 않으므로 두 줄을 따로 확인해야 합니다.</p>
-<p>비율 문제에서는 기본 단위를 맞춥니다 &mdash; &laquo;100 g당 얼마&raquo;로 주어졌는데 먹는 양이 100 g의 배수라는 보장은 없습니다. 1 g당으로 고쳐 놓고 시작하면 안전합니다.</p>
-<div class="u8-wrap">
-<div class="u8-t">농도 &mdash; 소금의 양을 쫓아간다</div>
-<div class="u8-scroll"><table class="u8-tb">
-  <tr><th></th><th>6% 소금물</th><th>11% 소금물</th><th>섞은 뒤</th></tr>
-  <tr class="pick"><th>소금물의 양(g)</th><td class="hit">x</td><td class="hit">y</td><td class="hit">250</td></tr>
-  <tr><th>농도</th><td>6%</td><td>11%</td><td>8%</td></tr>
-  <tr class="pick"><th>소금의 양(g)</th><td><sup>6</sup>&#8260;<sub>100</sub>x</td><td><sup>11</sup>&#8260;<sub>100</sub>y</td><td><sup>8</sup>&#8260;<sub>100</sub>&times;250</td></tr>
-</table></div>
-<div class="u8-note">섞기 전과 섞은 후에 <b>소금의 양은 변하지 않는다</b>. 소금물의 양도 그대로 더해진다 &mdash;
-  물을 더 붓거나 증발시키면 이 줄이 달라지므로 따로 확인해야 한다.</div>
-<div class="u8-cap">소금물줄에서 식 하나, 소금줄에서 식 하나가 나온다.</div></div>
-    <div class="quiz" data-qid="b16" data-ans="200" data-type="num">
-      <div class="quiz-q">Q. 4%의 소금물과 9%의 소금물을 섞어 6%의 소금물 500 g을 만들려고 한다. 9%의 소금물은 몇 g 필요한가?</div>
+
+<p>넓이를 거꾸로 알려 주고 상수를 찾게 하는 문제는, 절편을 문자로 두고 넓이 식을 세워 방정식으로 풉니다. 이때 <strong>a의 부호 조건</strong>(a &lt; 0 등)이 붙는 이유는 방정식의 해가 둘 나오기 때문입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = ax + 4 (a &lt; 0) 와 두 축이 둘러싼 삼각형의 넓이가 8이면 a = &minus;1</p>
+</div>
+    <div class="quiz" data-qid="b16" data-ans="-2" data-type="num">
+      <div class="quiz-q">Q. y = ax + 6 (a < 0) 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이가 9 일 때 a 의 값은?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 두 소금물의 양의 합의 식과, 소금의 양의 합의 식을 각각 세운다.</div>
+      <div class="quiz-hint">힌트: x절편을 a를 써서 나타내고, 절댓값을 이용해 넓이에 대한 방정식을 세운다.</div>
       <div class="quiz-fb"></div>
     </div>
+
+<p>직선이 하나가 아니라 두 개면 어떨까요? 아래 그림처럼 두 그래프가 y축 위 한 점에서 만나면, 그 점이 삼각형의 꼭짓점이 되고 두 x절편 사이가 밑변이 됩니다. 다음 연습문제의 심화 단계에서 이 경우도 만나게 됩니다.</p>
+<!-- ============ 두 직선이 x축과 만드는 삼각형 ============ -->
+<div class="u9-wrap">
+<div class="u9-t">두 직선이 x축과 만드는 삼각형</div>
+<div class="diagram-wrap" style="max-width:348px;margin:14px auto"><svg class="dia" viewBox="0 0 348 304" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="200.0" x2="322.0" y2="200.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="146.0" y1="248.0" x2="146.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="331.0" y="204.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="146.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="135.0" y="217.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="143.0" y1="136.0" x2="149.0" y2="136.0" stroke="var(--muted)" stroke-width="1.2"/><text x="137.0" y="140.1" font-size="11" fill="var(--muted)" text-anchor="end">4</text><polygon points="82.0,200.0 274.0,200.0 146.0,72.0" fill="var(--blue)" fill-opacity="0.2" stroke="none" stroke-width="1.2"/><polyline points="58.0,248.0 170.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="98.0,24.0 322.0,248.0" fill="none" stroke="var(--orange)" stroke-width="2.0"/><text x="94.3" y="99.4" font-size="11" fill="var(--green)" text-anchor="middle">y = 2x + 8</text><text x="278.3" y="161.0" font-size="11" fill="var(--orange)" text-anchor="middle">y = −x + 8</text><circle cx="82.0" cy="200.0" r="4.2" fill="var(--purple)"/><circle cx="274.0" cy="200.0" r="4.2" fill="var(--purple)"/><circle cx="146.0" cy="72.0" r="4.2" fill="var(--purple)"/><text x="90.0" y="222.0" font-size="12" fill="var(--purple)" text-anchor="start">−4</text><text x="266.0" y="222.0" font-size="12" fill="var(--purple)" text-anchor="end">8</text><text x="221.2" y="247.0" font-size="11" fill="var(--purple)" text-anchor="middle">밑변 = 4 + 8 = 12</text></svg></div>
+<div class="u9-cap">두 그래프가 y축 위에서 만나면 그 점이 <b>꼭짓점</b>, 두 x절편 사이가 <b>밑변</b>이 된다. 밑변의 길이는 두 x절편 사이의 거리다.</div>
+</div>
   </section>
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
@@ -1161,64 +1275,64 @@
     <div class="pset" id="pset_basic">
       <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 &mdash; 조건을 그대로 식 두 개로 옮기면 풀린다</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="26" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>합이 40이고 차가 12인 두 자연수가 있다. 큰 수는?</div>
+        <div class="prob" data-qid="pb1" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>한 자루에 500원인 연필 x 자루의 값을 y 원이라 할 때, y = 3500 이 되게 하는 x 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 자연수를 x, y로 놓고 합과 차를 각각 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: y 자리에 3500을 대입해 x에 대한 방정식을 푼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb2" data-ans="57" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>두 자리 자연수가 있다. 각 자리 숫자의 합은 12이고, 십의 자리와 일의 자리 숫자를 바꾼 수는 처음 수보다 18 크다. 처음 수는?</div>
+        <div class="prob" data-qid="pb2" data-ans="2" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>다음 중 y 가 x 의 함수인 것은 모두 몇 개인지 구하시오.<br>ㄱ. 자연수 x 의 배수 y &nbsp; ㄴ. 자연수 x 의 약수의 개수 y<br>ㄷ. 키가 x cm 인 학생의 몸무게 y kg &nbsp; ㄹ. 한 변이 x cm 인 정사각형의 넓이 y cm²</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 자릿값을 살려 10x + y 꼴로 쓴다.</div>
+          <div class="quiz-hint">힌트: ㄱ~ㄹ 하나씩 x에 값을 넣어 y가 몇 개 나오는지 세어 본다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb3" data-ans="5" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>한 개 800원인 빵과 1200원인 우유를 합해 9개 사고 8800원을 냈다. 빵은 몇 개 샀는가?</div>
+        <div class="prob" data-qid="pb3" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>자연수 x 보다 작은 소수의 개수를 y 라 할 때, x = 20 에 대응하는 y 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 빵의 개수, 우유의 개수를 미지수로 놓고 개수의 식과 금액의 식을 세운다.</div>
+          <div class="quiz-hint">힌트: 20보다 작은 소수를 직접 나열해 개수를 센다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb4" data-ans="200" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>어제 어느 가게를 찾은 손님은 300명이었다. 오늘은 어제에 비해 남자 손님이 10% 줄고 여자 손님이 20% 늘었으나 전체 손님 수는 어제와 같았다. 어제 남자 손님은 몇 명인가?</div>
+        <div class="prob" data-qid="pb4" data-ans="13" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>f(x) = −2x + 7 일 때 f(−3) 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 어제 남자 손님 수와 여자 손님 수를 미지수로 놓고 전체 인원의 식과 변화량의 식을 세운다.</div>
+          <div class="quiz-hint">힌트: x 자리에 −3을 대입해 계산한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb5" data-ans="10" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>현재 아버지와 딸의 나이의 합은 52살이다. 6년 후에 아버지의 나이가 딸의 나이의 3배가 된다. 현재 딸의 나이는?</div>
+        <div class="prob" data-qid="pb5" data-ans="-3" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>y = (2a + 6)x − 5 가 x 에 대한 일차함수가 되도록 하는 상수 a 의 조건은 a ≠ □ 이다. □ 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 6년 후 두 사람의 나이에 모두 6을 더한다.</div>
+          <div class="quiz-hint">힌트: 일차항의 계수가 0이 아니라는 조건을 a에 대한 방정식으로 바꾼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb6" data-ans="400" data-type="num">
-          <div class="pq"><span class="pnum">6.</span>작년 어느 동아리의 회원은 700명이었다. 올해는 남자 회원이 8% 늘고 여자 회원이 4% 줄어 전체가 20명 늘었다. 작년 남자 회원은 몇 명인가?</div>
+        <div class="prob" data-qid="pb6" data-ans="-7" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>y = −5x 의 그래프를 y축 방향으로 3 만큼 평행이동한 그래프가 점 (2, k) 를 지날 때 k 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 작년 남자, 여자 회원 수를 미지수로 놓고 전체 인원의 식과 변화량의 식을 세운다.</div>
+          <div class="quiz-hint">힌트: 평행이동한 식을 먼저 쓰고 x = 2를 대입한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb7" data-ans="4" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>16 km를 가는데 시속 4 km로 걷다가 도중에 시속 6 km로 뛰어 모두 3시간이 걸렸다. 걸은 거리는? (km)</div>
+        <div class="prob" data-qid="pb7" data-ans="-5" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>y = x + 4 의 그래프를 y축 방향으로 k 만큼 평행이동하면 y = x − 1 의 그래프가 된다. k 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 걸은 거리와 뛴 거리를 미지수로 놓고 거리의 합과 시간의 합을 각각 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: 이동 후 상수항에서 이동 전 상수항을 뺀다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb8" data-ans="8" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>어떤 일을 A가 3일 한 뒤 B가 5일 하면 끝나고, A가 6일 한 뒤 B가 2일 해도 끝난다. 이 일을 B가 혼자 하면 며칠 걸리는가?</div>
+        <div class="prob" data-qid="pb8" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>f(x) = (x 를 4 로 나눈 나머지) 일 때 f(19) + f(30) 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: A, B가 하루에 하는 일의 양을 미지수로 놓는다. 구한 값의 역수가 걸리는 날수다.</div>
+          <div class="quiz-hint">힌트: 19와 30을 각각 4로 나눈 나머지를 구해 더한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb9" data-ans="240" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>3%의 소금물과 8%의 소금물을 섞어 5%의 소금물 400 g을 만들려고 한다. 3%의 소금물은 몇 g 필요한가?</div>
+        <div class="prob" data-qid="pb9" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>y = −3x + 12 의 그래프의 x절편을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 소금물의 양의 합의 식과 소금의 양의 합의 식을 각각 세운다.</div>
+          <div class="quiz-hint">힌트: y에 0을 대입해 x에 대한 방정식을 푼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb10" data-ans="110" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>둘레가 800 m인 트랙을 두 사람이 같은 지점에서 동시에 출발한다. 반대 방향으로 돌면 4분 후, 같은 방향으로 돌면 40분 후에 처음 만난다. 빠른 사람의 속력은 분속 몇 m인가?</div>
+        <div class="prob" data-qid="pb10" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>두 점 (2, 3), (6, 15) 를 지나는 직선의 기울기를 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 반대 방향은 거리의 합, 같은 방향은 거리의 차가 둘레와 같다는 식을 세운다.</div>
+          <div class="quiz-hint">힌트: (y의 증가량)÷(x의 증가량)을 계산한다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
@@ -1227,64 +1341,70 @@
       <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 &mdash; 미지수 값에서 한 걸음 더 가거나, 조건이 한 겹 더 있다</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="46800" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>지난달 두 사람의 휴대폰 요금의 합은 90000원이었다. 이번 달에는 A의 요금이 10% 줄고 B의 요금이 30% 늘어 합계가 지난달보다 5400원 늘었다. <strong>이번 달</strong> B의 요금은? (원)</div>
+        <div class="prob" data-qid="pa1" data-ans="-3" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>y = 5x 의 그래프를 y축 방향으로 b 만큼 평행이동한 그래프의 x절편이 3/5 일 때, 상수 b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 지난달 두 사람의 요금을 미지수로 놓고 합계의 식과 변화량의 식을 세운다. 이번 달 요금은 구한 값에서 한 번 더 계산해야 한다.</div>
+          <div class="quiz-hint">힌트: 평행이동한 식에 x = 3/5, y = 0을 대입해 b에 대한 방정식을 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa2" data-ans="150" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>둘레가 50 cm인 직사각형에서 가로를 20% 늘이고 세로를 10% 줄였더니 둘레가 4 cm 늘었다. <strong>처음</strong> 직사각형의 넓이는? (cm²)</div>
+        <div class="prob" data-qid="pa2" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>다음 중 y 가 x 의 함수인 것은 모두 몇 개인지 구하시오.<br>ㄱ. 절댓값이 x 인 수 y &nbsp; ㄴ. 자연수 x 와 서로소인 자연수 y<br>ㄷ. 반지름이 x cm 인 원의 넓이 y cm² &nbsp; ㄹ. 시속 x km 로 4 시간 동안 간 거리 y km<br>ㅁ. 자연수 x 를 3 으로 나눈 나머지 y</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 처음 가로와 세로를 미지수로 놓고 처음 둘레의 식과 늘어난 둘레의 식을 세운다. 넓이는 구한 값을 한 번 더 계산해야 나온다.</div>
+          <div class="quiz-hint">힌트: ㄱ~ㅁ 하나씩 x에 값을 넣어 y가 몇 개 나오는지 세어 본다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa3" data-ans="6" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>가위바위보를 하여 이긴 사람은 3계단 올라가고 진 사람은 2계단 내려가기로 하였다. 몇 번의 게임 후 A는 처음보다 8계단, B는 처음보다 3계단 올라가 있었다. A가 이긴 횟수는? (비기는 경우는 없다)</div>
+        <div class="prob" data-qid="pa3" data-ans="-15" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>f(x) = ax − 3 에 대하여 f(−2) = 5 일 때, f(3) 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: A가 이긴 횟수, B가 이긴 횟수를 미지수로 놓고 각자의 계단 변화를 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: 먼저 f(−2) = 5로 a를 구한 뒤, 그 식에 x = 3을 대입한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa4" data-ans="5000" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>어른 2명과 어린이 3명의 입장료의 합은 27000원, 어른 3명과 어린이 5명의 입장료의 합은 43000원이다. 어린이 한 명의 입장료는? (원)</div>
+        <div class="prob" data-qid="pa4" data-ans="-6" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>f(x) = a/x 에 대하여 f(3) = −4, f(−2) = b 일 때, a + b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 어른 한 명, 어린이 한 명의 입장료를 미지수로 놓고 두 상황을 각각 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: f(3) = −4로 a를 먼저 구하고, 그 식에 x = −2를 대입해 b를 구한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa5" data-ans="74" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>학생들에게 사탕을 나누어 주는데 한 사람당 4개씩 주면 10개가 남고, 5개씩 주면 6개가 모자란다. 사탕은 모두 몇 개인가?</div>
+        <div class="prob" data-qid="pa5" data-ans="2" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>y = ax² + 3x − 2x² + 5 가 x 에 대한 일차함수가 되도록 하는 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 학생 수와 사탕의 개수를 미지수로 놓고, 남거나 모자라는 양을 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: x² 항의 계수가 0이 되어야 한다는 조건으로 a를 구한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa6" data-ans="20" data-type="num">
-          <div class="pq"><span class="pnum">6.</span>어느 반 36명의 수학 평균은 70점이다. 남학생의 평균은 74점, 여학생의 평균은 65점일 때 남학생은 몇 명인가?</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 남학생 수와 여학생 수를 미지수로 놓고 인원의 합과 점수 총합의 식을 세운다.</div>
+        <div class="prob" data-qid="pa6" data-ans="7/4|1.75" data-type="text">
+          <div class="pq"><span class="pnum">6.</span>y = 2x − 1/2 의 그래프를 y축 방향으로 3/2 만큼 평행이동하면 점 (k, 9/2) 를 지난다. k 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 평행이동한 식에 y = 9/2를 대입해 k에 대한 방정식을 푼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa7" data-ans="4" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>동생이 분속 50 m로 집을 나서 600 m를 간 뒤에 형이 분속 200 m로 출발하여 두 사람이 공원에 동시에 도착하였다. 형이 공원까지 가는 데 걸린 시간은? (분)</div>
+        <div class="prob" data-qid="pa7" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>오른쪽 그림과 같은 직선이 점 (4, a) 를 지날 때, a 의 값을 구하시오.</div>
+          <!-- ============  ============ -->
+          <div class="u9-wrap">
+          <div class="u9-t"></div>
+          <div class="diagram-wrap" style="max-width:320px;margin:14px auto"><svg class="dia" viewBox="0 0 320 236" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="154.0" x2="294.0" y2="154.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="190.0" y1="206.0" x2="190.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="303.0" y="158.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="190.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="179.0" y="171.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="34.0,193.0 259.3,24.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><circle cx="86.0" cy="154.0" r="4.2" fill="var(--orange)"/><circle cx="190.0" cy="76.0" r="4.2" fill="var(--orange)"/><text x="95.0" y="176.0" font-size="12" fill="var(--orange)" text-anchor="start">−4</text><text x="179.0" y="69.0" font-size="12" fill="var(--orange)" text-anchor="end">3</text></svg></div>
+          <div class="u9-cap"></div>
+          </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 형과 동생이 각각 걸린 시간을 미지수로 놓고 동시에 도착한다는 조건을 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: 그림에서 x절편과 y절편을 읽어 직선의 식을 먼저 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa8" data-ans="960" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>집에서 1800 m 떨어진 학교에 가는데 분속 60 m로 걷다가 도중에 문구점에서 4분 머문 뒤 분속 120 m로 뛰었더니 모두 26분이 걸렸다. <strong>뛴 거리</strong>는? (m)</div>
+        <div class="prob" data-qid="pa8" data-ans="-4" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>일차함수 y = ax + b 의 그래프가 y = −2x + 6 의 그래프와 x절편이 같고, y = 5x − 6 의 그래프와 y절편이 같다. a + b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 걸은 시간과 뛴 시간을 미지수로 놓고 전체 시간과 거리의 식을 세운다. 문구점에 머문 4분은 걷거나 뛴 시간이 아니다.</div>
+          <div class="quiz-hint">힌트: x절편이 같다는 것과 y절편이 같다는 것이 각각 무엇을 알려 주는지 먼저 정리한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa9" data-ans="18" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>어떤 작업을 인쇄기 A로 3시간 한 뒤 B로 12시간 하면 끝나고, A로 6시간 한 뒤 B로 6시간 해도 끝난다. 이 작업을 B만으로 하면 몇 시간 걸리는가?</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: A, B가 한 시간에 하는 일의 양을 미지수로 놓는다. 구한 값의 역수가 걸리는 시간이다.</div>
+        <div class="prob" data-qid="pa9" data-ans="-5/2|-2.5" data-type="text">
+          <div class="pq"><span class="pnum">9.</span>일차함수 y = ax + 3 에서 x 의 값이 4 만큼 증가할 때 y 의 값은 10 만큼 감소한다. 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: x가 4 증가할 때 y가 얼마나 증가(또는 감소)하는지를 기울기의 정의에 그대로 대입한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa10" data-ans="400" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>우유와 오렌지 주스를 합하여 600 mL를 마셨더니 섭취한 열량이 336 kcal였다. 우유는 100 mL당 60 kcal, 오렌지 주스는 100 mL당 48 kcal일 때 마신 우유는 몇 mL인가?</div>
+        <div class="prob" data-qid="pa10" data-ans="24" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>y = 3x + 12 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이를 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 100 mL당 열량을 1 mL당으로 바꾸어 식을 세운다.</div>
+          <div class="quiz-hint">힌트: x절편과 y절편의 절댓값을 두 변으로 하는 직각삼각형의 넓이 공식을 쓴다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
@@ -1294,73 +1414,78 @@
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
         <div class="solution">
-          <div class="sol-head">🧩 단계별 풀이 &mdash; 트랙을 도는 두 사람</div>
-          <div class="sol-q">둘레가 1200 m인 트랙을 두 사람이 같은 지점에서 동시에 출발한다. 반대 방향으로 돌면 4분 후, 같은 방향으로 돌면 12분 후에 처음 만난다. 두 사람의 속력을 각각 구하시오.</div>
-          <div class="step"><span class="s-label">STEP 1 &middot; 무엇을 미지수로 잡을까</span><br>묻는 것이 속력이고 거리도 시간도 따로는 모릅니다 &rarr; <strong>속력을 미지수</strong>로 잡습니다. 분속 x m, 분속 y m (x &gt; y).</div>
-          <div class="step"><span class="s-label">STEP 2 &middot; 반대 방향 조건</span><br>반대 방향은 &laquo;거리의 합 = 한 바퀴&raquo; &rarr; <strong>4(x + y) = 1200</strong></div>
-          <div class="step"><span class="s-label">STEP 3 &middot; 같은 방향 조건</span><br>같은 방향은 &laquo;거리의 차 = 한 바퀴&raquo; &rarr; <strong>12(x &minus; y) = 1200</strong></div>
-          <div class="step"><span class="s-label">STEP 4 &middot; 정리</span><br>정리하면 x + y = 300, x &minus; y = 100 &rarr; <strong>분속 200 m와 분속 100 m</strong></div>
-          <div class="step"><span class="s-label">STEP 5 &middot; 확인</span><br>4분 동안 800 m와 400 m로 합이 1200 m, 12분 동안 2400 m와 1200 m로 차가 1200 m입니다. 맞습니다. (다음 문항 ph1은 같은 &laquo;더하고 빼는&raquo; 구조지만 트랙이 아니라 강물입니다. 무엇이 속력을 더해 주고 빼는지 찾아보세요.)</div>
+          <div class="sol-head">🧩 단계별 풀이 &mdash; 함숫값 두 개로 두 상수 찾기</div>
+          <div class="sol-q">f(x) = 2x + b 에 대하여 f(1) = a, f(4) = 3a 일 때 a 와 b 를 구해 보자.</div>
+          <div class="step"><span class="s-label">STEP 1 &middot; 식 두 개를 만든다</span><br>f(1) = 2 + b = a &hellip; ①, f(4) = 8 + b = 3a &hellip; ②</div>
+          <div class="step"><span class="s-label">STEP 2 &middot; 두 식을 뺀다</span><br>② &minus; ① 을 하면 6 = 2a 이므로 <strong>a = 3</strong></div>
+          <div class="step"><span class="s-label">STEP 3 &middot; 처음 식에 대입한다</span><br>① 에 a = 3 을 넣으면 2 + b = 3 이므로 <strong>b = 1</strong></div>
+          <div class="step"><span class="s-label">STEP 4 &middot; 확인</span><br>f(x) = 2x + 1 이면 f(1) = 3 = a, f(4) = 9 = 3a 로 맞습니다. (다음 문항 ph1 은 이것과 달리 <strong>기울기가 음수</strong>여서 부호를 한 번 더 살펴야 합니다.)</div>
           <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 &rarr;</button>
         </div>
-        <div class="prob" data-qid="ph1" data-ans="12" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>배로 강을 따라 45 km를 내려가는 데 3시간, 같은 거리를 거슬러 올라가는 데 5시간이 걸렸다. 정지한 물에서 배의 속력은 시속 몇 km인가?</div>
+        <div class="prob" data-qid="ph1" data-ans="-24" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>f(x) = −3x + b 에 대하여 f(−2) = a, f(1) = 2a 일 때, a + b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 배의 속력과 강물의 속력을 미지수로 놓고 내려갈 때와 거슬러 갈 때의 식을 각각 세운다.</div>
+          <div class="quiz-hint">힌트: 두 조건을 각각 식으로 쓰고 두 식을 빼서 a를 먼저 구한다. 기울기가 음수라 부호에 주의한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph2" data-ans="250" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>일정한 속력으로 달리는 기차가 길이 1000 m인 다리를 완전히 지나는 데 50초, 길이 2000 m인 터널에 완전히 가려지는 데 70초가 걸렸다. 이 기차의 길이는? (m)</div>
+        <div class="prob" data-qid="ph2" data-ans="35" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>f(n) = (n 의 소인수 중 가장 큰 수) 로 정할 때, f(90) × f(56) 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 기차의 속력과 길이를 미지수로 놓고 (다리)+(기차), (터널)−(기차)를 각각 속력 × 시간으로 나타낸다.</div>
+          <div class="quiz-hint">힌트: 90과 56을 각각 소인수분해해 가장 큰 소인수를 찾는다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph3" data-ans="23" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>작년 두 반의 학생 수의 합은 80명이었다. 올해는 A반이 15% 늘고 B반이 10% 줄어 전체가 3명 줄었다. <strong>올해</strong> A반의 학생 수는?</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 작년 두 반의 학생 수를 미지수로 놓고 전체 인원의 식과 변화량의 식을 세운다. 올해 A반의 학생 수는 구한 값에서 한 번 더 계산해야 한다.</div>
+        <div class="prob" data-qid="ph3" data-ans="-3/2|-1.5" data-type="text">
+          <div class="pq"><span class="pnum">3.</span>y = −3/4 x + b 의 그래프를 y축 방향으로 −2 만큼 평행이동하면 y = ax 의 그래프가 된다. ab 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 평행이동한 식이 원점을 지난다는 것(상수항이 0)을 이용해 b를 먼저 구한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph4" data-ans="12000" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>두 상품 A, B의 원가의 합은 20000원이다. A는 원가에 20%의 이익을 붙이고 B는 원가에서 10%를 할인하여 팔았더니 판매 금액의 합이 21600원이었다. A의 원가는? (원)</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 원가의 합의 식과, 이익을 붙이거나 할인한 판매 금액의 합의 식을 세운다.</div>
+        <div class="prob" data-qid="ph4" data-ans="-2/3" data-type="text">
+          <div class="pq"><span class="pnum">4.</span>두 직선 ax + y − 6 = 0 과 −x + 3y − 9 = 0 이 x축 위에서 만날 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 「x축 위에서 만난다」는 두 직선의 x절편이 같다는 뜻이다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph5" data-ans="66018" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>어느 동아리에서 간식을 사려고 한다. 한 사람당 3000원씩 걷으면 12000원이 모자라고, 4000원씩 걷으면 6000원이 남는다. 회원 수를 <i>a</i>명, 간식의 값을 <i>b</i>원이라 할 때 <i>a</i> + <i>b</i>의 값은?</div>
+        <div class="prob" data-qid="ph5" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>세 점 (−1, 2), (3, 10), (a, 3a − 4) 가 한 직선 위에 있을 때, a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 회원 수와 간식 값을 미지수로 놓고, 모자라거나 남는 양을 각각 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: 앞의 두 점으로 기울기를 구한 뒤, 세 번째 점과의 기울기도 같다는 식을 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph6" data-ans="82" data-type="num">
-          <div class="pq"><span class="pnum">6.</span>25명이 응시한 시험에서 합격자와 불합격자의 비는 2 : 3이다. 합격자의 평균이 불합격자의 평균보다 20점 높고 응시자 전체의 평균이 70점일 때, 합격자의 평균 점수는?</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 비로 합격자, 불합격자 수를 구한 뒤 평균을 총점으로 바꿔 식을 세운다.</div>
+        <div class="prob" data-qid="ph6" data-ans="5/3" data-type="text">
+          <div class="pq"><span class="pnum">6.</span>일차함수 y = ax + b 의 그래프가 두 점 (−1, 8), (3, −4) 를 지날 때, 이 그래프의 x절편을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 점으로 기울기와 식을 먼저 구한 뒤 y = 0을 대입한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph7" data-ans="400" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>집에서 2400 m 떨어진 도서관에 가는데 분속 60 m로 걷다가 도중에 분속 150 m로 뛰었더니 모두 26분이 걸렸다. 뛴 거리는 걸은 거리보다 몇 m 더 먼가?</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 걸은 거리와 뛴 거리를 미지수로 놓고 거리의 합과 시간의 합을 식으로 쓴다. 두 거리의 차를 구하는 것이 마지막 단계다.</div>
+        <div class="prob" data-qid="ph7" data-ans="-3/4|-0.75" data-type="text">
+          <div class="pq"><span class="pnum">7.</span>y = ax + 6 (a < 0) 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이가 24 일 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 넓이 식을 세울 때 변의 길이에 절댓값을 쓴다. 부호 조건이 왜 붙었는지 생각한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph8" data-ans="24" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>어떤 일을 A와 B가 함께 하면 8일이 걸린다. 이 일을 A가 혼자 4일 한 뒤 나머지를 B가 혼자 16일 하여 끝냈다면, 이 일을 B가 혼자 할 때 걸리는 날수는?</div>
+        <div class="prob" data-qid="ph8" data-ans="-2" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>y = ax − 8 의 그래프와 x축, y축으로 둘러싸인 도형의 넓이가 16 이고 x절편이 음수일 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: A, B가 하루에 하는 일의 양을 미지수로 놓고, 함께 한 경우와 나눠서 한 경우를 각각 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: 넓이 식을 세울 때 변의 길이에 절댓값을 쓴다. x절편의 부호 조건으로 a의 부호를 정한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph9" data-ans="90" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>농도가 10%인 소금물 300 g에서 물 <i>x</i> g을 증발시키고 소금 <i>y</i> g을 더 넣었더니 농도가 20%인 소금물 250 g이 되었다. <i>x</i> + <i>y</i>의 값은?</div>
+        <div class="prob" data-qid="ph9" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>두 일차함수 y = 1/2 x + 2 와 y = −x + 2 의 그래프와 x축으로 둘러싸인 부분의 넓이를 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 증발한 물의 양과 더한 소금의 양을 각각 미지수로 놓고, 소금물의 양과 소금의 양을 따로 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: 두 그래프의 y절편이 같다는 점을 먼저 확인한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph10" data-ans="300" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>합금 A에는 구리가 20%, 아연이 40% 들어 있고 합금 B에는 구리가 50%, 아연이 20% 들어 있다. 두 합금을 녹여 구리 220 g과 아연 200 g을 얻으려고 할 때 필요한 합금 B는 몇 g인가?</div>
+        <div class="prob" data-qid="ph10" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>오른쪽 그림에서 두 일차함수 y = −2x + p, y = 1/3 x + q 의 그래프가 y축과 만나는 점을 각각 A, B, x축과 만나는 점을 각각 D, C 라 하자. AB : BO = 3 : 1 이고 CD = 10 일 때, p + q 의 값을 구하시오.</div>
+          <!-- ============  ============ -->
+          <div class="u9-wrap">
+          <div class="u9-t"></div>
+          <div class="diagram-wrap" style="max-width:354px;margin:14px auto"><svg class="dia" viewBox="0 0 354 285" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="213.0" x2="328.0" y2="213.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="202.0" y1="255.0" x2="202.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="337.0" y="217.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="202.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="191.0" y="230.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="191.5,24.0 307.0,255.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="34.0,227.0 328.0,129.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><text x="259.6" y="76.5" font-size="11" fill="var(--green)" text-anchor="middle">y = −2x + p</text><text x="285.9" y="119.1" font-size="11" fill="var(--blue)" text-anchor="middle">y = x/3 + q</text><circle cx="202.0" cy="45.0" r="4.2" fill="var(--purple)"/><text x="191.0" y="60.0" font-size="12" fill="var(--purple)" text-anchor="end">A</text><circle cx="202.0" cy="171.0" r="4.2" fill="var(--purple)"/><text x="191.0" y="160.0" font-size="12" fill="var(--purple)" text-anchor="end">B</text><circle cx="76.0" cy="213.0" r="4.2" fill="var(--purple)"/><text x="85.0" y="235.0" font-size="12" fill="var(--purple)" text-anchor="start">C</text><circle cx="286.0" cy="213.0" r="4.2" fill="var(--purple)"/><text x="277.0" y="235.0" font-size="12" fill="var(--purple)" text-anchor="end">D</text></svg></div>
+          <div class="u9-cap"></div>
+          </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 필요한 합금 A, B의 양을 미지수로 놓고 구리의 총량과 아연의 총량을 각각 식으로 쓴다.</div>
+          <div class="quiz-hint">힌트: AB : BO 를 p, q로 나타내면 둘 사이의 관계식이 하나 나온다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
@@ -1375,13 +1500,9 @@
 </div>
 
 <nav class="unit-nav" aria-label="단원 이동">
-    <a class="pv" href="note_2-1_7_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%92%80%EC%9D%B4_PRO.html">
+    <a class="pv" href="note_2-1_8_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%99%9C%EC%9A%A9_PRO.html">
       <span class="un-lbl">← 이전 단원</span>
-      <span class="un-t">7단원 · 연립일차방정식의 풀이</span>
-    </a>
-    <a class="nx" href="note_2-1_9_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%841_PRO.html">
-      <span class="un-lbl">다음 단원 →</span>
-      <span class="un-t">9단원 · 일차함수와 그래프(1)</span>
+      <span class="un-t">8단원 · 연립일차방정식의 활용</span>
     </a>
 </nav>
 
@@ -1391,7 +1512,7 @@
 </footer>
 
 <script>
-const LS='isaacmath_note_2-1-8_v1';
+const LS='isaacmath_note_2-1-9_v1';
 let state={done:[],results:{},reviewed:false};
 function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
 function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
