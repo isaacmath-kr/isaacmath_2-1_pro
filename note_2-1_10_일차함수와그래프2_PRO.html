@@ -14,13 +14,13 @@
         crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>일차함수와 그래프(1) | 중2 1학기 9단원 | Isaac Math PRO</title>
-<meta name="description" content="함수의 뜻과 판별, 함숫값 f(x), 일차함수의 정의, 평행이동, x절편·y절편, 기울기, 그래프와 좌표축이 만드는 넓이까지 — 정비례·반비례가 사실 함수였음을 잇고 그래프의 모양과 위치를 정하는 법을 정리한 중2 1학기 9단원 강의노트입니다.">
-<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_9_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%841_PRO.html">
-<meta property="og:title" content="일차함수와 그래프(1) — 중2 1학기 9단원 강의노트">
-<meta property="og:description" content="하나의 x에 하나의 y — 함수의 뜻과 판별부터 함숫값, 일차함수, 평행이동, 두 절편, 기울기, 좌표축이 만드는 넓이까지 여덟 개 섹션으로 정리한 중2 1학기 9단원 강의노트입니다. 연습문제 30문항 수록.">
+<title>일차함수와 그래프(2) | 중2 1학기 10단원 | Isaac Math PRO</title>
+<meta name="description" content="일차함수 y=ax+b의 모양과 위치, 기울기의 부호와 절댓값, 그래프가 지나는 사분면, 두 직선의 평행과 일치, 두 점·두 절편으로 식 세우기(y=a(x−m)+n 포함), 변화하는 양과 도형에 대한 활용까지 정리한 중2 1학기 10단원 강의노트입니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_10_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%842_PRO.html">
+<meta property="og:title" content="일차함수와 그래프(2) — 중2 1학기 10단원 강의노트">
+<meta property="og:description" content="모양(기울기)과 위치(y절편)부터 사분면, 평행과 일치, 두 점·두 절편으로 식 세우기, 변화하는 양과 도형의 활용까지 여덟 개 섹션으로 정리한 중2 1학기 10단원 강의노트입니다. 연습문제 30문항 수록.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_9_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%841_PRO.html">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_10_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%842_PRO.html">
 <style>
   :root {
     --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
@@ -120,6 +120,129 @@
 
   .diagram-wrap { text-align:center; margin:16px 0; }
   .diagram-wrap svg { max-width:100%; height:auto; width:100%; display:block; margin:0 auto; }
+
+  /* ── 10단원 시각자료 전용 CSS (vis10/_css10.txt) ── */
+/* ── 2-1 10단원 「일차함수와 그래프(2)」 전용 시각자료 CSS (u10- 접두사) ──
+   공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
+.u10-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u10-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u10-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u10-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u10-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u10-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u10-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u10-card.on{border-color:var(--green);border-width:2px;}
+.u10-card.off{border-color:var(--red);border-width:2px;}
+.u10-card.pick{border-color:var(--blue);border-width:2px;}
+.u10-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u10-lab.g{color:var(--green);} .u10-lab.r{color:var(--red);}
+.u10-lab.b{color:var(--blue);} .u10-lab.o{color:var(--orange);} .u10-lab.p{color:var(--purple);}
+.u10-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u10-note .u10-eq,.u10-cap .u10-eq{font-size:13px;}
+.u10-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u10-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u10-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u10-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u10-tb th,.u10-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u10-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u10-tb td.hit{color:var(--green);font-weight:700;}
+.u10-tb td.no{color:var(--red);}
+.u10-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u10-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u10-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+        font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.u10-num.o{background:var(--orange);} .u10-num.p{background:var(--purple);} .u10-num.g{background:var(--green);}
+.u10-flow{display:flex;flex-direction:column;gap:8px;}
+.u10-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u10-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u10-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u10-hl.o{background:rgba(251,146,60,.18);} .u10-hl.g{background:rgba(52,211,153,.18);}
+.u10-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u10-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u10-sys .rows{display:flex;flex-direction:column;gap:5px;}
+/* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
+.u10-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+        font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
+.u10-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u10-eqg span{text-align:right;font-style:italic;}
+.u10-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u10-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u10-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u10-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u10-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+        column-gap:7px;row-gap:9px;justify-content:start;}
+.u10-mul .n{font-size:14px;color:var(--muted);}
+.u10-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u10-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u10-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u10-fr{display:inline-flex;flex-direction:column;align-items:center;line-height:1.25;}
+.u10-fr .up{padding:0 6px;font-style:italic;}
+.u10-fr .dn{padding:0 6px;border-top:1.5px solid var(--text);font-style:italic;}
+.u10-fr.a .up,.u10-fr.a .dn{color:var(--blue);}
+.u10-fr.b .up,.u10-fr.b .dn{color:var(--purple);}
+.u10-fr.c .up,.u10-fr.c .dn{color:var(--orange);}
+.u10-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u10-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u10-eqrow{text-align:center;overflow-x:auto;}
+.u10-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u10-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u10-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+@media (max-width:600px){
+  .u10-2col,.u10-3col{grid-template-columns:1fr;}
+  .u10-eqg{font-size:15px;} .u10-eq{font-size:15px;}
+  .u10-anatg .pt{font-size:18px;}
+  .u10-ratio{gap:9px;font-size:14px;}
+}
+
+/* ── 9단원 추가: 대응 그림 · 함수 공장 · 좌표평면 SVG ── */
+.u10-map{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;margin:6px 0;}
+.u10-col{display:flex;flex-direction:column;gap:6px;}
+.u10-box{border:1px solid var(--border);border-radius:8px;padding:6px 4px;text-align:center;
+        font-size:13px;background:var(--bg);font-family:"Times New Roman",Georgia,serif;}
+.u10-box.hit{border-color:var(--green);color:var(--green);font-weight:700;}
+.u10-box.bad{border-color:var(--red);color:var(--red);font-weight:700;}
+.u10-mapl{font-size:10px;color:var(--muted);text-align:center;margin-bottom:4px;letter-spacing:.03em;}
+.u10-to{font-size:16px;color:var(--muted);text-align:center;line-height:1.6;}
+.u10-fact{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:8px 0 2px;}
+.u10-in,.u10-outb{border:2px solid var(--blue);border-radius:8px;padding:7px 11px;font-size:14px;
+        font-family:"Times New Roman",Georgia,serif;font-style:italic;color:var(--blue);font-weight:700;}
+.u10-outb{border-color:var(--green);color:var(--green);}
+.u10-mach{border:2px solid var(--orange);border-radius:10px;padding:8px 13px;background:var(--bg);text-align:center;}
+.u10-mach .nm{font-size:11px;color:var(--orange);font-weight:700;margin-bottom:3px;}
+.u10-mach .st{font-size:12px;color:var(--text);line-height:1.5;font-family:"Times New Roman",Georgia,serif;}
+.u10-ar{font-size:18px;color:var(--muted);line-height:1;}
+.diagram-wrap svg.dia{width:100%;height:auto;display:block;}
+@media (max-width:600px){ .u10-map{gap:4px;} .u10-box{font-size:12px;} }
+
+/* ── 10단원 추가: 부호 카드 · 말바꾸기 · 대응표 ── */
+.u10-sign{display:grid;grid-template-columns:auto auto auto;align-items:center;
+          column-gap:10px;row-gap:9px;justify-content:center;font-size:13px;}
+.u10-sign .sy{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:16px;text-align:right;}
+.u10-sign .ds{color:var(--muted);text-align:center;}
+.u10-sign .mn{font-weight:700;text-align:left;}
+.u10-sign .mn.g{color:var(--green);} .u10-sign .mn.o{color:var(--orange);}
+.u10-say{display:flex;flex-direction:column;gap:7px;}
+.u10-say .row{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:9px;
+              border:1px solid var(--border);border-radius:9px;padding:8px 11px;background:var(--bg);}
+.u10-say .txt{font-size:12.5px;line-height:1.5;}
+.u10-say .eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:14px;
+             color:var(--green);font-weight:700;white-space:nowrap;}
+.u10-step{display:grid;grid-template-columns:auto 1fr;column-gap:10px;row-gap:9px;align-items:start;}
+.u10-step .k{width:22px;height:22px;border-radius:50%;background:var(--purple);color:#fff;
+             font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.u10-step .v{font-size:13px;line-height:1.6;padding-top:2px;}
+@media (max-width:600px){
+  .u10-say .row{grid-template-columns:1fr;gap:5px;}
+  .u10-sign{column-gap:6px;font-size:12px;}
+}
+
 
   .stepbox { background:rgba(148,163,184,0.06); border-radius:10px; padding:14px 18px; margin:10px 0; border-left:4px solid var(--purple); }
   .stepbox .step-header { font-size:12px; font-weight:800; color:var(--purple); margin-bottom:6px; }
@@ -753,8 +876,8 @@
       <span class="pro-badge">PRO</span>
       <span class="label">Isaac Math 2-1 강의노트 · 프리미엄</span>
     </div>
-    <h1>일차함수와 그래프(1)</h1>
-    <div class="sub">1-1에서 배운 정비례와 반비례는 사실 이름만 몰랐을 뿐 이미 함수였습니다. 이 단원에서는 그 이름 &laquo;함수&raquo;를 정식으로 배웁니다. 함수는 두 변수 사이의 관계인데, 아무 관계나 함수가 아니라 <strong>&laquo;하나의 x에 하나의 y&raquo;</strong>여야 합니다. 함수 중에서도 그래프가 직선인 <strong>일차함수</strong>를 배우고, 그래프를 그리는 데 필요한 두 가지 — <strong>모양(기울기)</strong>과 <strong>위치(y절편)</strong> — 를 여덟 개 섹션으로 정리합니다.</div>
+    <h1>일차함수와 그래프(2)</h1>
+    <div class="sub">앞 단원에서 기울기와 y절편을 배웠다면, 이 단원은 반대 방향입니다. 그래프를 그리는 데 필요한 것은 <strong>모양</strong>과 <strong>위치</strong> 둘뿐 — 모양은 기울기 a가, 위치는 y절편 b가 맡습니다. 이 단원은 조건을 보고 거꾸로 함수식을 만드는 법을 익히고, 그 대표가 <strong>y = a(x − m) + n</strong> 꼴입니다. 부호로 그래프의 모양을 읽고, 두 점이나 두 절편으로 식을 세우고, 변화하는 양과 도형에 그대로 적용하는 여덟 개 섹션으로 정리합니다.</div>
     <div class="header-tools">
       <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
       <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
@@ -780,477 +903,446 @@
 </div>
 
 <nav class="toc" id="toc">
-  <a href="#s1" class="tlink">① 함수의 뜻</a>
-  <a href="#s2" class="tlink">② 함수 판별</a>
-  <a href="#s3" class="tlink">③ 함숫값</a>
-  <a href="#s4" class="tlink">④ 일차함수</a>
-  <a href="#s5" class="tlink">⑤ 평행이동</a>
-  <a href="#s6" class="tlink">⑥ 두 절편</a>
-  <a href="#s7" class="tlink">⑦ 기울기</a>
-  <a href="#s8" class="tlink">⑧ 넓이</a>
+  <a href="#s1" class="tlink">① 모양과 위치</a>
+  <a href="#s2" class="tlink">② 기울기 부호</a>
+  <a href="#s3" class="tlink">③ 사분면</a>
+  <a href="#s4" class="tlink">④ 평행·일치</a>
+  <a href="#s5" class="tlink">⑤ 식 구하기1</a>
+  <a href="#s6" class="tlink">⑥ 식 구하기2</a>
+  <a href="#s7" class="tlink">⑦ 변하는 양</a>
+  <a href="#s8" class="tlink">⑧ 도형과 점</a>
   <a href="#wrong" class="tlink">📕 오답노트</a>
   <a href="#gate" class="tlink">✏️ 연습문제</a>
 </nav>
 
 <div class="content">
   <section class="section" id="s1">
-    <div class="section-head"><span class="section-num">1</span><span class="section-title">함수의 뜻 &mdash; 두 변수 사이의 관계</span>
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">모양과 위치</span>
       <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
 
-<p>이 단원은 <strong>함수</strong>라는 낱말로 시작합니다. 함수는 두 변수 사이의 관계를 다루는 이야기입니다. 변하는 값을 <strong>변수</strong>, 그 반대로 고정되어 변하지 않는 값을 <strong>상수</strong>라고 부릅니다. 다만 두 변수 사이의 관계라고 다 함수인 것은 아닙니다. 수업에서 선생님이 못박은 조건은 단 하나, <strong>&laquo;하나의 x에 하나의 y&raquo;</strong>여야 한다는 것입니다.</p>
-<div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:4px">y = 3x 에서 x에 7을 넣으면 y는 21 하나로 정해진다.</p>
-<p style="margin-bottom:0">y = 4x &minus; 1 에서 y가 15가 되게 하는 x는? 4x &minus; 1 = 15, x = 4</p>
+<p>일차함수 y = ax + b 에서 아직 값이 정해지지 않은 a, b 를 <strong>미정계수</strong>라고 부릅니다. &laquo;아직 정해지지 않은 계수&raquo;라는 뜻으로, 조건이 하나 주어지면 값이 정해집니다. 그런데 왜 두 가지만 있으면 그래프가 완성될까요 &mdash; 직선은 <strong>기울어진 정도</strong>와 <strong>높이</strong>만 정하면 더 이상 고를 것이 없기 때문입니다. 이 중 기울어진 정도, 곧 그래프의 <strong>모양</strong>을 정하는 것이 a 입니다.</p>
+<!-- ============ 세 직선이 y축의 같은 점을 지난다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">세 직선이 y축의 같은 점을 지난다</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 374" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="240.0" x2="242.0" y2="240.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="344.0" x2="138.0" y2="84.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="244.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="76.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="127.0" y="257.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="60.0,344.0 190.0,84.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="34.0,240.0 242.0,136.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="34.0,84.0 242.0,292.0" fill="none" stroke="var(--orange)" stroke-width="2.0"/><rect x="36.6" y="16.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="51.6" y="24.0" font-size="11" fill="var(--green)" text-anchor="start">y = 2x + 2</text><rect x="36.6" y="37.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="51.6" y="45.0" font-size="11" fill="var(--blue)" text-anchor="start">y = ½x + 2</text><rect x="36.6" y="58.0" width="10" height="10" fill="var(--orange)" fill-opacity="0.45" stroke="var(--orange)" stroke-width="1.4"/><text x="51.6" y="66.0" font-size="11" fill="var(--orange)" text-anchor="start">y = −x + 2</text><circle cx="138.0" cy="188.0" r="4.2" fill="var(--purple)"/></svg></div>
+<div class="u10-cap">y절편이 모두 2 라 <b>같은 자리</b>에서 출발하지만, 기울기가 달라 뻗어 가는 <b>모양</b>이 셋 다 다르다.</div>
 </div>
-<!-- ============ 함수는 「하나의 x 에 하나의 y」다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">함수는 「하나의 x 에 하나의 y」다</div>
-<div class="u9-2col">
-  <div class="u9-card on"><div class="u9-lab g">함수다</div>
-    <div class="u9-note" style="margin-top:0">y = 3x</div>
-    <div class="u9-map">
-      <div class="u9-col"><div class="u9-mapl">x</div>
-        <div class="u9-box">1</div><div class="u9-box">4</div><div class="u9-box">7</div></div>
-      <div class="u9-to">&rarr;<br>&rarr;<br>&rarr;</div>
-      <div class="u9-col"><div class="u9-mapl">y</div>
-        <div class="u9-box hit">3</div><div class="u9-box hit">12</div><div class="u9-box hit">21</div></div>
-    </div>
-    <div class="u9-ok">화살표가 하나씩만 나간다</div>
-  </div>
-  <div class="u9-card off"><div class="u9-lab r">함수가 아니다</div>
-    <div class="u9-note" style="margin-top:0">자연수 x 의 약수 y</div>
-    <div class="u9-map">
-      <div class="u9-col"><div class="u9-mapl">x</div>
-        <div class="u9-box">1</div><div class="u9-box">2</div><div class="u9-box">4</div></div>
-      <div class="u9-to">&rarr;<br>&rarr;<br>&rArr;</div>
-      <div class="u9-col"><div class="u9-mapl">y</div>
-        <div class="u9-box">1</div><div class="u9-box">1, 2</div><div class="u9-box bad">1, 2, 4</div></div>
-    </div>
-    <div class="u9-why">x = 4 하나에 y 가 셋이나 딸려 나온다</div>
-  </div>
+<p>반대로 y축을 만나는 높이, 곧 그래프의 <strong>위치</strong>를 정하는 것은 b 입니다.</p>
+<!-- ============ 기울어진 정도가 같으면 나란하다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">기울어진 정도가 같으면 나란하다</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 400" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="240.0" x2="242.0" y2="240.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="370.0" x2="138.0" y2="84.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="244.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="76.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="127.0" y="257.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="135.0" y1="136.0" x2="141.0" y2="136.0" stroke="var(--muted)" stroke-width="1.2"/><text x="121.0" y="140.1" font-size="11" fill="var(--muted)" text-anchor="end">4</text><line x1="135.0" y1="318.0" x2="141.0" y2="318.0" stroke="var(--muted)" stroke-width="1.2"/><text x="121.0" y="322.1" font-size="11" fill="var(--muted)" text-anchor="end">−3</text><polyline points="112.0,84.0 242.0,344.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="73.0,84.0 216.0,370.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="34.0,110.0 164.0,370.0" fill="none" stroke="var(--orange)" stroke-width="2.0"/><circle cx="138.0" cy="136.0" r="4.0" fill="var(--blue)"/><circle cx="138.0" cy="214.0" r="4.0" fill="var(--green)"/><circle cx="138.0" cy="318.0" r="4.0" fill="var(--orange)"/><rect x="36.6" y="16.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="51.6" y="24.0" font-size="11" fill="var(--blue)" text-anchor="start">y = −2x + 4</text><rect x="36.6" y="37.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="51.6" y="45.0" font-size="11" fill="var(--green)" text-anchor="start">y = −2x + 1</text><rect x="36.6" y="58.0" width="10" height="10" fill="var(--orange)" fill-opacity="0.45" stroke="var(--orange)" stroke-width="1.4"/><text x="51.6" y="66.0" font-size="11" fill="var(--orange)" text-anchor="start">y = −2x − 3</text></svg></div>
+<div class="u10-cap">셋 다 기울기가 &minus;2 라 <b>모양</b>이 똑같고, y축을 만나는 높이만 다르다. 기울기가 정하는 모양은 그대로인 채 높이만 달라진 것이다.</div>
 </div>
-<div class="u9-cap">x 를 하나 정했을 때 그에 맞는 y 가 <b>딱 하나</b>로 정해지면 y 는 x 의 함수다. 하나라도 여러 개가 나오는 x 가 있으면 함수가 아니다.</div>
-</div>
-    <div class="quiz" data-qid="b1" data-ans="11" data-type="num">
-      <div class="quiz-q">Q. y = 3x − 1 에서 x = 4 에 대응하는 y 의 값은?</div>
+    <div class="quiz" data-qid="b1" data-ans="-5" data-type="num">
+      <div class="quiz-q">Q. 일차함수 y = −5x + 8 의 그래프에서 모양을 정하는 수를 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: x 자리에 4를 그대로 대입해 계산한다.</div>
+      <div class="quiz-hint">힌트: y = ax + b 에서 모양을 정하는 수가 무엇인지 떠올린다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-<p>1-1에서 이미 정비례와 반비례를 배웠습니다. 그때는 &laquo;함수&raquo;라는 이름을 쓰지 않았을 뿐, 사실 둘 다 함수였습니다.</p>
-<!-- ============ 작년에 배운 정비례 &middot; 반비례도 사실 함수였다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">작년에 배운 정비례 &middot; 반비례도 사실 함수였다</div>
-<div class="u9-2col">
-  <div class="u9-card pick"><div class="u9-lab b">정비례</div>
-    <div class="u9-eq">y = 3x</div>
-    <div class="u9-note">x 를 7 로 정하면 y 는 21 <b>하나뿐</b></div>
-    <div class="u9-ok">&rarr; 이 단원에서 배울 <b>일차함수</b></div>
-  </div>
-  <div class="u9-card pick"><div class="u9-lab p">반비례</div>
-    <div class="u9-eq">y = <span class="u9-fr"><span class="up">12</span><span class="dn">x</span></span></div>
-    <div class="u9-note">x 를 &minus;6 으로 정하면 y 는 &minus;2 <b>하나뿐</b></div>
-    <div class="u9-ok">&rarr; 고등학교에서 배울 다른 종류의 함수</div>
-  </div>
+<p>값을 정확히 몰라도 <strong>부호</strong>만 알면 그래프의 대략적인 모습을 알 수 있습니다 &mdash; 시험에서는 부호만 묻는 문항이 자주 나오고, 반대로 그래프를 보고 a, b 의 부호를 읽어 내는 문항도 같은 무게로 나옵니다. 그리고 미정계수는 그래프가 지나는 <strong>점 하나</strong>를 대입하면 값이 정해집니다 &mdash; 뒤에서 식을 만들 때 계속 쓰는 방법입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">오른쪽 위로 향하면서 y축의 양의 부분에서 만나는 그래프라면 a &gt; 0, b &gt; 0 이다.</p>
+<p style="margin-bottom:0">y = 3x + b 의 그래프가 점 (1, 7) 을 지나면 3 + b = 7 이므로 b = 4.</p>
 </div>
-<div class="u9-cap">둘 다 「하나의 x 에 하나의 y」를 만족하므로 함수다. 작년에는 <b>함수</b>라는 이름만 쓰지 않았을 뿐, 이미 함수를 두 가지 배운 셈이다.</div>
+<!-- ============ 그래프를 그리려면 두 가지가 필요하다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">그래프를 그리려면 두 가지가 필요하다</div>
+<div class="u10-2col">
+ <div class="u10-card">
+  <div class="u10-lab g">모양을 정한다</div>
+  <div class="u10-eq">y = <span class="u10-hl g">a</span>x + b</div>
+  <div class="u10-note">기울기<br>얼마나 가파른가<br>어느 쪽으로 기우는가</div>
+ </div>
+ <div class="u10-card">
+  <div class="u10-lab o">위치를 정한다</div>
+  <div class="u10-eq">y = ax + <span class="u10-hl o">b</span></div>
+  <div class="u10-note">y절편<br>y축의 어느 높이에서<br>출발하는가</div>
+ </div>
 </div>
-<p>그런데 왜 &laquo;하나의 y에 하나의 x&raquo;가 아니라 반대로 말할까요? 여기서 중요한 것은 <strong>순서</strong>입니다. x를 먼저 정하고, 그에 따라 y가 결정되는 방향으로 약속합니다. x처럼 내가 먼저 값을 고르는 쪽을 <strong>독립변수</strong>, y처럼 그 값에 딸려 정해지는 쪽을 <strong>종속변수</strong>라고 부릅니다.</p>
-<!-- ============ 누가 먼저 정해지는가 &mdash; x 가 주인공이다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">누가 먼저 정해지는가 &mdash; x 가 주인공이다</div>
-<div class="u9-fact">
-  <div class="u9-in">x</div>
-  <div class="u9-ar">&rarr;</div>
-  <div class="u9-mach"><div class="nm">관계식에 넣는다</div>
-    <div class="st">y = 2x + 5</div></div>
-  <div class="u9-ar">&rarr;</div>
-  <div class="u9-outb">y</div>
+<div class="u10-note" style="text-align:center">
+ <span class="u10-eq">y = 2x + 3</span> 이면 모양은 2 가, 위치는 3 이 맡는다.
 </div>
-<div class="u9-2col" style="margin-top:10px">
-  <div class="u9-card"><div class="u9-lab b">독립변수 &nbsp;x</div>
-    <div class="u9-note" style="margin-top:0">혼자 알아서 변한다. 내가 <b>먼저</b> 아무 값이나 고른다.</div></div>
-  <div class="u9-card"><div class="u9-lab g">종속변수 &nbsp;y</div>
-    <div class="u9-note" style="margin-top:0">x 에 <b>딸려</b> 정해진다. 從(종)은 「따라간다」는 뜻이다.</div></div>
+<div class="u10-cap">두 값이 <b>서로 다른 일을 맡는다</b>. 그래서 하나만 바꾸면 나머지 하나는 그대로 남는다.</div>
 </div>
-<div class="u9-cap">그래서 「하나의 y 에 하나의 x」가 아니라 <b>「하나의 x 에 하나의 y」</b> 라고 말한다. 변하지 않는 정해진 값은 <b>상수</b> &mdash; 변수의 반대말이다.</div>
-</div>
-    <div class="quiz" data-qid="b2" data-ans="6" data-type="num">
-      <div class="quiz-q">Q. y = 2x + 5 에서 y 의 값이 17 이 되게 하는 x 의 값은?</div>
+    <div class="quiz" data-qid="b2" data-ans="9" data-type="num">
+      <div class="quiz-q">Q. 일차함수 y = −4x + b 의 그래프가 점 (2, 1) 을 지날 때, 이 그래프의 y절편을 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: y 자리에 17을 넣어 x에 대한 방정식을 푼다.</div>
+      <div class="quiz-hint">힌트: 점 (2, 1)을 대입해 b에 대한 방정식을 세운다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s2">
-    <div class="section-head"><span class="section-num">2</span><span class="section-title">함수 판별</span>
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">기울기의 부호</span>
       <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
 
-<p>함수인지 판별할 때 실제로 하는 일은 하나뿐입니다. x에 값을 하나 넣어 보고, 그 x에 대응하는 y가 몇 개 나오는지 세어 보는 것입니다. <strong>반례 하나만</strong> 찾으면 더 볼 것 없이 함수가 아니라고 판정할 수 있습니다 &mdash; 모든 x 를 확인할 필요가 없습니다.</p>
-<div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:4px">자연수 x의 배수 y &mdash; x = 3 이면 3, 6, 9, &hellip; 로 무수히 많다 &rarr; 함수가 아니다.</p>
-<p style="margin-bottom:0">자연수 x의 약수의 개수 y &mdash; x = 15 면 1, 3, 5, 15 로 4개, 세어 보면 언제나 하나 &rarr; 함수다.</p>
+<p>기울기의 <strong>부호</strong>가 정하는 것과 <strong>절댓값</strong>이 정하는 것은 서로 다른 이야기입니다. 절댓값이 크면 &laquo;가파르다&raquo;고 하는데, 수학의 말로 바꾸면 <strong>y축에 가깝다</strong>는 뜻입니다 &mdash; 시험 문장이 실제로 그렇게 나옵니다.</p>
+<!-- ============ 기울기의 부호가 방향을 정한다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">기울기의 부호가 방향을 정한다</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 262" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="128.0" x2="242.0" y2="128.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="232.0" x2="138.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="132.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><polyline points="34.0,232.0 242.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="34.0,24.0 242.0,232.0" fill="none" stroke="var(--red)" stroke-width="2.0"/><text x="180.9" y="53.8" font-size="11" fill="var(--green)" text-anchor="middle">a &gt; 0</text><text x="95.1" y="53.8" font-size="11" fill="var(--red)" text-anchor="middle">a &lt; 0</text></svg></div>
+<div class="u10-cap">기울기가 <b>양수</b>면 오른쪽으로 갈수록 올라가고, <b>음수</b>면 내려간다. 부호 하나만 봐도 그래프가 어느 쪽으로 뻗는지 안다.</div>
 </div>
-<!-- ============ 가르는 기준은 하나뿐이다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">가르는 기준은 하나뿐이다</div>
-<div class="u9-scroll"><table class="u9-tb">
-  <tr><th>x 와 y 의 관계</th><th>x = 6 일 때 y</th><th>함수?</th></tr>
-  <tr class="pick"><td>자연수 x 의 약수의 개수 y</td><td class="hit">4 &nbsp;(1, 2, 3, 6 이 네 개)</td><td class="hit">함수다</td></tr>
-  <tr><td>자연수 x 의 약수 y</td><td class="no">1, 2, 3, 6 &nbsp;&mdash; 네 개</td><td class="no">아니다</td></tr>
-  <tr><td>자연수 x 의 배수 y</td><td class="no">6, 12, 18, &hellip; &mdash; 무수히 많다</td><td class="no">아니다</td></tr>
-  <tr class="pick"><td>한 변이 x cm 인 정삼각형의 둘레 y cm</td><td class="hit">18</td><td class="hit">함수다</td></tr>
-  <tr><td>절댓값이 x 인 수 y</td><td class="no">6 과 &minus;6 &mdash; 두 개</td><td class="no">아니다</td></tr>
-</table></div>
-<div class="u9-cap">「약수」와 「약수의 <b>개수</b>」는 한 글자 차이지만 결과가 정반대다. 개수는 세어 보면 언제나 <b>하나의 수</b>로 떨어지기 때문이다.</div>
-</div>
-<p>시험에는 한 글자 차이로 답이 갈리는 보기가 자주 나옵니다. &laquo;약수&raquo;와 &laquo;약수의 <strong>개수</strong>&raquo;, &laquo;배수&raquo;와 &laquo;배수 중 100보다 작은 것의 <strong>개수</strong>&raquo;처럼, 개수를 세는 순간 여러 값이 하나의 수로 정리되어 함수가 됩니다.</p>
-    <div class="quiz" data-qid="b3" data-ans="1" data-type="num">
-      <div class="quiz-q">Q. 다음 중 y 가 x 의 함수가 <strong>아닌</strong> 것의 번호를 쓰시오.<br>① 자연수 x 의 약수 y &nbsp; ② 자연수 x 의 약수의 개수 y &nbsp; ③ 한 변이 x cm 인 정사각형의 넓이 y cm²</div>
+    <div class="quiz" data-qid="b3" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. 다음 중 그래프가 가장 가파른(y축에 가장 가까운) 것의 번호는?<br>① y = ⅓x ② y = −x + 2 ③ y = 2x + 11 ④ y = 9x + 7</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 각 보기에서 x에 값을 하나씩 넣어 y가 몇 개 나오는지 세어 본다.</div>
+      <div class="quiz-hint">힌트: 기울기의 절댓값이 클수록 y축에 가깝다는 것을 이용해 네 값을 비교한다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-    <div class="quiz" data-qid="b4" data-ans="2" data-type="num">
-      <div class="quiz-q">Q. 다음 중 y 가 x 의 함수인 것은 모두 몇 개인가?<br>ㄱ. 자연수 x 의 약수의 개수 y &nbsp; ㄴ. 절댓값이 x 인 수 y<br>ㄷ. 한 변이 x cm 인 정삼각형의 둘레 y cm &nbsp; ㄹ. 자연수 x 보다 큰 자연수 y</div>
+<p>절댓값이 커질수록 x축에서 멀어진다는 것과 y축에 가까워진다는 것은 <strong>같은 뜻</strong>입니다. 기울기가 음수인 것끼리 비교할 때는 부호를 떼고 절댓값만 비교합니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">y = 5x 와 y = ⅕x 중 y축에 더 가까운 것은 y = 5x 이다.</p>
+<p style="margin-bottom:0">y = &minus;x 와 y = &minus;7x 는 둘 다 오른쪽 아래로 향하지만 y = &minus;7x 가 더 가파르다.</p>
+</div>
+<!-- ============ 절댓값이 클수록 y축에 가깝다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">절댓값이 클수록 y축에 가깝다</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 314" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="154.0" x2="242.0" y2="154.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="284.0" x2="138.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="158.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><polyline points="112.0,284.0 164.0,24.0" fill="none" stroke="var(--purple)" stroke-width="2.0"/><polyline points="34.0,258.0 242.0,50.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="34.0,174.8 242.0,133.2" fill="none" stroke="var(--blue)" stroke-width="2.0"/><rect x="171.8" y="208.4" width="10" height="10" fill="var(--purple)" fill-opacity="0.45" stroke="var(--purple)" stroke-width="1.4"/><text x="186.8" y="216.4" font-size="11" fill="var(--purple)" text-anchor="start">y = 5x</text><rect x="171.8" y="231.4" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="186.8" y="239.4" font-size="11" fill="var(--green)" text-anchor="start">y = x</text><rect x="171.8" y="254.4" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="186.8" y="262.4" font-size="11" fill="var(--blue)" text-anchor="start">y = ⅕x</text></svg></div>
+<div class="u10-cap">기울기의 절댓값이 5 → 1 → ⅕ 로 작아질수록 직선이 <b>y축에서 멀어지고 x축에 가까워진다</b>. 가파른 정도를 재는 것이 절댓값이다.</div>
+</div>
+<p>&laquo;~보다 y축에 가깝다&raquo;가 조건으로 붙으면 절댓값의 부등식이 하나 생깁니다. 방향까지 함께 주어지면 범위가 양쪽에서 막혀 값을 셀 수 있게 됩니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = ax 가 오른쪽 위로 향하고 y = 3x 보다 x축에 가까우면 0 &lt; a &lt; 3 이므로 자연수 a 는 1, 2 의 2 개다.</p>
+</div>
+    <div class="quiz" data-qid="b4" data-ans="6" data-type="num">
+      <div class="quiz-q">Q. 일차함수 y = ax − 1 의 그래프가 오른쪽 위로 향하고, y = 7x 의 그래프보다 x축에 가깝다. 이때 자연수 a 는 모두 몇 개인가?</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: ㄱ~ㄹ 하나씩 x에 값을 넣어 그때 y가 몇 개 나오는지 세어 본다.</div>
+      <div class="quiz-hint">힌트: 오른쪽 위로 향한다는 것과 x축에 가깝다는 것을 각각 부등식으로 나타내 겹치는 범위를 찾는다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s3">
-    <div class="section-head"><span class="section-num">3</span><span class="section-title">함숫값</span>
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">사분면</span>
       <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
 
-<p><strong>f(x)</strong>는 기호일 뿐 f와 x의 곱이 아닙니다. 공장 이름은 g, h로 바꿔도 됩니다. y = f(x)라고 쓰면 y와 f(x)는 같은 것을 가리킵니다.</p>
+<p>일차함수의 그래프가 좌표평면을 지나는 자리를 이야기할 때는 사분면 번호를 씁니다.</p>
+<!-- ============ 좌표평면의 네 부분 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">좌표평면의 네 부분</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 262" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="128.0" x2="242.0" y2="128.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="232.0" x2="138.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="132.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="197.8" y="76.0" font-size="11" fill="var(--muted)" text-anchor="middle">제1사분면</text><text x="78.2" y="76.0" font-size="11" fill="var(--muted)" text-anchor="middle">제2사분면</text><text x="78.2" y="180.0" font-size="11" fill="var(--muted)" text-anchor="middle">제3사분면</text><text x="197.8" y="180.0" font-size="11" fill="var(--muted)" text-anchor="middle">제4사분면</text></svg></div>
+<div class="u10-cap">두 축이 평면을 넷으로 나눈다. 번호는 <b>오른쪽 위에서 시작해 시계 반대 방향</b>으로 붙는다. 축 위의 점은 어느 사분면에도 속하지 않는다.</div>
+</div>
+<p>네 가지 경우를 외우면 시험장에서 뒤섞입니다. 손으로 그려 보는 쪽이 언제나 빠르고 정확합니다 &mdash; 이 단원에서 가장 중요한 태도입니다. 일차함수의 그래프는 직선이므로 네 사분면 중 정확히 세 곳만 지납니다(y절편이 0이 아닌 한). 그래서 &laquo;지나지 않는 사분면&raquo;은 언제나 한 곳이고, 문제도 늘 그렇게 묻습니다.</p>
 <div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">f(x) = 5x 일 때 f(3) = 15</p>
+<p style="margin-bottom:4px">y = x + 5 (a &gt; 0, b &gt; 0) → 지나지 않는 사분면은 제4사분면이다.</p>
+<p style="margin-bottom:0">y = &minus;2x &minus; 5 (a &lt; 0, b &lt; 0) → 지나지 않는 사분면은 제1사분면이다.</p>
 </div>
-<!-- ============ f 는 재료를 넣으면 결과가 나오는 공장이다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">f 는 재료를 넣으면 결과가 나오는 공장이다</div>
-<div class="u9-fact">
-  <div class="u9-in">3</div>
-  <div class="u9-ar">&rarr;</div>
-  <div class="u9-mach"><div class="nm">공장 f</div>
-    <div class="st">&times; 6 한 다음<br>+ 1 한다</div></div>
-  <div class="u9-ar">&rarr;</div>
-  <div class="u9-outb">19</div>
+<!-- ============ 외우지 말고 그려서 확인한다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">외우지 말고 그려서 확인한다</div>
+<div class="diagram-wrap" style="max-width:280px;margin:14px auto"><svg class="dia" viewBox="0 0 280 274" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="178.0" x2="254.0" y2="178.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="188.0" y1="244.0" x2="188.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="263.0" y="182.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="188.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="177.0" y="195.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="185.0" y1="68.0" x2="191.0" y2="68.0" stroke="var(--muted)" stroke-width="1.2"/><text x="172.0" y="72.1" font-size="11" fill="var(--muted)" text-anchor="end">5</text><polyline points="34.0,222.0 232.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><text x="240.0" y="66.0" font-size="11" fill="var(--green)" text-anchor="middle">y = x + 5</text><circle cx="188.0" cy="68.0" r="4.4" fill="var(--blue)"/><circle cx="78.0" cy="178.0" r="4.4" fill="var(--orange)"/><text x="236.4" y="217.6" font-size="11" fill="var(--red)" text-anchor="middle">지나지 않는다</text></svg></div>
+<div class="u10-cap">y절편 자리에 점을 찍고 기울기대로 선을 그으면 어느 쪽이 비는지 바로 보인다. 이 그래프는 오른쪽 아래 구역만 비어 있다.</div>
 </div>
-<div class="u9-anatg" style="grid-template-columns:auto auto auto auto auto">
-  <span class="pt">f</span><span class="pt op">(</span><span class="pt">3</span><span class="pt op">)</span><span class="pt">&nbsp;= 19</span>
-  <span class="tg" style="color:var(--orange)">어느 공장</span><span class="tg"></span>
-  <span class="tg" style="color:var(--blue)">넣은 재료</span><span class="tg"></span>
-  <span class="tg" style="color:var(--green)">함숫값</span>
-</div>
-<div class="u9-cap">함수의 영어 이름 function 의 첫 글자를 따서 f 라 쓴다. 공장 이름은 g, h 로 바꿔도 되고, 나온 결과를 <b>함숫값</b>이라고 부른다.</div>
-</div>
-    <div class="quiz" data-qid="b5" data-ans="17" data-type="num">
-      <div class="quiz-q">Q. f(x) = 3x + 2 일 때 f(5) 의 값은?</div>
+    <div class="quiz" data-qid="b5" data-ans="2" data-type="num">
+      <div class="quiz-q">Q. 일차함수 y = 6x − 9 의 그래프가 지나지 않는 사분면은 제 몇 사분면인가? (숫자만 쓰시오)</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: x 자리에 5를 대입해 계산한다.</div>
+      <div class="quiz-hint">힌트: y절편 자리에 점을 찍고 기울기대로 그려 보면 어느 사분면이 비는지 보인다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-<div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">f(x) = ax &minus; 1 에서 f(3) = 8 이면 3a &minus; 1 = 8, a = 3</p>
-</div>
-<!-- ============ 결과를 알려 주면 공장의 설정을 거꾸로 찾을 수 있다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">결과를 알려 주면 공장의 설정을 거꾸로 찾을 수 있다</div>
-<div class="u9-flow">
-  <div class="u9-chk"><div class="u9-num">1</div><div>
-    <b>공장 설정에 모르는 수가 있다</b> &nbsp;<span class="u9-eq">f(x) = ax &minus; 1</span></div></div>
-  <div class="u9-chk"><div class="u9-num o">2</div><div>
-    <b>아는 것을 대입한다</b> &mdash; 3 을 넣었더니 8 이 나왔다면
-    <span class="u9-eq">f(3) = 3a &minus; 1 = 8</span></div></div>
-  <div class="u9-chk"><div class="u9-num g">3</div><div>
-    <b>방정식을 푼다</b> &nbsp;<span class="u9-eq">3a = 9</span> 이므로
-    <span class="u9-eq">a = 3</span> &mdash; 공장 설정이 밝혀졌다</div></div>
-  <div class="u9-chk"><div class="u9-num p">4</div><div>
-    이제 <span class="u9-eq">f(x) = 3x &minus; 1</span> 이므로
-    <b>어떤 값을 넣어도</b> 함숫값을 구할 수 있다</div></div>
-</div>
-<div class="u9-cap">함숫값을 구하는 것은 대입뿐이라 어렵지 않다. 시험에 자주 나오는 것은 이렇게 <b>거꾸로</b> 공장의 설정(상수)을 찾는 문제다.</div>
-</div>
-    <div class="quiz" data-qid="b6" data-ans="4" data-type="num">
-      <div class="quiz-q">Q. f(x) = ax + 1 에 대하여 f(2) = 9 일 때 상수 a 의 값은?</div>
+    <div class="quiz" data-qid="b6" data-ans="3" data-type="num">
+      <div class="quiz-q">Q. 일차함수 y = −½x + 4 의 그래프가 지나지 않는 사분면은 제 몇 사분면인가? (숫자만 쓰시오)</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: x에 2를 대입한 식을 9와 같다고 놓고 a에 대한 방정식을 푼다.</div>
+      <div class="quiz-hint">힌트: y절편에서 시작해 기울기의 부호대로 그려 보면 어느 쪽이 비는지 보인다.</div>
       <div class="quiz-fb"></div>
     </div>
-
-<p>규칙을 말로 정의한 함수도 함수입니다. 식이 없어도 x 하나에 결과가 하나면 충분합니다 &mdash; 시험에도 자주 나옵니다.</p>
-<div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:4px">f(x) = 12/x 일 때 f(&minus;6) = &minus;2 (분모에 x가 있어도 함수다)</p>
-<p style="margin-bottom:0">f(x) = (x를 3으로 나눈 나머지) 일 때 f(10) = 1</p>
-</div>
   </section>
   <section class="section" id="s4">
-    <div class="section-head"><span class="section-num">4</span><span class="section-title">일차함수</span>
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">평행과 일치</span>
       <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
 
-<p>일차함수는 <strong>y = ax + b</strong> (a, b는 상수, a &ne; 0) 꼴로 나타나는 함수입니다. 여기서 x의 계수 a를 <strong>일차항의 계수</strong>라 부르는데, 이것이 0이면 x가 통째로 사라져 상수함수가 되어 버리므로 <strong>a &ne; 0</strong>이라는 조건이 꼭 필요합니다. &laquo;일차식&raquo;은 앞 단원에서 배운 그대로 &mdash; 정리했을 때 x의 차수가 1인 식을 말합니다.</p>
+<p>두 직선이 놓이는 방식은 <strong>세 가지</strong>뿐입니다 &mdash; 기울기가 다르면 반드시 한 점에서 만나고, 같으면 겹치거나 나란하거나 둘 중 하나입니다.</p>
 <div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">y = (a + 2)x &minus; 1 이 일차함수이려면 일차항의 계수가 0이면 안 되므로 a + 2 &ne; 0, 즉 a &ne; &minus;2</p>
+<p style="margin-bottom:0">y = 3x + 1 과 y = 3x &minus; 4 &mdash; 기울기가 둘 다 3 이고 y절편이 다르므로 평행하다.</p>
 </div>
-<!-- ============ y 가 x 에 대한 <b>일차식</b>이어야 일차함수다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">y 가 x 에 대한 <b>일차식</b>이어야 일차함수다</div>
-<div class="u9-3col">
-  <div class="u9-card on"><div class="u9-lab g">일차함수</div>
-    <div class="u9-eq">y = 2x + 5</div><div class="u9-eq">y = &minus;x</div>
-    <div class="u9-ok">y = ax + b 꼴 (a &ne; 0)</div></div>
-  <div class="u9-card off"><div class="u9-lab r">아니다</div>
-    <div class="u9-eq">y = 7</div>
-    <div class="u9-why">x 가 없다 &mdash; 일차항의 계수가 0 이면 안 된다</div></div>
-  <div class="u9-card off"><div class="u9-lab r">아니다</div>
-    <div class="u9-eq">y = <span class="u9-fr"><span class="up">5</span><span class="dn">x</span></span></div>
-    <div class="u9-why">x 가 분모에 있으면 차수를 정할 수 없다</div></div>
+<!-- ============ 평행한 두 직선 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">평행한 두 직선</div>
+<div class="diagram-wrap" style="max-width:242px;margin:14px auto"><svg class="dia" viewBox="0 0 242 396" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="236.0" x2="216.0" y2="236.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="112.0" y1="366.0" x2="112.0" y2="80.0" stroke="var(--muted)" stroke-width="1.5"/><text x="225.0" y="240.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="112.0" y="72.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><line x1="109.0" y1="210.0" x2="115.0" y2="210.0" stroke="var(--muted)" stroke-width="1.2"/><text x="96.0" y="214.1" font-size="11" fill="var(--muted)" text-anchor="end">1</text><line x1="109.0" y1="340.0" x2="115.0" y2="340.0" stroke="var(--muted)" stroke-width="1.2"/><text x="96.0" y="344.1" font-size="11" fill="var(--muted)" text-anchor="end">−4</text><polyline points="60.0,366.0 155.3,80.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="103.3,366.0 198.7,80.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><circle cx="112.0" cy="210.0" r="4.0" fill="var(--green)"/><circle cx="112.0" cy="340.0" r="4.0" fill="var(--blue)"/><rect x="35.3" y="12.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="50.3" y="20.0" font-size="11" fill="var(--green)" text-anchor="start">y = 3x + 1</text><rect x="35.3" y="33.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="50.3" y="41.0" font-size="11" fill="var(--blue)" text-anchor="start">y = 3x − 4</text></svg></div>
+<div class="u10-cap">기울기가 둘 다 3 이라 아무리 늘여도 만나지 않는다. y절편이 서로 달라야 <b>겹치지 않고</b> 나란히 간다.</div>
 </div>
-<div class="u9-note" style="text-align:center">
-  괄호가 있으면 <b>먼저 정리한 뒤</b> 판단한다 &mdash;
-  <span class="u9-eq">y = x(x + 2) &minus; x<sup>2</sup></span> 은 정리하면
-  <span class="u9-eq">y = 2x</span> 라서 일차함수가 맞다.</div>
-<div class="u9-cap">겉모습만 보고 판단하면 틀린다. <b>정리한 결과</b>가 x 에 대한 일차식인지를 본다.</div>
+<div class="box box-red"><div class="box-title">⚠ 시험에서 가장 많이 틀리는 자리</div>
+<p style="margin-bottom:0">&laquo;평행&raquo;의 조건을 <strong>기울기 하나로만</strong> 적고 끝내면, 두 그래프가 완전히 겹치는 경우까지 답에 들어갑니다.</p>
 </div>
-<p>1-1의 반비례 y = a/x를 떠올려 보세요. 방금 ①에서 반비례도 &laquo;함수&raquo;라고 확인했지만, 이 반비례는 &laquo;일차함수&raquo;는 아닙니다. 함수인지와 일차함수인지는 서로 다른 질문입니다 &mdash; 반비례는 첫 번째 관문(하나의 x에 하나의 y)은 통과하지만, 두 번째 관문(정리했을 때 x에 대한 일차식)을 통과하지 못합니다.</p>
-    <div class="quiz" data-qid="b7" data-ans="3" data-type="num">
-      <div class="quiz-q">Q. y = (a − 3)x + 5 가 x 에 대한 일차함수가 되도록 하는 상수 a 의 조건은 a ≠ □ 이다. □ 는?</div>
+    <div class="quiz" data-qid="b7" data-ans="-2" data-type="num">
+      <div class="quiz-q">Q. 두 일차함수 y = (a − 3)x + 1 과 y = −5x + 2 의 그래프가 서로 평행할 때, 상수 a 의 값을 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 일차항의 계수가 0이 아니어야 한다는 조건을 a에 대한 식으로 쓴다.</div>
+      <div class="quiz-hint">힌트: 두 그래프가 평행하려면 기울기가 같아야 한다는 조건을 식으로 쓴다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-    <div class="quiz" data-qid="b8" data-ans="8" data-type="num">
-      <div class="quiz-q">Q. y = 2x(x − 1) − 2x² + 6 을 y = ax + b 꼴로 정리했을 때 b − a 의 값은?</div>
+<p>&laquo;일치한다&raquo;는 것은 <strong>두 식이 같은 식</strong>이라는 뜻이므로, 계수를 하나씩 맞추면 됩니다. 문제는 &laquo;평행하다&raquo;를 조건으로 주기도 하고 반대로 <strong>구해야 할 결론</strong>으로 묻기도 합니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = ax + b 가 y = 7x &minus; 6 과 일치하려면 a = 7, b = &minus;6.</p>
+</div>
+<!-- ============ 두 직선이 놓일 수 있는 세 가지 모습 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">두 직선이 놓일 수 있는 세 가지 모습</div>
+<div class="u10-3col">
+ <div class="u10-card">
+  <div class="u10-lab b">한 점에서 만난다</div>
+  <div class="u10-note" style="text-align:left">
+   기울기가 <b>다르다</b><br><span style="color:var(--muted)">y절편은 무엇이든 상관없다</span>
+  </div>
+ </div>
+ <div class="u10-card on">
+  <div class="u10-lab g">평행하다</div>
+  <div class="u10-note" style="text-align:left">
+   기울기가 <b>같다</b><br>y절편이 <b>다르다</b>
+  </div>
+ </div>
+ <div class="u10-card pick">
+  <div class="u10-lab p">완전히 겹친다</div>
+  <div class="u10-note" style="text-align:left">
+   기울기가 <b>같다</b><br>y절편도 <b>같다</b>
+  </div>
+ </div>
+</div>
+<div class="u10-note" style="text-align:center">
+ 두 식을 <span class="u10-eq">y = ax + b</span>, <span class="u10-eq">y = cx + d</span> 라 하면
+ <b>a 와 c 를 먼저 비교</b>하고, 같을 때만 b 와 d 를 비교한다.
+</div>
+<div class="u10-cap">가운데와 오른쪽은 기울기가 같다는 점이 똑같다. <b>y절편까지 같은지</b>를 확인해야 둘을 가를 수 있다.</div>
+</div>
+    <div class="quiz" data-qid="b8" data-ans="-20" data-type="num">
+      <div class="quiz-q">Q. 두 일차함수 y = ax + 5 와 y = −4x + b 의 그래프가 일치할 때, ab 의 값을 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 괄호를 먼저 전개하고 동류항을 정리해 y = ax + b 꼴로 만든다.</div>
+      <div class="quiz-hint">힌트: 두 식이 일치하려면 x의 계수와 상수항이 각각 같아야 한다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s5">
-    <div class="section-head"><span class="section-num">5</span><span class="section-title">평행이동</span>
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">식 구하기(1)</span>
       <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
 
-<p>일차함수의 그래프를 그리는 절차는 간단합니다. x 값을 몇 개 정한다 &rarr; 함숫값을 구한다 &rarr; 순서쌍으로 점을 찍는다 &rarr; 점을 잇는다.</p>
-<!-- ============ 표에서 얻은 점을 이으면 그래프가 된다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">표에서 얻은 점을 이으면 그래프가 된다</div>
-<div class="diagram-wrap" style="max-width:216px;margin:14px auto"><svg class="dia" viewBox="0 0 216 348" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="214.0" x2="190.0" y2="214.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="86.0" y1="318.0" x2="86.0" y2="32.0" stroke="var(--muted)" stroke-width="1.5"/><text x="199.0" y="218.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="86.0" y="24.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="75.0" y="231.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="164.0" y1="211.0" x2="164.0" y2="217.0" stroke="var(--muted)" stroke-width="1.2"/><text x="164.0" y="233.0" font-size="11" fill="var(--muted)" text-anchor="middle">3</text><polyline points="60.0,318.0 155.3,32.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><text x="155.3" y="18.0" font-size="11" fill="var(--green)" text-anchor="middle">y = 3x − 1</text><circle cx="86.0" cy="240.0" r="3.6" fill="var(--orange)"/><text x="99.0" y="258.0" font-size="11" fill="var(--orange)" text-anchor="start">(0, −1)</text><circle cx="112.0" cy="162.0" r="3.6" fill="var(--orange)"/><text x="125.0" y="174.0" font-size="11" fill="var(--orange)" text-anchor="start">(1, 2)</text><circle cx="138.0" cy="84.0" r="3.6" fill="var(--orange)"/><text x="151.0" y="96.0" font-size="11" fill="var(--orange)" text-anchor="start">(2, 5)</text></svg></div>
-<div class="u9-cap">x 에 0, 1, 2 를 차례로 넣어 얻은 세 순서쌍을 찍고 이었다. 일차함수의 그래프는 언제나 <b>직선</b>이라 점 두어 개면 바로 이을 수 있다.</div>
+<p>식을 만들려면 언제나 <strong>두 가지</strong>가 필요합니다 &mdash; 모양 하나와 위치 하나, 앞에서 본 역할 분담이 그대로 쓰입니다. (1) 기울기와 y절편을 주면 → 자리에 그대로 넣으면 끝납니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">기울기가 3 이고 y절편이 &minus;6 → y = 3x &minus; 6.</p>
 </div>
-<p>그런데 왜 점 두어 개면 충분할까요? 일차함수의 그래프가 <strong>직선</strong>이기 때문입니다. 1-1의 정비례 그래프는 원점을 지나는 직선이었는데, 일차함수는 여기에 상수항이 붙어 위아래로 옮겨진 것뿐이라 마찬가지로 직선입니다.</p>
-<p>평행이동이란 도형을 일정한 방향으로 같은 거리만큼 밀어 옮기는 것입니다. 직선은 x축 방향으로 옮긴 것으로도, y축 방향으로 옮긴 것으로도 설명할 수 있지만, 두 가지를 동시에 생각하면 헷갈리므로 <strong>y축 방향 한 가지로 통일</strong>해서 봅니다. 직선이라서 가능한 편의입니다.</p>
-<!-- ============ 모양은 그대로, 위치만 위아래로 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">모양은 그대로, 위치만 위아래로</div>
-<div class="diagram-wrap" style="max-width:294px;margin:14px auto"><svg class="dia" viewBox="0 0 294 314" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="180.0" x2="268.0" y2="180.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="284.0" x2="138.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="277.0" y="184.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><line x1="216.0" y1="177.0" x2="216.0" y2="183.0" stroke="var(--muted)" stroke-width="1.2"/><text x="216.0" y="199.0" font-size="11" fill="var(--muted)" text-anchor="middle">3</text><polyline points="34.0,284.0 268.0,50.0" fill="none" stroke="var(--muted)" stroke-width="1.6" stroke-dasharray="6,4"/><polyline points="34.0,232.0 242.0,24.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="60.0,284.0 268.0,76.0" fill="none" stroke="var(--orange)" stroke-width="2.0"/><rect x="39.2" y="34.2" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="54.2" y="42.2" font-size="11" fill="var(--blue)" text-anchor="start">y = x + 2</text><rect x="39.2" y="56.2" width="10" height="10" fill="var(--muted)" fill-opacity="0.45" stroke="var(--muted)" stroke-width="1.4"/><text x="54.2" y="64.2" font-size="11" fill="var(--muted)" text-anchor="start">y = x</text><rect x="39.2" y="78.2" width="10" height="10" fill="var(--orange)" fill-opacity="0.45" stroke="var(--orange)" stroke-width="1.4"/><text x="54.2" y="86.2" font-size="11" fill="var(--orange)" text-anchor="start">y = x − 1</text><circle cx="138.0" cy="180.0" r="3.0" fill="var(--muted)"/><circle cx="138.0" cy="128.0" r="3.8" fill="var(--blue)"/><circle cx="138.0" cy="206.0" r="3.8" fill="var(--orange)"/></svg></div>
-<div class="u9-cap">세 직선은 기울어진 정도가 똑같고 <b>높이만</b> 다르다. 가운데 점선(y = x)을 기준으로 위의 것은 y축 방향으로 2만큼, 아래의 것은 &minus;1만큼 옮긴 것이다.</div>
+<p>(2) 기울기와 <strong>한 점</strong>을 주면 → y = a(x − m) + n 으로 씁니다.</p>
+<!-- ============ 한 점을 지나는 직선은 수없이 많다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">한 점을 지나는 직선은 수없이 많다</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 378" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="270.0" x2="242.0" y2="270.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="112.0" y1="348.0" x2="112.0" y2="62.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="274.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="112.0" y="54.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="101.0" y="287.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="138.0" y1="267.0" x2="138.0" y2="273.0" stroke="var(--muted)" stroke-width="1.2"/><text x="138.0" y="291.0" font-size="11" fill="var(--muted)" text-anchor="middle">1</text><line x1="109.0" y1="140.0" x2="115.0" y2="140.0" stroke="var(--muted)" stroke-width="1.2"/><text x="96.0" y="144.1" font-size="11" fill="var(--muted)" text-anchor="end">5</text><polyline points="34.0,348.0 177.0,62.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="60.0,62.0 242.0,244.0" fill="none" stroke="var(--blue)" stroke-width="2.0" stroke-dasharray="6,4"/><polyline points="34.0,174.7 242.0,105.3" fill="none" stroke="var(--orange)" stroke-width="2.0" stroke-dasharray="6,4"/><circle cx="138.0" cy="140.0" r="5.0" fill="var(--purple)"/><rect x="36.6" y="20.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="51.6" y="28.0" font-size="11" fill="var(--green)" text-anchor="start">y = 2x + 3</text></svg></div>
+<div class="u10-cap">점 (1, 5) 를 지나는 직선은 기울기에 따라 얼마든지 다르게 그려진다. 그래서 <b>점 하나만으로는 식이 정해지지 않고</b>, 기울기가 함께 있어야 한 개로 정해진다.</div>
 </div>
 <div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:4px">y = 2x &minus; 1 에서 x = 3 이면 y = 5 &rarr; 점 (3, 5)</p>
-<p style="margin-bottom:0">y = 2x 를 y축 방향으로 3만큼 평행이동하면 y = 2x + 3 이고, 이 그래프가 점 (&minus;1, k) 를 지나면 k = 1</p>
+<p style="margin-bottom:0">기울기가 2 이고 점 (1, 5) 를 지난다 → y = 2(x &minus; 1) + 5 → y = 2x + 3.</p>
 </div>
-    <div class="quiz" data-qid="b9" data-ans="7" data-type="num">
-      <div class="quiz-q">Q. y = 3x 의 그래프를 y축 방향으로 −5 만큼 평행이동한 그래프가 점 (4, k) 를 지날 때 k 의 값은?</div>
+<div class="box box-orange"><div class="box-title">한 걸음 더</div>
+<p style="margin-bottom:0">이 꼴이 왜 맞는지는 <strong>전개해서 x 의 계수를 보면</strong> 드러납니다 &mdash; 계수가 a 이므로 기울기 조건을 만족합니다. 그리고 x 자리에 m 을 넣으면 앞항이 0 이 되어 y 가 n 이 되므로, <strong>그 점을 지나는 것도 함께 만족</strong>합니다. 이 꼴은 <strong>고등학교에서 다시 만나는 도구</strong>라서, 지금 손에 익혀 두면 그때 새로 배울 것이 없습니다.</p>
+</div>
+    <div class="quiz" data-qid="b9" data-ans="-4" data-type="num">
+      <div class="quiz-q">Q. 기울기가 6 이고 점 (1, 2) 를 지나는 일차함수의 그래프의 y절편을 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: y = 3x 를 y축 방향으로 −5만큼 이동한 식을 먼저 쓰고 x = 4를 대입한다.</div>
+      <div class="quiz-hint">힌트: 기울기와 점 하나를 y = a(x − m) + n 꼴에 넣어 식을 세운 뒤 정리한다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-<p>직선의 식에서 상수항이 커지거나 작아지면 그래프도 그만큼 위아래로 움직입니다. 상수항이 곧 이동한 칸 수라는 것을 표로 확인해 봅시다.</p>
-<!-- ============ 뒤에 붙은 상수항이 위아래로 옮긴 칸 수다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">뒤에 붙은 상수항이 위아래로 옮긴 칸 수다</div>
-<div class="u9-anatg" style="grid-template-columns:auto auto auto">
-  <span class="pt">y = ax</span><span class="pt op">+</span><span class="pt" style="color:var(--orange)">b</span>
-  <span class="tg" style="color:var(--blue)">1&minus;1 에서 배운 정비례</span><span class="tg"></span>
-  <span class="tg" style="color:var(--orange)">y축 방향으로 b 만큼 평행이동</span>
+<p>조건을 그대로 읽지 말고 <strong>먼저 기울기로 바꿔 적는 습관</strong>이 이 단원 문제풀이의 시작입니다.</p>
+<!-- ============ 말만 바꿨을 뿐 전부 기울기다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">말만 바꿨을 뿐 전부 기울기다</div>
+<div class="u10-say">
+ <div class="row">
+  <div class="txt">y = 3x &minus; 1 의 그래프와 <b>평행하다</b></div>
+  <div class="eq">기울기 = 3</div>
+ </div>
+ <div class="row">
+  <div class="txt">x 의 값이 <b>2 만큼 증가</b>할 때 y 의 값이 <b>6 만큼 증가</b>한다</div>
+  <div class="eq">기울기 = 6 ÷ 2</div>
+ </div>
+ <div class="row">
+  <div class="txt">x 의 값의 증가량에 대한 y 의 값의 증가량의 <b>비율</b>이 3 이다</div>
+  <div class="eq">기울기 = 3</div>
+ </div>
+ <div class="row">
+  <div class="txt">두 점 (1, 4), (5, 16) 을 <b>지난다</b></div>
+  <div class="eq">기울기 = (16 &minus; 4) &divide; (5 &minus; 1)</div>
+ </div>
 </div>
-<div class="u9-scroll" style="margin-top:8px"><table class="u9-tb">
-  <tr><th>x</th><td>&minus;2</td><td>&minus;1</td><td>0</td><td>1</td><td>2</td></tr>
-  <tr><th>y = &minus;x</th><td>2</td><td>1</td><td>0</td><td>&minus;1</td><td>&minus;2</td></tr>
-  <tr class="pick"><th>y = &minus;x + 4</th><td class="hit">6</td><td class="hit">5</td><td class="hit">4</td>
-      <td class="hit">3</td><td class="hit">2</td></tr>
-</table></div>
-<div class="u9-cap">같은 x 에 대해 함숫값이 <b>언제나 4 만큼 크다</b>. 그래서 그래프 위의 모든 점이 똑같이 4 칸씩 올라가고, 이것을 <b>y축 방향으로 4 만큼 평행이동</b>했다고 말한다.</div>
+<div class="u10-cap">시험에서는 기울기를 대놓고 알려 주지 않고 <b>돌려서 말한다</b>. 어떤 말이 나와도 먼저 기울기로 바꿔 놓는 연습이 필요하다.</div>
 </div>
-<div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">y = x + 2 를 y축 방향으로 q 만큼 평행이동해 y = x + 6 이 되었다면 q = 4</p>
-</div>
-    <div class="quiz" data-qid="b10" data-ans="-9" data-type="num">
-      <div class="quiz-q">Q. y = −2x + 1 의 그래프를 y축 방향으로 q 만큼 평행이동했더니 y = −2x − 8 가 되었다. q 의 값은?</div>
+    <div class="quiz" data-qid="b10" data-ans="8" data-type="num">
+      <div class="quiz-q">Q. y = −2x + 1 의 그래프와 평행하고 점 (3, 2) 를 지나는 일차함수의 그래프의 y절편을 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 이동 후 상수항에서 이동 전 상수항을 뺀 값이 이동량이다.</div>
+      <div class="quiz-hint">힌트: 평행한 직선은 기울기가 같다는 것을 이용해 식을 세운 뒤 점을 대입한다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s6">
-    <div class="section-head"><span class="section-num">6</span><span class="section-title">두 절편</span>
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">식 구하기(2)</span>
       <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
 
-<p><strong>x절편을 알면 점 하나, y절편을 알면 점 하나</strong>를 알게 됩니다. 그래서 두 절편만 알면 그래프를 그릴 수 있습니다.</p>
-<!-- ============ 그래프가 두 축을 만나는 자리 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">그래프가 두 축을 만나는 자리</div>
-<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 288" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="180.0" x2="242.0" y2="180.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="164.0" y1="258.0" x2="164.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="184.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="164.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="153.0" y="197.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="216.0" y1="177.0" x2="216.0" y2="183.0" stroke="var(--muted)" stroke-width="1.2"/><text x="216.0" y="199.0" font-size="11" fill="var(--muted)" text-anchor="middle">2</text><polyline points="73.0,258.0 190.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><text x="125.7" y="237.8" font-size="11" fill="var(--green)" text-anchor="middle">y = 2x + 4</text><circle cx="112.0" cy="180.0" r="4.4" fill="var(--orange)"/><circle cx="164.0" cy="76.0" r="4.4" fill="var(--blue)"/><text x="121.0" y="202.0" font-size="12" fill="var(--orange)" text-anchor="start">−2</text><text x="153.0" y="69.0" font-size="12" fill="var(--blue)" text-anchor="end">4</text></svg></div>
-<div class="u9-cap">이 그래프는 x축과 (&minus;2, 0) 에서, y축과 (0, 4) 에서 만난다. 그래서 <b>x절편은 &minus;2</b>, <b>y절편은 4</b> 다 &mdash; 점이 아니라 수 하나로 답한다.</div>
+<p>(3) <strong>두 점</strong>을 주면 → 기울기를 만든 다음에는 바로 앞에서 배운 y = a(x − m) + n 을 그대로 씁니다.</p>
+<!-- ============ 두 점 사이의 계단이 기울기다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">두 점 사이의 계단이 기울기다</div>
+<div class="diagram-wrap" style="max-width:242px;margin:14px auto"><svg class="dia" viewBox="0 0 242 366" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="258.0" x2="216.0" y2="258.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="86.0" y1="336.0" x2="86.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="225.0" y="262.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="86.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="75.0" y="275.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="112.0" y1="255.0" x2="112.0" y2="261.0" stroke="var(--muted)" stroke-width="1.2"/><text x="112.0" y="280.0" font-size="11" fill="var(--muted)" text-anchor="middle">1</text><line x1="164.0" y1="255.0" x2="164.0" y2="261.0" stroke="var(--muted)" stroke-width="1.2"/><text x="164.0" y="280.0" font-size="11" fill="var(--muted)" text-anchor="middle">3</text><line x1="83.0" y1="206.0" x2="89.0" y2="206.0" stroke="var(--muted)" stroke-width="1.2"/><text x="71.0" y="210.1" font-size="11" fill="var(--muted)" text-anchor="end">2</text><line x1="83.0" y1="50.0" x2="89.0" y2="50.0" stroke="var(--muted)" stroke-width="1.2"/><text x="71.0" y="54.1" font-size="11" fill="var(--muted)" text-anchor="end">8</text><polyline points="68.7,336.0 172.7,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><circle cx="112.0" cy="206.0" r="4.4" fill="var(--orange)"/><circle cx="164.0" cy="50.0" r="4.4" fill="var(--orange)"/><line x1="112.0" y1="206.0" x2="164.0" y2="206.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><line x1="164.0" y1="206.0" x2="164.0" y2="50.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><text x="138.0" y="231.0" font-size="11" fill="var(--purple)" text-anchor="middle">2</text><text x="176.0" y="132.0" font-size="11" fill="var(--purple)" text-anchor="start">6</text></svg></div>
+<div class="u10-cap">오른쪽으로 2 간 동안 위로 6 올라갔으니 기울기는 6 ÷ 2 다. <b>두 점만 있으면 기울기를 먼저 만들 수 있다.</b></div>
 </div>
-<p>절편을 답할 때는 좌표가 아니라 <strong>값 하나</strong>로 답해야 합니다.</p>
-<!-- ============ 절편을 물으면 <b>수 하나</b>로 답한다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">절편을 물으면 <b>수 하나</b>로 답한다</div>
-<div class="u9-2col">
-  <div class="u9-card off"><div class="u9-lab r">이렇게 답하면 안 된다</div>
-    <div class="u9-eq">x절편 = (&minus;3, 0)</div>
-    <div class="u9-why">이것은 <b>점</b>이지 절편이 아니다</div></div>
-  <div class="u9-card on"><div class="u9-lab g">이렇게 답한다</div>
-    <div class="u9-eq">x절편 = &minus;3</div>
-    <div class="u9-ok">절편은 <b>좌표 하나</b>, 즉 수다</div></div>
+<p>기울기를 만들 때 두 점의 순서는 상관없습니다 &mdash; 분자·분모가 함께 부호가 바뀌므로 값이 같습니다.</p>
+<div class="box box-red"><div class="box-title">⚠ 한쪽만 뒤집으면 부호가 반대가 된다</div>
+<p style="margin-bottom:0">두 점을 위아래로 적어 놓고 <strong>같은 방향</strong>으로 빼는 것이 안전합니다.</p>
 </div>
-<div class="u9-flow" style="margin-top:10px">
-  <div class="u9-chk"><div class="u9-num o">x</div><div>
-    <b>x절편</b>을 구하려면 &nbsp;<span class="u9-eq">y</span> 에 0 을 대입한다
-    &mdash; x축 위의 점은 y좌표가 0 이기 때문</div></div>
-  <div class="u9-chk"><div class="u9-num">y</div><div>
-    <b>y절편</b>을 구하려면 &nbsp;<span class="u9-eq">x</span> 에 0 을 대입한다
-    &mdash; 그러면 x 가 든 항이 모두 사라지고 <b>상수항만</b> 남는다</div></div>
+<!-- ============ 두 점이 주어지면 밟는 세 단계 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">두 점이 주어지면 밟는 세 단계</div>
+<div class="u10-step">
+ <div class="k">1</div>
+ <div class="v">두 점으로 <b>기울기부터</b> 만든다<br>
+   <span class="u10-eq">(8 &minus; 2) ÷ (3 &minus; 1) = 3</span></div>
+ <div class="k">2</div>
+ <div class="v">기울기와 <b>점 하나</b>를 가지고 식을 세운다<br>
+   <span class="u10-eq">y = 3(x &minus; 1) + 2</span>
+   <span style="color:var(--muted);font-size:12px">&nbsp; ← 둘 중 아무 점이나 써도 된다</span></div>
+ <div class="k">3</div>
+ <div class="v">괄호를 풀어 정리한다<br>
+   <span class="u10-eq" style="color:var(--green);font-weight:700">y = 3x &minus; 1</span></div>
 </div>
-<div class="u9-cap">구하려는 절편과 <b>반대쪽</b> 문자에 0 을 넣는다는 점이 헷갈리기 쉽다. y 에 0 을 대입한 식은 곧 일차방정식이라, x절편은 그 방정식의 <b>해</b>와 같다.</div>
+<div class="u10-cap">2 단계에서 쓴 <span class="u10-eq">y = a(x &minus; m) + n</span> 은 <b>점 (m, n) 을 지나면서 기울기가 a 인 직선</b>을 한 줄로 적은 것이다. 실제로 x 에 m 을 넣어 보면 y 가 n 이 된다.</div>
 </div>
-<div class="box box-orange"><div class="box-title">한 걸음 더</div>
-<p style="margin-bottom:0">x절편은 y = 0 을 넣어 푼 <strong>일차방정식의 해</strong>와 같습니다. 이 사실은 고등학교의 이차함수에서 아주 많이 쓰입니다 &mdash; 지금은 한 줄로만 기억해 두어도 충분합니다.</p>
-</div>
-    <div class="quiz" data-qid="b11" data-ans="5" data-type="num">
-      <div class="quiz-q">Q. y = 4x − 20 의 그래프의 x절편은?</div>
+    <div class="quiz" data-qid="b11" data-ans="-7" data-type="num">
+      <div class="quiz-q">Q. 두 점 (2, −1), (5, 8) 을 지나는 일차함수의 그래프의 y절편을 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: y에 0을 대입해 x에 대한 방정식을 푼다.</div>
+      <div class="quiz-hint">힌트: 두 점으로 기울기를 먼저 구한 뒤 y = a(x − m) + n 꼴로 식을 세운다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-<p>x절편과 y절편은 각각 점을 하나씩 알려 주므로, 둘을 알면 표를 만들 필요 없이 두 점을 찍어 자로 이으면 됩니다. 예를 들어 x절편이 2, y절편이 &minus;6인 직선이 있다고 합시다.</p>
-<!-- ============ 점 두 개면 직선 하나가 정해진다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">점 두 개면 직선 하나가 정해진다</div>
-<div class="diagram-wrap" style="max-width:228px;margin:14px auto"><svg class="dia" viewBox="0 0 228 306" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="129.0" x2="202.0" y2="129.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="97.0" y1="276.0" x2="97.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="211.0" y="133.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="97.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="86.0" y="146.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="55.0" y1="126.0" x2="55.0" y2="132.0" stroke="var(--muted)" stroke-width="1.2"/><text x="55.0" y="148.0" font-size="11" fill="var(--muted)" text-anchor="middle">−2</text><line x1="94.0" y1="213.0" x2="100.0" y2="213.0" stroke="var(--muted)" stroke-width="1.2"/><text x="88.0" y="217.1" font-size="11" fill="var(--muted)" text-anchor="end">−4</text><polyline points="90.0,276.0 174.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><text x="134.8" y="26.8" font-size="11" fill="var(--green)" text-anchor="middle">y = 3x − 6</text><circle cx="139.0" cy="129.0" r="4.4" fill="var(--orange)"/><circle cx="97.0" cy="255.0" r="4.4" fill="var(--orange)"/><text x="148.0" y="151.0" font-size="11" fill="var(--orange)" text-anchor="start">(2, 0)</text><text x="108.0" y="271.0" font-size="11" fill="var(--orange)" text-anchor="start">(0, −6)</text></svg></div>
-<div class="u9-cap">x절편 2 와 y절편 &minus;6 은 각각 <b>점 하나</b>를 알려 준다. 두 점을 찍어 자로 이으면 그래프가 완성된다 &mdash; 표를 만들 필요가 없다.</div>
+<p>(4) <strong>두 절편</strong>을 주면 → 결국 두 점을 준 것과 같아서 (3) 의 방법으로 돌아옵니다.</p>
+<div class="box box-red"><div class="box-title">⚠ 절편은 점이 아니라 수다</div>
+<p style="margin-bottom:0">&laquo;x절편이 p&raquo;를 점 (0, p) 로 잘못 읽는 실수가 가장 많습니다 &mdash; <strong>절편은 축 위에 있는 점의 좌표</strong>입니다.</p>
 </div>
-    <div class="quiz" data-qid="b12" data-ans="9" data-type="num">
-      <div class="quiz-q">Q. y = −2x + 6 의 그래프의 x절편과 y절편의 합은?</div>
-      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: x절편과 y절편을 각각 구한 뒤 두 값을 더한다.</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">x절편이 2, y절편이 6 → 두 점 (2, 0), (0, 6) 을 지나므로 기울기는 &minus;3.</p>
+</div>
+<!-- ============ 두 절편이 곧 두 점이다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">두 절편이 곧 두 점이다</div>
+<div class="diagram-wrap" style="max-width:216px;margin:14px auto"><svg class="dia" viewBox="0 0 216 314" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="232.0" x2="190.0" y2="232.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="86.0" y1="284.0" x2="86.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="199.0" y="236.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="86.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="75.0" y="249.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="68.7,24.0 155.3,284.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><circle cx="138.0" cy="232.0" r="4.6" fill="var(--orange)"/><text x="128.0" y="256.0" font-size="11" fill="var(--orange)" text-anchor="end">2</text><circle cx="86.0" cy="76.0" r="4.6" fill="var(--blue)"/><text x="99.0" y="67.0" font-size="11" fill="var(--blue)" text-anchor="start">6</text></svg></div>
+<div class="u10-cap">x절편이 2 면 점 (2, 0) 을, y절편이 6 이면 점 (0, 6) 을 지난다는 뜻이다. <b>두 점을 찍어 이으면 그래프가 완성된다.</b></div>
+</div>
+<p>그래프 그림이 주어지는 문제도 결국 그림에서 <strong>두 점이나 두 절편을 읽어 내는</strong> 것일 뿐입니다.</p>
+    <div class="quiz" data-qid="b12" data-ans="3/2|1.5" data-type="text">
+      <div class="quiz-q">Q. x절편이 4 이고 y절편이 −6 인 일차함수의 그래프의 기울기를 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 두 절편이 각각 알려 주는 두 점으로 기울기를 구한다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s7">
-    <div class="section-head"><span class="section-num">7</span><span class="section-title">기울기 &mdash; 오늘 가장 중요한 이야기</span>
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">활용 &mdash; 변하는 양</span>
       <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
 
-<p>수업에서 선생님이 &laquo;오늘 가장 중요한 이야기&raquo;라고 못박은 것이 바로 <strong>기울기</strong>입니다. 기울기는 <strong>(y의 증가량) &divide; (x의 증가량)</strong>입니다. 두 점 (x&#8321;, y&#8321;), (x&#8322;, y&#8322;) 에서는 (y&#8322; &minus; y&#8321;) / (x&#8322; &minus; x&#8321;) 로 계산합니다.</p>
-<!-- ============ 가로로 간 만큼 세로로 얼마나 올라갔나 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">가로로 간 만큼 세로로 얼마나 올라갔나</div>
-<div class="diagram-wrap" style="max-width:252px;margin:14px auto"><svg class="dia" viewBox="0 0 252 270" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="216.0" x2="226.0" y2="216.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="58.0" y1="240.0" x2="58.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="235.0" y="220.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="58.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="69.0" y="233.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="202.0" y1="213.0" x2="202.0" y2="219.0" stroke="var(--muted)" stroke-width="1.2"/><text x="202.0" y="235.0" font-size="11" fill="var(--muted)" text-anchor="middle">6</text><line x1="55.0" y1="144.0" x2="61.0" y2="144.0" stroke="var(--muted)" stroke-width="1.2"/><text x="49.0" y="148.1" font-size="11" fill="var(--muted)" text-anchor="end">3</text><polyline points="34.0,228.0 170.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><circle cx="58.0" cy="192.0" r="4.2" fill="var(--orange)"/><circle cx="154.0" cy="48.0" r="4.2" fill="var(--orange)"/><line x1="58.0" y1="192.0" x2="154.0" y2="192.0" stroke="var(--purple)" stroke-width="1.8" stroke-dasharray="5,4"/><line x1="154.0" y1="192.0" x2="154.0" y2="48.0" stroke="var(--purple)" stroke-width="1.8" stroke-dasharray="5,4"/><text x="106.0" y="180.0" font-size="11" fill="var(--purple)" text-anchor="middle">Δx = 4</text><text x="165.0" y="124.0" font-size="11" fill="var(--purple)" text-anchor="start">Δy = 6</text><text x="47.0" y="179.0" font-size="11" fill="var(--orange)" text-anchor="end">A(0, 1)</text><text x="144.0" y="35.0" font-size="11" fill="var(--orange)" text-anchor="end">B(4, 7)</text></svg></div>
-<div class="u9-cap">A 에서 B 까지 가는 동안 가로로 4, 세로로 6 만큼 갔다. 이 두 값의 <b>비</b> 가 기울기다. &Delta;x 는 x의 증가량, &Delta;y 는 y의 증가량을 줄여 쓴 기호다.</div>
+<p>활용 문제를 푸는 순서는 다음과 같습니다 &mdash; <strong>① x 와 y 를 정한다 → ② 기울기와 y절편을 찾는다 → ③ 식을 세운다 → ④ 확인한다.</strong> 수업에서 마지막 <strong>확인</strong>을 빠뜨리지 말라고 했습니다 &mdash; x 에 0 을 넣어 처음 값이 나오는지 보면 됩니다.</p>
+<!-- ============ 문장에서 두 값을 찾아낸다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">문장에서 두 값을 찾아낸다</div>
+<div class="u10-scroll"><table class="u10-tb">
+ <tr><th>문장에 나오는 말</th><th>식에서 맡는 자리</th><th>예</th></tr>
+ <tr><td><b>일정하게</b> 늘거나 주는 양<br>(1 분에, 1 개마다, 매초)</td>
+     <td class="hit">기울기 a</td><td>1 분에 3 L 씩 &rarr; 3</td></tr>
+ <tr><td><b>처음</b>에 있던 양<br>(시작할 때, 0 일 때)</td>
+     <td class="hit">y절편 b</td><td>처음 20 L &rarr; 20</td></tr>
+</table></div>
+<div class="u10-note" style="text-align:center">
+ 두 값을 찾으면 <span class="u10-eq">y = 3x + 20</span> 이 바로 나온다.
+ 5 분 뒤를 묻는다면 x 자리에 5 를 넣는다.
 </div>
-<div class="box box-red"><div class="box-title">⚠ 순서를 맞춘다</div>
-<p style="margin-bottom:0">분모와 분자에서 빼는 순서를 맞춰야 합니다. 분모를 &laquo;2에서 1을 뺐다&raquo;면 분자도 그래야 합니다. 뒤집으면 부호가 반대가 됩니다.</p>
+<div class="u10-cap">활용 문제에서 새로 배우는 것은 없다. <b>어느 수가 기울기이고 어느 수가 y절편인지</b>만 가려내면 나머지는 지금까지 하던 계산 그대로다.</div>
 </div>
-<div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">두 점 (1, 3), (5, 11) 을 지나는 직선의 기울기는 (11 &minus; 3) / (5 &minus; 1) = 2</p>
-</div>
-<p>기울기가 곧 일차항의 계수인 이유는, 정비례에서 x와 y가 같은 비율로 변하고 그 비율을 정하는 것이 a이기 때문입니다. 그래서 그래프 위 <strong>어느 두 점</strong>을 골라도 기울기는 같습니다.</p>
-<!-- ============ 기울기가 다르면 다른 직선이다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">기울기가 다르면 다른 직선이다</div>
-<div class="diagram-wrap" style="max-width:356px;margin:14px auto"><svg class="dia" viewBox="0 0 356 320" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="160.0" x2="294.0" y2="160.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="164.0" y1="290.0" x2="164.0" y2="30.0" stroke="var(--muted)" stroke-width="1.5"/><text x="303.0" y="164.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="164.0" y="22.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><line x1="60.0" y1="157.0" x2="60.0" y2="163.0" stroke="var(--muted)" stroke-width="1.2"/><text x="60.0" y="179.0" font-size="11" fill="var(--muted)" text-anchor="middle">−4</text><line x1="268.0" y1="157.0" x2="268.0" y2="163.0" stroke="var(--muted)" stroke-width="1.2"/><text x="268.0" y="179.0" font-size="11" fill="var(--muted)" text-anchor="middle">4</text><polyline points="120.7,290.0 207.3,30.0" fill="none" stroke="var(--red)" stroke-width="1.9"/><polyline points="34.0,290.0 294.0,30.0" fill="none" stroke="var(--orange)" stroke-width="1.9"/><polyline points="34.0,203.3 294.0,116.7" fill="none" stroke="var(--green)" stroke-width="1.9"/><polyline points="34.0,30.0 294.0,290.0" fill="none" stroke="var(--blue)" stroke-width="1.9"/><text x="207.3" y="15.0" font-size="11" fill="var(--red)" text-anchor="middle">y = 3x</text><text x="302.0" y="34.0" font-size="11" fill="var(--orange)" text-anchor="start">y = x</text><text x="302.0" y="120.7" font-size="11" fill="var(--green)" text-anchor="start">y = x/3</text><text x="302.0" y="294.0" font-size="11" fill="var(--blue)" text-anchor="start">y = −x</text></svg></div>
-<div class="u9-cap">네 직선 모두 원점을 지나지만 기울어진 정도가 전부 다르다. 기울기가 클수록 가파르고, <b>음수</b>면 오른쪽으로 갈수록 내려간다.</div>
-</div>
-    <div class="quiz" data-qid="b13" data-ans="-3" data-type="num">
-      <div class="quiz-q">Q. 두 점 (−1, 5), (3, −7) 을 지나는 직선의 기울기는?</div>
+    <div class="quiz" data-qid="b13" data-ans="10" data-type="num">
+      <div class="quiz-q">Q. 길이가 20 cm 인 양초에 불을 붙이면 1 분에 0.4 cm 씩 일정하게 짧아진다. x 분 후 남은 양초의 길이를 y cm 라 할 때, 25 분 후의 양초의 길이를 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: (y의 증가량)÷(x의 증가량)을 계산할 때 두 점에서 빼는 순서를 통일한다.</div>
+      <div class="quiz-hint">힌트: 일정하게 줄어드는 양이므로 기울기가 음수인 일차함수로 식을 세운다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-<p>증가량이 음수일 수도 있습니다 &mdash; &laquo;감소했다&raquo;는 말은 &laquo;음수만큼 증가했다&raquo;와 같은 말입니다.</p>
+<p>문장에서 &laquo;일정하게&raquo;가 나오면 일차함수를 쓸 수 있다는 신호입니다. 줄어드는 양은 기울기가 <strong>음수</strong>가 됩니다 &mdash; &laquo;빠져나간다·짧아진다·줄어든다&raquo;가 그 신호입니다.</p>
 <div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">y = &minus;2x + 1 에서 x가 4만큼 증가하면 y는 &minus;8만큼 증가한다(= 8만큼 감소한다)</p>
+<p style="margin-bottom:0">20 L 가 들어 있는 통에 1 분에 3 L 씩 넣으면 y = 3x + 20 이고, 5 분 뒤에는 35 L 이다.</p>
 </div>
-<!-- ============ a 는 모양을, b 는 위치를 정한다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">a 는 모양을, b 는 위치를 정한다</div>
-<div class="u9-anatg" style="grid-template-columns:auto auto auto auto">
-  <span class="pt">y =</span><span class="pt" style="color:var(--orange)">a</span>
-  <span class="pt">x +</span><span class="pt" style="color:var(--blue)">b</span>
-  <span class="tg"></span><span class="tg" style="color:var(--orange)">기울기<br>= 모양</span>
-  <span class="tg"></span><span class="tg" style="color:var(--blue)">y절편<br>= 위치</span>
+<p>문장에 나온 값을 그대로 쓰면 틀리기 쉽습니다 &mdash; x 를 무엇으로 놓았는지에 맞춰 기울기의 단위를 <strong>다시 계산</strong>해야 할 때가 있습니다.</p>
+<!-- ============ 단위를 먼저 맞춘다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">단위를 먼저 맞춘다</div>
+<div class="u10-flow">
+ <div class="u10-card off">
+  <div class="u10-lab r">그대로 쓰면 틀린다</div>
+  <div class="u10-note">「8 분에 20 L」 를 보고 기울기를 20 이라고 적는 실수</div>
+ </div>
+ <div class="u10-arrow">&darr;</div>
+ <div class="u10-card on">
+  <div class="u10-lab g">1 분에 얼마인지로 바꾼다</div>
+  <div class="u10-note"><span class="u10-eq">20 &divide; 8 = 2.5</span> &nbsp; 1 분에 2.5 L</div>
+ </div>
 </div>
-<div class="u9-2col" style="margin-top:8px">
-  <div class="u9-card"><div class="u9-lab o">a &mdash; 어떻게 그릴 것인가</div>
-    <div class="u9-note" style="margin-top:0">일차항의 계수가 곧 기울기다.
-      얼마나 가파른지, 올라가는지 내려가는지를 정한다.</div></div>
-  <div class="u9-card"><div class="u9-lab b">b &mdash; 어디에 그릴 것인가</div>
-    <div class="u9-note" style="margin-top:0">상수항이 곧 y절편이다.
-      기울기가 같아도 b 가 다르면 위아래로 다른 자리에 놓인다.</div></div>
+<div class="u10-note" style="text-align:center">
+ x 를 <b>분</b>으로 놓았으면 기울기도 <b>1 분당</b> 값이어야 한다.
 </div>
-<div class="u9-cap">그래프를 그리려면 <b>모양</b>과 <b>위치</b> 두 가지만 있으면 된다. 그래서 기울기와 y절편을 알려 주면 일차함수의 식이 곧바로 하나로 정해진다.</div>
+<div class="u10-cap">x 가 무엇을 세는 값인지 정한 다음, <b>기울기의 단위를 거기에 맞춘다</b>. 시간을 분으로 놓고 시간당 변화량을 쓰면 답이 통째로 어긋난다.</div>
 </div>
+<p>⚠ &laquo;몇 분 후인가&raquo;를 묻는 문제는 <strong>y 를 알고 x 를 구하는 것</strong>이라 대입 방향이 반대입니다. 식을 세울 때까지는 똑같고 마지막 한 줄만 방정식 풀이로 바뀝니다. &laquo;다 탄다·다 빠진다·바닥난다&raquo;는 <strong>y = 0</strong> 을 뜻합니다.</p>
 <div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">y = 7x &minus; 2 의 기울기는 7</p>
+<p style="margin-bottom:0">40 L 가 든 통에서 1 분에 5 L 씩 빠지면 y = &minus;5x + 40 이고, 물이 다 빠지는 것은 &minus;5x + 40 = 0 을 풀어 8 분 후다.</p>
 </div>
-    <div class="quiz" data-qid="b14" data-ans="-6" data-type="num">
-      <div class="quiz-q">Q. y = −3x + 2 에서 x 의 값이 2 만큼 증가할 때 y 의 증가량은?</div>
+    <div class="quiz" data-qid="b14" data-ans="75" data-type="num">
+      <div class="quiz-q">Q. 물이 300 L 들어 있는 물통에서 5 분마다 20 L 씩 일정하게 물이 빠져나간다. 물이 모두 빠지는 것은 몇 분 후인지 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: 기울기는 일차항의 계수와 같다. 그 값에 x의 증가량을 곱한다.</div>
+      <div class="quiz-hint">힌트: 5분마다 20L라는 표현을 1분당 값으로 먼저 바꾼 뒤, '다 빠진다'는 y = 0을 뜻한다는 것을 이용한다.</div>
       <div class="quiz-fb"></div>
     </div>
   </section>
   <section class="section" id="s8">
-    <div class="section-head"><span class="section-num">8</span><span class="section-title">넓이</span>
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">활용 &mdash; 도형</span>
       <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
 
-<p>이 섹션은 새 개념이 아니라 ⑥에서 배운 두 절편을 <strong>길이</strong>로 바꿔 쓰는 것입니다.</p>
-<div class="box box-red"><div class="box-title">⚠ 길이는 음수가 될 수 없다</div>
-<p style="margin-bottom:0">절편은 음수일 수 있지만 길이는 음수가 될 수 없습니다 &mdash; 넓이를 구할 때는 <strong>절댓값</strong>을 씁니다. 여기서 부호를 그대로 넣어 넓이가 음수로 나오는 실수가 가장 많습니다.</p>
+<p>움직이는 점 문제에서 x 로 놓는 것은 <strong>움직인 시간</strong>이고, 그러면 움직인 거리는 (속력) × x 가 됩니다.</p>
+<div class="box box-red"><div class="box-title">⚠ 시간과 거리를 헷갈리지 않는다</div>
+<p style="margin-bottom:0">x 를 거리로 놓으면 뒤의 조건이 전부 어긋납니다.</p>
 </div>
+<!-- ============ 움직인 시간을 x 로 놓는다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">움직인 시간을 x 로 놓는다</div>
+<div class="diagram-wrap" style="max-width:376px;margin:14px auto"><svg class="dia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 193"><polygon points="60.0,36.0 60.0,151.0 163.5,151.0" fill="var(--green)" fill-opacity="0.20" stroke="none"/><line x1="60.0" y1="36.0" x2="60.0" y2="151.0" stroke="var(--text)" stroke-width="1.7"/><line x1="60.0" y1="151.0" x2="336.0" y2="151.0" stroke="var(--text)" stroke-width="1.7"/><line x1="336.0" y1="151.0" x2="336.0" y2="36.0" stroke="var(--text)" stroke-width="1.7"/><line x1="336.0" y1="36.0" x2="60.0" y2="36.0" stroke="var(--text)" stroke-width="1.7"/><line x1="60.0" y1="36.0" x2="163.5" y2="151.0" stroke="var(--orange)" stroke-width="1.9"/><circle cx="163.5" cy="151.0" r="4.6" fill="var(--orange)"/><text x="51.0" y="30.0" font-size="12.5" fill="var(--text)" text-anchor="end">A</text><text x="51.0" y="167.0" font-size="12.5" fill="var(--text)" text-anchor="end">B</text><text x="345.0" y="167.0" font-size="12.5" fill="var(--text)" text-anchor="start">C</text><text x="345.0" y="30.0" font-size="12.5" fill="var(--text)" text-anchor="start">D</text><text x="176.5" y="137.0" font-size="12.5" fill="var(--orange)" text-anchor="start">P</text><text x="49.0" y="97.5" font-size="12.5" fill="var(--muted)" text-anchor="end">10 cm</text><text x="198.0" y="22.0" font-size="12.5" fill="var(--muted)" text-anchor="middle">24 cm</text><text x="111.8" y="175.0" font-size="12.5" fill="var(--orange)" text-anchor="middle">3x</text></svg></div>
+<div class="u10-cap">점 P 가 매초 3 cm 씩 움직였으니 x 초 뒤에는 B 에서 3x 만큼 와 있다. 색칠한 삼각형의 밑변이 바로 그 3x 이고, 높이는 처음부터 끝까지 10 cm 로 <b>변하지 않는다</b>.</div>
+</div>
+<p>변하는 길이와 <strong>변하지 않는 길이</strong>를 먼저 갈라 놓으면 식이 저절로 나옵니다. 직사각형에서는 높이가 끝까지 그대로여서 변하는 것이 밑변 하나뿐인 경우가 많습니다.</p>
 <div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">y = &minus;4x + 8 의 그래프와 두 축이 둘러싼 삼각형의 넓이는 ½ &times; 2 &times; 8 = 8</p>
+<p style="margin-bottom:0">직사각형 ABCD 에서 AB = 10 cm, BC = 24 cm 이고 점 P 가 B 에서 C 로 매초 3 cm 씩 움직이면, x 초 후 삼각형 ABP 의 넓이는 15x 다.</p>
 </div>
-<!-- ============ 두 절편이 직각삼각형의 두 변이 된다 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">두 절편이 직각삼각형의 두 변이 된다</div>
-<div class="diagram-wrap" style="max-width:207px;margin:14px auto"><svg class="dia" viewBox="0 0 207 335" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="234.0" x2="181.0" y2="234.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="76.0" y1="297.0" x2="76.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="190.0" y="238.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="76.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="65.0" y="251.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="160.0" y1="231.0" x2="160.0" y2="237.0" stroke="var(--muted)" stroke-width="1.2"/><text x="160.0" y="253.0" font-size="11" fill="var(--muted)" text-anchor="middle">4</text><polygon points="76.0,234.0 118.0,234.0 76.0,66.0" fill="var(--green)" fill-opacity="0.22" stroke="none" stroke-width="1.2"/><polyline points="65.5,24.0 133.8,297.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><text x="133.8" y="322.0" font-size="11" fill="var(--green)" text-anchor="middle">y = −4x + 8</text><circle cx="118.0" cy="234.0" r="4.2" fill="var(--orange)"/><circle cx="76.0" cy="66.0" r="4.2" fill="var(--orange)"/><text x="97.0" y="256.0" font-size="12" fill="var(--orange)" text-anchor="middle">2</text><text x="65.0" y="149.8" font-size="12" fill="var(--orange)" text-anchor="end">8</text></svg></div>
-<div class="u9-cap">그래프와 x축, y축이 만드는 도형은 <b>직각삼각형</b>이다. 두 변의 길이는 x절편 2 와 y절편 8 의 <b>절댓값</b>이다 &mdash; 길이에는 음수가 없다.</div>
-</div>
-    <div class="quiz" data-qid="b15" data-ans="16" data-type="num">
-      <div class="quiz-q">Q. y = 2x + 8 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이는?</div>
+    <div class="quiz" data-qid="b15" data-ans="36" data-type="num">
+      <div class="quiz-q">Q. 직사각형 ABCD 에서 AB = 12 cm, BC = 16 cm 이다. 점 P 가 점 B 를 출발하여 점 C 까지 매초 2 cm 씩 움직인다. 출발한 지 x 초 후 삼각형 ABP 의 넓이를 y cm² 라 할 때, x = 3 일 때의 y 의 값을 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: x절편과 y절편의 절댓값을 두 변으로 하는 직각삼각형의 넓이 공식을 쓴다.</div>
+      <div class="quiz-hint">힌트: 움직인 시간을 x로 놓고 변하지 않는 높이를 먼저 확인한 뒤 넓이 식을 세운다.</div>
       <div class="quiz-fb"></div>
     </div>
 
-<p>넓이를 거꾸로 알려 주고 상수를 찾게 하는 문제는, 절편을 문자로 두고 넓이 식을 세워 방정식으로 풉니다. 이때 <strong>a의 부호 조건</strong>(a &lt; 0 등)이 붙는 이유는 방정식의 해가 둘 나오기 때문입니다.</p>
+<p>같은 그림에서 남은 부분의 넓이는 <strong>전체에서 빼면</strong> 빠릅니다.</p>
 <div class="box box-green"><div class="box-title">📌 예제</div>
-<p style="margin-bottom:0">y = ax + 4 (a &lt; 0) 와 두 축이 둘러싼 삼각형의 넓이가 8이면 a = &minus;1</p>
+<p style="margin-bottom:0">같은 그림에서 사각형 APCD 의 넓이는 240 &minus; 15x 다.</p>
 </div>
-    <div class="quiz" data-qid="b16" data-ans="-2" data-type="num">
-      <div class="quiz-q">Q. y = ax + 6 (a < 0) 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이가 9 일 때 a 의 값은?</div>
+<!-- ============ 남은 쪽은 전체에서 빼면 빠르다 ============ -->
+<div class="u10-wrap">
+<div class="u10-t">남은 쪽은 전체에서 빼면 빠르다</div>
+<div class="diagram-wrap" style="max-width:376px;margin:14px auto"><svg class="dia" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 193"><polygon points="60.0,36.0 163.5,151.0 336.0,151.0 336.0,36.0" fill="var(--blue)" fill-opacity="0.20" stroke="none"/><line x1="60.0" y1="36.0" x2="60.0" y2="151.0" stroke="var(--text)" stroke-width="1.7"/><line x1="60.0" y1="151.0" x2="336.0" y2="151.0" stroke="var(--text)" stroke-width="1.7"/><line x1="336.0" y1="151.0" x2="336.0" y2="36.0" stroke="var(--text)" stroke-width="1.7"/><line x1="336.0" y1="36.0" x2="60.0" y2="36.0" stroke="var(--text)" stroke-width="1.7"/><line x1="60.0" y1="36.0" x2="163.5" y2="151.0" stroke="var(--blue)" stroke-width="1.9"/><circle cx="163.5" cy="151.0" r="4.6" fill="var(--orange)"/><text x="51.0" y="30.0" font-size="12.5" fill="var(--text)" text-anchor="end">A</text><text x="51.0" y="167.0" font-size="12.5" fill="var(--text)" text-anchor="end">B</text><text x="345.0" y="167.0" font-size="12.5" fill="var(--text)" text-anchor="start">C</text><text x="345.0" y="30.0" font-size="12.5" fill="var(--text)" text-anchor="start">D</text><text x="176.5" y="137.0" font-size="12.5" fill="var(--orange)" text-anchor="start">P</text><text x="49.0" y="97.5" font-size="12.5" fill="var(--muted)" text-anchor="end">10 cm</text><text x="198.0" y="22.0" font-size="12.5" fill="var(--muted)" text-anchor="middle">24 cm</text><text x="249.8" y="175.0" font-size="12.5" fill="var(--blue)" text-anchor="middle">24 − 3x</text></svg></div>
+<div class="u10-cap">P 가 3x 만큼 왔으면 남은 <span style="white-space:nowrap">PC</span> 는 24 &minus; 3x 다. 색칠한 사다리꼴을 직접 구해도 되고, <b>직사각형 전체에서 삼각형 ABP 를 빼도</b> 같은 값이 나온다.</div>
+</div>
+<div class="box box-red"><div class="box-title">⚠ x 의 범위를 확인한다</div>
+<p style="margin-bottom:0">점이 변을 벗어나면 그 식은 더 이상 맞지 않습니다. 구한 답이 그 범위 안에 있는지 확인하는 것이 이 유형의 <strong>마지막 단계</strong>입니다.</p>
+</div>
+<p>여기서도 넓이를 주고 <strong>시각을 묻는</strong> 문제가 나옵니다 &mdash; 식을 세운 뒤 방정식을 푸는 것까지가 한 세트입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">같은 그림에서 삼각형 ABP 의 넓이가 90 cm² 가 되는 것은 15x = 90 이므로 6 초 후다. (P 가 18 cm 를 갔으니 BC = 24 안에 있어 조건에 맞는다.)</p>
+</div>
+    <div class="quiz" data-qid="b16" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. 위 문제와 같은 직사각형에서 삼각형 ABP 의 넓이가 60 cm² 가 되는 것은 출발한 지 몇 초 후인지 구하시오.</div>
       <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-      <div class="quiz-hint">힌트: x절편을 a를 써서 나타내고, 절댓값을 이용해 넓이에 대한 방정식을 세운다.</div>
+      <div class="quiz-hint">힌트: 넓이에 대한 방정식을 세워 x에 대해 푼 뒤, x의 범위 안에 있는지 확인한다.</div>
       <div class="quiz-fb"></div>
     </div>
-
-<p>직선이 하나가 아니라 두 개면 어떨까요? 아래 그림처럼 두 그래프가 y축 위 한 점에서 만나면, 그 점이 삼각형의 꼭짓점이 되고 두 x절편 사이가 밑변이 됩니다. 다음 연습문제의 심화 단계에서 이 경우도 만나게 됩니다.</p>
-<!-- ============ 두 직선이 x축과 만드는 삼각형 ============ -->
-<div class="u9-wrap">
-<div class="u9-t">두 직선이 x축과 만드는 삼각형</div>
-<div class="diagram-wrap" style="max-width:348px;margin:14px auto"><svg class="dia" viewBox="0 0 348 304" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="200.0" x2="322.0" y2="200.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="146.0" y1="248.0" x2="146.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="331.0" y="204.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="146.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="135.0" y="217.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="143.0" y1="136.0" x2="149.0" y2="136.0" stroke="var(--muted)" stroke-width="1.2"/><text x="137.0" y="140.1" font-size="11" fill="var(--muted)" text-anchor="end">4</text><polygon points="82.0,200.0 274.0,200.0 146.0,72.0" fill="var(--blue)" fill-opacity="0.2" stroke="none" stroke-width="1.2"/><polyline points="58.0,248.0 170.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="98.0,24.0 322.0,248.0" fill="none" stroke="var(--orange)" stroke-width="2.0"/><text x="94.3" y="99.4" font-size="11" fill="var(--green)" text-anchor="middle">y = 2x + 8</text><text x="278.3" y="161.0" font-size="11" fill="var(--orange)" text-anchor="middle">y = −x + 8</text><circle cx="82.0" cy="200.0" r="4.2" fill="var(--purple)"/><circle cx="274.0" cy="200.0" r="4.2" fill="var(--purple)"/><circle cx="146.0" cy="72.0" r="4.2" fill="var(--purple)"/><text x="90.0" y="222.0" font-size="12" fill="var(--purple)" text-anchor="start">−4</text><text x="266.0" y="222.0" font-size="12" fill="var(--purple)" text-anchor="end">8</text><text x="221.2" y="247.0" font-size="11" fill="var(--purple)" text-anchor="middle">밑변 = 4 + 8 = 12</text></svg></div>
-<div class="u9-cap">두 그래프가 y축 위에서 만나면 그 점이 <b>꼭짓점</b>, 두 x절편 사이가 <b>밑변</b>이 된다. 밑변의 길이는 두 x절편 사이의 거리다.</div>
-</div>
   </section>
   <section class="wrongnote" id="wrong">
     <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
@@ -1273,219 +1365,219 @@
     <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용 10문제를 모두 채점하면 심화가 열립니다. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
 
     <div class="pset" id="pset_basic">
-      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 &mdash; 조건을 그대로 식 두 개로 옮기면 풀린다</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 &mdash; 배운 개념을 그대로 적용하면 풀린다</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
       <div class="pbody">
-        <div class="prob" data-qid="pb1" data-ans="7" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>한 자루에 500원인 연필 x 자루의 값을 y 원이라 할 때, y = 3500 이 되게 하는 x 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb1" data-ans="2" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>다음 중 그래프가 오른쪽 위로 향하는 것의 번호를 쓰시오.<br>① y = −x + 3 ② y = ⅖x + 6 ③ y = −7x</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: y 자리에 3500을 대입해 x에 대한 방정식을 푼다.</div>
+          <div class="quiz-hint">힌트: 오른쪽 위로 향하려면 기울기의 부호가 어떠해야 하는지 생각한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb2" data-ans="2" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>다음 중 y 가 x 의 함수인 것은 모두 몇 개인지 구하시오.<br>ㄱ. 자연수 x 의 배수 y &nbsp; ㄴ. 자연수 x 의 약수의 개수 y<br>ㄷ. 키가 x cm 인 학생의 몸무게 y kg &nbsp; ㄹ. 한 변이 x cm 인 정사각형의 넓이 y cm²</div>
+        <div class="prob" data-qid="pb2" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>일차함수 y = −6x − 9 의 그래프가 지나지 않는 사분면은 제 몇 사분면인지 숫자만 쓰시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: ㄱ~ㄹ 하나씩 x에 값을 넣어 y가 몇 개 나오는지 세어 본다.</div>
+          <div class="quiz-hint">힌트: y절편 자리에 점을 찍고 기울기대로 그려 어느 사분면이 비는지 확인한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb3" data-ans="8" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>자연수 x 보다 작은 소수의 개수를 y 라 할 때, x = 20 에 대응하는 y 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb3" data-ans="-1" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>두 일차함수 y = 3x + 1 과 y = (a + 4)x − 5 의 그래프가 서로 평행할 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 20보다 작은 소수를 직접 나열해 개수를 센다.</div>
+          <div class="quiz-hint">힌트: 두 그래프가 평행하려면 기울기가 같아야 한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb4" data-ans="13" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>f(x) = −2x + 7 일 때 f(−3) 의 값을 구하시오.</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x 자리에 −3을 대입해 계산한다.</div>
+        <div class="prob" data-qid="pb4" data-ans="9/2|4.5" data-type="text">
+          <div class="pq"><span class="pnum">4.</span>기울기가 −2 이고 y절편이 9 인 일차함수의 그래프의 x절편을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 먼저 y = ax + b 식을 세우고 y에 0을 대입해 x절편을 구한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb5" data-ans="-3" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>y = (2a + 6)x − 5 가 x 에 대한 일차함수가 되도록 하는 상수 a 의 조건은 a ≠ □ 이다. □ 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb5" data-ans="-4" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>기울기가 3 이고 점 (−1, −7) 을 지나는 일차함수의 그래프의 y절편을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 일차항의 계수가 0이 아니라는 조건을 a에 대한 방정식으로 바꾼다.</div>
+          <div class="quiz-hint">힌트: 기울기와 점을 y = a(x − m) + n 꼴에 대입해 정리한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb6" data-ans="-7" data-type="num">
-          <div class="pq"><span class="pnum">6.</span>y = −5x 의 그래프를 y축 방향으로 3 만큼 평행이동한 그래프가 점 (2, k) 를 지날 때 k 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb6" data-ans="-3" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>두 점 (−1, 5), (3, −7) 을 지나는 직선의 기울기를 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 평행이동한 식을 먼저 쓰고 x = 2를 대입한다.</div>
+          <div class="quiz-hint">힌트: (y의 증가량) ÷ (x의 증가량)을 계산할 때 빼는 순서를 통일한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb7" data-ans="-5" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>y = x + 4 의 그래프를 y축 방향으로 k 만큼 평행이동하면 y = x − 1 의 그래프가 된다. k 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb7" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>x절편이 −2 이고 y절편이 8 인 일차함수의 그래프의 기울기를 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 이동 후 상수항에서 이동 전 상수항을 뺀다.</div>
+          <div class="quiz-hint">힌트: 두 절편이 알려 주는 두 점으로 기울기를 구한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb8" data-ans="5" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>f(x) = (x 를 4 로 나눈 나머지) 일 때 f(19) + f(30) 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pb8" data-ans="-5" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>y = 2x + 7 의 그래프와 평행하고 점 (4, 3) 을 지나는 직선의 y절편을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 19와 30을 각각 4로 나눈 나머지를 구해 더한다.</div>
+          <div class="quiz-hint">힌트: 평행한 직선의 기울기를 먼저 쓰고 점을 대입해 y절편을 구한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb9" data-ans="4" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>y = −3x + 12 의 그래프의 x절편을 구하시오.</div>
+        <div class="prob" data-qid="pb9" data-ans="38" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>길이가 30 cm 인 용수철에 무게가 1 g 인 추를 하나 달 때마다 0.5 cm 씩 일정하게 늘어난다. 16 g 의 추를 달았을 때 용수철의 길이는 몇 cm 인지 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: y에 0을 대입해 x에 대한 방정식을 푼다.</div>
+          <div class="quiz-hint">힌트: 늘어나는 길이를 기울기로, 처음 길이를 y절편으로 놓아 식을 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pb10" data-ans="3" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>두 점 (2, 3), (6, 15) 를 지나는 직선의 기울기를 구하시오.</div>
+        <div class="prob" data-qid="pb10" data-ans="48" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>직사각형 ABCD 에서 AB = 8 cm, BC = 15 cm 이다. 점 P 가 점 B 를 출발하여 점 C 까지 매초 3 cm 씩 움직일 때, 출발한 지 4 초 후 삼각형 ABP 의 넓이(cm²)를 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: (y의 증가량)÷(x의 증가량)을 계산한다.</div>
+          <div class="quiz-hint">힌트: 움직인 시간을 x로 놓고 변하지 않는 높이를 먼저 확인한다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
     </div>
     <div class="pset locked" id="pset_applied">
-      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 &mdash; 미지수 값에서 한 걸음 더 가거나, 조건이 한 겹 더 있다</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 &mdash; 조건을 한 번 더 해석해야 식이 나온다</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
       <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
-        <div class="prob" data-qid="pa1" data-ans="-3" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>y = 5x 의 그래프를 y축 방향으로 b 만큼 평행이동한 그래프의 x절편이 3/5 일 때, 상수 b 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa1" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>일차함수 y = ax + b 의 그래프가 오른쪽 아래로 향하고 y축의 양의 부분과 만난다. 이 그래프가 지나지 않는 사분면은 제 몇 사분면인지 숫자만 쓰시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 평행이동한 식에 x = 3/5, y = 0을 대입해 b에 대한 방정식을 세운다.</div>
+          <div class="quiz-hint">힌트: 오른쪽 아래로 향하고 y축의 양의 부분과 만난다는 것을 각각 부호로 바꾼 뒤 그려 본다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa2" data-ans="3" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>다음 중 y 가 x 의 함수인 것은 모두 몇 개인지 구하시오.<br>ㄱ. 절댓값이 x 인 수 y &nbsp; ㄴ. 자연수 x 와 서로소인 자연수 y<br>ㄷ. 반지름이 x cm 인 원의 넓이 y cm² &nbsp; ㄹ. 시속 x km 로 4 시간 동안 간 거리 y km<br>ㅁ. 자연수 x 를 3 으로 나눈 나머지 y</div>
+        <div class="prob" data-qid="pa2" data-ans="-7" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>일차함수 y = −3x + 7 의 그래프를 y축 방향으로 k 만큼 평행이동하였더니 제1사분면을 지나지 않았다. 이때 k 의 값이 될 수 있는 가장 큰 정수를 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: ㄱ~ㅁ 하나씩 x에 값을 넣어 y가 몇 개 나오는지 세어 본다.</div>
+          <div class="quiz-hint">힌트: 기울기가 음수인 직선이 제1사분면을 비켜 가려면 y절편이 어떠해야 하는지 먼저 생각한다. y축 방향 평행이동이 식의 어느 자리를 바꾸는지 앞 단원에서 배운 대로 떠올린다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa3" data-ans="-15" data-type="num">
-          <div class="pq"><span class="pnum">3.</span>f(x) = ax − 3 에 대하여 f(−2) = 5 일 때, f(3) 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa3" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>일차함수 y = ax + 4 의 그래프가 y = −½x − 1 의 그래프와 평행할 때, 이 그래프의 x절편을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 먼저 f(−2) = 5로 a를 구한 뒤, 그 식에 x = 3을 대입한다.</div>
+          <div class="quiz-hint">힌트: 평행하다는 것으로 기울기를 먼저 정한 뒤 y에 0을 대입한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa4" data-ans="-6" data-type="num">
-          <div class="pq"><span class="pnum">4.</span>f(x) = a/x 에 대하여 f(3) = −4, f(−2) = b 일 때, a + b 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa4" data-ans="16" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>두 점 (−3, 8), (1, −4) 를 지나는 직선과 평행하고 점 (5, 1) 을 지나는 일차함수의 그래프의 y절편을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: f(3) = −4로 a를 먼저 구하고, 그 식에 x = −2를 대입해 b를 구한다.</div>
+          <div class="quiz-hint">힌트: 두 점으로 기울기를 구한 뒤 점 (5, 1)을 지나는 평행한 직선의 식을 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa5" data-ans="2" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>y = ax² + 3x − 2x² + 5 가 x 에 대한 일차함수가 되도록 하는 상수 a 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa5" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>두 일차함수 y = (2a + 1)x − 3 과 y = 7x + b − 1 의 그래프가 일치할 때, 2a + b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x² 항의 계수가 0이 되어야 한다는 조건으로 a를 구한다.</div>
+          <div class="quiz-hint">힌트: 두 식이 일치하려면 x의 계수와 상수항이 각각 같아야 한다는 조건을 두 개 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa6" data-ans="7/4|1.75" data-type="text">
-          <div class="pq"><span class="pnum">6.</span>y = 2x − 1/2 의 그래프를 y축 방향으로 3/2 만큼 평행이동하면 점 (k, 9/2) 를 지난다. k 의 값을 구하시오.</div>
-          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 평행이동한 식에 y = 9/2를 대입해 k에 대한 방정식을 푼다.</div>
+        <div class="prob" data-qid="pa6" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>x절편이 5 이고 점 (1, 8) 을 지나는 일차함수의 그래프의 y절편을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: x절편으로 얻은 점과 주어진 점, 두 점으로 기울기를 구한 뒤 식을 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa7" data-ans="6" data-type="num">
-          <div class="pq"><span class="pnum">7.</span>오른쪽 그림과 같은 직선이 점 (4, a) 를 지날 때, a 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa7" data-ans="-12" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>일차함수 y = ax + b 의 그래프가 y = 4x − 1 의 그래프와 평행하고, y = −2x + 6 의 그래프와 x축 위에서 만난다. 상수 b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 「x축 위에서 만난다」 = 두 그래프의 x절편이 같다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa8" data-ans="-3" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>아래 그림과 같은 직선과 평행하고 점 (2, 1) 을 지나는 일차함수의 그래프의 y절편을 구하시오.</div>
           <!-- ============  ============ -->
-          <div class="u9-wrap">
-          <div class="u9-t"></div>
-          <div class="diagram-wrap" style="max-width:320px;margin:14px auto"><svg class="dia" viewBox="0 0 320 236" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="154.0" x2="294.0" y2="154.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="190.0" y1="206.0" x2="190.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="303.0" y="158.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="190.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="179.0" y="171.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="34.0,193.0 259.3,24.0" fill="none" stroke="var(--green)" stroke-width="2.2"/><circle cx="86.0" cy="154.0" r="4.2" fill="var(--orange)"/><circle cx="190.0" cy="76.0" r="4.2" fill="var(--orange)"/><text x="95.0" y="176.0" font-size="12" fill="var(--orange)" text-anchor="start">−4</text><text x="179.0" y="69.0" font-size="12" fill="var(--orange)" text-anchor="end">3</text></svg></div>
-          <div class="u9-cap"></div>
+          <div class="u10-wrap">
+          <div class="u10-t"></div>
+          <div class="diagram-wrap" style="max-width:242px;margin:14px auto"><svg class="dia" viewBox="0 0 242 262" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="180.0" x2="216.0" y2="180.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="138.0" y1="232.0" x2="138.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="225.0" y="184.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="138.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="127.0" y="197.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="60.0,232.0 164.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><circle cx="86.0" cy="180.0" r="4.2" fill="var(--orange)"/><text x="94.0" y="205.0" font-size="11" fill="var(--orange)" text-anchor="start">−2</text><circle cx="138.0" cy="76.0" r="4.2" fill="var(--blue)"/><text x="149.0" y="91.0" font-size="11" fill="var(--blue)" text-anchor="start">4</text></svg></div>
+          <div class="u10-cap"></div>
           </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 그림에서 x절편과 y절편을 읽어 직선의 식을 먼저 세운다.</div>
+          <div class="quiz-hint">힌트: 그림에서 기울기를 읽은 뒤 점 (2, 1)을 지나는 평행한 직선의 식을 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa8" data-ans="-4" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>일차함수 y = ax + b 의 그래프가 y = −2x + 6 의 그래프와 x절편이 같고, y = 5x − 6 의 그래프와 y절편이 같다. a + b 의 값을 구하시오.</div>
+        <div class="prob" data-qid="pa9" data-ans="150" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>물이 900 L 들어 있는 물탱크의 수도꼭지를 열면 15 분당 40 L 씩 일정한 양의 물이 빠져나간다. 남은 물의 양이 500 L 가 되는 것은 수도꼭지를 연 지 몇 분 후인지 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x절편이 같다는 것과 y절편이 같다는 것이 각각 무엇을 알려 주는지 먼저 정리한다.</div>
+          <div class="quiz-hint">힌트: 15분당 40L라는 표현을 1분당 값으로 먼저 바꾼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="pa9" data-ans="-5/2|-2.5" data-type="text">
-          <div class="pq"><span class="pnum">9.</span>일차함수 y = ax + 3 에서 x 의 값이 4 만큼 증가할 때 y 의 값은 10 만큼 감소한다. 상수 a 의 값을 구하시오.</div>
-          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x가 4 증가할 때 y가 얼마나 증가(또는 감소)하는지를 기울기의 정의에 그대로 대입한다.</div>
-          <div class="quiz-fb"></div>
-        </div>
-        <div class="prob" data-qid="pa10" data-ans="24" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>y = 3x + 12 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이를 구하시오.</div>
+        <div class="prob" data-qid="pa10" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>직사각형 ABCD 에서 AB = 6 cm, BC = 20 cm 이다. 점 P 가 점 B 를 출발하여 점 C 까지 매초 2 cm 씩 움직인다. 사각형 APCD 의 넓이가 78 cm² 가 되는 것은 출발한 지 몇 초 후인지 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: x절편과 y절편의 절댓값을 두 변으로 하는 직각삼각형의 넓이 공식을 쓴다.</div>
+          <div class="quiz-hint">힌트: 사각형 APCD의 넓이를 전체 직사각형에서 삼각형 ABP를 뺀 것으로 생각한다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
     </div>
     <div class="pset locked" id="pset_hard">
-      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 &mdash; 활용 유형이 두 겹 이상 겹친 문제</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 &mdash; 두 조건이 동시에 걸린 문제</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
       <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
       <div class="pbody">
         <div class="solution">
-          <div class="sol-head">🧩 단계별 풀이 &mdash; 함숫값 두 개로 두 상수 찾기</div>
-          <div class="sol-q">f(x) = 2x + b 에 대하여 f(1) = a, f(4) = 3a 일 때 a 와 b 를 구해 보자.</div>
-          <div class="step"><span class="s-label">STEP 1 &middot; 식 두 개를 만든다</span><br>f(1) = 2 + b = a &hellip; ①, f(4) = 8 + b = 3a &hellip; ②</div>
-          <div class="step"><span class="s-label">STEP 2 &middot; 두 식을 뺀다</span><br>② &minus; ① 을 하면 6 = 2a 이므로 <strong>a = 3</strong></div>
-          <div class="step"><span class="s-label">STEP 3 &middot; 처음 식에 대입한다</span><br>① 에 a = 3 을 넣으면 2 + b = 3 이므로 <strong>b = 1</strong></div>
-          <div class="step"><span class="s-label">STEP 4 &middot; 확인</span><br>f(x) = 2x + 1 이면 f(1) = 3 = a, f(4) = 9 = 3a 로 맞습니다. (다음 문항 ph1 은 이것과 달리 <strong>기울기가 음수</strong>여서 부호를 한 번 더 살펴야 합니다.)</div>
+          <div class="sol-head">🧩 단계별 풀이 &mdash; 사분면을 두 번 읽는다</div>
+          <div class="sol-q">일차함수 y = ax + b 의 그래프가 제1, 2, 4 사분면을 지날 때, y = bx + a 의 그래프가 지나지 않는 사분면을 찾아보자.</div>
+          <div class="step"><span class="s-label">STEP 1 &middot; 처음 그래프의 부호를 읽는다</span><br>지나지 않는 것이 제3사분면이므로, y절편에서 오른쪽 아래로 내려가는 모습이다 → <strong>a &lt; 0, b &gt; 0</strong></div>
+          <div class="step"><span class="s-label">STEP 2 &middot; 바꿔 넣은 식의 부호를 다시 정리한다</span><br>그러면 y = bx + a 는 기울기가 양수, y절편이 음수다 → 오른쪽 위로 향하며 y축 아래에서 만난다</div>
+          <div class="step"><span class="s-label">STEP 3 &middot; 그 모습이 비켜 가는 사분면을 찾는다</span><br>그런 직선이 비켜 가는 곳은 <strong>제2사분면</strong>이다</div>
+          <div class="step"><span class="s-label">STEP 4 &middot; 확인</span><br>이 유형은 두 단계입니다 &mdash; 먼저 주어진 그래프에서 부호를 읽고, 그 다음 바꿔 넣은 식의 모습을 다시 그립니다. 두 번째 단계에서 처음 그래프를 그대로 떠올리면 틀립니다. (다음 문제는 이것과 같은 유형이지만 사분면 구성이 다릅니다.)</div>
           <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 &rarr;</button>
         </div>
-        <div class="prob" data-qid="ph1" data-ans="-24" data-type="num">
-          <div class="pq"><span class="pnum">1.</span>f(x) = −3x + b 에 대하여 f(−2) = a, f(1) = 2a 일 때, a + b 의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph1" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>일차함수 y = ax + b 의 그래프가 제2, 3, 4 사분면을 지날 때, y = bx + a 의 그래프가 지나지 않는 사분면은 제 몇 사분면인지 숫자만 쓰시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 조건을 각각 식으로 쓰고 두 식을 빼서 a를 먼저 구한다. 기울기가 음수라 부호에 주의한다.</div>
+          <div class="quiz-hint">힌트: 지나지 않는 사분면 하나로 a, b 의 부호가 모두 정해진다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph2" data-ans="35" data-type="num">
-          <div class="pq"><span class="pnum">2.</span>f(n) = (n 의 소인수 중 가장 큰 수) 로 정할 때, f(90) × f(56) 의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph2" data-ans="-2" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>두 점 (a − 2, 7), (2a + 3, −5) 를 지나는 직선의 기울기가 −4 일 때, a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 90과 56을 각각 소인수분해해 가장 큰 소인수를 찾는다.</div>
+          <div class="quiz-hint">힌트: 두 점으로 기울기를 만드는 식을 세워 a에 대한 방정식을 푼다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph3" data-ans="-3/2|-1.5" data-type="text">
-          <div class="pq"><span class="pnum">3.</span>y = −3/4 x + b 의 그래프를 y축 방향으로 −2 만큼 평행이동하면 y = ax 의 그래프가 된다. ab 의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph3" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>세 점 (−2, 1), (1, 7), (a, 3a) 가 한 직선 위에 있을 때, a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 세 점이 한 직선 위에 있으면 어느 두 점을 골라도 기울기가 같다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph4" data-ans="3/2|1.5" data-type="text">
+          <div class="pq"><span class="pnum">4.</span>y = −3x + 2 의 그래프와 평행하고 점 (−2, 9) 를 지나는 직선이 x축, y축과 만나는 점을 각각 A, B 라 하자. 삼각형 AOB 의 넓이를 구하시오. (O 는 원점)</div>
           <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 평행이동한 식이 원점을 지난다는 것(상수항이 0)을 이용해 b를 먼저 구한다.</div>
+          <div class="quiz-hint">힌트: 좌표축과 둘러싸인 삼각형의 두 변은 x절편과 y절편이다. 길이는 절댓값으로 잡는다 — 앞 단원에서 배운 넓이 구하기를 그대로 쓴다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph4" data-ans="-2/3" data-type="text">
-          <div class="pq"><span class="pnum">4.</span>두 직선 ax + y − 6 = 0 과 −x + 3y − 9 = 0 이 x축 위에서 만날 때, 상수 a 의 값을 구하시오.</div>
-          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 「x축 위에서 만난다」는 두 직선의 x절편이 같다는 뜻이다.</div>
-          <div class="quiz-fb"></div>
-        </div>
-        <div class="prob" data-qid="ph5" data-ans="8" data-type="num">
-          <div class="pq"><span class="pnum">5.</span>세 점 (−1, 2), (3, 10), (a, 3a − 4) 가 한 직선 위에 있을 때, a 의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph5" data-ans="-5" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>두 일차함수 y = ax + 10 과 y = 4x − 8 의 그래프가 x축 위에서 만날 때, 상수 a 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 앞의 두 점으로 기울기를 구한 뒤, 세 번째 점과의 기울기도 같다는 식을 세운다.</div>
+          <div class="quiz-hint">힌트: 「x축 위에서 만난다」는 두 그래프의 x절편이 같다는 뜻이다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph6" data-ans="5/3" data-type="text">
-          <div class="pq"><span class="pnum">6.</span>일차함수 y = ax + b 의 그래프가 두 점 (−1, 8), (3, −4) 를 지날 때, 이 그래프의 x절편을 구하시오.</div>
+        <div class="prob" data-qid="ph6" data-ans="4/3" data-type="text">
+          <div class="pq"><span class="pnum">6.</span>서로 평행한 두 일차함수 y = ⅓x − 2, y = ax − b 의 그래프가 x축과 만나는 점의 좌표를 각각 (p, 0), (q, 0) 이라 할 때 p − q = 3 이다. 상수 a, b 에 대하여 a + b 의 값을 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 점으로 기울기와 식을 먼저 구한 뒤 y = 0을 대입한다.</div>
+          <div class="quiz-hint">힌트: 평행이라는 말이 두 식 중 무엇을 정해 주는지 먼저 적고 시작한다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph7" data-ans="-3/4|-0.75" data-type="text">
-          <div class="pq"><span class="pnum">7.</span>y = ax + 6 (a < 0) 의 그래프와 x축, y축으로 둘러싸인 삼각형의 넓이가 24 일 때, 상수 a 의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph7" data-ans="-15" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>두 점 (p + 2, 5), (3p − 1, −4) 를 지나는 직선의 기울기가 −3 이다. 이 직선을 y축 방향으로 q 만큼 평행이동한 그래프가 y = −3x + 2 의 그래프와 일치할 때, p + q 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 기울기 조건으로 p 를 먼저 구한 다음, 그 직선의 식을 세운다. y축 방향 평행이동이 식의 어느 자리를 바꾸는지 앞 단원에서 배운 대로 떠올린다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph8" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>직사각형 ABCD 에서 AB = 8 cm, BC = 12 cm 이다. 점 P 는 점 A 를 출발하여 AD 위를 점 D 까지 매초 2 cm 씩 움직이고, 점 Q 는 점 D 를 출발하여 DC 위를 점 C 까지 매초 1 cm 씩 움직인다. 두 점이 동시에 출발할 때, 사각형 PBQD 의 넓이가 42 cm² 가 되는 것은 몇 초 후인지 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 점이 동시에 움직인다. 각각이 x 초 동안 간 거리를 따로 적는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph9" data-ans="35/2|17.5" data-type="text">
+          <div class="pq"><span class="pnum">9.</span>어떤 물통에 물을 넣기 시작한 지 x 분 후의 물의 높이를 y cm 라 하면 y 는 x 의 일차함수이다. 4 분 후의 높이가 18 cm, 10 분 후의 높이가 30 cm 였다면, 물의 높이가 45 cm 가 되는 것은 물을 넣기 시작한 지 몇 분 후인지 구하시오.</div>
           <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 넓이 식을 세울 때 변의 길이에 절댓값을 쓴다. 부호 조건이 왜 붙었는지 생각한다.</div>
+          <div class="quiz-hint">힌트: 두 조건으로 기울기와 y절편을 먼저 구해 식을 세운다.</div>
           <div class="quiz-fb"></div>
         </div>
-        <div class="prob" data-qid="ph8" data-ans="-2" data-type="num">
-          <div class="pq"><span class="pnum">8.</span>y = ax − 8 의 그래프와 x축, y축으로 둘러싸인 도형의 넓이가 16 이고 x절편이 음수일 때, 상수 a 의 값을 구하시오.</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 넓이 식을 세울 때 변의 길이에 절댓값을 쓴다. x절편의 부호 조건으로 a의 부호를 정한다.</div>
-          <div class="quiz-fb"></div>
-        </div>
-        <div class="prob" data-qid="ph9" data-ans="6" data-type="num">
-          <div class="pq"><span class="pnum">9.</span>두 일차함수 y = 1/2 x + 2 와 y = −x + 2 의 그래프와 x축으로 둘러싸인 부분의 넓이를 구하시오.</div>
-          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: 두 그래프의 y절편이 같다는 점을 먼저 확인한다.</div>
-          <div class="quiz-fb"></div>
-        </div>
-        <div class="prob" data-qid="ph10" data-ans="10" data-type="num">
-          <div class="pq"><span class="pnum">10.</span>오른쪽 그림에서 두 일차함수 y = −2x + p, y = 1/3 x + q 의 그래프가 y축과 만나는 점을 각각 A, B, x축과 만나는 점을 각각 D, C 라 하자. AB : BO = 3 : 1 이고 CD = 10 일 때, p + q 의 값을 구하시오.</div>
+        <div class="prob" data-qid="ph10" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>아래 그림에서 직선 y = 2x + 4 와 직선 m 은 x축 위의 한 점에서 만나고, 직선 m 의 y절편은 10 이다. 두 직선과 y축으로 둘러싸인 삼각형의 넓이를 구하시오.</div>
           <!-- ============  ============ -->
-          <div class="u9-wrap">
-          <div class="u9-t"></div>
-          <div class="diagram-wrap" style="max-width:354px;margin:14px auto"><svg class="dia" viewBox="0 0 354 285" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="213.0" x2="328.0" y2="213.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="202.0" y1="255.0" x2="202.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="337.0" y="217.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="202.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="191.0" y="230.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="191.5,24.0 307.0,255.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="34.0,227.0 328.0,129.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><text x="259.6" y="76.5" font-size="11" fill="var(--green)" text-anchor="middle">y = −2x + p</text><text x="285.9" y="119.1" font-size="11" fill="var(--blue)" text-anchor="middle">y = x/3 + q</text><circle cx="202.0" cy="45.0" r="4.2" fill="var(--purple)"/><text x="191.0" y="60.0" font-size="12" fill="var(--purple)" text-anchor="end">A</text><circle cx="202.0" cy="171.0" r="4.2" fill="var(--purple)"/><text x="191.0" y="160.0" font-size="12" fill="var(--purple)" text-anchor="end">B</text><circle cx="76.0" cy="213.0" r="4.2" fill="var(--purple)"/><text x="85.0" y="235.0" font-size="12" fill="var(--purple)" text-anchor="start">C</text><circle cx="286.0" cy="213.0" r="4.2" fill="var(--purple)"/><text x="277.0" y="235.0" font-size="12" fill="var(--purple)" text-anchor="end">D</text></svg></div>
-          <div class="u9-cap"></div>
+          <div class="u10-wrap">
+          <div class="u10-t"></div>
+          <div class="diagram-wrap" style="max-width:220px;margin:14px auto"><svg class="dia" viewBox="0 0 220 404" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="314.0" x2="194.0" y2="314.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="114.0" y1="374.0" x2="114.0" y2="54.0" stroke="var(--muted)" stroke-width="1.5"/><text x="203.0" y="318.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="114.0" y="46.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><polygon points="74.0,314.0 114.0,234.0 114.0,114.0" fill="var(--purple)" fill-opacity="0.2" stroke="none" stroke-width="1.2"/><polyline points="44.0,374.0 194.0,74.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="62.0,374.0 126.0,54.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><circle cx="74.0" cy="314.0" r="4.0" fill="var(--orange)"/><circle cx="114.0" cy="234.0" r="4.0" fill="var(--green)"/><circle cx="114.0" cy="114.0" r="4.0" fill="var(--blue)"/><rect x="132.0" y="14.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="147.0" y="22.0" font-size="11" fill="var(--green)" text-anchor="start">y = 2x + 4</text><rect x="132.0" y="35.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="147.0" y="43.0" font-size="11" fill="var(--blue)" text-anchor="start">m</text></svg></div>
+          <div class="u10-cap"></div>
           </div>
           <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
-          <div class="quiz-hint">힌트: AB : BO 를 p, q로 나타내면 둘 사이의 관계식이 하나 나온다.</div>
+          <div class="quiz-hint">힌트: 삼각형의 세 꼭짓점 중 둘이 y축 위에 있다. 그 두 점 사이의 길이가 밑변이다 — 앞 단원에서 배운 좌표축이 둘러싼 넓이 구하기를 떠올린다.</div>
           <div class="quiz-fb"></div>
         </div>
       </div>
@@ -1500,13 +1592,9 @@
 </div>
 
 <nav class="unit-nav" aria-label="단원 이동">
-    <a class="pv" href="note_2-1_8_%EC%97%B0%EB%A6%BD%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%ED%99%9C%EC%9A%A9_PRO.html">
+    <a class="pv" href="note_2-1_9_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%841_PRO.html">
       <span class="un-lbl">← 이전 단원</span>
-      <span class="un-t">8단원 · 연립일차방정식의 활용</span>
-    </a>
-    <a class="nx" href="note_2-1_10_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%842_PRO.html">
-      <span class="un-lbl">다음 단원 →</span>
-      <span class="un-t">10단원 · 일차함수와 그래프(2)</span>
+      <span class="un-t">9단원 · 일차함수와 그래프(1)</span>
     </a>
 </nav>
 
@@ -1516,7 +1604,7 @@
 </footer>
 
 <script>
-const LS='isaacmath_note_2-1-9_v1';
+const LS='isaacmath_note_2-1-10_v1';
 let state={done:[],results:{},reviewed:false};
 function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
 function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
