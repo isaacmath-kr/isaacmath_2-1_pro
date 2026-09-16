@@ -1,0 +1,1719 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google tag (gtag.js) — isaacmath.kr 전용 GA4 속성. faithreason.kr 측정 ID를 재사용하지 말 것 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JS3GE709TF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-JS3GE709TF');
+</script>
+<!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2084707405154770"
+        crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>일차함수와 일차방정식의 관계 | 중2 1학기 11단원 | Isaac Math PRO</title>
+<meta name="description" content="일차방정식 ax+by+c=0 의 그래프, x축·y축에 평행한 직선, 일차함수·상수함수·함수가 아닌 직선의 구별, 연립방정식의 해와 두 직선의 교점, 해의 개수와 두 직선의 위치 관계, 직선으로 둘러싸인 도형까지 정리한 중2 1학기 11단원 강의노트입니다.">
+<link rel="canonical" href="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_11_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%EA%B4%80%EA%B3%84_PRO.html">
+<meta property="og:title" content="일차함수와 일차방정식의 관계 — 중2 1학기 11단원 강의노트">
+<meta property="og:description" content="일차방정식 ax+by+c=0 의 그래프, x축·y축에 평행한 직선, 일차함수·상수함수·함수가 아닌 직선의 구별, 연립방정식의 해와 두 직선의 교점, 해의 개수와 두 직선의 위치 관계, 직선으로 둘러싸인 도형까지 정리한 중2 1학기 11단원 강의노트입니다.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://isaacmath.kr/isaacmath_2-1_pro/note_2-1_11_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EC%9D%BC%EC%B0%A8%EB%B0%A9%EC%A0%95%EC%8B%9D%EC%9D%98%EA%B4%80%EA%B3%84_PRO.html">
+<style>
+  :root {
+    --bg:#0b1220; --bg2:#0f1830; --card:rgba(30,41,66,0.55); --card-solid:#162038;
+    --border:rgba(148,163,184,0.18); --text:#e7ecf3; --muted:#9aa7bd;
+    --green:#34d399; --green-d:#059669; --blue:#60a5fa; --orange:#fbbf24;
+    --red:#f87171; --purple:#c4b5fd; --gold:#fbbf24;
+  }
+  html.light {
+    --bg:#f3f5f9; --bg2:#eef1f7; --card:#ffffff; --card-solid:#ffffff;
+    --border:#e2e8f0; --text:#1a202c; --muted:#5b6675;
+    --green:#0f9d63; --blue:#2563eb; --orange:#c2870b; --red:#dc2626; --purple:#7c3aed;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic','맑은 고딕',sans-serif;
+    background:radial-gradient(1200px 600px at 80% -10%, rgba(52,211,153,0.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 10%, rgba(96,165,250,0.10), transparent 55%), var(--bg);
+    color:var(--text); line-height:1.7; -webkit-font-smoothing:antialiased; transition:background .3s,color .3s; }
+  p { margin-bottom:10px; } strong { color:var(--text); }
+  ul,ol { padding-left:20px; } li { margin-bottom:6px; } sup { font-size:.7em; } em { color:var(--muted); font-style:italic; }
+
+  .progress-bar { position:fixed; top:0; left:0; height:3px; width:0%;
+    background:linear-gradient(90deg,var(--green),var(--gold)); z-index:300; transition:width .1s; }
+
+  .page-header { position:relative; overflow:hidden; border-bottom:1px solid var(--border); }
+  .page-header::before { content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg, rgba(52,211,153,0.16), rgba(96,165,250,0.10) 50%, transparent); }
+  .page-header-inner { position:relative; max-width:820px; margin:0 auto; padding:48px 24px 34px; }
+  .brandline { display:flex; align-items:center; gap:10px; margin-bottom:14px; }
+  .pro-badge { font-size:11px; font-weight:800; letter-spacing:.08em; color:#1a1205;
+    background:linear-gradient(135deg,#fde68a,var(--gold)); padding:4px 10px; border-radius:6px; }
+  .brandline .label { font-size:13px; color:var(--muted); letter-spacing:.02em; }
+  .page-header h1 { font-size:32px; font-weight:800; letter-spacing:-0.03em; line-height:1.2; }
+  .page-header .sub { margin-top:10px; color:var(--muted); font-size:15px; }
+  .header-tools { display:flex; gap:8px; margin-top:18px; align-items:center; flex-wrap:wrap; }
+  .mini-btn { font-size:12.5px; color:var(--text); background:var(--card); border:1px solid var(--border);
+    padding:7px 12px; border-radius:8px; cursor:pointer; backdrop-filter:blur(6px); transition:.15s; }
+  .mini-btn:hover { border-color:var(--green); color:var(--green); }
+
+  .achieve { max-width:820px; margin:18px auto 0; padding:0 24px; }
+  .achieve-card { background:var(--card); border:1px solid var(--border); border-radius:16px;
+    padding:16px 20px; backdrop-filter:blur(10px); display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
+  .ring { --p:0; width:54px; height:54px; border-radius:50%; flex-shrink:0;
+    background:conic-gradient(var(--green) calc(var(--p)*1%), rgba(148,163,184,0.18) 0);
+    display:flex; align-items:center; justify-content:center; }
+  .ring span { width:42px; height:42px; border-radius:50%; background:var(--bg2);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:800; color:var(--green); }
+  .achieve-text { flex:1; min-width:160px; }
+  .achieve-text .t { font-weight:700; font-size:15px; } .achieve-text .d { font-size:13px; color:var(--muted); }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; }
+  .ach-badge { font-size:11px; font-weight:700; padding:5px 9px; border-radius:20px;
+    background:rgba(148,163,184,0.12); color:var(--muted); border:1px solid var(--border); }
+  .ach-badge.on { background:rgba(251,191,36,0.16); color:var(--gold); border-color:rgba(251,191,36,0.4); }
+
+  .toc { position:sticky; top:0; z-index:200; background:rgba(11,18,32,0.82); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--border); display:flex; justify-content:safe center; gap:2px; overflow-x:auto; padding:0 16px; }
+  html.light .toc { background:rgba(243,245,249,0.85); }
+  .toc a { padding:14px 10px; font-size:12.5px; color:var(--muted); text-decoration:none; white-space:nowrap;
+    border-bottom:2px solid transparent; transition:.2s; }
+  .toc a:hover { color:var(--green); } .toc a.active { color:var(--green); border-bottom-color:var(--green); }
+
+  .content { max-width:820px; margin:0 auto; padding:34px 24px 90px; }
+
+  .section { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:30px 30px 26px; margin-bottom:22px; backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.25); }
+  html.light .section { box-shadow:0 6px 20px rgba(15,23,42,0.06); }
+  .section-head { display:flex; align-items:center; gap:12px; margin-bottom:18px; }
+  .section-num { width:30px; height:30px; border-radius:9px; flex-shrink:0; font-size:14px; font-weight:800;
+    color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); display:flex; align-items:center; justify-content:center; }
+  .section-title { font-size:21px; font-weight:800; letter-spacing:-0.02em; }
+  .complete-btn { margin-left:auto; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:9px; cursor:pointer;
+    border:1px solid var(--border); background:transparent; color:var(--muted); transition:.15s; white-space:nowrap; }
+  .complete-btn:hover { border-color:var(--green); color:var(--green); }
+  .section.done { border-color:rgba(52,211,153,0.45); }
+  .section.done .complete-btn { background:rgba(52,211,153,0.14); color:var(--green); border-color:rgba(52,211,153,0.45); }
+
+  .box { border-radius:12px; padding:15px 18px; margin:14px 0; border:1px solid var(--border);
+    border-left-width:4px; background:rgba(148,163,184,0.06); }
+  .box-green { border-left-color:var(--green); background:rgba(52,211,153,0.08); }
+  .box-blue { border-left-color:var(--blue); background:rgba(96,165,250,0.08); }
+  .box-orange { border-left-color:var(--orange); background:rgba(251,191,36,0.08); }
+  .box-red { border-left-color:var(--red); background:rgba(248,113,113,0.08); }
+  .box-purple { border-left-color:var(--purple); background:rgba(196,181,253,0.08); }
+  .box-title { font-weight:800; font-size:13px; margin-bottom:6px; }
+  .box-green .box-title{color:var(--green);} .box-blue .box-title{color:var(--blue);}
+  .box-orange .box-title{color:var(--orange);} .box-red .box-title{color:var(--red);} .box-purple .box-title{color:var(--purple);}
+
+  .special-table { width:100%; border-collapse:collapse; margin:14px 0; font-size:14.5px; border-radius:10px; overflow:hidden; }
+  .special-table th { background:rgba(52,211,153,0.16); color:var(--green); padding:10px 12px; text-align:center; font-weight:700; }
+  .special-table td { padding:10px 12px; text-align:center; border-bottom:1px solid var(--border); }
+  .table-wrap { overflow-x:auto; margin:14px 0; }
+  .table-wrap .special-table { margin:0; }
+
+  .formula-big { background:linear-gradient(135deg, rgba(52,211,153,0.10), rgba(196,181,253,0.10));
+    border:2px solid var(--purple); border-radius:14px; padding:22px; text-align:center; margin:16px 0; }
+  .formula-big .f-title { font-size:13px; font-weight:800; color:var(--purple); margin-bottom:10px; }
+  .formula-big .f-body { font-size:20px; font-weight:800; line-height:1.8; }
+
+  .diagram-wrap { text-align:center; margin:16px 0; }
+  .diagram-wrap svg { max-width:100%; height:auto; width:100%; display:block; margin:0 auto; }
+
+  /* ── 2-1 11단원 「일차함수와 일차방정식의 관계」 전용 시각자료 CSS (vis11/_css11.txt) ── */
+/* ── 2-1 11단원 「일차함수와 일차방정식의 관계」 전용 시각자료 CSS (u11- 접두사) ──
+   공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
+.u11-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u11-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u11-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u11-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u11-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u11-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u11-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u11-card.on{border-color:var(--green);border-width:2px;}
+.u11-card.off{border-color:var(--red);border-width:2px;}
+.u11-card.pick{border-color:var(--blue);border-width:2px;}
+.u11-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u11-lab.g{color:var(--green);} .u11-lab.r{color:var(--red);}
+.u11-lab.b{color:var(--blue);} .u11-lab.o{color:var(--orange);} .u11-lab.p{color:var(--purple);}
+.u11-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u11-note .u11-eq,.u11-cap .u11-eq{font-size:13px;}
+.u11-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u11-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u11-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u11-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u11-tb th,.u11-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u11-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u11-tb td.hit{color:var(--green);font-weight:700;}
+.u11-tb td.no{color:var(--red);}
+.u11-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u11-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u11-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+        font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.u11-num.o{background:var(--orange);} .u11-num.p{background:var(--purple);} .u11-num.g{background:var(--green);}
+.u11-flow{display:flex;flex-direction:column;gap:8px;}
+.u11-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u11-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u11-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u11-hl.o{background:rgba(251,146,60,.18);} .u11-hl.g{background:rgba(52,211,153,.18);}
+.u11-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u11-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u11-sys .rows{display:flex;flex-direction:column;gap:5px;}
+/* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
+.u11-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+        font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
+.u11-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u11-eqg span{text-align:right;font-style:italic;}
+.u11-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u11-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u11-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u11-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u11-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+        column-gap:7px;row-gap:9px;justify-content:start;}
+.u11-mul .n{font-size:14px;color:var(--muted);}
+.u11-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u11-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u11-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u11-fr{display:inline-flex;flex-direction:column;align-items:center;line-height:1.25;}
+.u11-fr .up{padding:0 6px;font-style:italic;}
+.u11-fr .dn{padding:0 6px;border-top:1.5px solid var(--text);font-style:italic;}
+.u11-fr.a .up,.u11-fr.a .dn{color:var(--blue);}
+.u11-fr.b .up,.u11-fr.b .dn{color:var(--purple);}
+.u11-fr.c .up,.u11-fr.c .dn{color:var(--orange);}
+.u11-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u11-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u11-eqrow{text-align:center;overflow-x:auto;}
+.u11-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u11-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u11-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+@media (max-width:600px){
+  .u11-2col,.u11-3col{grid-template-columns:1fr;}
+  .u11-eqg{font-size:15px;} .u11-eq{font-size:15px;}
+  .u11-anatg .pt{font-size:18px;}
+  .u11-ratio{gap:9px;font-size:14px;}
+}
+
+/* ── 9단원 추가: 대응 그림 · 함수 공장 · 좌표평면 SVG ── */
+.u11-map{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;margin:6px 0;}
+.u11-col{display:flex;flex-direction:column;gap:6px;}
+.u11-box{border:1px solid var(--border);border-radius:8px;padding:6px 4px;text-align:center;
+        font-size:13px;background:var(--bg);font-family:"Times New Roman",Georgia,serif;}
+.u11-box.hit{border-color:var(--green);color:var(--green);font-weight:700;}
+.u11-box.bad{border-color:var(--red);color:var(--red);font-weight:700;}
+.u11-mapl{font-size:10px;color:var(--muted);text-align:center;margin-bottom:4px;letter-spacing:.03em;}
+.u11-to{font-size:16px;color:var(--muted);text-align:center;line-height:1.6;}
+.u11-fact{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:8px 0 2px;}
+.u11-in,.u11-outb{border:2px solid var(--blue);border-radius:8px;padding:7px 11px;font-size:14px;
+        font-family:"Times New Roman",Georgia,serif;font-style:italic;color:var(--blue);font-weight:700;}
+.u11-outb{border-color:var(--green);color:var(--green);}
+.u11-mach{border:2px solid var(--orange);border-radius:10px;padding:8px 13px;background:var(--bg);text-align:center;}
+.u11-mach .nm{font-size:11px;color:var(--orange);font-weight:700;margin-bottom:3px;}
+.u11-mach .st{font-size:12px;color:var(--text);line-height:1.5;font-family:"Times New Roman",Georgia,serif;}
+.u11-ar{font-size:18px;color:var(--muted);line-height:1;}
+.diagram-wrap svg.dia{width:100%;height:auto;display:block;}
+@media (max-width:600px){ .u11-map{gap:4px;} .u11-box{font-size:12px;} }
+
+/* ── 10단원 추가: 부호 카드 · 말바꾸기 · 대응표 ── */
+.u11-sign{display:grid;grid-template-columns:auto auto auto;align-items:center;
+          column-gap:10px;row-gap:9px;justify-content:center;font-size:13px;}
+.u11-sign .sy{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:16px;text-align:right;}
+.u11-sign .ds{color:var(--muted);text-align:center;}
+.u11-sign .mn{font-weight:700;text-align:left;}
+.u11-sign .mn.g{color:var(--green);} .u11-sign .mn.o{color:var(--orange);}
+.u11-say{display:flex;flex-direction:column;gap:7px;}
+.u11-say .row{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:9px;
+              border:1px solid var(--border);border-radius:9px;padding:8px 11px;background:var(--bg);}
+.u11-say .txt{font-size:12.5px;line-height:1.5;}
+.u11-say .eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:14px;
+             color:var(--green);font-weight:700;white-space:nowrap;}
+.u11-step{display:grid;grid-template-columns:auto 1fr;column-gap:10px;row-gap:9px;align-items:start;}
+.u11-step .k{width:22px;height:22px;border-radius:50%;background:var(--purple);color:#fff;
+             font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.u11-step .v{font-size:13px;line-height:1.6;padding-top:2px;}
+@media (max-width:600px){
+  .u11-say .row{grid-template-columns:1fr;gap:5px;}
+  .u11-sign{column-gap:6px;font-size:12px;}
+}
+
+/* ── 11단원 추가: 대응표 화살표 칸 · 소형 좌표평면 3칸 ── */
+.u11-tb td.ar{color:var(--muted);font-size:15px;border-left:0;border-right:0;width:24px;}
+.u11-3col .u11-card{padding:8px 6px;}
+.u11-3col .u11-lab{margin-bottom:2px;}
+.u11-arrow.sm{font-size:11px;}
+
+  .stepbox { background:rgba(148,163,184,0.06); border-radius:10px; padding:14px 18px; margin:10px 0; border-left:4px solid var(--purple); }
+  .stepbox .step-header { font-size:12px; font-weight:800; color:var(--purple); margin-bottom:6px; }
+
+  .solution { border:1px dashed var(--border); border-radius:12px; padding:16px 18px; margin:14px 0; background:rgba(196,181,253,0.05); }
+  .sol-head { display:flex; align-items:center; gap:8px; font-weight:800; font-size:14px; color:var(--purple); }
+  .sol-q { margin:6px 0 12px; font-weight:600; }
+  .step { display:none; padding:10px 14px; margin:8px 0; border-radius:10px; background:rgba(148,163,184,0.07); border-left:3px solid var(--purple); font-size:14.5px; }
+  .step.show { display:block; animation:fade .3s ease; }
+  @keyframes fade { from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:none;} }
+  .step .s-label { font-size:11px; font-weight:800; color:var(--purple); letter-spacing:.04em; }
+  .reveal-btn { margin-top:8px; font-size:13px; font-weight:700; padding:9px 16px; border-radius:9px; cursor:pointer; border:1px solid var(--purple); color:var(--purple); background:transparent; transition:.15s; }
+  .reveal-btn:hover { background:rgba(196,181,253,0.14); } .reveal-btn:disabled { opacity:.4; cursor:default; }
+
+  .quiz { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:14px; padding:18px; margin:14px 0; }
+  .quiz-q { font-weight:700; margin-bottom:12px; }
+  .quiz-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .quiz-input { width:150px; padding:9px 12px; font-size:15px; border-radius:9px; border:1px solid var(--border); background:var(--bg2); color:var(--text); }
+  .quiz-input:focus { outline:none; border-color:var(--green); }
+  .quiz-submit { padding:9px 18px; font-size:14px; font-weight:700; border-radius:9px; cursor:pointer; color:#04140d; background:linear-gradient(135deg,var(--green),var(--green-d)); border:none; }
+  .quiz-hint { font-size:12.5px; color:var(--muted); margin-top:8px; }
+  .quiz-fb { margin-top:10px; font-size:13.5px; font-weight:700; display:none; }
+  .quiz-fb.show { display:block; } .quiz-fb.ok { color:var(--green); } .quiz-fb.ng { color:var(--red); }
+
+  .wrongnote { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .wrongnote h2 { font-size:18px; font-weight:800; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+  .wrongnote .empty { color:var(--muted); font-size:14px; margin-top:8px; }
+  .wrong-item { padding:12px 14px; border-radius:10px; background:rgba(248,113,113,0.08); border-left:3px solid var(--red); margin-top:10px; font-size:14px; }
+  .wrong-item .wq { font-weight:600; } .wrong-item .wa { font-size:13px; color:var(--muted); margin-top:4px; }
+  .clear-btn { margin-top:14px; font-size:12.5px; padding:7px 12px; border-radius:8px; cursor:pointer; border:1px solid var(--border); background:transparent; color:var(--muted); }
+  .review-btn { margin-top:14px; margin-right:8px; font-size:12.5px; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; border:1px solid var(--purple); background:transparent; color:var(--purple); }
+  .review-btn.done { background:rgba(196,181,253,0.16); }
+
+  .gate { background:var(--card); border:1px solid var(--border); border-radius:18px; padding:28px 30px; margin-bottom:22px; backdrop-filter:blur(10px); }
+  .gate h2 { font-size:19px; font-weight:800; display:flex; align-items:center; gap:8px; }
+  .gate .desc { color:var(--muted); font-size:14px; margin-top:6px; }
+  .checklist { list-style:none; padding:0; margin:18px 0; }
+  .checklist li { display:flex; align-items:center; gap:12px; padding:12px 14px; border:1px solid var(--border); border-radius:10px; margin-bottom:8px; font-size:14px; background:rgba(148,163,184,0.05); }
+  .checklist li .mark { width:24px; height:24px; border-radius:50%; border:2px solid var(--muted); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:13px; color:var(--muted); font-weight:800; }
+  .checklist li.ok .mark { border-color:var(--green); background:var(--green); color:#04140d; }
+  .checklist li.ok { border-color:rgba(52,211,153,0.4); }
+  .start-btn { display:inline-block; margin-top:6px; padding:13px 24px; border-radius:11px; font-weight:800; font-size:15px; border:none; cursor:pointer; transition:.15s; }
+  .start-btn.locked { background:rgba(148,163,184,0.15); color:var(--muted); cursor:not-allowed; }
+  .start-btn.open { background:linear-gradient(135deg,var(--green),var(--green-d)); color:#04140d; box-shadow:0 6px 18px rgba(52,211,153,0.25); }
+
+  .practice-wrap { display:none; }
+  .practice-title { font-size:24px; font-weight:800; letter-spacing:-0.02em; margin:8px 0 4px; }
+  .practice-sub { color:var(--muted); font-size:14px; margin-bottom:18px; }
+  .pset { position:relative; background:var(--card); border:1px solid var(--border); border-radius:18px; padding:24px 28px; margin-bottom:20px; backdrop-filter:blur(10px); }
+  .pset-head { display:flex; align-items:center; gap:12px; margin-bottom:6px; flex-wrap:wrap; }
+  .diff-badge { font-size:12px; font-weight:800; padding:5px 12px; border-radius:20px; }
+  .diff-basic { background:rgba(96,165,250,0.16); color:var(--blue); }
+  .diff-applied { background:rgba(251,191,36,0.16); color:var(--orange); }
+  .diff-hard { background:rgba(196,181,253,0.16); color:var(--purple); }
+  .pset-title { font-size:18px; font-weight:800; }
+  .pcount { margin-left:auto; font-size:13px; color:var(--muted); font-weight:700; }
+  .pcount.clear { color:var(--green); }
+  .lockmsg { display:none; color:var(--muted); font-size:14px; padding:16px 0 2px; }
+  .pset.locked .pbody { display:none; }
+  .pset.locked .lockmsg { display:block; }
+  .pset.locked { opacity:.9; }
+  .prob { background:rgba(148,163,184,0.06); border:1px solid var(--border); border-radius:12px; padding:14px 16px; margin:10px 0; }
+  .prob .pq { font-weight:600; margin-bottom:10px; font-size:14.5px; }
+  .prob .pnum { color:var(--green); font-weight:800; margin-right:6px; }
+
+  .toast { position:fixed; left:50%; bottom:32px; transform:translateX(-50%) translateY(12px); z-index:400;
+    background:var(--card-solid); border:1px solid var(--border); color:var(--text); padding:12px 18px; border-radius:12px;
+    font-size:13.5px; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,0.35); opacity:0; transition:opacity .3s, transform .3s; max-width:90vw; text-align:center; }
+  .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+  .toast.ok { border-color:rgba(52,211,153,0.5); } .toast.ng { border-color:rgba(248,113,113,0.5); }
+  .confetti-canvas { position:fixed; inset:0; pointer-events:none; z-index:390; }
+  @keyframes wrongflash { 0%{box-shadow:0 0 0 0 rgba(248,113,113,0);} 30%{box-shadow:0 0 0 3px rgba(248,113,113,0.55);} 100%{box-shadow:0 0 0 0 rgba(248,113,113,0);} }
+  .wrongnote.flash { animation:wrongflash .7s ease; }
+
+  @media (max-width:600px) {
+    .page-header-inner{padding:32px 16px 24px;} .page-header h1{font-size:24px;}
+    .content{padding:24px 16px 70px;} .section,.gate,.pset,.wrongnote{padding:22px 18px;}
+  }
+  @media print {
+    :root{--bg:#fff;--bg2:#fff;--card:#fff;--card-solid:#fff;--border:#cbd5e1;--text:#111827;--muted:#475569;--green:#0f9d63;--blue:#2563eb;--orange:#c2870b;--red:#dc2626;--purple:#7c3aed;--gold:#b45309;}
+    body{background:#fff; color:#000;}
+    .progress-bar,.toc,.header-tools,.complete-btn,.reveal-btn,.quiz-submit,.clear-btn,.review-btn,.achieve,.start-btn{display:none!important;}
+    .section,.wrongnote,.gate,.pset{box-shadow:none; border:1px solid #ccc; backdrop-filter:none; break-inside:avoid;}
+    .step{display:block!important;} .practice-wrap{display:block!important;} .pset.locked .pbody{display:block!important;} .lockmsg{display:none!important;}
+  }
+  .unit-nav{max-width:900px;margin:44px auto 0;padding:0 20px;display:grid;
+    grid-template-columns:1fr 1fr;gap:12px;}
+  .unit-nav a{display:flex;flex-direction:column;gap:3px;padding:14px 18px;
+    background:var(--card);border:1px solid var(--border);border-radius:12px;
+    text-decoration:none;transition:border-color .15s, transform .15s;}
+  .unit-nav a:hover{border-color:var(--green);transform:translateY(-2px);}
+  .unit-nav .un-lbl{font-size:11.5px;font-weight:700;color:var(--muted);letter-spacing:.03em;}
+  .unit-nav .un-t{font-size:14.5px;font-weight:700;color:var(--text);letter-spacing:-.01em;}
+  .unit-nav .nx{text-align:right;grid-column:2;}
+  @media(max-width:600px){.unit-nav{grid-template-columns:1fr;}.unit-nav .nx{grid-column:1;text-align:left;}}
+  .site-foot{margin:40px auto 0;padding:22px 20px 30px;border-top:1px solid var(--border);
+    text-align:center;font-size:12.5px;color:var(--muted);line-height:1.9;}
+  .site-foot a{color:var(--muted);text-decoration:none;border-bottom:1px dashed var(--border);}
+  .site-foot a:hover{color:var(--green);border-color:var(--green);}
+  .site-foot .sep{margin:0 8px;opacity:.5;}
+
+  /* ── 2-1 2단원 「단항식의 계산」 전용 시각자료 (SVG 없이 HTML/CSS) ───────── */
+  /* V1 거듭제곱 구조 */
+  .powstruct { display:flex; justify-content:center; align-items:flex-start; gap:0; padding:26px 10px 12px; }
+  .powstruct .pw { position:relative; font-size:44px; font-weight:800; letter-spacing:-.02em; line-height:1; }
+  .powstruct .pw sup { font-size:.48em; color:var(--orange); }
+  .powstruct .pw .base { color:var(--green); }
+  .pw-notes { display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:14px; }
+  .pw-note { font-size:13px; font-weight:700; }
+  .pw-note.b { color:var(--green); } .pw-note.e { color:var(--orange); }
+  .pw-note span { display:block; font-size:12px; font-weight:600; color:var(--muted); margin-top:2px; }
+
+  /* V2 지수법칙 카드 */
+  .lawgrid { display:grid; grid-template-columns:repeat(2,1fr); gap:10px; margin:14px 0; }
+  .lawcard { background:var(--card); border:1px solid var(--border); border-left:3px solid var(--green);
+    border-radius:10px; padding:12px 14px; }
+  .lawcard .ln { font-size:11.5px; font-weight:800; color:var(--muted); letter-spacing:.04em; }
+  .lawcard .lf { font-size:17px; font-weight:800; margin:5px 0 3px; }
+  .lawcard .ld { font-size:12.5px; color:var(--muted); }
+  .lawcard.c2 { border-left-color:var(--blue); } .lawcard.c3 { border-left-color:var(--orange); }
+  .lawcard.c4 { border-left-color:var(--purple); }
+  @media(max-width:600px){ .lawgrid{grid-template-columns:1fr;} }
+
+  /* V3 블록 전개 */
+  .blkrow { display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; padding:8px 0; }
+  .blk { display:inline-flex; align-items:center; justify-content:center; min-width:32px; height:34px;
+    padding:0 8px; border-radius:8px; font-weight:800; font-size:15px; }
+  .blk.g { background:rgba(52,211,153,.18); color:var(--green); border:1px solid rgba(52,211,153,.45); }
+  .blk.b { background:rgba(96,165,250,.18); color:var(--blue); border:1px solid rgba(96,165,250,.45); }
+  .blkop { font-size:17px; font-weight:800; color:var(--muted); margin:0 3px; }
+  .blkres { text-align:center; font-size:16px; font-weight:800; margin-top:8px; }
+
+  /* V4 약분 */
+  .fracbox { display:flex; justify-content:center; align-items:center; gap:14px; flex-wrap:wrap; padding:6px 0; }
+  .frac { display:inline-flex; flex-direction:column; align-items:center; gap:4px; }
+  .frac .top, .frac .bot { display:flex; gap:5px; padding:3px 6px; }
+  .frac .bar { width:100%; min-width:96px; height:2px; background:var(--text); opacity:.75; }
+  .cancel { position:relative; opacity:.45; }
+  .cancel::after { content:""; position:absolute; left:-2px; right:-2px; top:50%;
+    height:2px; background:var(--red); transform:rotate(-16deg); }
+  .frac-note { font-size:12.5px; color:var(--muted); text-align:center; margin-top:8px; }
+  .frac-note b { color:var(--red); }
+
+  /* V5 세 갈래 */
+  .branch { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:12px 0 4px; }
+  .brc { border:1px solid var(--border); border-radius:10px; padding:11px 12px; background:var(--card); text-align:center; }
+  .brc .cond { font-size:12px; font-weight:800; color:var(--muted); }
+  .brc .res { font-size:16px; font-weight:800; margin-top:5px; }
+  .brc.p .res { color:var(--green); } .brc.z .res { color:var(--blue); } .brc.n .res { color:var(--orange); }
+  .brc .ex { font-size:11.5px; color:var(--muted); margin-top:4px; }
+  @media(max-width:600px){ .branch{grid-template-columns:1fr;} }
+
+  /* V6 정리 순서 */
+  .orderline { display:flex; justify-content:center; align-items:stretch; gap:0; flex-wrap:wrap; margin:12px 0 4px; }
+  .ostep { flex:1 1 130px; min-width:120px; border:1px solid var(--border); background:var(--card);
+    border-radius:10px; padding:10px 12px; margin:4px; text-align:center; }
+  .ostep .on { display:inline-block; width:20px; height:20px; line-height:20px; border-radius:50%;
+    background:var(--green); color:#06281c; font-size:12px; font-weight:800; margin-bottom:5px; }
+  .ostep .ot { font-size:13.5px; font-weight:800; }
+  .ostep .oe { font-size:12px; color:var(--muted); margin-top:3px; }
+
+  /* V7 · V8 연산 흐름 */
+  .opflow { display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap; padding:8px 0; }
+  .opnode { min-width:46px; padding:8px 12px; border:1px solid var(--border); border-radius:9px;
+    background:var(--card); font-weight:800; font-size:15px; text-align:center; }
+  .opnode.res { border-color:var(--green); color:var(--green); }
+  .opnode.unk { border-color:var(--orange); color:var(--orange); border-style:dashed; }
+  .oparrow { display:flex; flex-direction:column; align-items:center; gap:2px; min-width:74px; }
+  .oparrow .lbl { font-size:12px; font-weight:800; color:var(--blue); white-space:nowrap; }
+  .oparrow .ln { width:100%; height:0; border-top:2px solid var(--border); position:relative; }
+  .oparrow .ln::after { content:""; position:absolute; right:-1px; top:-4px;
+    border-left:6px solid var(--border); border-top:4px solid transparent; border-bottom:4px solid transparent; }
+  .oparrow.back .lbl { color:var(--orange); }
+  .flowcap { text-align:center; font-size:12.5px; color:var(--muted); margin-top:6px; }
+
+  /* 다이어그램 캡션 */
+  .dia-cap{color:var(--muted);font-size:13px;text-align:center;margin-top:10px}
+
+/* ── 2-1 3단원 전용 시각자료 CSS (기존 CSS 블록 맨 끝, @media print 앞에 추가) ── */
+
+/* V1 다항식 해부도 */
+.anat { display:flex; flex-wrap:wrap; justify-content:center; align-items:flex-start; gap:10px; margin:18px 0 6px; }
+.anat .term { border:1px solid var(--border); border-radius:12px; padding:12px 16px 10px; background:var(--card);
+  text-align:center; min-width:104px; }
+.anat .term.g { border-color:var(--green); } .anat .term.b { border-color:var(--blue); } .anat .term.o { border-color:var(--orange); }
+.anat .tv { font-size:21px; font-weight:800; letter-spacing:-.01em; }
+.anat .tv .co { color:var(--green); } .anat .tv .va { color:var(--blue); }
+.anat .tl { font-size:11.5px; color:var(--muted); margin-top:7px; line-height:1.5; }
+.anat .plus { font-size:20px; font-weight:800; color:var(--muted); align-self:center; padding-top:12px; }
+
+/* V2 단원 지도 표 */
+.roadmap { width:100%; border-collapse:collapse; margin:16px 0 6px; font-size:14px; }
+.roadmap th, .roadmap td { border:1px solid var(--border); padding:9px 11px; text-align:center; }
+.roadmap th { background:rgba(52,211,153,0.10); font-weight:700; font-size:13px; }
+.roadmap td.now { color:var(--green); font-weight:800; }
+.roadmap td.later { color:var(--muted); }
+
+/* V3 동류항 색 블록 */
+.likebox { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:16px 0 6px; }
+.likebox .lt { padding:8px 14px; border-radius:10px; font-size:17px; font-weight:800; border:1px solid var(--border); }
+.likebox .lt.x { color:var(--green); background:rgba(52,211,153,0.12); border-color:var(--green); }
+.likebox .lt.y { color:var(--blue);  background:rgba(96,165,250,0.12); border-color:var(--blue); }
+.likebox .lt.c { color:var(--orange);background:rgba(251,191,36,0.12); border-color:var(--orange); }
+.likebox .op { align-self:center; font-size:17px; font-weight:800; color:var(--muted); }
+
+/* V4 / V11 : 틀린 예 ↔ 맞는 예 2단 비교 */
+.cmp2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 6px; }
+.cmp2 .cc { border:1px solid var(--border); border-radius:12px; padding:14px 16px; background:var(--card); }
+.cmp2 .cc.bad { border-color:var(--red); } .cmp2 .cc.good { border-color:var(--green); }
+.cmp2 .ch { font-size:12.5px; font-weight:800; margin-bottom:8px; }
+.cmp2 .cc.bad .ch { color:var(--red); } .cmp2 .cc.good .ch { color:var(--green); }
+.cmp2 .cb { font-size:15px; line-height:1.9; }
+.cmp2 .cn { font-size:12px; color:var(--muted); margin-top:8px; line-height:1.6; }
+@media(max-width:600px){ .cmp2 { grid-template-columns:1fr; } }
+
+/* V5 겹괄호 계층 */
+.nest { display:flex; flex-direction:column; align-items:center; gap:0; margin:16px 0 6px; }
+.nest .lv { border:1px solid var(--border); border-radius:12px; padding:12px 16px; width:100%; max-width:430px;
+  text-align:center; background:var(--card); }
+.nest .lv .lb { font-size:11.5px; font-weight:800; letter-spacing:.03em; display:block; margin-bottom:5px; }
+.nest .lv .ex { font-size:16px; font-weight:700; }
+.nest .lv.l1 { border-color:var(--green); } .nest .lv.l1 .lb { color:var(--green); }
+.nest .lv.l2 { border-color:var(--blue); }  .nest .lv.l2 .lb { color:var(--blue); }
+.nest .lv.l3 { border-color:var(--orange); }.nest .lv.l3 .lb { color:var(--orange); }
+.nest .arw { font-size:17px; color:var(--muted); line-height:1.1; padding:5px 0; }
+
+/* V7 분배법칙 — 항마다 한 칸 */
+.distrib { margin:18px 0 6px; }
+.distrib .head { text-align:center; font-size:20px; font-weight:800; letter-spacing:.01em; margin-bottom:12px; }
+.distrib .head .src { color:var(--green); }
+.distrib .cols { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.distrib .dc { border:1px solid var(--border); border-radius:12px; padding:12px 10px; text-align:center; background:var(--card); }
+.distrib .dc.c1 { border-color:var(--green); } .distrib .dc.c2 { border-color:var(--blue); } .distrib .dc.c3 { border-color:var(--orange); }
+.distrib .dc .mul { font-size:14px; color:var(--muted); }
+.distrib .dc .eq { font-size:19px; font-weight:800; margin-top:6px; }
+.distrib .dc.c1 .eq { color:var(--green); } .distrib .dc.c2 .eq { color:var(--blue); } .distrib .dc.c3 .eq { color:var(--orange); }
+.distrib .sum { text-align:center; font-size:18px; font-weight:800; margin-top:12px; }
+.distrib .sum .t1 { color:var(--green); } .distrib .sum .t2 { color:var(--blue); } .distrib .sum .t3 { color:var(--orange); }
+@media(max-width:600px){ .distrib .cols { grid-template-columns:1fr; } }
+
+/* V8 두 방법 나란히 */
+.ways { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin:16px 0 6px; }
+.ways .wy { border:1px solid var(--border); border-radius:12px; padding:14px 16px; background:var(--card); }
+.ways .wy.w1 { border-color:var(--green); } .ways .wy.w2 { border-color:var(--blue); }
+.ways .wh { font-size:12.5px; font-weight:800; margin-bottom:8px; }
+.ways .wy.w1 .wh { color:var(--green); } .ways .wy.w2 .wh { color:var(--blue); }
+.ways .wb { font-size:15px; line-height:2; }
+.ways .wn { font-size:12px; color:var(--muted); margin-top:8px; line-height:1.6; }
+@media(max-width:600px){ .ways { grid-template-columns:1fr; } }
+
+/* V9 약분 — 공통인 것만 */
+.cancelrow { display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px; margin:16px 0 4px; }
+.cancelrow .chunk { border:1px solid var(--border); border-radius:10px; padding:10px 14px; text-align:center; background:var(--card); min-width:96px; }
+.cancelrow .chunk .cv { font-size:17px; font-weight:800; }
+.cancelrow .chunk .cf { font-size:11.5px; color:var(--muted); margin-top:6px; }
+.cancelrow .chunk.on { border-color:var(--green); } .cancelrow .chunk.on .cv { color:var(--green); }
+.cancelrow .sep { font-size:16px; font-weight:800; color:var(--muted); }
+.cancelverdict { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin-top:10px; }
+.cancelverdict span { font-size:12.5px; font-weight:700; padding:5px 11px; border-radius:8px; border:1px solid var(--border); }
+.cancelverdict .yes { color:var(--green); border-color:var(--green); background:rgba(52,211,153,0.10); }
+.cancelverdict .no  { color:var(--red);   border-color:var(--red);   background:rgba(248,113,113,0.10); }
+
+/* V10 역산 흐름 */
+.revflow { display:flex; flex-wrap:wrap; justify-content:center; align-items:stretch; gap:8px; margin:16px 0 6px; }
+.revflow .rf { border:1px solid var(--border); border-radius:12px; padding:11px 14px; background:var(--card);
+  text-align:center; flex:1 1 150px; min-width:140px; }
+.revflow .rf .rn { display:inline-block; width:20px; height:20px; line-height:20px; border-radius:50%;
+  background:var(--purple); color:#12121e; font-size:11.5px; font-weight:800; margin-bottom:6px; }
+.revflow .rf .rt { font-size:13.5px; font-weight:700; }
+.revflow .rf .re { font-size:11.5px; color:var(--muted); margin-top:5px; line-height:1.55; }
+
+/* V12 덧셈 피라미드 */
+.pyr { display:flex; flex-direction:column; align-items:center; gap:6px; margin:16px 0 6px; }
+.pyr .row { display:flex; justify-content:center; gap:12px; }
+.pyr .cell { border:1px solid var(--border); border-radius:9px; padding:9px 13px; background:var(--card);
+  font-size:14.5px; font-weight:700; min-width:78px; text-align:center; }
+.pyr .cell.q { border-color:var(--orange); color:var(--orange); border-style:dashed; }
+.pyr .cell.ans { border-color:var(--purple); color:var(--purple); }
+.pyr .hint { font-size:12.5px; color:var(--muted); }
+
+/* ── 2-1 4단원 「일차부등식」 전용 시각자료 CSS ── */
+
+/* V4 성질(1) 카드 4장 — 방향 그대로 */
+.prop4 { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:16px 0 6px; }
+.prop4 .pc { border:1px solid var(--green); border-radius:12px; padding:13px 10px; background:var(--card); text-align:center; }
+.prop4 .pc .pt { font-size:12.5px; font-weight:800; color:var(--muted); }
+.prop4 .pc .pf { font-size:16px; font-weight:800; margin-top:7px; color:var(--green); }
+.prop4 .pc .pd { font-size:11px; color:var(--muted); margin-top:5px; }
+@media(max-width:600px){ .prop4{grid-template-columns:repeat(2,1fr);} }
+
+/* V5 성질(2) 카드 2장 — 방향 반대(강조) */
+.prop2 { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:16px 0 6px; }
+.prop2 .pc { border:2px solid var(--red); border-radius:12px; padding:18px 16px; background:rgba(248,113,113,0.08); text-align:center; }
+.prop2 .pc .pt { font-size:13px; font-weight:800; color:var(--red); }
+.prop2 .pc .pf { font-size:20px; font-weight:800; margin-top:9px; }
+.prop2 .pc .pd { font-size:11.5px; color:var(--muted); margin-top:6px; }
+@media(max-width:600px){ .prop2{grid-template-columns:1fr;} }
+
+/* ── 2-1 5단원 「일차부등식의 활용」 전용 시각자료 CSS ── */
+.steps5{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}
+.steps5 .st{border:1.5px solid var(--border);border-radius:10px;padding:10px 8px;text-align:center;background:var(--card)}
+.steps5 .st.last{border-color:var(--orange)}
+.steps5 .st .no{font-size:11.5px;font-weight:800;color:var(--green);letter-spacing:.4px}
+.steps5 .st.last .no{color:var(--orange)}
+.steps5 .st .nm{font-size:13.5px;font-weight:800;margin:4px 0 3px}
+.steps5 .st .ds{font-size:11.5px;color:var(--muted);line-height:1.45}
+@media(max-width:600px){.steps5{grid-template-columns:1fr 1fr}}
+
+.uv2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}
+.uv2 .col{border:1.5px solid var(--border);border-radius:10px;padding:12px;background:var(--card)}
+.uv2 .col.no{border-color:var(--red)}
+.uv2 .col.yes{border-color:var(--green)}
+.uv2 .col h5{margin:0 0 8px;font-size:12.5px;font-weight:800}
+.uv2 .col.no h5{color:var(--red)}
+.uv2 .col.yes h5{color:var(--green)}
+.uv2 .col p{margin:5px 0;font-size:13.5px;line-height:1.6}
+.uv2 .col .sm{font-size:12px;color:var(--muted)}
+@media(max-width:600px){.uv2{grid-template-columns:1fr}}
+
+.pchain{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:6px;align-items:center;margin:14px 0}
+.pchain .cell{border:1.5px solid var(--border);border-radius:10px;padding:10px 6px;text-align:center;background:var(--card)}
+.pchain .cell .cap{font-size:11.5px;color:var(--muted);font-weight:700}
+.pchain .cell .val{font-size:15px;font-weight:800;margin-top:4px}
+.pchain .op{text-align:center;font-size:11.5px;font-weight:800;color:var(--orange);line-height:1.3}
+@media(max-width:600px){.pchain{grid-template-columns:1fr}.pchain .op{padding:2px 0}}
+
+.ucards{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:14px 0}
+.ucards .uc{border:1.5px solid var(--border);border-left:4px solid var(--blue);border-radius:8px;padding:9px 11px;background:var(--card)}
+.ucards .uc .a{font-size:13px;font-weight:700}
+.ucards .uc .b{font-size:13px;font-weight:800;color:var(--blue);margin-top:2px}
+@media(max-width:600px){.ucards{grid-template-columns:1fr}}
+
+/* 순환소수 점 표기 — 1단원과 동일. 글꼴에 의존하지 않는다 */
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+
+/* ── 2-1 7단원 「연립일차방정식의 풀이」 전용 시각자료 CSS (u7- 접두사) ──
+   공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
+.u7-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u7-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u7-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u7-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u7-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u7-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u7-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u7-card.on{border-color:var(--green);border-width:2px;}
+.u7-card.off{border-color:var(--red);border-width:2px;}
+.u7-card.pick{border-color:var(--blue);border-width:2px;}
+.u7-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u7-lab.g{color:var(--green);} .u7-lab.r{color:var(--red);}
+.u7-lab.b{color:var(--blue);} .u7-lab.o{color:var(--orange);} .u7-lab.p{color:var(--purple);}
+.u7-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u7-note .u7-eq,.u7-cap .u7-eq{font-size:13px;}
+.u7-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u7-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u7-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u7-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u7-tb th,.u7-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u7-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u7-tb td.hit{color:var(--green);font-weight:700;}
+.u7-tb td.no{color:var(--red);}
+.u7-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u7-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u7-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+        font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.u7-num.o{background:var(--orange);} .u7-num.p{background:var(--purple);} .u7-num.g{background:var(--green);}
+.u7-flow{display:flex;flex-direction:column;gap:8px;}
+.u7-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u7-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u7-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u7-hl.o{background:rgba(251,146,60,.18);} .u7-hl.g{background:rgba(52,211,153,.18);}
+.u7-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u7-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u7-sys .rows{display:flex;flex-direction:column;gap:5px;}
+/* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
+.u7-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+        font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
+.u7-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u7-eqg span{text-align:right;font-style:italic;}
+.u7-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u7-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u7-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u7-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u7-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+        column-gap:7px;row-gap:9px;justify-content:start;}
+.u7-mul .n{font-size:14px;color:var(--muted);}
+.u7-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u7-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u7-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u7-fr{display:inline-flex;flex-direction:column;align-items:center;line-height:1.25;}
+.u7-fr .up{padding:0 6px;font-style:italic;}
+.u7-fr .dn{padding:0 6px;border-top:1.5px solid var(--text);font-style:italic;}
+.u7-fr.a .up,.u7-fr.a .dn{color:var(--blue);}
+.u7-fr.b .up,.u7-fr.b .dn{color:var(--purple);}
+.u7-fr.c .up,.u7-fr.c .dn{color:var(--orange);}
+.u7-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u7-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u7-eqrow{text-align:center;overflow-x:auto;}
+.u7-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u7-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u7-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+@media (max-width:600px){
+  .u7-2col,.u7-3col{grid-template-columns:1fr;}
+  .u7-eqg{font-size:15px;} .u7-eq{font-size:15px;}
+  .u7-anatg .pt{font-size:18px;}
+  .u7-ratio{gap:9px;font-size:14px;}
+}
+
+/* ── 2-1 8단원 「연립일차방정식의 활용」 전용 시각자료 CSS (u8- 접두사) ──
+   공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
+.u8-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u8-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u8-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u8-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u8-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u8-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u8-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u8-card.on{border-color:var(--green);border-width:2px;}
+.u8-card.off{border-color:var(--red);border-width:2px;}
+.u8-card.pick{border-color:var(--blue);border-width:2px;}
+.u8-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u8-lab.g{color:var(--green);} .u8-lab.r{color:var(--red);}
+.u8-lab.b{color:var(--blue);} .u8-lab.o{color:var(--orange);} .u8-lab.p{color:var(--purple);}
+.u8-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u8-note .u8-eq,.u8-cap .u8-eq{font-size:13px;}
+.u8-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u8-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u8-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u8-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u8-tb th,.u8-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u8-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u8-tb td.hit{color:var(--green);font-weight:700;}
+.u8-tb td.no{color:var(--red);}
+.u8-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u8-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u8-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+        font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.u8-num.o{background:var(--orange);} .u8-num.p{background:var(--purple);} .u8-num.g{background:var(--green);}
+.u8-flow{display:flex;flex-direction:column;gap:8px;}
+.u8-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u8-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u8-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u8-hl.o{background:rgba(251,146,60,.18);} .u8-hl.g{background:rgba(52,211,153,.18);}
+.u8-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u8-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u8-sys .rows{display:flex;flex-direction:column;gap:5px;}
+/* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
+.u8-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+        font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
+.u8-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u8-eqg span{text-align:right;font-style:italic;}
+.u8-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u8-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u8-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u8-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u8-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+        column-gap:7px;row-gap:9px;justify-content:start;}
+.u8-mul .n{font-size:14px;color:var(--muted);}
+.u8-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u8-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u8-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u8-fr{display:inline-flex;flex-direction:column;align-items:center;line-height:1.25;}
+.u8-fr .up{padding:0 6px;font-style:italic;}
+.u8-fr .dn{padding:0 6px;border-top:1.5px solid var(--text);font-style:italic;}
+.u8-fr.a .up,.u8-fr.a .dn{color:var(--blue);}
+.u8-fr.b .up,.u8-fr.b .dn{color:var(--purple);}
+.u8-fr.c .up,.u8-fr.c .dn{color:var(--orange);}
+.u8-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u8-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u8-eqrow{text-align:center;overflow-x:auto;}
+.u8-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u8-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u8-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+@media (max-width:600px){
+  .u8-2col,.u8-3col{grid-template-columns:1fr;}
+  .u8-eqg{font-size:15px;} .u8-eq{font-size:15px;}
+  .u8-anatg .pt{font-size:18px;}
+  .u8-ratio{gap:9px;font-size:14px;}
+}
+
+/* ── 8단원 추가: 상황 띠그림(만남·트랙)과 단계 카드 ── */
+.u8-band{position:relative;height:34px;border-radius:6px;background:var(--bg);
+         border:1px solid var(--border);display:flex;overflow:hidden;margin:10px 0 4px;}
+.u8-band .seg{display:flex;align-items:center;justify-content:center;
+         font-size:11px;font-weight:700;color:#fff;white-space:nowrap;padding:0 4px;}
+.u8-band .seg.a{background:var(--blue);} .u8-band .seg.b{background:var(--purple);}
+.u8-band .seg.c{background:var(--orange);}
+.u8-ends{display:flex;justify-content:space-between;font-size:11px;color:var(--muted);}
+.u8-tot{text-align:center;font-size:12px;color:var(--green);font-weight:700;margin-top:6px;}
+.u8-loop{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;}
+.u8-ring{width:100px;height:100px;border-radius:50%;border:3px dashed var(--border);
+         position:relative;flex:0 0 100px;margin:6px auto 2px;}
+.u8-ring i{position:absolute;width:13px;height:13px;border-radius:50%;font-style:normal;}
+.u8-ring i.p1{background:var(--blue);} .u8-ring i.p2{background:var(--purple);}
+.u8-ring em{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
+           text-align:center;font-style:normal;font-size:22px;color:var(--muted);line-height:1;}
+.u8-lgd{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:9px;font-size:11px;}
+.u8-lgd span{display:inline-flex;align-items:center;gap:5px;color:var(--muted);}
+.u8-lgd i{width:10px;height:10px;border-radius:50%;font-style:normal;display:inline-block;}
+.u8-lgd i.p1{background:var(--blue);} .u8-lgd i.p2{background:var(--purple);}
+.u8-step{display:grid;grid-template-columns:22px 1fr;gap:9px;align-items:start;
+         padding:8px 10px;border:1px solid var(--border);border-radius:9px;background:var(--bg);}
+.u8-step .k{width:22px;height:22px;border-radius:6px;background:var(--blue);color:#fff;
+         font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.u8-step .k.g{background:var(--green);} .u8-step .k.o{background:var(--orange);}
+.u8-step .h{font-size:12.5px;font-weight:700;color:var(--text);line-height:1.4;}
+.u8-step .d{font-size:11.5px;color:var(--muted);line-height:1.55;margin-top:3px;}
+
+/* ── 2-1 9단원 「일차함수와 그래프(1)」 전용 시각자료 CSS (u9- 접두사) ──
+   공통 안전 변수만 사용: --bg --blue --border --card --green --muted --orange --purple --red --text */
+.u9-wrap{border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;background:var(--card);}
+.u9-cap{font-size:12px;color:var(--muted);text-align:center;margin-top:10px;line-height:1.5;}
+.u9-t{font-weight:700;font-size:13px;margin-bottom:10px;color:var(--text);}
+.u9-eq{font-family:"Times New Roman",Georgia,serif;font-style:italic;font-size:17px;white-space:nowrap;}
+.u9-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.u9-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+.u9-card{border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;background:var(--bg);overflow-x:auto;}
+.u9-card.on{border-color:var(--green);border-width:2px;}
+.u9-card.off{border-color:var(--red);border-width:2px;}
+.u9-card.pick{border-color:var(--blue);border-width:2px;}
+.u9-lab{font-size:11px;font-weight:700;letter-spacing:.02em;margin-bottom:8px;}
+.u9-lab.g{color:var(--green);} .u9-lab.r{color:var(--red);}
+.u9-lab.b{color:var(--blue);} .u9-lab.o{color:var(--orange);} .u9-lab.p{color:var(--purple);}
+.u9-note{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.75;}
+.u9-note .u9-eq,.u9-cap .u9-eq{font-size:13px;}
+.u9-why{font-size:11px;color:var(--red);margin-top:6px;line-height:1.45;}
+.u9-ok{font-size:11px;color:var(--green);margin-top:6px;line-height:1.45;}
+.u9-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+.u9-tb{border-collapse:collapse;width:100%;min-width:280px;font-size:13px;}
+.u9-tb th,.u9-tb td{border:1px solid var(--border);padding:7px 9px;text-align:center;}
+.u9-tb th{background:var(--bg);font-weight:700;font-size:12px;color:var(--muted);}
+.u9-tb td.hit{color:var(--green);font-weight:700;}
+.u9-tb td.no{color:var(--red);}
+.u9-tb tr.pick td{background:rgba(52,211,153,.12);}
+.u9-chk{display:flex;gap:9px;align-items:flex-start;margin:7px 0;font-size:13px;line-height:1.55;}
+.u9-num{flex:0 0 20px;height:20px;border-radius:50%;background:var(--blue);color:#fff;
+        font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;margin-top:1px;}
+.u9-num.o{background:var(--orange);} .u9-num.p{background:var(--purple);} .u9-num.g{background:var(--green);}
+.u9-flow{display:flex;flex-direction:column;gap:8px;}
+.u9-arrow{text-align:center;color:var(--muted);font-size:13px;line-height:1;margin:2px 0;}
+.u9-rule{border:0;border-top:2px solid var(--text);margin:5px 0 6px;}
+.u9-hl{background:rgba(96,165,250,.16);border-radius:4px;padding:1px 3px;}
+.u9-hl.o{background:rgba(251,146,60,.18);} .u9-hl.g{background:rgba(52,211,153,.18);}
+.u9-sys{display:grid;grid-template-columns:auto auto;align-items:center;column-gap:6px;justify-content:center;}
+.u9-brace{font-size:40px;line-height:.9;color:var(--muted);font-weight:300;}
+.u9-sys .rows{display:flex;flex-direction:column;gap:5px;}
+/* 식을 항마다 한 칸씩 주는 격자 (정렬에 의존하지 않는다) */
+.u9-eqg{display:grid;justify-content:center;column-gap:3px;row-gap:2px;
+        font-family:"Times New Roman",Georgia,serif;font-size:17px;align-items:baseline;}
+.u9-eqg.add{grid-template-columns:1em 1.5em .9em 1.2em .9em 1.7em auto;}
+.u9-eqg span{text-align:right;font-style:italic;}
+.u9-eqg .sg{text-align:center;font-style:normal;color:var(--orange);font-weight:700;}
+.u9-eqg .mk{text-align:left;font-style:normal;font-size:12px;color:var(--muted);padding-left:6px;}
+.u9-eqg .bar{grid-column:1/7;border-top:2px solid var(--text);height:0;margin:4px 0 5px;}
+.u9-eqg .res{font-style:italic;color:var(--green);font-weight:700;text-align:left;padding-left:8px;}
+.u9-mul{display:grid;grid-template-columns:auto auto auto auto auto;align-items:center;
+        column-gap:7px;row-gap:9px;justify-content:start;}
+.u9-mul .n{font-size:14px;color:var(--muted);}
+.u9-mul .x{font-size:12px;color:var(--orange);font-style:normal;font-weight:700;white-space:nowrap;}
+.u9-mul .ar{color:var(--muted);}
+/* 계수비 판별 (분수 3개를 나란히) */
+.u9-ratio{display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;
+          font-family:"Times New Roman",Georgia,serif;font-size:16px;}
+.u9-fr{display:inline-flex;flex-direction:column;align-items:center;line-height:1.25;}
+.u9-fr .up{padding:0 6px;font-style:italic;}
+.u9-fr .dn{padding:0 6px;border-top:1.5px solid var(--text);font-style:italic;}
+.u9-fr.a .up,.u9-fr.a .dn{color:var(--blue);}
+.u9-fr.b .up,.u9-fr.b .dn{color:var(--purple);}
+.u9-fr.c .up,.u9-fr.c .dn{color:var(--orange);}
+.u9-rel{font-size:20px;font-style:normal;color:var(--text);}
+/* 항마다 한 칸 (해부도) */
+.u9-anatg{display:grid;justify-content:center;column-gap:1px;row-gap:6px;padding:4px 0 2px;}
+.u9-eqrow{text-align:center;overflow-x:auto;}
+.u9-anatg .pt{font-family:"Times New Roman",Georgia,serif;font-style:italic;
+          font-size:21px;text-align:center;line-height:1.1;}
+.u9-anatg .pt.op{font-style:normal;color:var(--muted);padding:0 6px;}
+.u9-anatg .tg{font-size:10px;font-style:normal;text-align:center;line-height:1.35;white-space:nowrap;}
+.od{position:relative;display:inline-block;line-height:1}
+.od::after{content:"";position:absolute;left:50%;top:-.42em;width:.2em;height:.2em;
+           margin-left:-.1em;border-radius:50%;background:currentColor}
+@media (max-width:600px){
+  .u9-2col,.u9-3col{grid-template-columns:1fr;}
+  .u9-eqg{font-size:15px;} .u9-eq{font-size:15px;}
+  .u9-anatg .pt{font-size:18px;}
+  .u9-ratio{gap:9px;font-size:14px;}
+}
+
+/* ── 9단원 추가: 대응 그림 · 함수 공장 · 좌표평면 SVG ── */
+.u9-map{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:6px;margin:6px 0;}
+.u9-col{display:flex;flex-direction:column;gap:6px;}
+.u9-box{border:1px solid var(--border);border-radius:8px;padding:6px 4px;text-align:center;
+        font-size:13px;background:var(--bg);font-family:"Times New Roman",Georgia,serif;}
+.u9-box.hit{border-color:var(--green);color:var(--green);font-weight:700;}
+.u9-box.bad{border-color:var(--red);color:var(--red);font-weight:700;}
+.u9-mapl{font-size:10px;color:var(--muted);text-align:center;margin-bottom:4px;letter-spacing:.03em;}
+.u9-to{font-size:16px;color:var(--muted);text-align:center;line-height:1.6;}
+.u9-fact{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap;margin:8px 0 2px;}
+.u9-in,.u9-outb{border:2px solid var(--blue);border-radius:8px;padding:7px 11px;font-size:14px;
+        font-family:"Times New Roman",Georgia,serif;font-style:italic;color:var(--blue);font-weight:700;}
+.u9-outb{border-color:var(--green);color:var(--green);}
+.u9-mach{border:2px solid var(--orange);border-radius:10px;padding:8px 13px;background:var(--bg);text-align:center;}
+.u9-mach .nm{font-size:11px;color:var(--orange);font-weight:700;margin-bottom:3px;}
+.u9-mach .st{font-size:12px;color:var(--text);line-height:1.5;font-family:"Times New Roman",Georgia,serif;}
+.u9-ar{font-size:18px;color:var(--muted);line-height:1;}
+.diagram-wrap svg.dia{width:100%;height:auto;display:block;}
+@media (max-width:600px){ .u9-map{gap:4px;} .u9-box{font-size:12px;} }
+
+</style>
+</head>
+<body>
+<div class="progress-bar" id="pbar"></div>
+
+<header class="page-header">
+  <div class="page-header-inner">
+    <div class="brandline">
+      <span class="pro-badge">PRO</span>
+      <span class="label">Isaac Math 2-1 강의노트 · 프리미엄</span>
+    </div>
+    <h1>일차함수와 일차방정식의 관계</h1>
+    <div class="sub">2-1의 마지막 단원입니다. 앞에서 따로 배운 연립방정식과 일차함수가 여기서 하나로 이어집니다. 가장 먼저 잡아둘 것은 <strong>y = ax + b</strong>와 <strong>ax + by + c = 0</strong>이 꼴만 다른 같은 식이라는 점 &mdash; 방정식으로 풀다가 막히면 함수의 성질을, 함수로 풀다가 막히면 방정식의 성질을 가져다 쓸 수 있습니다. 둘째, <strong>좌표평면의 직선이라고 모두 일차함수는 아닙니다</strong> &mdash; 직선의 방정식이 가장 넓은 이름이고 일차함수는 그 안의 한 종류일 뿐입니다. 셋째, <strong>그래프의 교점이 나오면 연립방정식을 푼다</strong>는 것 &mdash; 앞으로 어떤 그래프를 배우든 교점을 구하는 기본은 똑같습니다. 이 연결은 차수가 이차·삼차로 늘어나도, 고등학교에 가서도 그대로 쓰입니다.</div>
+    <div class="header-tools">
+      <button class="mini-btn" onclick="location.href='index.html'">← 학기 목차</button>
+      <button class="mini-btn" onclick="toggleTheme()" id="themeBtn">☀️ 라이트 모드</button>
+      <button class="mini-btn" onclick="window.print()">🖨️ 인쇄 / PDF 저장</button>
+      <button class="mini-btn" onclick="resetAll()">↺ 진행 초기화</button>
+    </div>
+  </div>
+</header>
+
+<div class="achieve">
+  <div class="achieve-card">
+    <div class="ring" id="ring"><span id="ringTxt">0%</span></div>
+    <div class="achieve-text">
+      <div class="t" id="achTitle">학습 진행률</div>
+      <div class="d" id="achDesc">각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.</div>
+    </div>
+    <div class="badges">
+      <span class="ach-badge" id="b_first">🔰 첫 완료</span>
+      <span class="ach-badge" id="b_half">🔥 절반 돌파</span>
+      <span class="ach-badge" id="b_master">🏆 단원 마스터</span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" id="toc">
+  <a href="#s1" class="tlink">① 두 관점</a>
+  <a href="#s2" class="tlink">② 그래프</a>
+  <a href="#s3" class="tlink">③ 축에 평행</a>
+  <a href="#s4" class="tlink">④ 직선의 방정식</a>
+  <a href="#s5" class="tlink">⑤ 해와 교점</a>
+  <a href="#s6" class="tlink">⑥ 교점 활용</a>
+  <a href="#s7" class="tlink">⑦ 해의 개수</a>
+  <a href="#s8" class="tlink">⑧ 도형</a>
+  <a href="#wrong" class="tlink">📕 오답노트</a>
+  <a href="#gate" class="tlink">✏️ 연습문제</a>
+</nav>
+
+<div class="content">
+  <section class="section" id="s1">
+    <div class="section-head"><span class="section-num">1</span><span class="section-title">같은 식, 두 가지 관점 &mdash; 일차방정식과 일차함수</span>
+      <button class="complete-btn" onclick="toggleDone('s1')">완료하기</button></div>
+
+<p>앞에서 <strong>미지수가 2개인 일차방정식</strong> ax + by + c = 0 (a &ne; 0, b &ne; 0)을 배웠고, 그다음 <strong>일차함수</strong> y = ax + b를 배웠습니다. 두 식은 이항 한 번이면 서로 바뀝니다 &mdash; 겉보기에 다른 두 개념이 아니라 <strong>같은 식을 보는 두 가지 관점</strong>입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:4px">y = 2x &minus; 3 의 우변을 이항하면 2x &minus; y &minus; 3 = 0 &mdash; 미지수가 2개인 일차방정식이 된다.</p>
+<p style="margin-bottom:0">반대로 3x + 6y &minus; 12 = 0 을 y 에 대하여 풀면 6y = &minus;3x + 12, 양변을 6 으로 나누면 y = &minus;½x + 2.</p>
+</div>
+<!-- ============ 하나의 식, 두 가지 이름 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">하나의 식, 두 가지 이름</div>
+<div class="u11-scroll"><table class="u11-tb">
+ <tr><th>미지수가 2개인 일차방정식으로 보면</th><th></th><th>일차함수로 보면</th></tr>
+ <tr><td><span class="u11-eq">x + 2y &minus; 6 = 0</span></td><td class="ar">&harr;</td>
+     <td><span class="u11-eq">y = &minus;<span class="u11-fr "><span class="up">1</span><span class="dn">2</span></span>x + 3</span></td></tr>
+ <tr><td>식을 만족하는 <b>해</b> (x, y)</td><td class="ar">&harr;</td><td>그래프 위의 <b>점</b> (x, y)</td></tr>
+ <tr><td>해가 <b>무수히 많다</b></td><td class="ar">&harr;</td><td>직선 위의 점이 <b>무수히 많다</b></td></tr>
+</table></div>
+<div class="u11-note" style="text-align:center">
+ 두 식은 좌표평면에서 <b>같은 직선 하나</b>를 나타낸다.
+</div>
+<div class="u11-cap">왼쪽 식을 y 에 대하여 풀면 오른쪽 식이 된다. <b>꼴만 다를 뿐 같은 식</b>이라 한쪽에서 알게 된 성질을 다른 쪽에서 그대로 쓸 수 있다.</div>
+</div><!-- ============ 해를 하나씩 찍어 보면 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">해를 하나씩 찍어 보면</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 270" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="188.0" x2="242.0" y2="188.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="60.0" y1="240.0" x2="60.0" y2="58.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="192.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="60.0" y="50.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="49.0" y="205.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="112.0" y1="185.0" x2="112.0" y2="191.0" stroke="var(--muted)" stroke-width="1.2"/><text x="112.0" y="207.0" font-size="11" fill="var(--muted)" text-anchor="middle">2</text><line x1="164.0" y1="185.0" x2="164.0" y2="191.0" stroke="var(--muted)" stroke-width="1.2"/><text x="164.0" y="207.0" font-size="11" fill="var(--muted)" text-anchor="middle">4</text><line x1="57.0" y1="162.0" x2="63.0" y2="162.0" stroke="var(--muted)" stroke-width="1.2"/><text x="51.0" y="166.1" font-size="11" fill="var(--muted)" text-anchor="end">1</text><line x1="57.0" y1="136.0" x2="63.0" y2="136.0" stroke="var(--muted)" stroke-width="1.2"/><text x="51.0" y="140.1" font-size="11" fill="var(--muted)" text-anchor="end">2</text><polyline points="34.0,97.0 231.6,195.8" fill="none" stroke="var(--green)" stroke-width="1.6" stroke-dasharray="6,4"/><circle cx="60.0" cy="110.0" r="4.6" fill="var(--orange)"/><circle cx="112.0" cy="136.0" r="4.6" fill="var(--orange)"/><circle cx="164.0" cy="162.0" r="4.6" fill="var(--orange)"/><circle cx="216.0" cy="188.0" r="4.6" fill="var(--orange)"/><rect x="122.4" y="20.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="137.4" y="28.0" font-size="11" fill="var(--green)" text-anchor="start">x + 2y − 6 = 0</text></svg></div>
+<div class="u11-cap">순서쌍 (0, 3), (2, 2), (4, 1), (6, 0) 은 모두 이 방정식을 만족한다. 좌표평면에 찍으면 <b>한 직선 위에 나란히</b> 놓이고, 그 사이의 해까지 전부 채우면 직선이 된다.</div>
+</div>    <div class="quiz" data-qid="b1" data-ans="-7" data-type="num">
+      <div class="quiz-q">Q. 일차방정식 6x + 2y + 8 = 0 을 y = ax + b 꼴로 나타낼 때, 상수 a, b 에 대하여 a + b 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 양변을 y의 계수로 나눠 y = ax + b 꼴로 정리한 뒤 a와 b를 읽는다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<p>이 연결이 왜 중요할까요 &mdash; 한쪽 관점에서 막히면 다른 관점으로 바꿔 풀 수 있기 때문입니다. 수업에서 &laquo;차수가 이차·삼차로 늘어나도 똑같다&raquo;고 했습니다 &mdash; 지금 익히는 이 연결은 앞으로도 계속 쓰입니다.</p>
+<p><strong>그래프를 그리기 전에는 조건부터 읽습니다.</strong> 수업에서 &laquo;아무것도 안 보고 대충 그리면 안 된다&raquo;고 했습니다 &mdash; x, y 의 값이 자연수(또는 정수)로 제한되면 그래프의 모습이 달라집니다.</p>
+<!-- ============ 자연수 조건이 붙으면 선을 긋지 않는다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">자연수 조건이 붙으면 선을 긋지 않는다</div>
+<div class="diagram-wrap" style="max-width:216px;margin:14px auto"><svg class="dia" viewBox="0 0 216 244" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="188.0" x2="190.0" y2="188.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="60.0" y1="214.0" x2="60.0" y2="58.0" stroke="var(--muted)" stroke-width="1.5"/><text x="199.0" y="192.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="60.0" y="50.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="49.0" y="205.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="86.0" y1="185.0" x2="86.0" y2="191.0" stroke="var(--muted)" stroke-width="1.2"/><text x="86.0" y="207.0" font-size="11" fill="var(--muted)" text-anchor="middle">1</text><line x1="112.0" y1="185.0" x2="112.0" y2="191.0" stroke="var(--muted)" stroke-width="1.2"/><text x="112.0" y="207.0" font-size="11" fill="var(--muted)" text-anchor="middle">2</text><line x1="138.0" y1="185.0" x2="138.0" y2="191.0" stroke="var(--muted)" stroke-width="1.2"/><text x="138.0" y="207.0" font-size="11" fill="var(--muted)" text-anchor="middle">3</text><line x1="57.0" y1="162.0" x2="63.0" y2="162.0" stroke="var(--muted)" stroke-width="1.2"/><text x="51.0" y="166.1" font-size="11" fill="var(--muted)" text-anchor="end">1</text><line x1="57.0" y1="136.0" x2="63.0" y2="136.0" stroke="var(--muted)" stroke-width="1.2"/><text x="51.0" y="140.1" font-size="11" fill="var(--muted)" text-anchor="end">2</text><line x1="57.0" y1="110.0" x2="63.0" y2="110.0" stroke="var(--muted)" stroke-width="1.2"/><text x="51.0" y="114.1" font-size="11" fill="var(--muted)" text-anchor="end">3</text><polyline points="34.0,58.0 190.0,214.0" fill="none" stroke="var(--border)" stroke-width="1.4" stroke-dasharray="6,4"/><circle cx="86.0" cy="110.0" r="5.0" fill="var(--orange)"/><circle cx="112.0" cy="136.0" r="5.0" fill="var(--orange)"/><circle cx="138.0" cy="162.0" r="5.0" fill="var(--orange)"/><rect x="91.2" y="20.0" width="10" height="10" fill="var(--orange)" fill-opacity="0.45" stroke="var(--orange)" stroke-width="1.4"/><text x="106.2" y="28.0" font-size="11" fill="var(--orange)" text-anchor="start">x, y 가 자연수일 때</text></svg></div>
+<div class="u11-cap">x, y 가 자연수일 때 <span class="u11-eq">x + y = 4</span> 의 해는 세 개뿐이라 그래프도 <b>점 세 개</b>다. 점선은 조건이 없을 때의 모습으로, 이 경우에는 그리지 않는다.</div>
+</div>    <div class="quiz" data-qid="b2" data-ans="5" data-type="num">
+      <div class="quiz-q">Q. x, y 가 자연수일 때, 일차방정식 x + 2y = 11 의 그래프는 몇 개의 점으로 나타나는지 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: y에 1부터 차례로 자연수를 대입해 x도 자연수가 되는 경우를 센다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s2">
+    <div class="section-head"><span class="section-num">2</span><span class="section-title">일차방정식의 그래프 읽기</span>
+      <button class="complete-btn" onclick="toggleDone('s2')">완료하기</button></div>
+
+<p>일차방정식의 그래프를 다루는 길은 둘입니다 &mdash; y 에 대하여 풀어 기울기·y절편을 읽는 길, 절편 두 개를 바로 구하는 길. <strong>무엇을 묻는지에 따라 고릅니다</strong>: 기울기를 묻거나 다른 직선과 견주어야 하면 앞의 길, 그래프를 그리기만 하면 뒤의 길입니다.</p>
+<!-- ============ y 에 대하여 풀면 기울기와 y절편이 드러난다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">y 에 대하여 풀면 기울기와 y절편이 드러난다</div>
+<div class="u11-step">
+ <div class="k">1</div>
+ <div class="v">y 가 들어 있는 항만 왼쪽에 남긴다<br>
+   <span class="u11-eq">2x + 3y &minus; 12 = 0</span> &rarr; <span class="u11-eq">3y = &minus;2x + 12</span></div>
+ <div class="k">2</div>
+ <div class="v">양변을 y 의 계수로 나눈다<br>
+   <span class="u11-eq" style="color:var(--green);font-weight:700">y = &minus;<span class="u11-fr "><span class="up">2</span><span class="dn">3</span></span>x + 4</span></div>
+ <div class="k">3</div>
+ <div class="v">읽는다 &nbsp;&nbsp;기울기 <span class="u11-eq">&minus;<span class="u11-fr "><span class="up">2</span><span class="dn">3</span></span></span> · y절편 <span class="u11-eq">4</span></div>
+</div>
+<div class="u11-cap">셋째 줄의 두 수가 그래프의 <b>모양과 위치</b>다. x절편은 정리하기 전의 식에 y = 0 을 넣어 2x = 12 에서 6 으로 구한다.</div>
+</div><div class="box box-red"><div class="box-title">⚠ 시험에서 가장 많이 틀리는 자리</div>
+<p style="margin-bottom:0">y 의 계수로 나눌 때 <strong>x 의 계수와 상수항의 부호가 함께 바뀌는</strong> 실수가 가장 많습니다.</p>
+</div>
+<!-- ============ 일차방정식의 그래프도 직선이다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">일차방정식의 그래프도 직선이다</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 210" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="154.0" x2="242.0" y2="154.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="60.0" y1="180.0" x2="60.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="158.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="60.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="49.0" y="171.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="34.0,32.7 242.0,171.3" fill="none" stroke="var(--green)" stroke-width="2.0"/><circle cx="216.0" cy="154.0" r="4.6" fill="var(--orange)"/><text x="210.0" y="178.0" font-size="11" fill="var(--orange)" text-anchor="end">6</text><circle cx="60.0" cy="50.0" r="4.6" fill="var(--blue)"/><text x="69.0" y="40.0" font-size="11" fill="var(--blue)" text-anchor="start">4</text><text x="146.5" y="64.0" font-size="11" fill="var(--green)" text-anchor="middle">2x + 3y − 12 = 0</text></svg></div>
+<div class="u11-cap">x 에 0 을 넣으면 y절편, y 에 0 을 넣으면 x절편이 바로 나온다. <b>y 로 정리하지 않고도</b> 두 점을 찍어 그래프를 그릴 수 있다.</div>
+</div>    <div class="quiz" data-qid="b3" data-ans="-9" data-type="num">
+      <div class="quiz-q">Q. 일차방정식 2x &minus; 5y + 30 = 0 의 그래프의 x절편과 y절편의 합을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: x = 0, y = 0을 각각 대입해 두 절편을 구한 뒤 더한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<p>식에 <strong>모르는 계수</strong>가 있고 그래프가 지나는 점이 주어지면, 그 점의 좌표를 x, y 에 넣어 계수부터 구합니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">일차방정식 ax + 2y &minus; 8 = 0 의 그래프가 점 (&minus;1, 5) 를 지나면 &minus;a + 10 &minus; 8 = 0 이므로 a = 2.</p>
+</div>
+<p>시험 보기에 &laquo;두 직선이 평행하다&raquo;라고 적혀 있지만 실제로는 <strong>같은 직선</strong>인 경우가 자주 나옵니다.</p>
+<!-- ============ 계수가 달라 보여도 같은 직선일 수 있다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">계수가 달라 보여도 같은 직선일 수 있다</div>
+<div class="u11-2col">
+ <div class="u11-card">
+  <div class="u11-eq">x &minus; 2y + 4 = 0</div>
+  <div class="u11-arrow">&darr; y 에 대하여 풀기</div>
+  <div class="u11-eq">y = <span class="u11-fr "><span class="up">1</span><span class="dn">2</span></span>x + 2</div>
+ </div>
+ <div class="u11-card">
+  <div class="u11-eq">2x &minus; 4y + 8 = 0</div>
+  <div class="u11-arrow">&darr; y 에 대하여 풀기</div>
+  <div class="u11-eq">y = <span class="u11-fr "><span class="up">1</span><span class="dn">2</span></span>x + 2</div>
+ </div>
+</div>
+<div class="u11-card pick" style="margin-top:9px">
+ <div class="u11-lab p">기울기도 y절편도 같다 → 평행이 아니라 <b>일치</b></div>
+</div>
+<div class="u11-cap">오른쪽 식은 왼쪽 식의 양변에 2 를 곱한 것뿐이다. <b>정리하기 전에는 판단하지 말고</b>, 두 식을 같은 꼴로 바꾼 다음 비교한다.</div>
+</div>    <div class="quiz" data-qid="b4" data-ans="-3/2|-1.5" data-type="text">
+      <div class="quiz-q">Q. 일차방정식 ax + 2y &minus; 5 = 0 의 그래프가 점 (3, &minus;2) 를 지날 때, 이 그래프의 기울기를 구하시오. (단, a 는 상수)</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: y에 대하여 풀 때 양변을 y의 계수로 나누면 x의 계수 부호가 어떻게 되는지 확인한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s3">
+    <div class="section-head"><span class="section-num">3</span><span class="section-title">x축·y축에 평행한 직선</span>
+      <button class="complete-btn" onclick="toggleDone('s3')">완료하기</button></div>
+
+<p><span class="u11-eq" style="font-size:15px">x = q</span> 는 x + 0&middot;y = q 처럼 <strong>y 의 계수가 0 인 경우</strong>입니다. 그래서 &laquo;미지수가 2개인 일차방정식&raquo;은 아니지만 그래프는 여전히 <strong>직선</strong>입니다. y = p 도 마찬가지입니다.</p>
+<!-- ============ 한 좌표만 정해진 직선 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">한 좌표만 정해진 직선</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 262" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="128.0" x2="242.0" y2="128.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="112.0" y1="232.0" x2="112.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="132.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="112.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="101.0" y="145.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="190.0" y1="232.0" x2="190.0" y2="24.0" stroke="var(--blue)" stroke-width="2.0"/><polyline points="34.0,180.0 242.0,180.0" fill="none" stroke="var(--orange)" stroke-width="2.0"/><circle cx="190.0" cy="180.0" r="4.6" fill="var(--purple)"/><text x="198.0" y="203.0" font-size="11" fill="var(--purple)" text-anchor="start">(3, −2)</text><text x="198.0" y="42.2" font-size="11" fill="var(--blue)" text-anchor="start">x = 3</text><text x="49.6" y="168.0" font-size="11" fill="var(--orange)" text-anchor="middle">y = −2</text></svg></div>
+<div class="u11-cap"><span class="u11-eq">x = 3</span> 위의 점은 y좌표가 무엇이든 x좌표가 3 이라 <b>세로로</b> 늘어서고, <span class="u11-eq">y = &minus;2</span> 위의 점은 y좌표가 &minus;2 라 <b>가로로</b> 늘어선다. </div>
+</div><p>수업에서 &laquo;급하게 읽지 말라&raquo;고 한 자리입니다 &mdash; 문제 문장에 <strong>축 이름과 &laquo;평행·수직&raquo;이 함께</strong> 나옵니다. 둘 중 하나만 보고 식을 쓰면 x 와 y 가 뒤바뀝니다.</p>
+<!-- ============ 「평행」과 「수직」을 식으로 옮기기 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">「평행」과 「수직」을 식으로 옮기기</div>
+<div class="u11-2col">
+ <div class="u11-card">
+  <div class="u11-lab o">x축에 평행 &nbsp;=&nbsp; y축에 수직</div>
+  <div class="u11-note" style="margin-top:0">가로로 누운 직선<br><b>y 좌표가 고정</b>된다</div>
+  <div class="u11-eq" style="color:var(--orange);font-weight:700;margin-top:6px">y = p</div>
+ </div>
+ <div class="u11-card">
+  <div class="u11-lab b">x축에 수직 &nbsp;=&nbsp; y축에 평행</div>
+  <div class="u11-note" style="margin-top:0">세로로 선 직선<br><b>x 좌표가 고정</b>된다</div>
+  <div class="u11-eq" style="color:var(--blue);font-weight:700;margin-top:6px">x = q</div>
+ </div>
+</div>
+
+<div class="u11-cap">「x축에 평행」과 「y축에 수직」은 <b>같은 직선을 두 가지로 말한 것</b>이다. 고정되는 좌표가 x 인지 y 인지만 가려내면 된다.</div>
+</div><p>두 점을 지나는 직선이 어느 축에 평행하다는 조건이 주어지면, <strong>같아야 하는 좌표끼리 등식</strong>을 세워 모르는 수를 구합니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">두 점 (&minus;1, 3a), (6, 10 &minus; 2a) 를 지나는 직선이 <strong>x축에 평행</strong>하면 두 점의 y좌표가 같으므로 3a = 10 &minus; 2a, a = 2 이고 직선의 방정식은 y = 6 이다.</p>
+</div>
+<p><span class="u11-eq" style="font-size:15px">x = q</span> 와 <span class="u11-eq" style="font-size:15px">y = p</span> 가 만나는 점은 계산 없이 <strong>(q, p)</strong> 입니다.</p>
+    <div class="quiz" data-qid="b5" data-ans="-8" data-type="num">
+      <div class="quiz-q">Q. 점 (&minus;2, 7) 을 지나고 x축에 수직인 직선과 점 (5, &minus;6) 을 지나고 x축에 평행한 직선의 교점의 좌표를 (p, q) 라 할 때, p + q 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: x축에 수직인 직선은 x = k 꼴, 평행한 직선은 y = k 꼴이라는 것을 이용해 두 식을 각각 세운다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<div class="box box-red"><div class="box-title">⚠ y = 0 과 x = 0 은 특별하다</div>
+<p style="margin-bottom:0">y = 0 은 x축과 평행한 직선이 아니라 <strong>x축 자신</strong>이고, x = 0 은 <strong>y축 자신</strong>입니다.</p>
+</div>
+    <div class="quiz" data-qid="b6" data-ans="4" data-type="num">
+      <div class="quiz-q">Q. 두 점 (5a &minus; 7, 2), (2a + 5, &minus;6) 을 지나는 직선이 y축에 평행할 때, 상수 a 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: y축에 평행하려면 두 점의 x좌표가 같아야 한다는 조건을 식으로 쓴다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s4">
+    <div class="section-head"><span class="section-num">4</span><span class="section-title">직선의 방정식 &mdash; 모든 직선이 일차함수는 아니다</span>
+      <button class="complete-btn" onclick="toggleDone('s4')">완료하기</button></div>
+
+<p>좌표평면의 직선은 <strong>모두</strong> ax + by + c = 0 (a, b 가 동시에 0 은 아님) 꼴로 쓸 수 있고, 이 식을 <strong>직선의 방정식</strong>이라 부릅니다.</p>
+<p>수업의 질문 &mdash; &laquo;직선의 방정식과 일차함수는 같은 말인가?&raquo; 답은 <strong>아닙니다</strong>. 가장 넓은 이름이 직선의 방정식이고 일차함수는 그 일부입니다.</p>
+<!-- ============ 직선의 방정식 ax + by + c = 0 의 세 갈래 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">직선의 방정식 ax + by + c = 0 의 세 갈래</div>
+<div class="u11-scroll"><table class="u11-tb">
+ <tr><th>계수 조건</th><th>정리한 꼴</th><th>그래프</th><th>함수인가</th></tr>
+ <tr><td>a &ne; 0, b &ne; 0</td><td><span class="u11-eq">y = &minus;<span class="u11-fr "><span class="up">a</span><span class="dn">b</span></span>x &minus; <span class="u11-fr "><span class="up">c</span><span class="dn">b</span></span></span></td>
+     <td>기울어진 직선</td><td class="hit">일차함수</td></tr>
+ <tr><td><b>a = 0</b>, b &ne; 0</td><td><span class="u11-eq">y = &minus;<span class="u11-fr "><span class="up">c</span><span class="dn">b</span></span></span></td>
+     <td>x축에 평행</td><td class="hit">상수함수</td></tr>
+ <tr><td>a &ne; 0, <b>b = 0</b></td><td><span class="u11-eq">x = &minus;<span class="u11-fr "><span class="up">c</span><span class="dn">a</span></span></span></td>
+     <td>y축에 평행</td><td class="no">함수가 아니다</td></tr>
+</table></div>
+<div class="u11-cap">세 경우 모두 좌표평면에서 직선이지만 <b>일차함수는 첫째 줄뿐</b>이다. a 와 b 가 동시에 0 이면 x, y 가 사라져 직선이 되지 않는다.</div>
+</div><p>y = p 는 x 가 무엇이든 y 가 하나로 정해지므로 <strong>함수</strong>이지만, y 가 x 의 일차식이 아니라서 일차함수가 아닙니다 &rarr; <strong>상수함수</strong>라고 부릅니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">2y + 8 = 0 &rarr; y = &minus;4 : x 의 값에 관계없이 y 가 &minus;4 하나 &rarr; 상수함수.</p>
+</div>
+<p>함수의 뜻(하나의 x 에 하나의 y)을 떠올리면 x = q 가 왜 함수가 아닌지 바로 판단할 수 있습니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">2x + 10 = 0 &rarr; x = &minus;5 : x 의 값 &minus;5 하나에 y 가 여러 개 대응 &rarr; 함수가 아니다.</p>
+</div>
+<!-- ============ x 하나에 y 가 하나로 정해지지 않는다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">x 하나에 y 가 하나로 정해지지 않는다</div>
+<div class="diagram-wrap" style="max-width:294px;margin:14px auto"><svg class="dia" viewBox="0 0 294 262" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="154.0" x2="268.0" y2="154.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="216.0" y1="232.0" x2="216.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="277.0" y="158.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="216.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><line x1="86.0" y1="232.0" x2="86.0" y2="24.0" stroke="var(--red)" stroke-width="2.0"/><circle cx="86.0" cy="206.0" r="4.6" fill="var(--orange)"/><circle cx="86.0" cy="128.0" r="4.6" fill="var(--orange)"/><circle cx="86.0" cy="50.0" r="4.6" fill="var(--orange)"/><text x="76.0" y="36.6" font-size="11" fill="var(--red)" text-anchor="end">x = −5</text><text x="117.2" y="132.0" font-size="11" fill="var(--orange)" text-anchor="start">y 값이 여럿</text></svg></div>
+<div class="u11-cap">x 의 값이 &minus;5 하나인데 짝이 되는 y 의 값은 &minus;2 도, 1 도, 4 도 된다. 하나의 x 에 하나의 y 가 대응하지 않으므로 <b>함수가 아니다</b>.</div>
+</div>    <div class="quiz" data-qid="b7" data-ans="3" data-type="num">
+      <div class="quiz-q">Q. 다음 중 y 가 x 의 함수가 <strong>아닌</strong> 것의 번호를 쓰시오.<br>① y = 7 ② x + y = 1 ③ 4x &minus; 8 = 0 ④ y = &minus;2x</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 각 보기를 정리했을 때 x값 하나에 y값이 하나로 정해지는지 확인한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<p>시험에서 &laquo;x축에 평행한 직선이 되기 위한 조건&raquo;을 물으면 <strong>0 이어야 하는 계수와 0 이 아니어야 하는 계수를 둘 다</strong> 적어야 합니다. 보기에서 이 둘을 섞어 냅니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">일차방정식 ax + by &minus; 6 = 0 의 그래프가 <strong>y축에 평행</strong>하고 점 (6, 4) 를 지나면, b = 0 이고 6a &minus; 6 = 0 이므로 a = 1.</p>
+</div>
+    <div class="quiz" data-qid="b8" data-ans="-15" data-type="num">
+      <div class="quiz-q">Q. 일차방정식 (a &minus; 3)x + (b + 2)y &minus; 12 = 0 의 그래프가 x축에 평행하고 점 (5, &minus;4) 를 지날 때, 상수 a, b 에 대하여 ab 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: x축에 평행하려면 x의 계수는 0이고 y의 계수는 0이 아니어야 한다는 두 조건을 모두 쓴다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s5">
+    <div class="section-head"><span class="section-num">5</span><span class="section-title">연립방정식의 해와 두 그래프의 교점</span>
+      <button class="complete-btn" onclick="toggleDone('s5')">완료하기</button></div>
+
+<p>연립방정식은 <strong>두 직선</strong>을 한 좌표평면에 함께 그린 것과 같습니다.</p>
+<!-- ============ 두 직선이 만나는 점 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">두 직선이 만나는 점</div>
+<div class="diagram-wrap" style="max-width:216px;margin:14px auto"><svg class="dia" viewBox="0 0 216 316" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="234.0" x2="190.0" y2="234.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="60.0" y1="286.0" x2="60.0" y2="78.0" stroke="var(--muted)" stroke-width="1.5"/><text x="199.0" y="238.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="60.0" y="70.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="49.0" y="251.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="112.0" y1="231.0" x2="112.0" y2="237.0" stroke="var(--muted)" stroke-width="1.2"/><text x="112.0" y="253.0" font-size="11" fill="var(--muted)" text-anchor="middle">2</text><line x1="57.0" y1="156.0" x2="63.0" y2="156.0" stroke="var(--muted)" stroke-width="1.2"/><text x="48.0" y="160.1" font-size="11" fill="var(--muted)" text-anchor="end">3</text><polyline points="34.0,78.0 179.6,223.6" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="47.0,286.0 151.0,78.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><line x1="60.0" y1="156.0" x2="112.0" y2="156.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><line x1="112.0" y1="234.0" x2="112.0" y2="156.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><circle cx="112.0" cy="156.0" r="5.0" fill="var(--orange)"/><rect x="127.6" y="18.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="142.6" y="26.0" font-size="11" fill="var(--green)" text-anchor="start">x + y = 5</text><rect x="127.6" y="39.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="142.6" y="47.0" font-size="11" fill="var(--blue)" text-anchor="start">2x − y = 1</text></svg></div>
+<div class="u11-cap">교점 (2, 3) 은 두 직선 <b>모두의 위에</b> 있으므로 두 방정식을 동시에 만족한다. 그래서 연립방정식의 해가 x = 2, y = 3 이다.</div>
+</div><p>수업의 가장 큰 메시지 &mdash; 앞으로 <strong>그래프 사이의 교점</strong>이 나오면 &laquo;연립방정식을 푼다&raquo;가 기본입니다. 이차함수나 다른 함수에서도 똑같습니다.</p>
+<p>그래프에서 해를 읽으면 한눈에 보이지만, 교점이 눈금에 딱 맞지 않으면 정확한 값을 읽을 수 없습니다 &rarr; <strong>계산으로 확인</strong>합니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">y = 3x &minus; 2 와 y = x + 4 의 교점 &rarr; 3x &minus; 2 = x + 4 에서 x = 3, 넣으면 y = 7 &rarr; 교점 (3, 7).</p>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">두 일차방정식 ax + y = &minus;1, x &minus; by = 13 의 그래프의 교점이 (1, &minus;3) 이면 a &minus; 3 = &minus;1 에서 a = 2, 1 + 3b = 13 에서 b = 4.</p>
+</div>
+<!-- ============ 교점을 구하는 것은 연립방정식을 푸는 것이다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">교점을 구하는 것은 연립방정식을 푸는 것이다</div>
+<div class="u11-2col">
+ <div class="u11-card">
+  <div class="u11-lab g">그림 &rarr; 식</div>
+  <div class="u11-note" style="margin-top:0;text-align:left">
+   그래프에서 교점의 좌표를 읽으면<br>그 좌표가 곧 <b>연립방정식의 해</b>다.<br>
+   <span style="color:var(--muted)">두 식에 넣어 확인할 수 있다</span>
+  </div>
+ </div>
+ <div class="u11-card">
+  <div class="u11-lab b">식 &rarr; 그림</div>
+  <div class="u11-note" style="margin-top:0;text-align:left">
+   두 식이 <span class="u11-eq">y = f(x)</span>, <span class="u11-eq">y = g(x)</span> 꼴이면<br>
+   <span class="u11-eq">f(x) = g(x)</span> 를 푼 값이 <b>교점의 x좌표</b>다.<br>
+   <span style="color:var(--muted)">y좌표는 그 값을 한쪽 식에 넣어 구한다</span>
+  </div>
+ </div>
+</div>
+<div class="u11-cap">교점의 좌표가 문제에 주어지면 <b>두 식에 각각 넣어</b> 모르는 계수를 구한다. 교점은 두 직선 모두의 위에 있기 때문이다.</div>
+</div>    <div class="quiz" data-qid="b9" data-ans="8" data-type="num">
+      <div class="quiz-q">Q. 두 일차방정식 2x + y = 11, x &minus; 3y = &minus;12 의 그래프의 교점의 좌표를 (p, q) 라 할 때, p + q 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 두 방정식을 연립해 교점의 좌표를 먼저 구한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+    <div class="quiz" data-qid="b10" data-ans="6" data-type="num">
+      <div class="quiz-q">Q. 두 일차방정식 ax + 2y = 7, 3x &minus; by = 11 의 그래프의 교점의 좌표가 (3, &minus;1) 일 때, 상수 a, b 에 대하여 ab 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 교점의 좌표를 두 식에 각각 대입해 a, b에 대한 방정식을 세운다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s6">
+    <div class="section-head"><span class="section-num">6</span><span class="section-title">교점을 이용하는 문제</span>
+      <button class="complete-btn" onclick="toggleDone('s6')">완료하기</button></div>
+
+<p>문제에 교점의 좌표가 없어도 <strong>&laquo;두 직선의 교점을 지나는&raquo;</strong> 이라는 말이 보이면 그것이 신호입니다.</p>
+<!-- ============ 교점을 지나는 직선의 식은 두 단계로 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">교점을 지나는 직선의 식은 두 단계로</div>
+<div class="u11-step">
+ <div class="k">①</div>
+ <div class="v">두 식을 연립해 <b>교점부터</b> 구한다<br>
+   <span class="u11-eq">x + y = 6</span>, <span class="u11-eq">x &minus; y = 2</span> &rarr; 교점 <span class="u11-eq">(4, 2)</span></div>
+ <div class="k">②</div>
+ <div class="v">교점과 다른 한 점 <span class="u11-eq">(0, 10)</span> 으로 <b>두 점을 지나는 직선</b>을 만든다<br>
+   기울기 <span class="u11-eq">(2 &minus; 10) &divide; (4 &minus; 0) = &minus;2</span> &rarr;
+   <span class="u11-eq" style="color:var(--green);font-weight:700">y = &minus;2x + 10</span></div>
+</div>
+<div class="u11-cap">교점을 구하고 나면 앞 단원에서 연습한 「두 점을 지나는 직선」 문제로 바뀐다. <b>교점은 식을 세우기 위한 재료</b>일 뿐이다.</div>
+</div>    <div class="quiz" data-qid="b11" data-ans="-4" data-type="num">
+      <div class="quiz-q">Q. 두 일차방정식 x + 2y = 8, 3x &minus; y = 3 의 그래프의 교점과 점 (6, 5) 를 지나는 직선의 x절편을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 먼저 두 방정식을 연립해 교점을 구한 뒤, 그 점과 (6, 5)로 직선의 식을 세운다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<p>세 직선이 한 점에서 만나는 문제는 <strong>모르는 수가 없는 두 식을 골라</strong> 먼저 연립합니다. 모르는 수가 든 식을 먼저 쓰면 미지수가 셋이 되어 풀리지 않습니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">세 일차방정식 x + 2y = 2, x &minus; y = 8, ax + 3y = 12 의 그래프가 한 점에서 만날 때 &mdash; 모르는 수가 없는 앞의 두 식을 연립하면 교점 (6, &minus;2), 이 점을 ax + 3y = 12 에 넣으면 6a &minus; 6 = 12 이므로 a = 3.</p>
+</div>
+<!-- ============ 세 번째 직선이 같은 점을 지나야 한다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">세 번째 직선이 같은 점을 지나야 한다</div>
+<div class="diagram-wrap" style="max-width:280px;margin:14px auto"><svg class="dia" viewBox="0 0 280 356" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="194.0" x2="254.0" y2="194.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="78.0" y1="326.0" x2="78.0" y2="84.0" stroke="var(--muted)" stroke-width="1.5"/><text x="263.0" y="198.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="78.0" y="76.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="67.0" y="211.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polyline points="34.0,150.0 254.0,260.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="122.0,326.0 240.8,207.2" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="56.0,84.0 254.0,282.0" fill="none" stroke="var(--purple)" stroke-width="2.0" stroke-dasharray="6,4"/><circle cx="210.0" cy="238.0" r="5.0" fill="var(--orange)"/><text x="210.0" y="294.0" font-size="11" fill="var(--orange)" text-anchor="middle">(6, −2)</text><rect x="126.4" y="12.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="141.4" y="20.0" font-size="11" fill="var(--green)" text-anchor="start">x + 2y = 2</text><rect x="126.4" y="33.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="141.4" y="41.0" font-size="11" fill="var(--blue)" text-anchor="start">x − y = 8</text><rect x="126.4" y="54.0" width="10" height="10" fill="var(--purple)" fill-opacity="0.45" stroke="var(--purple)" stroke-width="1.4"/><text x="141.4" y="62.0" font-size="11" fill="var(--purple)" text-anchor="start">3x + 3y = 12</text></svg></div>
+<div class="u11-cap">초록·파랑 두 직선이 만나는 점을 점선 직선도 지나간다. <b>세 직선이 모두 같은 점을 지나는</b> 모습이다.</div>
+</div><p>x = k 처럼 축에 평행한 직선도 직선이므로, &laquo;x = k 가 두 그래프의 교점을 지난다&raquo;도 <strong>세 직선이 한 점에서 만나는</strong> 문제와 같습니다.</p>
+    <div class="quiz" data-qid="b12" data-ans="-5" data-type="num">
+      <div class="quiz-q">Q. 세 일차방정식 x + y = 7, 2x &minus; y = &minus;1, ax &minus; 3y = &minus;25 의 그래프가 한 점에서 만날 때, 상수 a 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 모르는 수가 없는 두 식을 먼저 연립해 교점을 구한 뒤 세 번째 식에 대입한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s7">
+    <div class="section-head"><span class="section-num">7</span><span class="section-title">해의 개수와 두 직선의 위치 관계</span>
+      <button class="complete-btn" onclick="toggleDone('s7')">완료하기</button></div>
+
+<p>앞에서 연립방정식을 배울 때 <strong>계수의 비</strong>로 해가 무수히 많은지·없는지를 가렸습니다. 새로 외울 것은 없습니다 &mdash; <strong>그 판별이 좌표평면에서 무엇을 뜻하는지</strong>를 보는 것입니다.</p>
+<!-- ============ 두 직선이 놓이는 세 가지 모습과 해의 개수 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">두 직선이 놓이는 세 가지 모습과 해의 개수</div>
+<div class="u11-3col"><div class="u11-card"><div class="u11-lab">한 점에서 만난다</div><div class="diagram-wrap" style="max-width:156px;margin:6px auto 0"><svg class="dia" viewBox="0 0 156 142" xmlns="http://www.w3.org/2000/svg"><line x1="18.0" y1="104.0" x2="138.0" y2="104.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="38.0" y1="124.0" x2="38.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="147.0" y="108.0" font-size="10" fill="var(--muted)" text-anchor="middle">x</text><text x="38.0" y="16.0" font-size="10" fill="var(--muted)" text-anchor="middle">y</text><polyline points="18.0,124.0 118.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="18.0,24.0 118.0,124.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><circle cx="68.0" cy="74.0" r="4.2" fill="var(--orange)"/></svg></div></div><div class="u11-card"><div class="u11-lab">평행하다</div><div class="diagram-wrap" style="max-width:156px;margin:6px auto 0"><svg class="dia" viewBox="0 0 156 142" xmlns="http://www.w3.org/2000/svg"><line x1="18.0" y1="104.0" x2="138.0" y2="104.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="38.0" y1="124.0" x2="38.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="147.0" y="108.0" font-size="10" fill="var(--muted)" text-anchor="middle">x</text><text x="38.0" y="16.0" font-size="10" fill="var(--muted)" text-anchor="middle">y</text><polyline points="18.0,54.0 126.0,108.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="18.0,69.0 128.0,124.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/></svg></div></div><div class="u11-card"><div class="u11-lab">일치한다</div><div class="diagram-wrap" style="max-width:156px;margin:6px auto 0"><svg class="dia" viewBox="0 0 156 142" xmlns="http://www.w3.org/2000/svg"><line x1="18.0" y1="104.0" x2="138.0" y2="104.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="38.0" y1="124.0" x2="38.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="147.0" y="108.0" font-size="10" fill="var(--muted)" text-anchor="middle">x</text><text x="38.0" y="16.0" font-size="10" fill="var(--muted)" text-anchor="middle">y</text><polyline points="18.0,54.0 126.0,108.0" fill="none" stroke="var(--green)" stroke-width="4.0"/><polyline points="18.0,54.0 126.0,108.0" fill="none" stroke="var(--blue)" stroke-width="1.6" stroke-dasharray="6,4"/></svg></div></div></div>
+<div class="u11-cap">왼쪽부터 교점이 <b>하나</b> → 해가 한 쌍, 교점이 <b>없다</b> → 해가 없다, 교점이 <b>무수히 많다</b> → 해가 무수히 많다. 교점의 개수가 곧 해의 개수다.</div>
+</div><p>두 식을 y 에 대하여 풀어 기울기·y절편을 견주어도 같은 결론이 나옵니다. 계수의 비는 <strong>식을 정리하지 않고 바로</strong> 쓸 수 있어 빠를 뿐입니다.</p>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">x + 2y = 4, 2x + 4y = 8 &rarr; 1/2 = 2/4 = 4/8 &rarr; 두 직선이 <strong>일치</strong> &rarr; 해가 <strong>무수히 많다</strong>.</p>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">x + 2y = 4, 2x + 4y = 5 &rarr; 1/2 = 2/4 &ne; 4/5 &rarr; 두 직선이 <strong>평행</strong> &rarr; 해가 <strong>없다</strong>.</p>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">연립방정식 3x &minus; y = 2, 6x + ay = b 의 해가 무수히 많으려면 3/6 = &minus;1/a = 2/b 이므로 a = &minus;2, b = 4.</p>
+</div>
+<div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">연립방정식 2x + ay = 1, 4x &minus; 6y = 5 의 해가 없으려면 2/4 = a/(&minus;6) 이고 1/5 과는 달라야 하므로 a = &minus;3 (이때 2/4 &ne; 1/5 이므로 조건이 맞는다).</p>
+</div>
+<!-- ============ 계수의 비로 해의 개수를 가린다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">계수의 비로 해의 개수를 가린다</div>
+<div class="u11-sys" style="margin-bottom:8px">
+ <div class="u11-brace">{</div>
+ <div class="rows"><span class="u11-eq">a&#8321;x + b&#8321;y = c&#8321;</span><span class="u11-eq">a&#8322;x + b&#8322;y = c&#8322;</span></div>
+</div>
+<div class="u11-scroll"><table class="u11-tb">
+ <tr><th>계수의 비</th><th>두 직선</th><th>연립방정식의 해</th></tr>
+ <tr><td><span class="u11-fr a"><span class="up">a&#8321;</span><span class="dn">a&#8322;</span></span> <span class="u11-rel">&ne;</span> <span class="u11-fr b"><span class="up">b&#8321;</span><span class="dn">b&#8322;</span></span></td>
+     <td>한 점에서 만난다</td><td>한 쌍</td></tr>
+ <tr><td><span class="u11-fr a"><span class="up">a&#8321;</span><span class="dn">a&#8322;</span></span> <span class="u11-rel">=</span> <span class="u11-fr b"><span class="up">b&#8321;</span><span class="dn">b&#8322;</span></span> <span class="u11-rel">&ne;</span> <span class="u11-fr c"><span class="up">c&#8321;</span><span class="dn">c&#8322;</span></span></td>
+     <td>평행하다</td><td class="no">없다</td></tr>
+ <tr><td><span class="u11-fr a"><span class="up">a&#8321;</span><span class="dn">a&#8322;</span></span> <span class="u11-rel">=</span> <span class="u11-fr b"><span class="up">b&#8321;</span><span class="dn">b&#8322;</span></span> <span class="u11-rel">=</span> <span class="u11-fr c"><span class="up">c&#8321;</span><span class="dn">c&#8322;</span></span></td>
+     <td>일치한다</td><td class="hit">무수히 많다</td></tr>
+</table></div>
+<div class="u11-cap">x 의 계수의 비와 y 의 계수의 비가 같다는 것은 <b>두 직선의 기울기가 같다</b>는 뜻이다. 분수를 만들 때 위아래 순서는 세 개 모두 <b>첫째 식이 분자</b>로 맞춘다.</div>
+</div>    <div class="quiz" data-qid="b13" data-ans="-21" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 2x &minus; 3y = 5, ax + 9y = b 의 해가 무수히 많을 때, 상수 a, b 에 대하여 a + b 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 계수의 비가 모두 같아야 한다는 조건을 이용해 a, b를 각각 구한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<div class="box box-red"><div class="box-title">⚠ 「해가 없다」는 조건 하나로 끝나지 않는다</div>
+<p style="margin-bottom:0">&laquo;해가 없다&raquo;는 조건에서 <strong>상수항의 비가 달라야 한다는 조건까지</strong> 챙겨야 합니다. 이것을 빼면 두 직선이 겹치는 경우까지 답에 들어갑니다.</p>
+</div>
+<div class="box box-red"><div class="box-title">⚠ 계수에 0 이 있으면 비를 못 만든다</div>
+<p style="margin-bottom:0">계수 중에 0 이 있으면 비(분수)를 만들 수 없습니다 &mdash; 그럴 때는 식을 정리해 기울기로 견줍니다.</p>
+</div>
+    <div class="quiz" data-qid="b14" data-ans="-12" data-type="num">
+      <div class="quiz-q">Q. 연립방정식 8x + ay = 3, 2x &minus; 3y = 5 의 해가 없을 때, 상수 a 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: x, y의 계수의 비는 같고 상수항의 비는 달라야 한다는 조건을 이용한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="section" id="s8">
+    <div class="section-head"><span class="section-num">8</span><span class="section-title">직선으로 둘러싸인 도형</span>
+      <button class="complete-btn" onclick="toggleDone('s8')">완료하기</button></div>
+
+<p>밑변이 x축이 아니라 y = 1 같은 <strong>x축에 평행한 직선</strong> 위에 있으면, 높이는 위쪽 꼭짓점의 y좌표에서 <strong>그 직선의 높이를 뺀 값</strong>입니다.</p>
+<!-- ============ 꼭짓점은 두 직선씩의 교점이다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">꼭짓점은 두 직선씩의 교점이다</div>
+<div class="diagram-wrap" style="max-width:320px;margin:14px auto"><svg class="dia" viewBox="0 0 320 282" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="228.0" x2="274.0" y2="228.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="106.0" y1="252.0" x2="106.0" y2="60.0" stroke="var(--muted)" stroke-width="1.5"/><text x="283.0" y="232.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="106.0" y="52.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="95.0" y="245.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><polygon points="58.0,228.0 250.0,228.0 154.0,132.0" fill="var(--orange)" fill-opacity="0.2" stroke="none" stroke-width="1.2"/><polyline points="58.0,228.0 226.0,60.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="82.0,60.0 250.0,228.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><line x1="154.0" y1="228.0" x2="154.0" y2="132.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><circle cx="58.0" cy="228.0" r="4.2" fill="var(--orange)"/><text x="58.0" y="250.0" font-size="11" fill="var(--orange)" text-anchor="middle">(−2, 0)</text><circle cx="250.0" cy="228.0" r="4.2" fill="var(--orange)"/><text x="250.0" y="250.0" font-size="11" fill="var(--orange)" text-anchor="middle">(6, 0)</text><circle cx="154.0" cy="132.0" r="4.2" fill="var(--orange)"/><text x="154.0" y="100.0" font-size="11" fill="var(--orange)" text-anchor="middle">(2, 4)</text><rect x="182.8" y="18.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="197.8" y="26.0" font-size="11" fill="var(--green)" text-anchor="start">y = x + 2</text><rect x="182.8" y="39.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="197.8" y="47.0" font-size="11" fill="var(--blue)" text-anchor="start">y = −x + 6</text></svg></div>
+<div class="u11-cap">세 직선을 둘씩 짝지어 교점 세 개를 구하면 삼각형이 정해진다. 밑변이 x축 위에 놓여 <b>밑변은 x좌표의 차, 높이는 위쪽 꼭짓점의 y좌표</b>로 바로 읽힌다.</div>
+</div><div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">위 그림의 삼각형은 밑변이 x좌표의 차 6 &minus; (&minus;2) = 8, 높이가 4 이므로 넓이는 &frac12; × 8 × 4 = 16.</p>
+</div>
+    <div class="quiz" data-qid="b15" data-ans="25" data-type="num">
+      <div class="quiz-q">Q. 세 직선 x &minus; y + 3 = 0, x + y &minus; 9 = 0, y = 1 로 둘러싸인 삼각형의 넓이를 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 세 직선을 두 개씩 연립해 세 꼭짓점의 좌표를 먼저 구한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+
+<p>세 직선이 삼각형을 만들지 <strong>못하는</strong> 경우를 찾는 문제는 두 갈래를 <strong>빠짐없이</strong> 셉니다 &mdash; 세 직선이 한 점을 지나는 경우, 어느 두 직선이 평행한 경우. 평행한 경우는 직선마다 따로 확인합니다.</p>
+<!-- ============ 세 직선이 삼각형을 만들지 못하는 경우 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">세 직선이 삼각형을 만들지 못하는 경우</div>
+<div class="u11-3col"><div class="u11-card"><div class="u11-lab">세 직선이 한 점을 지난다</div><div class="diagram-wrap" style="max-width:156px;margin:6px auto 0"><svg class="dia" viewBox="0 0 156 162" xmlns="http://www.w3.org/2000/svg"><line x1="18.0" y1="124.0" x2="138.0" y2="124.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="38.0" y1="144.0" x2="38.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="147.0" y="128.0" font-size="10" fill="var(--muted)" text-anchor="middle">x</text><text x="38.0" y="16.0" font-size="10" fill="var(--muted)" text-anchor="middle">y</text><polyline points="28.0,144.0 88.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="58.0,24.0 138.0,104.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="18.0,74.0 118.0,24.0" fill="none" stroke="var(--orange)" stroke-width="2.0" stroke-dasharray="6,4"/><circle cx="78.0" cy="44.0" r="4.2" fill="var(--purple)"/></svg></div></div><div class="u11-card"><div class="u11-lab">점선이 한 직선과 평행</div><div class="diagram-wrap" style="max-width:156px;margin:6px auto 0"><svg class="dia" viewBox="0 0 156 162" xmlns="http://www.w3.org/2000/svg"><line x1="18.0" y1="124.0" x2="138.0" y2="124.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="38.0" y1="144.0" x2="38.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="147.0" y="128.0" font-size="10" fill="var(--muted)" text-anchor="middle">x</text><text x="38.0" y="16.0" font-size="10" fill="var(--muted)" text-anchor="middle">y</text><polyline points="28.0,144.0 88.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="58.0,24.0 138.0,104.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="18.0,144.0 78.0,24.0" fill="none" stroke="var(--orange)" stroke-width="2.0" stroke-dasharray="6,4"/></svg></div></div><div class="u11-card"><div class="u11-lab">점선이 다른 직선과 평행</div><div class="diagram-wrap" style="max-width:156px;margin:6px auto 0"><svg class="dia" viewBox="0 0 156 162" xmlns="http://www.w3.org/2000/svg"><line x1="18.0" y1="124.0" x2="138.0" y2="124.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="38.0" y1="144.0" x2="38.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="147.0" y="128.0" font-size="10" fill="var(--muted)" text-anchor="middle">x</text><text x="38.0" y="16.0" font-size="10" fill="var(--muted)" text-anchor="middle">y</text><polyline points="28.0,144.0 88.0,24.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="58.0,24.0 138.0,104.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><polyline points="18.0,84.0 66.0,132.0" fill="none" stroke="var(--orange)" stroke-width="2.0" stroke-dasharray="6,4"/></svg></div></div></div>
+<div class="u11-cap">실선 두 개는 그대로 두고 점선 직선만 바꿔 본 것이다. 세 경우 모두 <b>세 직선으로 둘러싸인 부분이 생기지 않는다</b>.</div>
+</div><div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">세 직선 y = 2x, y = &minus;x + 6, y = ax + 1 이 삼각형을 만들지 않는 상수 a 는 y = 2x 와 평행할 때 a = 2, y = &minus;x + 6 과 평행할 때 a = &minus;1, 세 직선이 앞의 두 직선의 교점 (2, 4) 를 지날 때 4 = 2a + 1 에서 a = 3/2 &mdash; 모두 세 개다.</p>
+</div>
+<p>직사각형·평행사변형은 <strong>가운데 점(두 대각선이 만나는 점)을 중심으로 반 바퀴 돌리면 자기 자신과 겹치는</strong> 도형입니다. 그래서 그 점을 지나는 직선으로 자르면 두 조각의 모양이 같아 넓이도 같습니다.</p>
+<p>삼각형의 넓이를 이등분할 때는 한 꼭짓점과 <strong>마주 보는 변의 중점</strong>을 잇습니다(밑변이 반, 높이는 같다).</p>
+<!-- ============ 가운데 점을 지나기만 하면 반으로 나뉜다 ============ -->
+<div class="u11-wrap">
+<div class="u11-t">가운데 점을 지나기만 하면 반으로 나뉜다</div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 210" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="154.0" x2="242.0" y2="154.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="60.0" y1="180.0" x2="60.0" y2="24.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="158.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="60.0" y="16.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><polygon points="60.0,154.0 216.0,154.0 216.0,50.0" fill="var(--green)" fill-opacity="0.18" stroke="none" stroke-width="1.2"/><line x1="60.0" y1="154.0" x2="216.0" y2="154.0" stroke="var(--text)" stroke-width="1.6"/><line x1="216.0" y1="154.0" x2="216.0" y2="50.0" stroke="var(--text)" stroke-width="1.6"/><line x1="216.0" y1="50.0" x2="60.0" y2="50.0" stroke="var(--text)" stroke-width="1.6"/><line x1="60.0" y1="50.0" x2="60.0" y2="154.0" stroke="var(--text)" stroke-width="1.6"/><polyline points="34.0,171.3 242.0,32.7" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="99.0,24.0 177.0,180.0" fill="none" stroke="var(--blue)" stroke-width="2.0" stroke-dasharray="6,4"/><line x1="138.0" y1="151.0" x2="138.0" y2="157.0" stroke="var(--muted)" stroke-width="1.2"/><text x="138.0" y="176.0" font-size="11" fill="var(--muted)" text-anchor="middle">3</text><line x1="216.0" y1="151.0" x2="216.0" y2="157.0" stroke="var(--muted)" stroke-width="1.2"/><text x="216.0" y="176.0" font-size="11" fill="var(--muted)" text-anchor="middle">6</text><line x1="57.0" y1="102.0" x2="63.0" y2="102.0" stroke="var(--muted)" stroke-width="1.2"/><text x="51.0" y="106.1" font-size="11" fill="var(--muted)" text-anchor="end">2</text><line x1="57.0" y1="50.0" x2="63.0" y2="50.0" stroke="var(--muted)" stroke-width="1.2"/><text x="51.0" y="54.1" font-size="11" fill="var(--muted)" text-anchor="end">4</text><line x1="60.0" y1="102.0" x2="138.0" y2="102.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><line x1="138.0" y1="154.0" x2="138.0" y2="102.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><circle cx="138.0" cy="102.0" r="5.0" fill="var(--orange)"/></svg></div>
+<div class="u11-cap">네 꼭짓점이 (0, 0), (6, 0), (6, 4), (0, 4) 인 직사각형과 가운데 점 (3, 2). 실선과 점선은 방향이 다르지만 <b>둘 다 넓이를 똑같이 나눈다</b>.</div>
+</div><div class="box box-green"><div class="box-title">📌 예제</div>
+<p style="margin-bottom:0">위 그림의 직사각형에서 가운데 점 (3, 2) 를 지나는 직선을 y = ax 라 하면, 2 = 3a 이므로 a = ⅔.</p>
+</div>
+    <div class="quiz" data-qid="b16" data-ans="5/4|1.25" data-type="text">
+      <div class="quiz-q">Q. 네 점 (1, 1), (7, 1), (7, 5), (1, 5) 를 꼭짓점으로 하는 직사각형의 넓이를 직선 y = ax &minus; 2 가 이등분할 때, 상수 a 의 값을 구하시오.</div>
+      <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+      <div class="quiz-hint">힌트: 직사각형의 넓이를 이등분하는 직선은 두 대각선이 만나는 점을 지난다는 것을 이용한다.</div>
+      <div class="quiz-fb"></div>
+    </div>
+  </section>
+  <section class="wrongnote" id="wrong">
+    <h2>📕 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(본문에서 틀린 문제가 자동으로 모여요)</span></h2>
+    <div id="wrongList"><p class="empty">아직 틀린 문제가 없어요. 퀴즈를 풀어보세요!</p></div>
+    <button class="review-btn" id="reviewBtn" onclick="reviewWrong()">오답 정리 완료</button>
+    <button class="clear-btn" onclick="clearWrong()">오답노트 비우기</button>
+  </section>
+  <section class="gate" id="gate">
+    <h2>🔓 연습문제 잠금 해제</h2>
+    <p class="desc">아래 두 조건을 모두 채우면 기본&middot;응용&middot;심화 연습문제가 열려요.</p>
+    <ul class="checklist">
+      <li id="ck_quiz"><span class="mark">✓</span><span>본문 퀴즈 전부 채점하기 (<span id="gradedCount">0</span> / <span id="quizTotal">16</span>)</span></li>
+      <li id="ck_review"><span class="mark">✓</span><span>오답노트 확인하기 (위에서 '오답 정리 완료' 누르기)</span></li>
+    </ul>
+    <button class="start-btn locked" id="startBtn" onclick="startPractice()">🔒 연습문제 풀기 (잠김)</button>
+  </section>
+
+  <div class="practice-wrap" id="practiceWrap">
+    <div class="practice-title">✏️ 연습문제</div>
+    <div class="practice-sub">기본 10문제를 모두 채점하면 응용이, 응용 10문제를 모두 채점하면 심화가 열립니다. 틀린 문제는 아래 연습 오답노트에 모입니다.</div>
+
+    <div class="pset" id="pset_basic">
+      <div class="pset-head"><span class="diff-badge diff-basic">기본</span><span class="pset-title">기본 &mdash; 배운 개념을 그대로 적용하면 풀린다</span><span class="pcount" id="cnt_basic">0 / 10</span></div>
+      <div class="pbody">
+        <div class="prob" data-qid="pb1" data-ans="3/4|0.75" data-type="text">
+          <div class="pq"><span class="pnum">1.</span>일차방정식 3x &minus; 4y + 8 = 0 의 그래프의 기울기를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: y에 대하여 풀어 정리한 뒤 x의 계수를 읽는다. 양변을 y의 계수로 나누면 x의 계수 부호가 어떻게 되는지 확인한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb2" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>일차방정식 2x + y &minus; 6 = 0 의 그래프가 점 (k, &minus;4) 를 지날 때, k 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: y = −4를 대입해 k에 대한 방정식을 세운다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb3" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>두 점 (a + 5, 1), (2a &minus; 2, 6) 을 지나는 직선이 y축에 평행할 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: y축에 평행하려면 두 점의 x좌표가 같아야 한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb4" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>다음 중 그래프가 x축에 평행한 것의 번호를 쓰시오.<br>① x = 5 ② y = x + 1 ③ 2y + 6 = 0 ④ x &minus; y = 0</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 각 식을 정리해 y = (상수) 꼴이 되는 것을 찾는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb5" data-ans="-2" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>일차방정식 ax + by &minus; 6 = 0 의 그래프가 직선 x = &minus;3 과 같을 때, 상수 a, b 에 대하여 a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 직선 x = &minus;3 에는 y 가 없다. 먼저 y 의 계수가 어떻게 되어야 하는지 정한 다음, x = &minus;3 을 식에 맞춰 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb6" data-ans="-1" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>두 일차방정식 x + y = 4, 2x &minus; y = 11 의 그래프의 교점의 y좌표를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 방정식을 연립해 교점의 좌표를 구한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb7" data-ans="6" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>두 일차방정식 ax &minus; y = 14, x + by = 10 의 그래프의 교점의 좌표가 (4, &minus;2) 일 때, 상수 a, b 에 대하여 a &minus; b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 교점의 좌표를 두 식에 각각 대입해 a, b를 구한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb8" data-ans="-32" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>연립방정식 3x + ay = 4, 6x &minus; 8y = b 의 해가 무수히 많을 때, 상수 a, b 에 대하여 ab 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 계수의 비가 모두 같아야 한다는 조건을 이용한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb9" data-ans="-8" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>연립방정식 ax + 2y = 3, 4x &minus; y = 1 의 해가 없을 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: x, y의 계수의 비는 같고 상수항의 비는 달라야 한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pb10" data-ans="12" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>세 직선 y = 2x + 4, y = &minus;x + 4 와 x축으로 둘러싸인 삼각형의 넓이를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 각 직선이 x축과 만나는 점, 그리고 두 직선의 교점을 먼저 구한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pset locked" id="pset_applied">
+      <div class="pset-head"><span class="diff-badge diff-applied">응용</span><span class="pset-title">응용 &mdash; 조건을 한 번 더 해석해야 식이 나온다</span><span class="pcount" id="cnt_applied">0 / 10</span></div>
+      <div class="lockmsg">🔒 기본 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="prob" data-qid="pa1" data-ans="-5" data-type="num">
+          <div class="pq"><span class="pnum">1.</span>일차방정식 2x + ay &minus; 4 = 0 의 그래프가 두 점 (&minus;4, 6), (7, b) 를 지날 때, b 의 값을 구하시오. (단, a 는 상수)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 먼저 점 (−4, 6)을 대입해 a를 구한 뒤, 그 식에 (7, b)를 대입한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa2" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>일차방정식 4x &minus; 2y + 6 = 0 의 그래프에 대한 설명으로 옳지 <strong>않은</strong> 것의 번호를 쓰시오.<br>① 기울기는 2 이다. ② y절편은 3 이다. ③ y = 2x &minus; 3 의 그래프와 평행하다. ④ 제4사분면을 지나지 않는다. ⑤ 2x &minus; y + 3 = 0 의 그래프와 평행하다.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 보기마다 두 식을 같은 꼴로 정리한 뒤 판단한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa3" data-ans="11" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>두 점 (&minus;5, 3a &minus; 1), (4, a + 7) 을 지나는 직선이 x축에 평행할 때, 이 직선의 방정식을 y = k 라 하자. k 의 값을 구하시오. (단, a 는 상수)</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: x축에 평행하려면 두 점의 y좌표가 같아야 한다는 조건으로 a를 먼저 구한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa4" data-ans="19" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>점 (&minus;4, 7) 을 지나고 x축에 평행한 직선과 점 (3, &minus;5) 를 지나고 x축에 수직인 직선이 일차함수 y = 2x &minus; 1 의 그래프와 만나는 점을 각각 (a, b), (c, d) 라 할 때, a + b + c + d 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: x축에 평행한 직선은 y가, 수직인 직선은 x가 먼저 정해진다. 그 값을 y = 2x − 1에 넣는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa5" data-ans="4" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>네 점 (&minus;1, 2), (5, 2), (5, 8), (&minus;1, 8) 을 꼭짓점으로 하는 직사각형의 넓이를 직선 y = ax &minus; 3 이 이등분할 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 직사각형의 넓이를 이등분하는 직선은 두 대각선의 교점을 지난다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa6" data-ans="13" data-type="num">
+          <div class="pq"><span class="pnum">6.</span>두 일차방정식 2x &minus; y = 7, x + 3y = 7 의 그래프의 교점과 점 (2, 7) 을 지나는 직선의 y절편을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 먼저 두 방정식을 연립해 교점을 구한 뒤, 그 점과 (2, 7)로 직선의 식을 세운다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa7" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>아래 그림은 연립방정식 ax &minus; y = 3, x + by = 12 를 풀기 위해 두 일차방정식의 그래프를 그린 것이다. 상수 a, b 에 대하여 ab 의 값을 구하시오.</div>
+<!-- ============  ============ -->
+<div class="u11-wrap">
+<div class="u11-t"></div>
+<div class="diagram-wrap" style="max-width:268px;margin:14px auto"><svg class="dia" viewBox="0 0 268 322" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="240.0" x2="242.0" y2="240.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="86.0" y1="292.0" x2="86.0" y2="58.0" stroke="var(--muted)" stroke-width="1.5"/><text x="251.0" y="244.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="86.0" y="50.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="75.0" y="257.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="138.0" y1="237.0" x2="138.0" y2="243.0" stroke="var(--muted)" stroke-width="1.2"/><text x="138.0" y="259.0" font-size="11" fill="var(--muted)" text-anchor="middle">2</text><line x1="83.0" y1="110.0" x2="89.0" y2="110.0" stroke="var(--muted)" stroke-width="1.2"/><text x="74.0" y="114.1" font-size="11" fill="var(--muted)" text-anchor="end">5</text><polyline points="92.5,292.0 151.0,58.0" fill="none" stroke="var(--green)" stroke-width="2.0"/><polyline points="34.0,58.0 242.0,162.0" fill="none" stroke="var(--blue)" stroke-width="2.0"/><line x1="86.0" y1="110.0" x2="138.0" y2="110.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><line x1="138.0" y1="240.0" x2="138.0" y2="110.0" stroke="var(--purple)" stroke-width="1.3" stroke-dasharray="5,4"/><circle cx="138.0" cy="110.0" r="4.6" fill="var(--orange)"/><rect x="161.4" y="20.0" width="10" height="10" fill="var(--green)" fill-opacity="0.45" stroke="var(--green)" stroke-width="1.4"/><text x="176.4" y="28.0" font-size="11" fill="var(--green)" text-anchor="start">ax − y = 3</text><rect x="161.4" y="41.0" width="10" height="10" fill="var(--blue)" fill-opacity="0.45" stroke="var(--blue)" stroke-width="1.4"/><text x="176.4" y="49.0" font-size="11" fill="var(--blue)" text-anchor="start">x + by = 12</text></svg></div>
+<div class="u11-cap"></div>
+</div>          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 그림에서 두 직선의 교점의 좌표를 먼저 읽는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa8" data-ans="5/2|2.5" data-type="text">
+          <div class="pq"><span class="pnum">8.</span>방정식 x = 2 의 그래프가 두 일차함수 y = ax &minus; 4, y = 3x &minus; 5 의 그래프의 교점을 지날 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 먼저 두 일차함수의 교점의 x좌표가 2임을 이용해 교점의 좌표를 구한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa9" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>연립방정식 x &minus; 2y = 3, ax + 4y = b 의 해가 무수히 많을 때, 일차함수 y = ax + b 의 그래프가 지나지 <strong>않는</strong> 사분면은 제 몇 사분면인지 숫자만 쓰시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 해가 무수히 많다 = 두 식이 같은 직선. a, b를 구한 다음 새 일차함수의 기울기와 y절편의 부호를 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="pa10" data-ans="-18" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>연립방정식 2x &minus; y = 3, ax + by = 6 의 해가 없고, 일차방정식 ax + by = 6 의 그래프가 점 (1, 4) 를 지날 때, 상수 a, b 에 대하여 ab 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 「해가 없다」에서 나오는 관계식 하나와, 점을 지난다는 식 하나를 연립한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+    <div class="pset locked" id="pset_hard">
+      <div class="pset-head"><span class="diff-badge diff-hard">심화</span><span class="pset-title">심화 &mdash; 두 조건이 동시에 걸린 문제</span><span class="pcount" id="cnt_hard">0 / 10</span></div>
+      <div class="lockmsg">🔒 응용 10문제를 모두 채점하면 열려요.</div>
+      <div class="pbody">
+        <div class="solution">
+          <div class="sol-head">🧩 단계별 풀이 &mdash; 문자가 하나만 모르는 점부터 넣는다</div>
+          <div class="sol-q">일차방정식 x + ay + 4 = 0 의 그래프가 세 점 (2, &minus;3), (b, &minus;1), (&minus;12, c) 를 지날 때, 일차방정식 ax + by + c = 0 의 그래프의 x절편을 구해 보자.</div>
+          <div class="step"><span class="s-label">STEP 1 &middot; 문자가 하나만 모르는 점부터 넣는다</span><br>(2, &minus;3) 을 넣으면 2 &minus; 3a + 4 = 0 이므로 <strong>a = 2</strong></div>
+          <div class="step"><span class="s-label">STEP 2 &middot; 정해진 식에 나머지 두 점을 넣는다</span><br>이제 식이 x + 2y + 4 = 0 으로 정해졌으니 나머지 두 점을 넣는다 &mdash; b &minus; 2 + 4 = 0 에서 <strong>b = &minus;2</strong>, &minus;12 + 2c + 4 = 0 에서 <strong>c = 4</strong></div>
+          <div class="step"><span class="s-label">STEP 3 &middot; 완성된 식에서 x절편을 구한다</span><br>2x &minus; 2y + 4 = 0 에 y = 0 을 넣으면 x절편은 <strong>&minus;2</strong></div>
+          <div class="step"><span class="s-label">STEP 4 &middot; 이 유형의 순서</span><br>세 점을 한꺼번에 넣으면 모르는 수가 넷이 됩니다. 먼저 계수를 확정하고 나서 나머지 점을 넣는 순서가 이 유형의 핵심입니다. (다음 문제는 이것과 같은 유형이지만 수치가 다릅니다.)</div>
+          <button class="reveal-btn" onclick="reveal(this)">다음 단계 보기 &rarr;</button>
+        </div>
+        <div class="prob" data-qid="ph1" data-ans="-5/3" data-type="text">
+          <div class="pq"><span class="pnum">1.</span>일차방정식 2x + ay &minus; 5 = 0 의 그래프가 세 점 (1, &minus;3), (b, 1), (5, c) 를 지날 때, 일차방정식 ax + by + c = 0 의 그래프의 y절편을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 문자가 하나만 모르는 점부터 대입해 계수를 먼저 확정한 뒤 나머지 점을 넣는다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph2" data-ans="3" data-type="num">
+          <div class="pq"><span class="pnum">2.</span>일차방정식 (a + 2)x &minus; (b &minus; 1)y = 12 의 그래프가 y축에 평행하고 y축의 오른쪽에 있다. 이 직선과 두 직선 y = x, y = &minus;x 로 둘러싸인 삼각형의 넓이가 9 일 때, 상수 a, b 에 대하여 a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: y축에 평행하려면 y의 계수가 0이어야 한다. 직선 x = k와 y = x, y = −x가 만나는 두 점과 원점으로 삼각형을 그려 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph3" data-ans="32" data-type="num">
+          <div class="pq"><span class="pnum">3.</span>점 (&minus;2, 7) 을 지나고 x축에 평행한 직선을 l, 점 (4, 2) 를 지나고 x축에 수직인 직선을 m 이라 하자. 두 직선 l, m 과 일차함수 y = &minus;x + 3 의 그래프로 둘러싸인 삼각형의 넓이를 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 직선 l과 m의 식을 먼저 세운 뒤, 세 직선이 만드는 세 꼭짓점의 좌표를 구한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph4" data-ans="1" data-type="num">
+          <div class="pq"><span class="pnum">4.</span>두 일차방정식 ax + by = 7, bx + ay = &minus;8 의 그래프의 교점의 좌표가 (2, &minus;3) 일 때, 상수 a, b 에 대하여 a + b 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 교점의 좌표를 두 식에 넣으면 a, b에 대한 연립방정식이 된다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph5" data-ans="5" data-type="num">
+          <div class="pq"><span class="pnum">5.</span>세 일차방정식 2x + y = 3, x &minus; y = 6, ax + 2y = a + 4 의 그래프가 한 점에서 만날 때, 상수 a 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 모르는 수가 없는 두 식을 먼저 연립해 교점을 구한 뒤 세 번째 식에 대입한다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph6" data-ans="1/2|0.5" data-type="text">
+          <div class="pq"><span class="pnum">6.</span>세 일차방정식 x &minus; 2y + 4 = 0, x + y &minus; 5 = 0, ax &minus; y + 1 = 0 의 그래프가 삼각형을 이루지 <strong>않도록</strong> 하는 모든 상수 a 의 값의 합을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" placeholder="답" style="width:150px"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 갈래 — 어느 두 직선이 평행한 경우와, 세 직선이 한 점을 지나는 경우를 모두 센다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph7" data-ans="10" data-type="num">
+          <div class="pq"><span class="pnum">7.</span>두 일차방정식 ax &minus; 3y = 6, 2x + by = &minus;4 의 그래프가 일치한다. 연립방정식 bx + ay = 5, 4x &minus; 6y = k 의 해가 무수히 많을 때, 상수 k 의 값을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 두 그래프가 일치하면 계수의 비가 모두 같다. 구한 a, b를 새 연립방정식에 넣고 다시 비를 만든다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph8" data-ans="-6" data-type="num">
+          <div class="pq"><span class="pnum">8.</span>연립방정식 (a &minus; 2)x + y &minus; 3 = 0, ax + 3y + b = 0 의 해가 없을 때, 상수 a 의 값과 b 가 될 수 <strong>없는</strong> 값의 합을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 해가 없을 조건에는 등호 조건과 같지 않다는 조건이 함께 있다. b가 될 수 없는 값은 어느 쪽에서 나오는가.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph9" data-ans="8" data-type="num">
+          <div class="pq"><span class="pnum">9.</span>세 직선 x &minus; y + 2 = 0, x + 2y &minus; 10 = 0, y = 0 으로 둘러싸인 삼각형이 있다. 두 직선 x &minus; y + 2 = 0, x + 2y &minus; 10 = 0 의 교점을 지나면서 이 삼각형의 넓이를 이등분하는 직선의 y절편을 구하시오.</div>
+          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 넓이를 이등분하는 직선은 꼭짓점과 마주 보는 변의 중점을 지난다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+        <div class="prob" data-qid="ph10" data-ans="7" data-type="num">
+          <div class="pq"><span class="pnum">10.</span>아래 그림과 같이 두 점 A(&minus;2, 6), B(3, 1) 이 있다. 직선 y = ax &minus; 5 가 선분 AB 와 만나지 <strong>않도록</strong> 하는 정수 a 의 개수를 구하시오.</div>
+<!-- ============  ============ -->
+<div class="u11-wrap">
+<div class="u11-t"></div>
+<div class="diagram-wrap" style="max-width:240px;margin:14px auto"><svg class="dia" viewBox="0 0 240 360" xmlns="http://www.w3.org/2000/svg"><line x1="34.0" y1="190.0" x2="214.0" y2="190.0" stroke="var(--muted)" stroke-width="1.5"/><line x1="114.0" y1="330.0" x2="114.0" y2="30.0" stroke="var(--muted)" stroke-width="1.5"/><text x="223.0" y="194.0" font-size="11" fill="var(--muted)" text-anchor="middle">x</text><text x="114.0" y="22.0" font-size="11" fill="var(--muted)" text-anchor="middle">y</text><text x="103.0" y="207.0" font-size="11" fill="var(--muted)" text-anchor="middle">O</text><line x1="74.0" y1="70.0" x2="174.0" y2="170.0" stroke="var(--text)" stroke-width="2.2"/><circle cx="74.0" cy="70.0" r="4.4" fill="var(--orange)"/><text x="66.0" y="61.0" font-size="11" fill="var(--orange)" text-anchor="end">A(−2, 6)</text><circle cx="174.0" cy="170.0" r="4.4" fill="var(--orange)"/><text x="183.0" y="162.0" font-size="11" fill="var(--orange)" text-anchor="start">B(3, 1)</text></svg></div>
+<div class="u11-cap"></div>
+</div>          <div class="quiz-row"><input class="quiz-input" type="number" placeholder="값"><button class="quiz-submit" onclick="grade(this)">채점</button></div>
+          <div class="quiz-hint">힌트: 직선 y = ax − 5는 a가 무엇이든 한 점을 지난다. 그 점에서 A와 B를 각각 지나는 경우를 경계로 잡고, 선분이 y축의 어느 쪽에 걸쳐 있는지 본다.</div>
+          <div class="quiz-fb"></div>
+        </div>
+      </div>
+    </div>
+
+
+    <section class="wrongnote" id="pwrong">
+      <h2>📒 연습 오답노트 <span style="font-size:13px;font-weight:600;color:var(--muted)">(연습문제에서 틀린 문제)</span></h2>
+      <div id="pwrongList"><p class="empty">아직 틀린 문제가 없어요.</p></div>
+    </section>
+  </div>
+</div>
+
+<nav class="unit-nav" aria-label="단원 이동">
+    <a class="pv" href="note_2-1_10_%EC%9D%BC%EC%B0%A8%ED%95%A8%EC%88%98%EC%99%80%EA%B7%B8%EB%9E%98%ED%94%842_PRO.html">
+      <span class="un-lbl">← 이전 단원</span>
+      <span class="un-t">10단원 · 일차함수와 그래프(2)</span>
+    </a>
+</nav>
+
+<footer class="site-foot">
+  <p><a href="index.html">← 중2 1학기 목차</a><span class="sep">·</span><a href="/">Isaac Math 홈</a><span class="sep">·</span><a href="/about.html">사이트 소개</a><span class="sep">·</span><a href="/privacy.html">개인정보처리방침</a></p>
+  <p>© Isaac Math · 개인 학습용으로 자유롭게 이용하세요. 무단 복제·재배포는 금합니다.</p>
+</footer>
+
+<script>
+const LS='isaacmath_note_2-1-11_v1';
+let state={done:[],results:{},reviewed:false};
+function load(){try{const s=JSON.parse(localStorage.getItem(LS));if(s&&typeof s==='object'){state.done=s.done||[];state.results=s.results||{};state.reviewed=!!s.reviewed;}}catch(e){}}
+function save(){try{localStorage.setItem(LS,JSON.stringify(state));}catch(e){}}
+
+let cel={init:false,practice:false,applied:false,hard:false};
+const reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function toast(msg,type){const t=document.createElement('div');t.className='toast '+(type==='ng'?'ng':'ok');t.textContent=msg;document.body.appendChild(t);requestAnimationFrame(()=>t.classList.add('show'));setTimeout(()=>{t.classList.remove('show');setTimeout(()=>t.remove(),300);},2200);}
+function flashWrong(id){const el=document.getElementById(id);if(!el)return;el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');}
+function confetti(){if(reduceMotion)return;const c=document.createElement('canvas');c.className='confetti-canvas';c.width=innerWidth;c.height=innerHeight;document.body.appendChild(c);const ctx=c.getContext('2d');const cols=['#34d399','#60a5fa','#fbbf24','#c4b5fd','#f87171'];const ps=[];for(let i=0;i<90;i++)ps.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*0.3,r:4+Math.random()*5,vx:-2+Math.random()*4,vy:2+Math.random()*4,col:cols[i%cols.length],rot:Math.random()*6.28,vr:-0.2+Math.random()*0.4});let t0=null;function frame(ts){if(!t0)t0=ts;const el=ts-t0;ctx.clearRect(0,0,c.width,c.height);ps.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.05;p.rot+=p.vr;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);ctx.fillStyle=p.col;ctx.fillRect(-p.r/2,-p.r/2,p.r,p.r*0.7);ctx.restore();});if(el<1600)requestAnimationFrame(frame);else c.remove();}requestAnimationFrame(frame);}
+function celebrate(msg){toast(msg,'ok');confetti();}
+
+function toggleTheme(){document.documentElement.classList.toggle('light');const light=document.documentElement.classList.contains('light');document.getElementById('themeBtn').textContent=light?'🌙 다크 모드':'☀️ 라이트 모드';}
+function resetAll(){if(confirm('이 단원의 모든 진행 상황(완료·채점·오답·잠금)을 초기화할까요?')){state={done:[],results:{},reviewed:false};save();location.reload();}}
+
+function onScroll(){const h=document.documentElement;const sc=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;document.getElementById('pbar').style.width=Math.min(100,sc)+'%';}
+window.addEventListener('scroll',onScroll);
+
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  const inp=e.target;
+  if(inp.classList&&inp.classList.contains('quiz-input')){
+    e.preventDefault();
+    const row=inp.closest('.quiz-row');const btn=row&&row.querySelector('.quiz-submit');
+    if(btn)grade(btn);
+  }
+});
+
+const spy=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){const id=e.target.id;document.querySelectorAll('.tlink').forEach(a=>a.classList.remove('active'));const l=document.querySelector('.tlink[href="#'+id+'"]');if(l)l.classList.add('active');}});},{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('.section,#wrong,#gate').forEach(s=>spy.observe(s));
+
+function qtext(el){const q=el.querySelector('.quiz-q, .pq');return q?q.textContent.trim():'';}
+function ids(t){return [...document.querySelectorAll('[data-qid]')].filter(t);}
+const bodyEls=()=>ids(q=>q.dataset.qid[0]==='b');
+const setEls=(p)=>ids(q=>q.dataset.qid.startsWith(p));
+const gradedIn=(list)=>list.filter(q=>state.results[q.dataset.qid]).length;
+
+function grade(btn){
+  const el=btn.closest('[data-qid]');const qid=el.dataset.qid;
+  const inp=el.querySelector('.quiz-input');const type=el.dataset.type;
+  const cands=el.dataset.ans.split('|');   // 복수 정답 지원
+  let val=inp.value.trim();
+  let ok=type==='num'?(val!==''&&cands.some(a=>Number(val)===Number(a))):cands.some(a=>val.replace(/\s/g,'')===a.replace(/\s/g,''));
+  state.results[qid]={correct:ok,given:val||'(미입력)',question:qtext(el),ans:cands[0]};
+  if(!ok){flashWrong(qid[0]==='p'?'pwrong':'wrong');toast('❌ 틀린 문제가 오답노트에 기록됐어요','ng');}
+  save();refresh();
+}
+function paint(el){
+  const qid=el.dataset.qid;const r=state.results[qid];const fb=el.querySelector('.quiz-fb');const inp=el.querySelector('.quiz-input');
+  if(!fb)return;
+  if(r){if(inp&&inp.value===''&&r.given!=='(미입력)')inp.value=r.given;
+    fb.classList.add('show');
+    if(r.correct){fb.className='quiz-fb show ok';fb.textContent='✅ 정답이에요!';}
+    else{fb.className='quiz-fb show ng';fb.textContent='❌ 다시 생각해봐요. (오답노트에 기록됐어요)';}
+  } else {fb.className='quiz-fb';fb.textContent='';}
+}
+
+function toggleDone(id){const i=state.done.indexOf(id);if(i>=0)state.done.splice(i,1);else state.done.push(id);save();refresh();}
+function reveal(btn){const box=btn.closest('.solution');const steps=box.querySelectorAll('.step');for(const s of steps){if(!s.classList.contains('show')){s.classList.add('show');break;}}if([...steps].every(s=>s.classList.contains('show'))){btn.disabled=true;btn.textContent='모든 단계 공개됨';}}
+function reviewWrong(){state.reviewed=true;save();refresh();}
+function clearWrong(){for(const k of Object.keys(state.results)){if(state.results[k].correct===false)delete state.results[k];}save();refresh();}
+function startPractice(){const wrap=document.getElementById('practiceWrap');if(wrap.style.display==='block'){document.getElementById('pset_basic').scrollIntoView({behavior:'smooth'});}}
+
+function renderWrongList(boxId,list){
+  const box=document.getElementById(boxId);
+  const items=list.filter(q=>{const r=state.results[q.dataset.qid];return r&&r.correct===false;}).map(q=>state.results[q.dataset.qid]);
+  if(!items.length){box.innerHTML='<p class="empty">아직 틀린 문제가 없어요.</p>';return;}
+  box.innerHTML=items.map(w=>'<div class="wrong-item"><div class="wq">'+w.question+'</div><div class="wa">내 답: '+w.given+' · 정답: '+w.ans+'</div></div>').join('');
+}
+
+function refresh(){
+  state.done=state.done.filter(id=>document.getElementById(id));
+  const secs=document.querySelectorAll('.section');
+  secs.forEach(s=>{const on=state.done.indexOf(s.id)>=0;s.classList.toggle('done',on);const b=s.querySelector('.complete-btn');if(b)b.textContent=on?'✓ 완료됨':'완료하기';});
+  const total=secs.length;const p=Math.round(state.done.length/total*100);
+  document.getElementById('ring').style.setProperty('--p',p);document.getElementById('ringTxt').textContent=p+'%';
+  document.getElementById('b_first').classList.toggle('on',state.done.length>=1);
+  document.getElementById('b_half').classList.toggle('on',p>=50);
+  document.getElementById('b_master').classList.toggle('on',p>=100);
+  const d=document.getElementById('achDesc');
+  d.textContent=p>=100?'🏆 단원 마스터! 모든 섹션을 끝냈어요.':(p>=50?'🔥 절반 돌파! 끝까지 가볼까요?':'각 섹션을 끝내면 완료 버튼을 눌러 진행률을 채워보세요.');
+
+  document.querySelectorAll('[data-qid]').forEach(paint);
+
+  renderWrongList('wrongList',bodyEls());
+  renderWrongList('pwrongList',[...setEls('pb'),...setEls('pa'),...setEls('ph')]);
+  const rb=document.getElementById('reviewBtn');if(state.reviewed){rb.classList.add('done');rb.textContent='✓ 오답 정리 완료';}else{rb.classList.remove('done');rb.textContent='오답 정리 완료';}
+
+  const body=bodyEls();const bg=gradedIn(body);
+  document.getElementById('gradedCount').textContent=bg;
+  document.getElementById('quizTotal').textContent=body.length;
+  const quizDone=bg===body.length&&body.length>0;
+  document.getElementById('ck_quiz').classList.toggle('ok',quizDone);
+  document.getElementById('ck_review').classList.toggle('ok',state.reviewed);
+  const unlocked=quizDone&&state.reviewed;
+  const sb=document.getElementById('startBtn');
+  if(unlocked){sb.className='start-btn open';sb.textContent='✏️ 연습문제 풀기 →';}
+  else{sb.className='start-btn locked';sb.textContent='🔒 연습문제 풀기 (잠김)';}
+  document.getElementById('practiceWrap').style.display=unlocked?'block':'none';
+
+  const nb=setEls('pb').length, na=setEls('pa').length;
+  const gb=gradedIn(setEls('pb')),ga=gradedIn(setEls('pa')),gh=gradedIn(setEls('ph'));
+  setCount('cnt_basic',gb,nb);setCount('cnt_applied',ga,na);setCount('cnt_hard',gh,setEls('ph').length);
+  document.getElementById('pset_basic').classList.remove('locked');
+  document.getElementById('pset_applied').classList.toggle('locked',gb<nb);
+  document.getElementById('pset_hard').classList.toggle('locked',ga<na);
+
+  const cur={practice:unlocked,applied:gb>=nb,hard:ga>=na};
+  if(cel.init){
+    if(cur.practice&&!cel.practice)celebrate('🎉 축하합니다! 연습문제가 열렸어요!');
+    else if(cur.hard&&!cel.hard)celebrate('🏆 심화 레벨이 열렸어요!');
+    else if(cur.applied&&!cel.applied)celebrate('🔥 응용 레벨이 열렸어요!');
+  }
+  cel={init:true,practice:cur.practice,applied:cur.applied,hard:cur.hard};
+}
+function setCount(id,n,tot){const el=document.getElementById(id);el.textContent=n+' / '+tot;el.classList.toggle('clear',n>=tot);}
+
+load();
+if(document.documentElement.classList.contains('light'))document.getElementById('themeBtn').textContent='🌙 다크 모드';
+refresh();
+</script>
+</body>
+</html>
